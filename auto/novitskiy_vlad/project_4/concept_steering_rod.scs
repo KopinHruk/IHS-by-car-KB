@@ -1,0 +1,98 @@
+sc_node_not_relation -> concept_steering_rod;;
+concept_steering_rod => nrel_main_idtf:
+[рулевая тяга](*<-lang_ru;;*);
+[steering rod](*<-lang_en;;*);;
+concept_steering_rod => nrel_idtf:
+	[tie rod](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_upper_end;;
+nrel_upper_end => nrel_main_idtf:
+[верхний конец*](*<-lang_ru;;*);
+    [upper end*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_left_steering_rod;;
+concept_left_steering_rod => nrel_main_idtf:
+[левая рулевая тяга](*<-lang_ru;;*);
+	[left steering rod](*<-lang_en;;*);;
+sc_node_not_relation -> concept_middle_steering_rod;;
+concept_middle_steering_rod => nrel_main_idtf:
+[средняя рулевая тяга](*<-lang_ru;;*);
+	[middle steering rod](*<-lang_en;;*);;
+sc_node_not_relation -> concept_right_steering_rod;;
+concept_right_steering_rod => nrel_main_idtf:
+[правая рулевая тяга](*<-lang_ru;;*);
+	[right steering rod](*<-lang_en;;*);;
+sc_node_not_relation -> concept_longitudinal_tie_rod;;
+concept_longitudinal_tie_rod => nrel_main_idtf:
+[продольная рулевая тяга](*<-lang_ru;;*);
+	[longitudinal tie rod](*<-lang_en;;*);;
+sc_node_not_relation -> concept_threaded_end;;
+concept_threaded_end => nrel_main_idtf:
+[резьбовое окончание](*<-lang_ru;;*);
+	[threaded end](*<-lang_en;;*);;
+
+concept_steering_rod <= nrel_subdividing: ...
+(*
+->concept_left_steering_rod;;  
+->concept_middle_steering_rod;;
+->concept_right_steering_rod;;
+=> nrel_main_idtf: [Разбиение по признаку расположение](* <- lang_ru;; *);;
+*);;
+
+concept_steering_rod <= nrel_subdividing: ...
+(*
+->concept_relay_rod;;  
+->concept_longitudinal_tie_rod;;
+=> nrel_main_idtf: [Разбиение по признаку выполняемые функции](* <- lang_ru;; *);;
+*);;
+
+concept_steering_rod <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_composite_part;; 
+		->concept_steering_drive;;
+		->nrel_provide;;
+		->nrel_to_transfer_effort;;
+		->concept_knuckle;;
+		->nrel_managed_wheel;;
+		->nrel_wheel_turning;;
+		->nrel_rotation_angle_of_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(рулевая тяга)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Рулевая тяга – часть рулевого привода, обеспечивающая передачу усилия от поворота руля на поворотные кулаки колес, а также необходимый угол поворота управляемых колёс.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_rod <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_design; nrel_element; concept_steering_rod_end; nrel_lower_end; nrel_upper_end; concept_middle_steering_rod; concept_threaded_end;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Конструктивно элементами рулевой тяги могут быть рулевые наконечники с обоих ее концов, как например, у средней тяги, либо резьбовое окончание с одной стороны и рулевой наконечник с другой.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевая тяга, конструкция*, элемент*, рулевой наконечник, нижний конец*, верхний конец*, средняя тяга, резьбовое окончание, рулевой наконечник)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_steering_rod -> rrel_example: exemplar_relay_rod_FEBI_BILSTEIN_01127;;
+
+illustration -> ...
+	(*
+	<- rrel_key_sc_element: ... 
+		(*
+		<-explanation;;
+		<=nrel_sc_text_translation: ... 
+			(* 
+				-> rrel_example: [Рулевая тяга Hyundai Accent: 1 – рулевая тяга; 2 – стальной хомут; 3 – защитный чехол; 4 – гайка; 5 – наконечник рулевой тяги; 6 – хомут.](*<-lang_ru;;*);;
+			*);;
+		*);;
+	-> rrel_key_sc_element: concept_steering_rod;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/steering_rod.png";;
+		*);;
+	*);;

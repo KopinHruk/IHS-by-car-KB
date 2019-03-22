@@ -1,0 +1,38 @@
+sc_node_not_relation -> concept_split_steering_linkage;;
+concept_split_steering_linkage => nrel_main_idtf:
+[разрезная рулевая трапеция](*<-lang_ru;;*);
+[split steering linkage](*<-lang_en;;*);;
+concept_split_steering_linkage => nrel_idtf:
+	[расчленённая рулевая трапеция](*<-lang_ru;;*);;
+
+concept_split_steering_linkage <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_linkage;; 
+		->nrel_composite_part;; 
+		->concept_multi_link_relay_rod;;
+		->nrel_connection;;
+		->concept_wheel;;
+		->nrel_managed_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(разрезная рулевая трапеция)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Разрезная рулевая трапеция - рулевая трапеция, которая имеет многозвен­ную поперечную рулевую тягу, со­единяющую управляемые колеса.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_split_steering_linkage <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_steering_linkage; nrel_to_apply; concept_car; nrel_composite_part; concept_independent_suspension;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Разрезная рулевая трапеция применяется в автомобилях с независимой подвеской колес.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(цельная рулевая трапеция, применяться*, автомобиль, составная часть*, зависимая подвеска колес)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;

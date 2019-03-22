@@ -1,0 +1,84 @@
+sc_node_not_relation -> concept_steering_shaft;;
+concept_steering_shaft => nrel_main_idtf:
+[рулевой вал](*<-lang_ru;;*);
+[steering shaft](*<-lang_en;;*);;	
+concept_steering_shaft => nrel_idtf:
+[карданный вал рулевого управления](*<-lang_ru;;*);
+[вал рулевого управления](*<-lang_ru;;*);
+	[steering cardan shaft](*<-lang_en;;*);;	
+sc_node_not_relation -> concept_thread;;
+concept_thread => nrel_main_idtf:
+[резьба](*<-lang_ru;;*);
+	[thread](*<-lang_en;;*);;
+sc_node_not_relation -> concept_splined_connection;;
+concept_splined_connection => nrel_main_idtf:
+[шлицевое соединение](*<-lang_ru;;*);
+	[splined connection](*<-lang_en;;*);;
+sc_node_role_relation->rrel_internal_connection;;
+rrel_internal_connection => nrel_main_idtf:
+[внутреннее соединение'](*<-lang_ru;;*);
+    [internal connection'](*<-lang_en;;*);;
+sc_node_role_relation->rrel_external_connection;;
+rrel_external_connection => nrel_main_idtf:
+[внешнее соединение'](*<-lang_ru;;*);
+    [external connection'](*<-lang_en;;*);;
+sc_node_not_relation->concept_strength_steel;;
+concept_strength_steel => nrel_main_idtf:
+[высокопрочная сталь](*<-lang_ru;;*);
+	[strength steel](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_steering_shaft_FEBEST_AST_190;;
+concept_steering_shaft_FEBEST_AST_190 => nrel_main_idtf:
+[рулевой вал FEBEST AST-190](*<-lang_ru;;*);
+	[steering shaft FEBEST AST-190](*<-lang_en;;*);;
+concept_steering_shaft_FEBEST_AST_190 -> exemplar_steering_shaft_FEBEST_AST_190;;
+exemplar_steering_shaft_FEBEST_AST_190 => nrel_main_idtf:
+[Рулевой вал FEBEST AST-190](*<-lang_ru;;*);
+	[Steering shaft FEBEST AST-190](*<-lang_en;;*);;
+
+concept_steering_shaft <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_equipped_with_hinges_shaft;;
+		->nrel_composite_part;; 
+		->concept_steering_column;;
+		->nrel_to_transfer_effort;;
+		->concept_effort;;
+		->nrel_with_the_help_of;; 
+		->concept_steering_wheel;;
+		->concept_steering_mechanism;;
+	*);;
+=> nrel_main_idtf: [Опр.(рулевой вал)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Рулевой вал – снабжённый шарнирами вал, являющийся частью рулевой колонки автомобиля, которая выполняет передачу усилия от руля к рулевому механизму.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_shaft <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_part_edge; concept_thread; concept_splined_connection; rrel_internal_connection; nrel_to_be_intended; nrel_connection; concept_steering_mechanism; rrel_external_connection; concept_steering_wheel;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Рулевой вал имеет на двух краях резьбу и шлицевые соединения, но с одного края оно внутреннее и предназначено для крепления рулевого механизма, а с другого – наружное и служит для крепления руля.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевой вал, край детали*, резьба, шлицевое соединение, внутреннее соединение', быть предназначенным*, крепление*, рулевой механизм, наружное соединение', служить для', крепление*, руль)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_columns;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_material; concept_strength_steel;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Рулевой вал изготавливается из высокопрочной стали.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевой вал, материал, высокопрочная сталь)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_columns;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_steering_shaft -> rrel_example: exemplar_steering_shaft_FEBEST_AST_190;;

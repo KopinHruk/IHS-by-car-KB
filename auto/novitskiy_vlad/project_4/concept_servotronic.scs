@@ -1,0 +1,102 @@
+sc_node_not_relation -> concept_servotronic;;
+concept_servotronic => nrel_main_idtf:
+[Сервотроник](*<-lang_ru;;*);
+[Servotronic](*<-lang_en;;*);;
+concept_servotronic => nrel_idtf:
+[система управления Servotronic](*<-lang_ru;;*);
+	[Servotronic control system](*<-lang_en;;*);;
+Volkswagen_brand => nrel_main_idtf:
+[марка Volkswagen](*<-lang_ru;;*);
+[Volkswagen brand](*<-lang_en;;*);;
+Volkswagen_brand => nrel_idtf:
+	[Volkswagen](*<-lang_en;;*);;
+sc_node_not_relation -> concept_tradename;;
+concept_tradename => nrel_main_idtf:
+[торговое название](*<-lang_ru;;*);
+[tradename](*<-lang_en;;*);;
+concept_tradename => nrel_idtf:
+[торговая марка](*<-lang_ru;;*);
+	[trademark](*<-lang_en;;*);;
+sc_node_not_relation -> concept_input_sensor_of_Servotronic_system;;
+concept_input_sensor_of_Servotronic_system => nrel_main_idtf:
+[входной датчик системы Servotronic](*<-lang_ru;;*);
+	[input sensor of Servotronic system](*<-lang_en;;*);;
+sc_node_not_relation -> concept_electronic_control_unit_of_Servotronic_system;;
+concept_electronic_control_unit_of_Servotronic_system => nrel_main_idtf:
+[электронный блок управления системы Servotronic](*<-lang_ru;;*);
+	[electronic control unit of Servotronic system](*<-lang_en;;*);;
+sc_node_not_relation -> concept_execution_unit_of_Servotronic_system;;
+concept_execution_unit_of_Servotronic_system => nrel_main_idtf:
+[исполнительное устройство системы Servotronic](*<-lang_ru;;*);
+	[execution unit of Servotronic system](*<-lang_en;;*);;
+sc_node_not_relation -> concept_servotronic_of_Bmw_M5_e34;;
+concept_servotronic_of_Bmw_M5_e34 => nrel_main_idtf:
+[система управления Сервотроник Bmw M5 e34](*<-lang_ru;;*);
+	[control system Servotronic of Bmw M5 e34](*<-lang_en;;*);;
+exemplar_servotronic_of_Bmw_M5_e34 => nrel_main_idtf:
+[Система управления Сервотроник Bmw M5 e34](*<-lang_ru;;*);
+	[Control system Servotronic of Bmw M5 e34](*<-lang_en;;*);;
+
+concept_servotronic <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_device;; 
+		->nrel_function;; 
+		->nrel_to_transfer_effort;;
+		->concept_effort;;
+		->nrel_to_depend;;
+		->nrel_speed;;
+	*);;
+=> nrel_main_idtf: [Опр.(Сервотроник)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Сервотроник – механизм, главной функцией которого является распределение усилий, прикладываемых к рулевому колесу, в зависимости от скорости движения автомобиля.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_servotronic <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_tradename; concept_control_system_of_electro_hydraulic_power_steering; nrel_be_installed; Volkswagen_brand; BMW_brand;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Сервотроник - торговое название системы управления электрогидравлическим усилителем руля, устанавливаемой на автомобилях компаний Volkswagen и BMW.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(гидроусилитель рулевого управления, торговое название, система управления электрогидроусилителя, быть установленным*, автомобиль, марка Volkswagen, марка BMW)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_statement_of_the_defining_type;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_input_sensor_of_Servotronic_system; concept_electronic_control_unit_of_Servotronic_system; concept_execution_unit_of_Servotronic_system;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Система Servotronic состоит из входных датчиков, электронного блока управления и исполнительного устройства.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система управления Servotronic, составная часть*, входной датчик системы Servotronic, электронный блок управления системы Servotronic, исполнительное устройство системы Servotronic)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_servotronic <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Электронная система Сервотроник получила широкое распространение на автомобилях концерна Volkswagen и BMW.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_servotronic -> rrel_example: exemplar_servotronic_of_Bmw_M5_e34 (*<- concept_servotronic_of_Bmw_M5_e34;;*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_servotronic;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/servotronic.png";;
+		*);;
+	*);;

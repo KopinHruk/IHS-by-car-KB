@@ -1,0 +1,72 @@
+sc_node_not_relation -> concept_longitudinal_tie_rod;;
+concept_longitudinal_tie_rod => nrel_main_idtf:
+[продольная рулевая тяга](*<-lang_ru;;*);
+	[longitudinal tie rod](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_managed_wheel;;
+nrel_managed_wheel => nrel_main_idtf:
+[управляемое колесо*](* <- lang_ru;; *);
+    [managed wheel*](* <- lang_en;; *);;
+sc_node_role_relation -> rrel_along;;
+rrel_along => nrel_main_idtf:
+[вдоль'](*<-lang_ru;;*);
+    [along'](*<-lang_en;;*);;
+sc_node_not_relation -> concept_longitudinal_axis;;
+concept_longitudinal_axis => nrel_main_idtf:
+[продольная ось](*<-lang_ru;;*);
+    [longitudinal axis](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_lever;;
+concept_steering_lever => nrel_main_idtf:
+[рычаг рулевого механизма](*<-lang_ru;;*);
+	[steering lever](*<-lang_en;;*);;
+sc_node_not_relation -> concept_longitudinal_tie_rod_TEKNOROT_V_706;;
+concept_longitudinal_tie_rod_TEKNOROT_V_706 => nrel_main_idtf:
+[продольная рулевая тяга TEKNOROT V-706](*<-lang_ru;;*);
+	[longitudinal tie rod TEKNOROT V-706](*<-lang_en;;*);;
+exemplar_longitudinal_tie_rod_TEKNOROT_V_706 => nrel_main_idtf:
+[Продольная рулевая тяга TEKNOROT V-706](*<-lang_ru;;*);
+	[Longitudinal tie rod TEKNOROT V-706](*<-lang_en;;*);;
+ 
+concept_longitudinal_tie_rod <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_rod;; 
+		->nrel_located;;
+		->rrel_along;;
+		->concept_longitudinal_axis;;
+		->nrel_connection;; 
+		->concept_steering_bipod;;
+		->concept_stub_axle;;
+		->nrel_managed_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(продольная рулевая тяга)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Продольная рулевая тяга – рулевая тяга, расположенная вдоль продольной оси автомобиля, связывающая между собой рулевую сошку и поворотную цапфу одного из управляемых колес.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_longitudinal_tie_rod <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_connection; concept_steering_lever; nrel_with_the_help_of; concept_ball_joint;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Продольная рулевая тяга связывается с рычагом рулевого механизма при помощи шаровых шарниров.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(продольная рулевая тяга, связываться с*, рычаг рулевого механизма, с помощью*, шаровой шарнир)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_longitudinal_tie_rod -> rrel_example: exemplar_longitudinal_tie_rod_TEKNOROT_V_706 (*<- concept_longitudinal_tie_rod_TEKNOROT_V_706;;*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_longitudinal_tie_rod;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/longitudinal_tie_rod.png";;
+		*);;
+	*);;

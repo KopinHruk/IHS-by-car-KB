@@ -1,0 +1,125 @@
+sc_node_not_relation -> concept_screw_and_nut;;
+concept_screw_and_nut => nrel_main_idtf:
+[винтовой рулевой механизм](*<-lang_ru;;*);
+[screw-and-nut](*<-lang_en;;*);;
+concept_screw_and_nut => nrel_idtf:
+	[screw steering gear](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_with_the_help_of;;
+nrel_with_the_help_of => nrel_main_idtf:
+[с помощью*](*<-lang_ru;;*);
+	[with the help of*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_gear_ball;;
+concept_steering_gear_ball => nrel_main_idtf:
+[шарик рулевого механизма](*<-lang_ru;;*);
+	[steering gear ball](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_gear_screw;;
+concept_steering_gear_screw => nrel_main_idtf:
+[винт рулевого механизма](*<-lang_ru;;*);
+	[steering gear screw](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_gear_nut;;
+concept_steering_gear_nut => nrel_main_idtf:
+[гайка рулевого механизма](*<-lang_ru;;*);
+	[steering gear nut](*<-lang_en;;*);;
+sc_node_not_relation -> concept_heavy_duty_truck;;
+concept_heavy_duty_truck => nrel_main_idtf:
+[тяжёлый грузовой автомобиль](*<-lang_ru;;*);
+[heavy duty truck](*<-lang_en;;*);;
+concept_heavy_duty_truck => nrel_idtf:
+	[грузовой автомобиль большой грузоподъёмности](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_executive_car;;
+concept_executive_car => nrel_main_idtf:
+[представительский автомобиль](*<-lang_ru;;*);
+[executive car](*<-lang_en;;*);;
+concept_executive_car => nrel_idtf:
+	[легковой автомобиль представительского класса](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_sliced_on_a_nut;;
+concept_sliced_on_a_nut => nrel_main_idtf:
+[нарезанный на гайке](*<-lang_ru;;*);
+	[sliced on a nut](*<-lang_en;;*);;
+sc_node_not_relation -> concept_toothed_sector;;
+concept_toothed_sector => nrel_main_idtf:
+[зубчатый сектор](*<-lang_ru;;*);
+	[toothed sector](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_connection;;
+nrel_connection => nrel_main_idtf:
+[связь*](*<-lang_ru;;*);
+[connection*](*<-lang_en;;*);;
+nrel_connection => nrel_idtf:
+[соединяться с*](*<-lang_ru;;*);
+[to connect with*](*<-lang_en;;*);
+[крепление*](*<-lang_ru;;*);
+[binding*](*<-lang_en;;*);
+[крепиться к*](*<-lang_ru;;*);
+[mounted to*](*<-lang_en;;*);
+[быть соединённым с*](*<-lang_ru;;*);
+	[to be connected with*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_rubbing;;
+nrel_rubbing => nrel_main_idtf:
+[трение*](*<-lang_ru;;*);
+	[rubbing*](*<-lang_en;;*);;
+
+concept_screw_and_nut <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_mechanism;; 
+		->nrel_feature;;
+		->nrel_connection;;
+		->nrel_with_the_help_of;; 
+		->concept_steering_gear_ball;;
+		->concept_steering_gear_screw;;
+		->concept_steering_gear_nut;;
+	*);;
+=> nrel_main_idtf: [Опр.(винтовой рулевой механизм)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Винтовой рулевой механизм – рулевой механизм, особенностью которого является соединение с помощью шариков винта и гайки.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_screw_and_nut <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_to_apply; concept_bus; concept_heavy_duty_truck; concept_executive_car;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Винтовой рулевой механизм применяется в автобусах, тяжелых грузовых автомобилях и в некоторых легковых автомобилях представительского класса.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(винтовой рулевой механизм, применяться*, автобус, тяжёлый грузовой автомобиль, легковой автомобиль представительского класса)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_element; concept_steering_shaft; concept_steering_gear_screw; concept_steering_gear_nut; concept_toothed_rack; concept_sliced_on_a_nut; concept_toothed_sector; nrel_connection; concept_steering_bipod;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В винтовой рулевой механизм входят следующие элементы: вал рулевого колеса с винтом; гайка, перемещаемая по винту; зубчатая рейка, нарезанная на гайке; зубчатый сектор, с которым соединена рейка; рулевая сошка.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(винтовой рулевой механизм, элемент*, вал рулевого колеса, винт рулевого механизма, гайка рулевого механизма, зубчатая рейка, нарезанный на гайке, зубчатый сектор, соединяться с*, зубчатая рейка, рулевая сошка)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_advantage; concept_high_reliability; nrel_to_be_less; nrel_rubbing; nrel_element;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Преимуществом винтового механизма является высокая надёжность за счёт меньшего трения его элементов.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(винтовой рулевой механизм, преимущество*, высокая надёжность, быть меньше*, трение*, элемент*)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_screw_and_nut;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/screw_and_nut.png";;
+		*);;
+	*);;

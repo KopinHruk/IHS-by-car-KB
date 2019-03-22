@@ -1,0 +1,52 @@
+sc_node_not_relation -> concept_electronic_unit_of_power_steering;;
+concept_electronic_unit_of_power_steering => nrel_main_idtf:
+[электронный блок усилителя](*<-lang_ru;;*);
+[electronic unit of power steering](*<-lang_en;;*);;
+concept_electronic_unit_of_power_steering => nrel_idtf:
+[блок управления усилителем](*<-lang_ru;;*);
+	[control unit of power steering](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_transmit_signal;; 
+nrel_to_transmit_signal => nrel_main_idtf:
+[передавать сигнал*](*<-lang_ru;;*);
+	[to transmit signal*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_electric_signal;;
+concept_electric_signal => nrel_main_idtf:
+[электрический сигнал](*<-lang_ru;;*);
+	[electric signal](*<-lang_en;;*);;
+sc_node_not_relation -> concept_hydraulic_pump_motor;;
+concept_hydraulic_pump_motor => nrel_main_idtf:
+[электродвигатель насоса усилителя](*<-lang_ru;;*);
+	[hydraulic pump motor](*<-lang_en;;*);;
+
+concept_electronic_unit_of_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_composite_part;; 
+		->concept_electro_hydraulic_power_steering;;
+		->concept_electric_power_steering;; 
+		->nrel_to_change;; 
+		->nrel_functionality;;
+		->nrel_to_depend;;
+		->nrel_speed;;
+	*);;
+=> nrel_main_idtf: [Опр.(электронный блок усилителя)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Электронный блок усилителя – часть электрогидравлического или электрического усилителя руля, которая корректирует его работу в зависимости от скорости движения.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_electronic_unit_of_power_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_electro_hydraulic_power_steering; nrel_to_transmit_signal; concept_electric_signal; concept_speed_steering_sensor; concept_car_speed_sensor; concept_torque_sensor; nrel_to_depend; nrel_to_change; nrel_motor_rotation_frequency; concept_hydraulic_pump_motor;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Блок управления электрогидроусилителем получает сигналы с датчиков поворота рулевого колеса, скорости автомобиля, частоты вращения вала его двигателя, крутящего момента и в зависимости от них изменяет частоту вращения электродвигателя насоса.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(блок управления усилителем, электрогидроусилитель, передавать сигнал*, электронный сигнал, датчик поворота рулевого колеса, датчик скорости автомобиля, датчик частоты вращения вала двигателя, датчик крутящего момента, зависеть*, изменять*, частота вращения электродвигателя*, электродвигатель насоса)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_general_form_statement;;
+	*);;

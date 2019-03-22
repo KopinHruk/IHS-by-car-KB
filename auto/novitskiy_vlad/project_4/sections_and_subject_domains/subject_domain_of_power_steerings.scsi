@@ -1,0 +1,10 @@
+subject_domain -> subject_domain_of_power_steerings;;
+subject_domain_of_power_steerings => nrel_main_idtf:
+[Предметная область усилителей рулевого управления](*<-lang_ru;;*);
+	[Subject domain of power steerings](*<-lang_en;;*);;
+
+subject_domain_of_power_steerings -> rrel_explored_relation: nrel_power_steering;;
+
+subject_domain_of_power_steerings -> rrel_maximum_studied_object_class: concept_power_steering_type;;
+
+subject_domain_of_power_steerings -> rrel_not_maximum_studied_object_class: concept_electric_power_steering; concept_electro_hydraulic_power_steering; concept_hydraulic_power_steering; concept_mechanical_power_steering; concept_pneumatic_power_steering; concept_servotronic; concept_electronic_unit_of_power_steering; concept_hydraulic_pump; concept_hydrocylinder; concept_input_sensor_of_power_steering; concept_power_steering_distributor; concept_power_steering_filter; concept_power_steering_tank; concept_torsion_distributor;;

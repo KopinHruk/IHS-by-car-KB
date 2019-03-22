@@ -1,0 +1,52 @@
+sc_node_not_relation -> concept_connecting_hose_of_power_steering;;
+concept_hydraulic_drive => nrel_main_idtf:
+[соединительный шланг гидроусилителя](*<-lang_ru;;*);
+	[connecting hose of power steering](*<-lang_en;;*);;
+sc_node_not_relation -> concept_low_pressure_connecting_hose;;
+concept_low_pressure_connecting_hose => nrel_main_idtf:
+[соединительный шланг низкого давления](*<-lang_ru;;*);
+	[low pressure connecting hose](*<-lang_en;;*);;
+sc_node_not_relation -> concept_high_pressure_connecting_hose;;
+concept_high_pressure_hose => nrel_main_idtf:
+[соединительный шланг высокого давления](*<-lang_ru;;*);
+	[high pressure connecting hose](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_way;;
+nrel_way => nrel_main_idtf:
+[путь*](*<-lang_ru;;*);
+    [way*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_connecting_hose_of_power_steering_MEYLE_359_202_0001;;
+concept_connecting_hose_of_power_steering_MEYLE_359_202_0001 => nrel_main_idtf:
+[соединительный шланг гидроусилителя MEYLE 359 202 0001](*<-lang_ru;;*);
+	[connecting hose of power steering MEYLE 359 202 0001](*<-lang_en;;*);;
+exemplar_connecting_hose_of_power_steering_MEYLE_359_202_0001 => nrel_main_idtf:
+[Соединительный шланг гидроусилителя MEYLE 359 202 0001](*<-lang_ru;;*);
+	[Connecting hose of power steering MEYLE 359 202 0001](*<-lang_en;;*);;
+
+concept_connecting_hose_of_power_steering <= nrel_subdividing: ...
+(*
+->concept_low_pressure_connecting_hose;;
+->concept_high_pressure_connecting_hose;;  
+=> nrel_main_idtf: [Разбиение по признаку выполняемые функции](* <- lang_ru;; *);;
+*);;
+
+concept_connecting_hose_of_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_composite_part;; 
+		->concept_hydraulic_power_steering;; 
+		->concept_electro_hydraulic_power_steering;;
+		->nrel_provide;; 
+		->nrel_way;;
+		->nrel_to_move_cyclically;;
+		->concept_working_fluid_of_power_steering;;
+	*);;
+=> nrel_main_idtf: [Опр.(соединительный шланг гидроусилителя)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Соединительный шланг гидроусилителя – часть гидравлического или электрогидравлического усилителя руля, обеспечивающая путь для циркуляции жидкости по системе усилителя.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_connecting_hose_of_power_steering -> rrel_example: exemplar_connecting_hose_of_power_steering_MEYLE_359_202_0001 (*<- concept_connecting_hose_of_power_steering_MEYLE_359_202_0001;;*);;

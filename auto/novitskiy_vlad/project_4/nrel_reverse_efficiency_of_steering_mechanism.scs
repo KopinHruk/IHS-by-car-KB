@@ -1,0 +1,67 @@
+sc_node_norole_relation -> nrel_reverse_efficiency_of_steering_mechanism;; 
+nrel_reverse_efficiency_of_steering_mechanism => nrel_main_idtf:
+[обратный КПД рулевого механизма*](*<-lang_ru;;*);
+	[reverse efficiency of steering mechanism*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_kickback;; 
+nrel_kickback => nrel_main_idtf:
+[обратный удар*](*<-lang_ru;;*);
+	[kickback*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_run_into;; 
+nrel_run_into => nrel_main_idtf:
+[наезжать на*](*<-lang_ru;;*);
+	[run into*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_pavement_roughness;; 
+nrel_pavement_roughness => nrel_main_idtf:
+[неровность дорожного покрытия*](*<-lang_ru;;*);
+	[pavement roughness*](*<-lang_en;;*);;
+
+nrel_reverse_efficiency_of_steering_mechanism <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_characteristic;;
+		->concept_steering_mechanism;; 
+		->nrel_to_quantify;;
+		->nrel_mechanical_losses;;
+		->nrel_to_transfer_effort;;
+		->concept_effort;; 
+		->concept_steering_bipod;;
+		->concept_steering_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(обратный КПД рулевого механизма*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Обратный КПД рулевого механизма* – характеристика рулевого механизма, которая количественно оценивает механические потери при передаче усилия от сошки к рулевому колесу.](*<-lang_ru;;*);; 
+	*);;
+*);;	
+
+nrel_reverse_efficiency_of_steering_mechanism <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: rrel_if; nrel_be_more; rrel_then; nrel_kickback; nrel_run_into; nrel_managed_wheel; nrel_pavement_roughness;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Чем меньше обратный КПД, тем ниже обратный удар вследствие наезда управляемых колес на неровности дорожного покрытия.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(обратный КПД рулевого механизма*, если', больше*, то', больше*, обратный удар*, наезжать на*, управляемое колесо*, неровность дорожного покрытия*)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_reverse_efficiency_of_steering_mechanism => nrel_first_domain: concept_steering_mechanism;;
+nrel_reverse_efficiency_of_steering_mechanism => nrel_second_domain: value;;
+nrel_reverse_efficiency_of_steering_mechanism => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_mechanism;;
+				->value;;
+			*);;
+	*);;
+		
+oriented_relation->nrel_reverse_efficiency_of_steering_mechanism;;
+binary_relation->nrel_reverse_efficiency_of_steering_mechanism;;
+antisymmetric_relation->nrel_reverse_efficiency_of_steering_mechanism;;
+antitransitive_relation->nrel_reverse_efficiency_of_steering_mechanism;;
+antireflexive_relation->nrel_reverse_efficiency_of_steering_mechanism;;

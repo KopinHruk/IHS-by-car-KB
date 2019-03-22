@@ -1,0 +1,62 @@
+sc_node_not_relation -> concept_mechanical_power_steering;;
+concept_mechanical_power_steering => nrel_main_idtf:
+[механический усилитель рулевого управления](*<-lang_ru;;*);
+[mechanical power steering](*<-lang_en;;*);;
+concept_mechanical_power_steering => nrel_idtf:
+	[механический усилитель руля](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_modernized;;
+concept_modernized => nrel_main_idtf:
+[модернизированный](*<-lang_ru;;*);
+	[modernized](*<-lang_en;;*);;
+sc_node_not_relation -> concept_drive;;
+concept_drive => nrel_main_idtf:
+[привод](*<-lang_ru;;*);
+	[drive](*<-lang_en;;*);;
+sc_node_not_relation -> concept_power_steering_of_VAZ_2105;;
+concept_power_steering_of_VAZ_2105 => nrel_main_idtf:
+[усилитель руля ВАЗ 2105](*<-lang_ru;;*);
+	[power steering of VAZ 2105](*<-lang_en;;*);;
+exemplar_power_steering_of_VAZ_2105 => nrel_main_idtf:
+[Усилитель руля ВАЗ 2105](*<-lang_ru;;*);
+	[Power steering of VAZ 2105](*<-lang_en;;*);;
+
+concept_mechanical_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_mechanism;; 
+		->nrel_be_more;; 
+		->rrel_base;;
+		->nrel_steering_mechanism_ratio;;
+	*);;
+=> nrel_main_idtf: [Опр.(механический усилитель рулевого управления)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Механический усилитель рулевого управления – рулевой механизм с увеличенным (по сравнению с базовым) передаточным отношением.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_mechanical_power_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_modernized; rrel_base; concept_steering_mechanism; nrel_to_be_equipped_with; rrel_option; concept_drive;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Механический усилитель руля - это модернизированный базовый рулевой механизм, не оснащенный каким-либо дополнительным приводом.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(механический усилитель руля, модернизированный, базовый', рулевой механизм, быть оснащённым*, дополнительный', привод)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_statement_of_the_defining_type;;
+	*);;
+
+concept_mechanical_power_steering <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В 1876 году Г.В. Фиттс запатентовал свою систему усиления рулевого управления, основанную на сложном механизме дифференциального механического усилителя с приводом через сцепление от мотора (US Patent: 175,601), но такая система так и не была реализована.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_mechanical_power_steering -> rrel_example: exemplar_power_steering_of_VAZ_2105 (*<- concept_power_steering_of_VAZ_2105;;*);;

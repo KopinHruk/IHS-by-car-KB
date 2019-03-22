@@ -1,0 +1,132 @@
+sc_node_not_relation -> concept_worm_and_sector;;
+concept_worm_and_sector => nrel_main_idtf:
+[червячный рулевой механизм](*<-lang_ru;;*);
+[worm-and-sector](*<-lang_en;;*);;
+concept_worm_and_sector => nrel_idtf:
+	[worm steering gear](*<-lang_en;;*);;
+sc_node_not_relation -> concept_outdated;;
+concept_outdated => nrel_main_idtf:
+[устаревший](*<-lang_ru;;*);
+	[outdated](*<-lang_en;;*);;
+sc_node_not_relation -> concept_off_road_vehicle;;
+concept_off_road_vehicle => nrel_main_idtf:
+[внедорожник](*<-lang_ru;;*);
+[off-road vehicle](*<-lang_en;;*);;
+concept_off_road_vehicle => nrel_idtf:
+	[автомобиль повышенной проходимости](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_light_duty_truck;;
+concept_light_duty_truck => nrel_main_idtf:
+[лёгкий грузовой автомобиль](*<-lang_ru;;*);
+[light duty truck](*<-lang_en;;*);;
+concept_light_duty_truck => nrel_idtf:
+	[грузовой автомобиль малой грузоподъёмности](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_bus;;
+concept_bus => nrel_main_idtf:
+[автобус](*<-lang_ru;;*);
+	[bus](*<-lang_en;;*);;
+sc_node_not_relation -> concept_worm_and_sector_housing;;
+concept_worm_and_sector_housing => nrel_main_idtf:
+[картер червячного рулевого механизма](*<-lang_ru;;*);
+	[worm and sector housing](*<-lang_en;;*);;
+sc_node_not_relation -> concept_resistant_to_shocks;;
+concept_resistant_to_shocks => nrel_main_idtf:
+[стойкий к ударам](*<-lang_ru;;*);
+	[resistant to shocks](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_wheel_turning;;
+nrel_wheel_turning => nrel_main_idtf:
+[поворот колеса*](*<-lang_ru;;*);
+[wheel turning*](*<-lang_en;;*);;
+nrel_wheel_turning => nrel_main_idtf:
+	[горизонтальное отклонение колеса*](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_to_be_better;;
+nrel_to_be_better => nrel_main_idtf:
+[быть лучше*](*<-lang_ru;;*);
+    [to be better*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_complex_fabrication;;
+concept_complex_fabrication => nrel_main_idtf:
+[сложное изготовление](*<-lang_ru;;*);
+	[complex fabrication](*<-lang_en;;*);;
+sc_node_not_relation -> concept_high_cost;;
+concept_high_cost => nrel_main_idtf:
+[высокая стоимость](*<-lang_ru;;*);
+	[high cost](*<-lang_en;;*);;
+sc_node_not_relation -> concept_complex_construction;;
+concept_complex_construction => nrel_main_idtf:
+[сложная конструкция](*<-lang_ru;;*);
+	[complex construction](*<-lang_en;;*);;
+
+concept_worm_and_sector <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_outdated;; 
+		->concept_steering_mechanism;; 
+		->nrel_use;; 
+		->concept_globoid_worm;;
+		->concept_worm_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(червячный рулевой механизм)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Червячный рулевой механизм – устаревший тип рулевого механизма, использующий червяк и червячное колесо.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_worm_and_sector <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_to_apply; concept_off_road_vehicle; concept_dependent_suspension; nrel_managed_wheel; concept_light_duty_truck; concept_bus;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Червячный механизм применяется на автомобилях с повышенной проходимостью с зависимой подвеской управляемых колес, а также в легких грузовых автомобилях и автобусах.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(червячный рулевой механизм, применяться*, автомобиль с повышенной проходимостью, зависимая подвеска, управляемое колесо*, лёгкий грузовой автомобиль, автобус)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_element; concept_steering_shaft; concept_globoid_worm; concept_worm_wheel; concept_worm_and_sector_housing; concept_steering_bipod;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В червячный рулевой механизм входят следующие элементы: рулевой вал, червяк, червячное колесо, картер и рулевая сошка.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(червячный рулевой механизм, элемент*, рулевой вал, червяк, червячное колесо, картер, рулевая сошка)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_advantage; nrel_wheel_turning; nrel_to_be_more; nrel_rotation_angle_of_wheel; concept_resistant_to_shocks; nrel_to_transfer_effort; concept_effort; nrel_provide; nrel_to_be_better; concept_maneuverability;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Преимуществами червячного рулевого механизма являются возможность поворота колес на большой угол, стойкость к ударам от дорожных неровностей, передача больших усилий, обеспечение лучшей маневренности машины.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(червячный рулевой механизм, преимущество*, поворот колеса*, быть больше*, угол поворота колеса*, стойкий к ударам, передавать усилие*, быть больше*, усилие, обеспечивать*, быть лучше*, манёвренность)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_disadvantage; concept_complex_fabrication; concept_high_cost; concept_complex_construction;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Недостатками червячного рулевого механизма считаются достаточно сложное изготовление, высокая стоимость, а также сложная конструкция.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(червячный рулевой механизм, недостаток*, сложное изготовление, высокая стоимость, сложная конструкция)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_worm_and_sector;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/worm_and_sector.png";;
+		*);;
+	*);;

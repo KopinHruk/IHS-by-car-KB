@@ -1,0 +1,6 @@
+subject_domain -> concept_IHS_by_car;;
+concept_IHS_by_car => nrel_main_idtf:
+[Интеллектуальная Система по автомобилям](*<-lang_ru;;*);
+	[IHS by car](*<-lang_en;;*);;
+
+concept_IHS_by_car -> rrel_maximum_studied_object_class: concept_car;;

@@ -1,0 +1,114 @@
+sc_node_not_relation -> concept_ball_joint;;
+concept_ball_joint => nrel_main_idtf:
+[шаровая опора](*<-lang_ru;;*);
+[ball joint](*<-lang_en;;*);;
+concept_ball_joint => nrel_idtf:
+[шаровая опора рулевой тяги](*<-lang_ru;;*);
+[ball joint of steering rod](*<-lang_en;;*);
+	[шаровое крепление рулевой тяги](*<-lang_ru;;*);;
+sc_node_norole_relation->nrel_to_rotate_in_the_plane;;
+nrel_to_rotate_in_the_plane => nrel_main_idtf:
+[вращаться в плоскости*](*<-lang_ru;;*);
+    [to rotate in the plane*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_plane;;
+concept_plane => nrel_main_idtf:
+[плоскость](*<-lang_ru;;*);
+	[plane](*<-lang_en;;*);;
+sc_node_not_relation -> concept_knuckle;;
+concept_knuckle => nrel_main_idtf:
+[поворотный кулак](*<-lang_ru;;*);
+[knuckle](*<-lang_en;;*);;
+concept_knuckle => nrel_idtf:
+	[steering knuckle](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_to_be_necessary_for;;
+nrel_to_be_necessary_for => nrel_main_idtf:
+[быть необходимым для*](*<-lang_ru;;*);
+    [to be necessary for*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_ball_joint_housing;;
+concept_ball_joint_housing => nrel_main_idtf:
+[корпус шаровой опоры](*<-lang_ru;;*);
+	[ball joint housing](*<-lang_en;;*);;
+sc_node_not_relation -> concept_ball_finger;;
+concept_ball_finger => nrel_main_idtf:
+[шаровой палец](*<-lang_ru;;*);
+[ball finger](*<-lang_en;;*);;
+concept_ball_finger => nrel_idtf:
+[металлический палец рулевого управления](*<-lang_ru;;*);
+	[steering metal finger](*<-lang_en;;*);;
+sc_node_not_relation -> concept_duster_of_ball_joint;;
+concept_duster_of_ball_joint => nrel_main_idtf:
+[пыльник шаровой опоры](*<-lang_ru;;*);
+	[duster of ball joint](*<-lang_en;;*);;
+sc_node_not_relation -> concept_ball_joint_TECH_AS_54503_34A01;;
+concept_ball_joint_TECH_AS_54503_34A01 => nrel_main_idtf:
+[шаровая опора TECH-AS 54503-34A01](*<-lang_ru;;*);
+	[ball joint TECH-AS 54503-34A01](*<-lang_en;;*);;
+exemplar_ball_joint_TECH_AS_54503_34A01 => nrel_main_idtf:
+[Шаровая опора TECH-AS 54503-34A01](*<-lang_ru;;*);
+	[Ball joint TECH-AS 54503-34A01](*<-lang_en;;*);;
+
+concept_ball_joint <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_composite_part;; 
+		->nrel_connection;; 
+		->nrel_element;;
+		->nrel_to_rotate_in_the_plane;;
+		->concept_plane;;
+	*);;
+=> nrel_main_idtf: [Опр.(шаровая опора)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Шаровая опора – соединительная часть, которая позволяет закрепленным на ней элементам вращаться в нескольких плоскостях.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_ball_joint <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_element; concept_knuckle;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Шаровая опора является одним из элементов поворотного кулака.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(шаровая опора, элемент*, поворотный кулак)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_function; nrel_movement; concept_knuckle; nrel_to_be_necessary_for; concept_steering_mechanism; nrel_wheel_turning;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Функция шаровой опоры заключается в обеспечении полной подвижности кулака, что необходимо рулевому механизму для поворота колес.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(шаровая опора, функция*, обеспечивать подвижность*, кулак, быть необходимым для*, рулевой механизм, поворот колеса*)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_ball_joint_housing; concept_ball_finger; concept_duster_of_ball_joint;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В состав шаровой опоры входит корпус, металлический палец и пыльник.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(шаровая опора, корпус шаровой опоры, металлический палец шаровой опоры, пыльник шаровой опоры)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_ball_joint -> rrel_example: exemplar_ball_joint_TECH_AS_54503_34A01 (*<- concept_ball_joint_TECH_AS_54503_34A01;;*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_ball_joint;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/ball_joint.png";;
+		*);;
+	*);;

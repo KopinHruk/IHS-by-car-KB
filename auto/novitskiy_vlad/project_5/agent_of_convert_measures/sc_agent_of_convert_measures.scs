@@ -1,0 +1,65 @@
+sc_agent_of_convert_measures => nrel_main_idtf:
+[sc-агент конвертирования величин] (* <- lang_ru;; *);
+    [sc-agent of convert valuses] (* <- lang_en;; *);
+
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: (
+    sc_event_add_output_arc => question_initiated
+);
+
+=> nrel_initiation_condition_and_result: (
+    ..sc_agent_of_convert_measures_initiation_condition =>
+    ..sc_agent_of_convert_measures_rezult
+);
+
+<= nrel_sc_agent_key_sc_elements: {
+    question_initiated;
+    question;
+    question_convert_measures
+};
+
+<- key_sc_element: ... 
+    (*
+        <- sc_description_of_sc_agent_behavior;;
+        <= nrel_sc_text_translation: ... 
+            (*
+                <- rrel_example: [Задачей sc-агента конвертирования величин
+                является перевод заданной величины из одной заданной 
+                единицы измерения в другую также заданную 
+                единицу измерения этого же параметра, используя при этом 
+                коэффициент конвертирования этих единиц измерения.];;
+            *);;
+    *);
+
+=> nrel_inclusion: ...
+    (*
+        <- platform_independent_abstract_sc_agent;;
+        <= nrel_sc_agent_program:
+            {
+                agent_proc_convert_measures;
+                proc_convert_measures;
+                proc_convert_main_measure_in_SI_to_measure;
+                proc_convert_measure_to_main_measure;
+                proc_convert_measure_to_measure;
+                proc_generate_converting_answer_construction
+            };;
+        -> sc_agent_of_convert_measures_scp (* <- active_sc_agent;; *);;
+    *);;
+
+..sc_agent_of_convert_measures_initiation_condition
+= [*
+    question_convert_measures _-> .._question;;
+    question_initiated _-> .._question;;
+    question _-> .._question;;
+    .._question _-> .._parameter;;
+*];;
+
+..sc_agent_of_convert_measures_rezult
+= [*
+    question_convert_measures _-> .._question;;
+    question_finished _-> .._question;;
+    question _-> .._question;;
+    .._question _=> nrel_answer: .._answer;;
+    .._question _-> .._parameter;;
+*];;

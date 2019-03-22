@@ -1,0 +1,122 @@
+sc_node_not_relation -> concept_folding_steering_column;;
+concept_folding_steering_column => nrel_main_idtf:
+[складывающаяся рулевая колонка](*<-lang_ru;;*);
+[folding steering column](*<-lang_en;;*);;
+concept_folding_steering_column => nrel_idtf:
+[энергопоглащающая рулевая колонка](*<-lang_ru;;*);
+	[energy-absorbing steering column](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_absorb_energy;; 
+nrel_to_absorb_energy => nrel_main_idtf:
+[поглощать энергию*](*<-lang_ru;;*);
+	[to absorb energy*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_impact;;
+concept_impact => nrel_main_idtf:
+[удар](*<-lang_ru;;*);
+	[impact](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_release_energy;; 
+nrel_to_release_energy => nrel_main_idtf:
+[выделять энергию*](*<-lang_ru;;*);
+	[to release energy*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_crash;; 
+nrel_crash => nrel_main_idtf:
+[столкновение*](*<-lang_ru;;*);
+	[crash*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_object;;
+concept_object => nrel_main_idtf:
+[объект](*<-lang_ru;;*);
+	[object](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_slow_path;; 
+nrel_slow_path => nrel_main_idtf:
+[путь замедления*](*<-lang_ru;;*);
+	[slow path*](*<-lang_en;;*);;
+sc_node_role_relation->concept_deformable_counterpoint;;
+concept_deformable_counterpoint => nrel_main_idtf:
+[деформируемый контрпункт](*<-lang_ru;;*);
+	[deformable counterpoint](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_prevent;; 
+nrel_to_prevent => nrel_main_idtf:
+[предотвращать*](*<-lang_ru;;*);
+	[to prevent*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_body_part_deformation;; 
+nrel_body_part_deformation => nrel_main_idtf:
+[деформирование части тела*](*<-lang_ru;;*);
+[body part deformation*](*<-lang_en;;*);;
+nrel_body_part_deformation => nrel_idtf:
+[деформировать часть тела*](*<-lang_ru;;*);
+	[to deform body part*](*<-lang_en;;*);;
+sc_node_role_relation->concept_rib_cage;;
+concept_rib_cage => nrel_main_idtf:
+[грудная клетка](*<-lang_ru;;*);
+	[rib cage](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_column_Audi_80_90_Coupe_B3;;
+concept_steering_column_Audi_80_90_Coupe_B3 => nrel_main_idtf:
+[рулевая колонка Audi 80 (90) Coupe B3](*<-lang_ru;;*);
+	[steering column Audi 80 (90) Coupe B3](*<-lang_en;;*);;
+exemplar_steering_column_Audi_80_90_Coupe_B3 => nrel_main_idtf:
+[Рулевая колонка Audi 80 (90) Coupe B3](*<-lang_ru;;*);
+	[Steering column Audi 80 (90) Coupe B3](*<-lang_en;;*);;
+
+concept_folding_steering_column <= nrel_inclusion: concept_steering_column;;
+
+concept_folding_steering_column <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_column;; 
+		->nrel_feature;; 
+		->nrel_to_absorb_energy;;
+		->concept_energy;; 
+		->concept_impact;;
+		->nrel_to_release_energy;;
+		->nrel_crash;;
+		->concept_car;; 
+		->concept_object;;
+	*);;
+=> nrel_main_idtf: [Опр.(складывающаяся рулевая колонка)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Складывающаяся рулевая колонка – разновидность рулевой колонки, особенностью которой является поглощение энергии удара, выделевшуюся в результате столкновения автомобиля с некоторым объектом.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_folding_steering_column <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_to_increase; nrel_slow_path; concept_deformable_counterpoint; nrel_to_prevent; rrel_driver; nrel_body_part_deformation; concept_rib_cage;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Энергопоглощающая рулевая колонка увеличивает путь замедления и выполняет, таким образом, роль деформируемого контрпункта, предотвращая деформацию грудной клетки.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(энергопоглощающая рулевая колонка, увеличивать*, путь замедления*, деформируемый контрпункт, предотвращать*, водитель', деформировать часть тела*, грудная клетка)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_columns;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_folding_steering_column <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Складывающуюся рулевую колонку изобрел и запатентовал в 1954 г. Б. Барени (В. Barreny).](*<-lang_ru;;*);;
+		*);;
+	*);
+...
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Первая серия энергопоглощающих колонок была выпущена в США и показала высокую эффективность с точки зрения безопасности конструкции.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_folding_steering_column -> rrel_example: exemplar_steering_column_Audi_80_90_Coupe_B3 (*<- concept_steering_column_Audi_80_90_Coupe_B3;;*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_folding_steering_column;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/folding_steering_column.png";;
+		*);;
+	*);;

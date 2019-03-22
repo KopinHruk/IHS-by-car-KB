@@ -1,0 +1,45 @@
+sc_node_not_relation -> concept_power_steering_filter;;
+concept_power_steering_filter => nrel_main_idtf:
+[фильтр гидроусилителя](*<-lang_ru;;*);
+	[power steering filter](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_liquid_cleaning;;
+nrel_liquid_cleaning => nrel_main_idtf:
+[очистки жидкости*](*<-lang_ru;;*);
+    [liquid cleaning*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_microscopic_particle;;
+concept_microscopic_particle => nrel_main_idtf:
+[микроскопическая частичка](*<-lang_ru;;*);
+	[microscopic particle](*<-lang_en;;*);;
+
+concept_power_steering_filter <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_composite_part;; 
+		->concept_hydraulic_power_steering;; 
+		->concept_electro_hydraulic_power_steering;;
+		->nrel_to_be_necessary_for;; 
+		->concept_power_steering_filter;;
+		->concept_working_fluid_of_power_steering;;
+		->concept_microscopic_particle;;
+	*);;
+=> nrel_main_idtf: [Опр.(фильтр гидроусилителя)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Фильтр гидроусилителя – часть гидравлического или электрогидравлического усилителя руля, необходимая для очистки рабочей жидкости усилителя от микроскопических частичек.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_power_steering_filter <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_located; concept_power_steering_tank;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Фильтр гидроусилителя располагается в бачке.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(фильтр гидроусилителя, располагаться*, бачок гидроусилителя)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_general_form_statement;;
+	*);;

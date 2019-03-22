@@ -1,0 +1,122 @@
+sc_node_not_relation -> concept_electro_hydraulic_power_steering;;
+concept_electro_hydraulic_power_steering => nrel_main_idtf:
+[электрогидравлический усилитель рулевого управления](*<-lang_ru;;*);
+[electro hydraulic power steering](*<-lang_en;;*);;
+concept_electro_hydraulic_power_steering => nrel_idtf:
+[ЭГУР](*<-lang_ru;;*);
+[электрогидравлический усилитель руля](*<-lang_ru;;*);
+[электрогидроусилитель рулевого управления](*<-lang_ru;;*);
+	[электрогидроусилитель руля](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_coefficient_of_amplification;;
+nrel_coefficient_of_amplification => nrel_main_idtf:
+[коэффициент усиления*](*<-lang_ru;;*);
+    [coefficient of amplification*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_steering_wheel_turning_speed;;
+nrel_steering_wheel_turning_speed => nrel_main_idtf:
+[скорость поворота рулевого колеса*](*<-lang_ru;;*);
+    [steering wheel turning speed*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_power_steering_pump_unit;;
+concept_power_steering_pump_unit => nrel_main_idtf:
+[насосный агрегат гидроусилителя](*<-lang_ru;;*);
+	[power steering pump unit](*<-lang_en;;*);;
+sc_node_not_relation -> concept_power_steering_control_unit;;
+concept_power_steering_control_unit => nrel_main_idtf:
+[гидравлический узел управления гидроусилителя](*<-lang_ru;;*);
+	[power steering control unit](*<-lang_en;;*);;
+sc_node_not_relation -> concept_control_system_of_electro_hydraulic_power_steering;;
+concept_control_system_of_electro_hydraulic_power_steering => nrel_main_idtf:
+[система управления электрогидроусилителя](*<-lang_ru;;*);
+	[control system of electro hydraulic power steering](*<-lang_en;;*);;
+sc_node_not_relation -> concept_power_steering_of_Subaru_Xt;;
+concept_power_steering_of_Subaru_Xt => nrel_main_idtf:
+[усилитель руля Subaru Xt](*<-lang_ru;;*);
+[power steering of Subaru Xt](*<-lang_en;;*);;
+concept_power_steering_of_Subaru_Xt => nrel_idtf:
+	[power steering Cybrid](*<-lang_en;;*);;
+exemplar_power_steering_of_Subaru_Xt => nrel_main_idtf:
+[Усилитель руля Subaru Xt](*<-lang_ru;;*);
+	[Power steering of Subaru Xt](*<-lang_en;;*);;
+
+concept_electro_hydraulic_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_power_steering_type;; 
+		->nrel_difference;; 
+		->concept_hydraulic_power_steering;;
+		->nrel_provide;;
+		->nrel_hydraulic_pressure;;
+		->nrel_with_the_help_of;;
+		->concept_hydraulic_pump;;
+		->nrel_element;;
+		->concept_power_steering_electric_motor;;
+	*);;
+=> nrel_main_idtf: [Опр.(электрогидравлический усилитель руля)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Электрогидравлический усилитель руля – усилитель рулевого управления, отличием которого от гидроусилителя является обеспечение гидравлического давления с помощью насоса, в конструкцию которого входит электромотор.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_electro_hydraulic_power_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_coefficient_of_amplification; nrel_to_change; nrel_to_depend; nrel_steering_wheel_turning_speed; nrel_speed;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В электрогидравлическом усилителе коэффициент усиления руля изменяется в зависимости от скорости поворота рулевого колеса и скорости автомобиля.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(гидроусилитель рулевого управления, коэффициент усиления*, изменять*, зависеть*, скорость поворота рулевого колеса*, скорость*)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_power_steering_pump_unit; concept_power_steering_control_unit; concept_control_system_of_electro_hydraulic_power_steering;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Электрогидравлический усилитель рулевого управления состоит из насосного агрегата, гидравлического узла управления и системы управления.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(гидроусилитель рулевого управления, составная часть*, насосный агрегат, гидравлический узел управления усилителя, система управления электрогидроусилителя)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_electro_hydraulic_power_steering <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В 1988 году Subaru XT стал одним из первых автомобилей, оснащенных электрогидроусилителем, получившим название Cybrid.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_electro_hydraulic_power_steering -> rrel_example: exemplar_power_steering_of_Subaru_Xt (*<- concept_power_steering_of_Subaru_Xt;;*);;
+
+illustration -> ...
+	(*
+	<- rrel_key_sc_element: ... 
+		(*
+		<-explanation;;
+		<=nrel_sc_text_translation: ... 
+			(* 
+				-> rrel_example: [1. датчик усилителя руля; 2. сигнал о скорости поворота рулевого колеса; 3. рулевой механизм; 4. обратный клапан; 5. бачок рабочей жидкости; 6. редукционный клапан; 7. шестеренный насос; 8. блок управления усилителем руля; 9. электродвигатель; 10. сигнал о скорости движения автомобиля; 11. диагностический сигнал; 12. сигнал о частоте вращения коленчатого вала двигателя](*<-lang_ru;;*);;
+			*);;
+		*);;
+	-> rrel_key_sc_element: concept_electro_hydraulic_power_steering;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/electro_hydraulic_power_steering_1.png";;
+		*);;
+	*);
+...
+	(*
+	-> rrel_key_sc_element: concept_electro_hydraulic_power_steering;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/electro_hydraulic_power_steering_2.png";;
+		*);;
+	*);;
+

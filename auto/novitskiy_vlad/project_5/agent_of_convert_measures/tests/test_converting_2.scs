@@ -1,0 +1,7 @@
+test_converting_2 => nrel_main_idtf:
+[Тестирование конвертирования основной единицы измерения в СИ в единицу измерения в СИ](*<-lang_ru;;*);
+    [Testing of converting main measure in SI to measure in SI](*<-lang_en;;*);;
+
+test_converting_2 -> rrel_convertible_measure: rrel_meter;;
+test_converting_2 -> rrel_converted_measure: rrel_kilometer;;
+test_converting_2 -> amount_2;;

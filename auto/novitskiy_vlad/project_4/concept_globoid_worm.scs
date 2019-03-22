@@ -1,0 +1,67 @@
+sc_node_not_relation -> concept_globoid_worm;;
+concept_globoid_worm => nrel_main_idtf:
+[глобоидный червяк](*<-lang_ru;;*);
+[globoid worm](*<-lang_en;;*);;
+concept_globoid_worm => nrel_idtf:
+[червяк](*<-lang_ru;;*);
+[worm](*<-lang_en;;*);
+[червяк рулевого механизма](*<-lang_ru;;*);
+	[worm of steering gear](*<-lang_en;;*);;
+sc_node_not_relation -> concept_trapezoidal_thread;;
+concept_trapezoidal_thread => nrel_main_idtf:
+[трапецеидальная резьба](*<-lang_ru;;*);
+	[trapezoidal thread](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_lower_end;;
+nrel_lower_end => nrel_main_idtf:
+[нижний конец*](*<-lang_ru;;*);
+    [lower end*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_globoid_worm_VAZ_21012_3401035_10;;
+concept_globoid_worm_VAZ_21012_3401035_10 => nrel_main_idtf:
+[глобоидный червяк ВАЗ №21012-3401035-10](*<-lang_ru;;*);
+	[globoid worm VAZ №21012-3401035-10](*<-lang_en;;*);;
+exemplar_globoid_worm_VAZ_21012_3401035_10 => nrel_main_idtf:
+[Глобоидный червяк ВАЗ №21012-3401035-10](*<-lang_ru;;*);
+	[Globoid worm VAZ №21012-3401035-10](*<-lang_en;;*);;
+
+concept_globoid_worm <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_gear_screw;; 
+		->concept_trapezoidal_thread;; 
+		->nrel_torque_transmission;;
+		->concept_worm_wheel;;
+		->concept_toothed_sector;;
+		->nrel_steering_wheel_turning;;
+	*);;
+=> nrel_main_idtf: [Опр.(глобоидный червяк)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Глобоидный червяк – винт с трапецеидальной резьбой, который передает момент червячному колесу или сектору при вращении рулевого колеса.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_globoid_worm <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_lower_end; concept_steering_shaft;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Червяк есть ни что иное, как нижний конец рулевого вала.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(червяк, нижний конец*, рулевой вал)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_mechanisms;;
+	<-concept_statement_of_the_defining_type;;
+	*);;
+
+concept_globoid_worm -> rrel_example: exemplar_globoid_worm_VAZ_21012_3401035_10 (*<- concept_globoid_worm_VAZ_21012_3401035_10;;*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_globoid_worm;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/globoid_worm.png";;
+		*);;
+	*);;

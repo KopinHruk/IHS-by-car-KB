@@ -1,0 +1,24 @@
+sc_node_role_relation -> rrel_santimeter;;
+rrel_santimeter => nrel_main_idtf:
+[сантиметр'](*<-lang_ru;;*);
+[santimeter'](*<-lang_en;;*);;
+rrel_santimeter => nrel_idtf:
+	[sm'](*<-lang_en;;*);;
+
+rrel_santimeter <- rrel_key_sc_element:...
+	(*
+		<- definition;;
+		<= nrel_using_constants: ... 
+		(*
+			-> rrel_measure_in_SI;; 
+			-> nrel_distance;;
+		*);; 
+		=> nrel_main_idtf: [Опр.(сантиметр)](*<-lang_ru;;*);; 
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [<b>Сантиметр'</b> - это <sc_element sys_idtf="rrel_measure_in_SI">единица измерения</sc_element> <sc_element sys_idtf="nrel_distance">расстояния</sc_element> в СИ.](*<-lang_ru;; => nrel_format: format_html;;*);;
+			*);; 
+	*);;
+
+//задание коэффициента конвертирования*
+0_01 <= nrel_conversion_rate: (rrel_santimeter => rrel_meter);;

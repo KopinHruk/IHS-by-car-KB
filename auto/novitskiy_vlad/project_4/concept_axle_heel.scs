@@ -1,0 +1,75 @@
+sc_node_not_relation -> concept_axle_heel;;
+concept_axle_heel => nrel_main_idtf:
+[цапфа "пята"](*<-lang_ru;;*);
+[axle "heel"](*<-lang_en;;*);;
+concept_axle_heel => nrel_idtf:
+[пята](*<-lang_ru;;*);
+    [heel](*<-lang_en;;*);;
+sc_node_not_relation -> concept_solid_heel;;
+concept_solid_heel => nrel_main_idtf:
+[сплошная "пята"](*<-lang_ru;;*);
+    [solid "heel"](*<-lang_en;;*);;
+sc_node_not_relation -> concept_annular_heel;;
+concept_annular_heel => nrel_main_idtf:
+[кольцевая "пята"](*<-lang_ru;;*);
+    [annular "heel"](*<-lang_en;;*);;
+sc_node_not_relation -> concept_pectinate_heel;;
+concept_pectinate_heel => nrel_main_idtf:
+[гребенчатая "пята"](*<-lang_ru;;*);
+    [pectinate "heel"](*<-lang_en;;*);;
+sc_node_not_relation -> concept_axial_load_sensing;;
+concept_axial_load_sensing => nrel_main_idtf:
+[воспринимающий осевые нагрузки](*<-lang_ru;;*);
+    [axial load sensing](*<-lang_en;;*);;
+sc_node_not_relation -> concept_thrust_bearing;;
+concept_thrust_bearing => nrel_main_idtf:
+[подпятник](*<-lang_ru;;*);
+    [thrust bearing](*<-lang_en;;*);;
+
+concept_axle_heel <= nrel_subdividing: ...
+(*
+->concept_solid_heel;;  
+->concept_annular_heel;;
+->concept_pectinate_heel;;
+=> nrel_main_idtf: [Разбиение по признаку геометрическая форма](* <- lang_ru;; *);;
+*);;
+
+concept_axle_heel <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_stub_axle;; 
+		->nrel_located;; 
+		->nrel_part_edge;;
+		->concept_shaft;;
+		->concept_axial_load_sensing;;
+	*);;
+=> nrel_main_idtf: [Опр.(цапфа "пята")](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Цапфа "пята" – цапфа, находящаяся на краю вала и воспринимающая осевые нагрузки.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_axle_heel <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_axle_support; concept_thrust_bearing;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Опорами для пят являются подпятники.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(пята, опора цапфы*, подпятник)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_axle_heel;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/axle_heel.png";;
+		*);;
+	*);;

@@ -1,0 +1,84 @@
+sc_node_norole_relation -> nrel_steering_drive_ratio;; 
+nrel_steering_drive_ratio => nrel_main_idtf:
+[передаточное отношение рулевого привода*](*<-lang_ru;;*);
+[steering drive ratio*](*<-lang_en;;*);;
+nrel_steering_drive_ratio => nrel_idtf:
+	[передаточное число рулевого привода*](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_lever_arm;; 
+nrel_lever_arm => nrel_main_idtf:
+[плечо рычага*](*<-lang_ru;;*);
+	[lever arm*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_neutral_position_of_wheel;; 
+nrel_neutral_position_of_wheel => nrel_main_idtf:
+[нейтральное положение колеса*](*<-lang_ru;;*);
+	[neutral position of wheel*](*<-lang_en;;*);;
+sc_node_no_relation -> concept_steering_linkage_lever;; 
+concept_steering_linkage_lever => nrel_main_idtf:
+[рычаг рулевой трапеции](*<-lang_ru;;*);
+	[steering linkage lever](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_lever_tilt;; 
+nrel_lever_tilt => nrel_main_idtf:
+[наклон рычага*](*<-lang_ru;;*);
+	[lever tilt*](*<-lang_en;;*);;
+
+nrel_steering_drive_ratio <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_characteristic;;
+		->concept_steering_drive;;
+		->concept_ratio;; 
+		->nrel_lever_arm;;
+		->concept_steering_linkage_lever;;
+		->nrel_neutral_position_of_wheel;;
+		->nrel_managed_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(передаточное отношение рулевого привода*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Передаточное отношение рулевого привода* – характеристика рулевого привода, которая определяется как отношение плеч рычагов рулевой трапеции при нейтральном положении управляемых колёс.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	  
+nrel_steering_drive_ratio <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: value; nrel_managed_wheel; nrel_wheel_turning; nrel_to_change; nrel_lever_tilt; concept_steering_linkage_lever;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Величина передаточного отношения рулевого привода в процессе поворота управляемого колеса не остается постоянной вследствие изменения наклона рычагов.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(передаточное отношение рулевого привода*, величина, управляемое колесо*, поворот колеса*, меняться*, наклон рычага*, рычаг рулевой трапеции)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_car;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Передаточное число рулевого привода у различных автомобилей в среднем колеблется от 0,85 до 1. ](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(передаточное число рулевого привода*, автомобиль)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_steering_drive_ratio => nrel_first_domain: concept_steering_drive;;
+nrel_steering_drive_ratio => nrel_second_domain: value;;
+nrel_steering_drive_ratio => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_drive;;
+				->value;;
+			*);;
+	*);;
+		
+oriented_relation->nrel_steering_drive_ratio;;
+binary_relation->nrel_steering_drive_ratio;;
+antisymmetric_relation->nrel_steering_drive_ratio;;
+antitransitive_relation->nrel_steering_drive_ratio;;
+antireflexive_relation->nrel_steering_drive_ratio;;

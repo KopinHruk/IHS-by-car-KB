@@ -1,0 +1,84 @@
+sc_node_not_relation -> concept_worm_wheel;;
+concept_worm_wheel => nrel_main_idtf:
+[червячное колесо](*<-lang_ru;;*);
+	[worm wheel](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_be_a_couple;;
+nrel_to_be_a_couple => nrel_main_idtf:
+[состовлять пару*](*<-lang_ru;;*);
+    [to be a couple*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_metal;;
+concept_metal => nrel_main_idtf:
+[металл](*<-lang_ru;;*);
+	[metal](*<-lang_en;;*);;
+sc_node_not_relation -> concept_plastic;;
+concept_plastic => nrel_main_idtf:
+[пластик](*<-lang_ru;;*);
+	[plastic](*<-lang_en;;*);;
+sc_node_not_relation -> concept_composite_material;;
+concept_composite_material => nrel_main_idtf:
+[композитный материал](*<-lang_ru;;*);
+	[composite material](*<-lang_en;;*);;
+sc_node_not_relation -> concept_fibreglass;;
+concept_fibreglass => nrel_main_idtf:
+[стеклопластик](*<-lang_ru;;*);
+	[fibreglass](*<-lang_en;;*);;
+sc_node_not_relation -> concept_ebonite;;
+concept_ebonite => nrel_main_idtf:
+[эбонит](*<-lang_ru;;*);
+	[ebonite](*<-lang_en;;*);;
+
+concept_worm_wheel <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_pinion;; 
+		->nrel_to_be_a_couple;; 
+		->concept_globoid_worm;;
+		->concept_worm_and_sector;;
+	*);;
+=> nrel_main_idtf: [Опр.(червячное колесо)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Червячное колесо – зубчатое колесо, составляющее пару червяку в червячном рулевом механизме.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_worm_wheel <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_material; concept_metal; concept_plastic; concept_composite_material; concept_fibreglass; concept_ebonite;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Червячные колёса могут изготавливаться из металла, пластика, композитных материалов (стеклопластик, эбонит).](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(червячное колесо, изготавливать из*, металл, пластик, композитный материал, стеклопластик, эбонит)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_worm_wheel <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Чтобы повысить механическую прочность зубцов червячного колеса и самого червяка, после нарезки их закаливают, это относится непосредственно к шестерням из стали.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	<- rrel_key_sc_element: ... 
+		(*
+		<-explanation;;
+		<=nrel_sc_text_translation: ... 
+			(* 
+				-> rrel_example: [1. червяк; 2. червячное колесо.](*<-lang_ru;;*);;
+			*);;
+		*);;
+	-> rrel_key_sc_element: concept_worm_wheel;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/worm_wheel.png";;
+		*);;
+	*);;

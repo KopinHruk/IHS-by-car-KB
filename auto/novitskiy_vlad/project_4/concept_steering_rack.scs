@@ -1,0 +1,77 @@
+sc_node_not_relation -> concept_steering_rack;;
+concept_steering_rack => nrel_main_idtf:
+[рулевая рейка](*<-lang_ru;;*);
+	[steering rack](*<-lang_en;;*);;
+sc_node_not_relation -> concept_elementary;;
+concept_elementary => nrel_main_idtf:
+[простейший](*<-lang_ru;;*);
+[elementary](*<-lang_en;;*);;
+concept_elementary => nrel_main_idtf:
+	[простой вариант](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_steering_rack_pinion;;
+concept_steering_rack_pinion => nrel_main_idtf:
+[шестерня рулевой рейки](*<-lang_ru;;*);
+    [steering rack pinion](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_rack_rod;;
+concept_steering_rack_rod => nrel_main_idtf:
+[тяга рулевой рейки](*<-lang_ru;;*);
+    [steering rack rod](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_rack_of_FENOX_SR16010;;
+concept_steering_rack_FENOX_SR16010 => nrel_main_idtf:
+[рулевая рейка FENOX SR16010](*<-lang_ru;;*);
+	[steering rack of FENOX SR16010](*<-lang_en;;*);;
+concept_steering_rack_of_FENOX_SR16010 -> exemplar_steering_rack_FENOX_SR16010;;
+exemplar_steering_rack_FENOX_SR16010 => nrel_main_idtf:
+[Рулевая рейка FENOX SR16010](*<-lang_ru;;*);
+	[Steering rack of FENOX SR16010](*<-lang_en;;*);;
+
+concept_steering_rack <= nrel_subdividing: ...
+(*
+->concept_mechanical_steering_rack;;  
+->concept_hydraulic_steering_rack;;
+->concept_electric_steering_rack;;
+=> nrel_main_idtf: [Разбиение по признаку тип используемого усилителя руля](* <- lang_ru;; *);;
+*);;
+
+concept_steering_rack <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_composite_part;; 
+		->nrel_to_be_intended;; 
+		->nrel_to_convert;;
+		->nrel_steering_wheel_turning;;
+		->rrel_front_wheel;;
+		->nrel_wheel_turning;;
+	*);;
+=> nrel_main_idtf: [Опр.(рулевая рейка)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Рулевая рейка – это соединительная часть, предназначенная для преобразования поворота руля в горизонтальное отклонение передних колес.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_rack <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_elementary; concept_steering_rack_pinion; concept_steering_shaft; nrel_connection; concept_steering_rack_rod;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В состав самой простой рулевой рейки входят шестерня на рулевом валу и соединённая с ней тяга рулевой рейки.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевая рейка, составная часть*, простейший, шестерня рулевой рейки, рулевой вал, быть соединённым с*, тяга рулевой рейки)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_steering_rack -> rrel_example: exemplar_steering_rack_FENOX_SR16010;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_steering_rack;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/steering_rack.png";;
+		*);;
+	*);;

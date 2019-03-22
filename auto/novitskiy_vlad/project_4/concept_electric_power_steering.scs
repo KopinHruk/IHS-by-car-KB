@@ -1,0 +1,101 @@
+sc_node_not_relation -> concept_electric_power_steering;;
+concept_electric_power_steering => nrel_main_idtf:
+[электрический усилитель рулевого управления](*<-lang_ru;;*);
+[electric power steering](*<-lang_en;;*);;
+concept_electric_power_steering => nrel_idtf:
+[ЭУР](*<-lang_ru;;*);
+[электрический усилитель руля](*<-lang_ru;;*);
+[электроусилитель рулевого управления](*<-lang_ru;;*);
+	[электроусилитель руля](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_electric_power_steering_built_in_steering_column;;
+concept_electric_power_steering_built_in_steering_column => nrel_main_idtf:
+[электроусилитель руля, встроенный в рулевую колонку](*<-lang_ru;;*);
+	[electric power steering built in steering column](*<-lang_en;;*);;
+sc_node_not_relation -> concept_electromechanical_power_steering;;
+concept_electromechanical_power_steering => nrel_main_idtf:
+[электромеханический усилитель рулевого управления](*<-lang_ru;;*);
+[electromechanical power steering](*<-lang_en;;*);;
+concept_electromechanical_power_steering => nrel_idtf:
+[ЭМУР](*<-lang_ru;;*);
+[электроусилитель руля, встроенный в рулевую рейку](*<-lang_ru;;*);
+	[electric power steering built in steering rack](*<-lang_en;;*);;
+sc_node_not_relation -> concept_power_steering_servo;;
+concept_power_steering_servo => nrel_main_idtf:
+[сервопривод усилителя руля](*<-lang_ru;;*);
+	[power steering servo](*<-lang_en;;*);;
+sc_node_not_relation -> concept_power_steering_control_unit;;
+concept_power_steering_control_unit => nrel_main_idtf:
+[блок управления усилителя руля](*<-lang_ru;;*);
+	[power steering control unit](*<-lang_en;;*);;
+sc_node_not_relation -> concept_electric_drive;;
+concept_electric_drive => nrel_main_idtf:
+[электрический привод](*<-lang_ru;;*);
+	[electric drive](*<-lang_en;;*);;
+sc_node_not_relation -> concept_power_steering_of_Bmw_X6_ActiveHybrid;;
+concept_power_steering_of_Bmw_X6_ActiveHybrid => nrel_main_idtf:
+[усилитель руля Bmw X6 ActiveHybrid](*<-lang_ru;;*);
+	[power steering of Bmw X6 ActiveHybrid](*<-lang_en;;*);;
+exemplar_power_steering_of_Bmw_X6_ActiveHybrid => nrel_main_idtf:
+[Усилитель руля Bmw X6 ActiveHybrid](*<-lang_ru;;*);
+	[Power steering of Bmw X6 ActiveHybrid](*<-lang_en;;*);;
+
+concept_electric_power_steering <= nrel_subdividing: ...
+(*
+->concept_electric_power_steering_built_in_steering_column;;  
+->concept_electromechanical_power_steering;;
+=> nrel_main_idtf: [Разбиение по признаку расположение в рулевом управлении](* <- lang_ru;; *);;
+*);;
+
+//далее - разбиение электроусилителя, встроенного в рулевуюю рейку, по признаку конструктивного исполнения
+
+concept_electric_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_element;; 
+		->concept_steering_system;; 
+		->rrel_additional_effort;;
+		->concept_effort;;
+		->nrel_steering_wheel_turning;; 
+		->nrel_to_produce;; 
+		->concept_electric_drive;;
+	*);;
+=> nrel_main_idtf: [Опр.(электрический усилитель рулевого управления)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Электрический усилитель рулевого управления – конструктивный элемент рулевого управления, в котором дополнительное усилие при повороте рулевого колеса создается с помощью электрического привода.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_electric_power_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_power_steering_engine; concept_power_steering_servo; concept_power_steering_control_unit; concept_input_sensor_of_power_steering;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Электроусилитель рулевого управления состоит из электродвигателя, сервопривода, блока управления и входных датчиков.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(электроусилитель рулевого управления, составная часть*, электродвигатель усилителя руля, сервопривод усилителя руля, блок управления , входной датчик усилителя)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_electric_power_steering <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Основными преимуществами электроусилителя руля в сравнении с гидроусилителем рулевого управления являются: удобство регулирования характеристик рулевого управления; высокая информативность рулевого управления; высокая надежность в связи с отсутствием гидравлической системы; топливная экономичность, обусловленная экономным расходованием энергии (снижение расхода топлива до 0,5 л. на 100 км).](*<-lang_ru;;*);;
+		*);;
+	*);
+... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [К минусам устройства относятся: невозможность использования устройства на тяжелых грузовиках из-за его малой мощности; недостаточная влагозащищенность; высокая стоимость](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_electric_power_steering -> rrel_example: exemplar_power_steering_of_Bmw_X6_ActiveHybrid (*<- concept_power_steering_of_Bmw_X6_ActiveHybrid;;*);;

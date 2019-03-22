@@ -1,0 +1,7 @@
+test_converting_5 => nrel_main_idtf:
+[Тестирование конвертирования без основного идентификатора](*<-lang_ru;;*);
+    [Testing of converting without main identifier](*<-lang_en;;*);;
+
+test_converting_5 -> rrel_convertible_measure: rrel_kilometer;;
+test_converting_5 -> rrel_converted_measure: rrel_mile;;
+test_converting_5 -> amount_5;;

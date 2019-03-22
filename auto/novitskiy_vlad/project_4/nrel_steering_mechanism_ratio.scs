@@ -1,0 +1,104 @@
+sc_node_norole_relation -> nrel_steering_mechanism_ratio;; 
+nrel_steering_mechanism_ratio => nrel_main_idtf:
+[передаточное отношение рулевого механизма*](*<-lang_ru;;*);
+[steering mechanism ratio*](*<-lang_en;;*);;
+nrel_steering_mechanism_ratio => nrel_idtf:
+	[передаточное число рулевого механизма*](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_bipod_angle;; 
+nrel_bipod_angle => nrel_main_idtf:
+[угол поворота сошки*](*<-lang_ru;;*);
+	[bipod angle*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_rack_move;; 
+nrel_rack_move => nrel_main_idtf:
+[ход рейки*](*<-lang_ru;;*);
+	[rack move*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_passenger_car;; 
+concept_passenger_car => nrel_main_idtf:
+[легковой автомобиль](*<-lang_ru;;*);
+	[passenger car](*<-lang_en;;*);;
+sc_node_not_relation -> concept_manageability;; 
+concept_manageability => nrel_main_idtf:
+[управляемость](*<-lang_ru;;*);
+	[manageability](*<-lang_en;;*);;
+
+nrel_steering_mechanism_ratio <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_characteristic;;
+		->concept_steering_mechanism;;
+		->concept_ratio;; 
+		->nrel_steering_wheel_angle;; 
+		->nrel_bipod_angle;;
+		->nrel_rack_move;;
+	*);;
+=> nrel_main_idtf: [Опр.(передаточное отношение рулевого механизма*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Передаточное отношение рулевого механизма* – характеристика рулевого механизма, которая определяется как отношение угла поворота рулевого колеса к углу поворота сошки или к ходу рейки.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	  
+nrel_steering_mechanism_ratio <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_steering_system; nrel_not_change; nrel_to_change; nrel_managed_wheel; nrel_wheel_turning;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В зависимости от типа рулевого управления, передаточное число рулевого механизма может быть постоянным или меняться в процессе поворота.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(передаточное число рулевого механизма*, рулевое управление, быть постоянным*, меняться*, управляемое колесо*, поворот колеса*)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_passenger_car; concept_truck;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В среднем передаточное число рулевого механизма равно 10-20 для легковых автомобилей и 15-25 - для грузовых.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(передаточное число рулевого механизма*, легковой автомобиль, грузовой автомобиль)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_to_change; nrel_to_be_better; concept_manageability; nrel_difference; nrel_not_change;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Переменное передаточное число рулевого механизма обеспечивает большую управляемость автомобиля, в отличие от постоянного передаточного числа.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(передаточное отношение рулевого управления*, быть переменным*, быть лучше*, управляемость, отличаться*, быть постоянным*)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_steering_mechanism_ratio => nrel_first_domain: concept_steering_mechanism;;
+nrel_steering_mechanism_ratio => nrel_second_domain: value;;
+nrel_steering_mechanism_ratio => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_mechanism;;
+				->value;;
+			*);;
+	*);;
+		
+oriented_relation->nrel_steering_mechanism_ratio;;
+binary_relation->nrel_steering_mechanism_ratio;;
+antisymmetric_relation->nrel_steering_mechanism_ratio;;
+antitransitive_relation->nrel_steering_mechanism_ratio;;
+antireflexive_relation->nrel_steering_mechanism_ratio;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: nrel_steering_mechanism_ratio;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/nrel_steering_mechanism_ratio.png";;
+		*);;
+	*);;

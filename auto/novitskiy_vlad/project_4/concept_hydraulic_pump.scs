@@ -1,0 +1,63 @@
+sc_node_not_relation -> concept_hydraulic_pump;;
+concept_hydraulic_pump => nrel_main_idtf:
+[гидравлический насос](*<-lang_ru;;*);
+[hydraulic pump](*<-lang_en;;*);;
+concept_hydraulic_pump => nrel_idtf:
+[насос гидроусилителя](*<-lang_ru;;*);
+	[power steering pump](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_to_create;;
+nrel_to_create => nrel_main_idtf:
+[создавать*](*<-lang_ru;;*);
+    [to create*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_adjustable_hydraulic_pump;;
+concept_adjustable_hydraulic_pump => nrel_main_idtf:
+[регулируемый гидравлический насос](*<-lang_ru;;*);
+	[adjustable hydraulic pump](*<-lang_en;;*);;
+sc_node_not_relation -> concept_non_adjustable_hydraulic_pump;;
+concept_non_adjustable_hydraulic_pump => nrel_main_idtf:
+[нерегулируемый гидравлический насос](*<-lang_ru;;*);
+	[non-adjustable hydraulic pump](*<-lang_en;;*);;
+sc_node_not_relation -> concept_vane_hydraulic_pump;;
+concept_adjustable_hydraulic_pump => nrel_main_idtf:
+[лопастный гидравлический насос](*<-lang_ru;;*);
+	[vane hydraulic pump](*<-lang_en;;*);;
+sc_node_not_relation -> concept_gear_type_hydraulic_pump;;
+concept_gear_type_hydraulic_pump => nrel_main_idtf:
+[шестерёночный гидравлический насос](*<-lang_ru;;*);
+	[gear type hydraulic pump](*<-lang_en;;*);;
+
+concept_hydraulic_pump <= nrel_subdividing: ...
+(*
+->concept_adjustable_hydraulic_pump;;  
+->concept_non_adjustable_hydraulic_pump;;
+=> nrel_main_idtf: [Разбиение по признаку тип управления](* <- lang_ru;; *);;
+*);;
+
+concept_hydraulic_pump <= nrel_subdividing: ...
+(*
+->concept_vane_hydraulic_pump;;  
+->concept_gear_type_hydraulic_pump;;
+=> nrel_main_idtf: [Разбиение по признаку устройство и функционирование](* <- lang_ru;; *);;
+*);;
+
+concept_hydraulic_pump <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_composite_part;; 
+		->concept_hydraulic_power_steering;; 
+		->concept_electro_hydraulic_power_steering;;
+		->nrel_to_create;;
+		->nrel_hydraulic_pressure;;
+		->concept_working_fluid_of_power_steering;;
+		->nrel_to_move_cyclically;;
+	*);;
+=> nrel_main_idtf: [Опр.(гидравлический насос)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Гидравлический насос – часть гидравлического или электрогидравлического усилителя руля, создающая давление жидкости для её циркуляции в системе усилителя.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_hydraulic_pump -> rrel_example: exemplar_hydraulic_pump_TRW_JPR284;;

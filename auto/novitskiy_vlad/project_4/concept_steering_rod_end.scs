@@ -1,0 +1,116 @@
+sc_node_not_relation -> concept_steering_rod_end;;
+concept_steering_rod_end => nrel_main_idtf:
+[наконечник рулевой тяги](*<-lang_ru;;*);
+[steering rod end](*<-lang_en;;*);;
+concept_steering_rod_end => nrel_idtf:
+[рулевой наконечник](*<-lang_ru;;*);
+	[steering tip](*<-lang_en;;*);;
+sc_node_not_relation -> concept_relay_rod_end;;
+concept_relay_rod_end => nrel_main_idtf:
+[наконечник поперечной рулевой тяги](*<-lang_ru;;*);
+	[relay rod end](*<-lang_en;;*);;
+sc_node_not_relation -> concept_longitudinal_tie_rod_end;;
+concept_longitudinal_tie_rod_end => nrel_main_idtf:
+[наконечник продольной рулевой тяги](*<-lang_ru;;*);
+	[longitudinal tie rod end](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_knuckle_turning;;
+nrel_knuckle_turning => nrel_main_idtf:
+[поворот кулака*](*<-lang_ru;;*);
+    [knuckle turning*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_rotation_angle_of_knuckle;;
+nrel_rotation_angle_of_knuckle => nrel_main_idtf:
+[угол поворота кулака*](*<-lang_ru;;*);
+    [rotation angle of knuckle*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_housing_of_steering_rod_end;;
+concept_housing_of_steering_rod_end => nrel_main_idtf:
+[корпус наконечника рулевой тяги](*<-lang_ru;;*);
+	[housing of steering rod end](*<-lang_en;;*);;
+sc_node_not_relation -> concept_insert_of_steering_rod_end;;
+concept_insert_of_steering_rod_end => nrel_main_idtf:
+[вкладыш наконечника рулевой тяги](*<-lang_ru;;*);
+	[insert of steering rod end](*<-lang_en;;*);;
+sc_node_not_relation -> concept_cover_of_steering_rod_end;;
+concept_cover_of_steering_rod_end => nrel_main_idtf:
+[крышка наконечника рулевой тяги](*<-lang_ru;;*);
+	[cover of steering rod end](*<-lang_en;;*);;
+sc_node_not_relation -> concept_slipcover_of_steering_rod_end;;
+concept_slipcover_of_steering_rod_end => nrel_main_idtf:
+[чехол наконечника рулевой тяги](*<-lang_ru;;*);
+	[slipcover of steering rod end](*<-lang_en;;*);;
+sc_node_not_relation -> concept_spring_of_steering_rod_end;;
+concept_spring_of_steering_rod_end => nrel_main_idtf:
+[пружина наконечника рулевой тяги](*<-lang_ru;;*);
+	[spring of steering rod end](*<-lang_en;;*);;
+sc_node_not_relation -> concept_nut_of_steering_rod_end;;
+concept_nut_of_steering_rod_end => nrel_main_idtf:
+[гайка наконечника рулевой тяги](*<-lang_ru;;*);
+	[nut of steering rod end](*<-lang_en;;*);;
+
+concept_steering_rod_end <= nrel_subdividing: ...
+(*
+->concept_relay_rod_end;;  
+->concept_longitudinal_tie_rod_end;;
+=> nrel_main_idtf: [Разбиение по признаку использующая рулевая тяга](* <- lang_ru;; *);;
+*);;
+
+concept_steering_rod_end <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_element;; 
+		->concept_steering_system;; 
+		->nrel_knuckle_turning;;
+		->nrel_rotation_angle_of_knuckle;;
+	*);;
+=> nrel_main_idtf: [Опр.(наконечник рулевой тяги)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Наконечник рулевой тяги – элемент системы рулевого управления, который осуществляет поворот кулака на определённый угол.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_rod_end <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_connection; nrel_part_edge; concept_steering_rod; concept_knuckle;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Наконечник рулевой тяги соединён одним краем с рулевой тягой, а другим - с поворотным кулаком.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(наконечник рулевой тяги, соединяться с*, край детали*, рулевая тяга, край детали*, поворотный кулак)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_housing_of_steering_rod_end; concept_ball_finger; concept_insert_of_steering_rod_end; concept_cover_of_steering_rod_end; concept_slipcover_of_steering_rod_end; concept_spring_of_steering_rod_end; concept_nut_of_steering_rod_end;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Наконечник рулевой тяги состоит из корпуса, шарового пальца, вкладыша, крышки, чехла, кольца, пружины и гайки.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(наконечник рулевой тяги, составная часть*, корпус наконечника рулевой тяги, шаровой палец, вкладыш наконечника рулевой тяги, крышка наконечника рулевой тяги, чехол наконечника рулевой тяги, пружина наконечника рулевой тяги, гайка наконечника рулевой тяги)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_hydraulic_power_steering <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Зависимо от типа и особенностей автомобильной системы управления, в одной машине встречается от четырех до шести наконечников.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_steering_rod_end -> rrel_example: exemplar_relay_rod_end_FEBI_BILSTEIN_06641;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_steering_rod_end;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/steering_rod_end.png";;
+		*);;
+	*);;

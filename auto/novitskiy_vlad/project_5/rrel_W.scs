@@ -1,0 +1,25 @@
+sc_node_role_relation -> rrel_W;;
+rrel_W => nrel_main_idtf:
+[ватт'](* <- lang_ru;; *);
+[watt'](* <- lang_en;; *);;
+rrel_W => nrel_idtf:
+[Вт'](* <- lang_ru;; *);
+    [W'](* <- lang_en;; *);;
+
+rrel_W<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(ватт')]  (* <- lang_ru;; *);;
+	<- definition;;
+    <= nrel_using_constants:...
+	(*
+		-> rrel_main_measure_in_SI;;
+        -> concept_power;;
+	*);;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Ватт' - основная единица измерения мощности электрического тока.](* <- lang_ru;; *);;
+		*);;
+*);;

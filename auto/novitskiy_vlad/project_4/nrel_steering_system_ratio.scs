@@ -1,0 +1,113 @@
+sc_node_norole_relation -> nrel_steering_system_ratio;; 
+nrel_steering_system_ratio => nrel_main_idtf:
+[передаточное отношение рулевого управления*](*<-lang_ru;;*);
+[steering system ratio*](*<-lang_en;;*);;
+nrel_steering_system_ratio => nrel_idtf:
+	[передаточное число рулевого управления*](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_ratio;; 
+concept_ratio => nrel_main_idtf:
+[соотношение](*<-lang_ru;;*);
+	[ratio](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_average_rotation_angle_of_managed_wheels;; 
+nrel_average_rotation_angle_of_managed_wheels => nrel_main_idtf:
+[средний угол поворота управляемых колёс*](*<-lang_ru;;*);
+	[average rotation angle of managed wheels*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_effort;; 
+concept_effort => nrel_main_idtf:
+[усилие](*<-lang_ru;;*);
+[effort](*<-lang_en;;*);;
+concept_effort => nrel_idtf:
+	[механическое воздействие](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_to_increase;; 
+nrel_to_increase => nrel_main_idtf:
+[увеличивать*](*<-lang_ru;;*);
+	[to increase*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_reduce;;
+nrel_to_reduce => nrel_main_idtf:
+[уменьшать*](*<-lang_ru;;*);
+[to reduce*](*<-lang_en;;*);;
+nrel_to_reduce => nrel_main_idtf:
+[ухудшать*](*<-lang_ru;;*);
+	[снижать*](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_wheel_turning_speed;; 
+nrel_wheel_turning_speed => nrel_main_idtf:
+[скорость поворота колеса*](*<-lang_ru;;*);
+	[wheel turning speed*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_maneuverability;; 
+concept_maneuverability => nrel_main_idtf:
+[манёвренность](*<-lang_ru;;*);
+	[maneuverability](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_not_change;; 
+nrel_not_change => nrel_main_idtf:
+[не изменять*](*<-lang_ru;;*);
+[not change*](*<-lang_en;;*);;
+nrel_not_change => nrel_idtf:
+[быть постоянным*](*<-lang_ru;;*);
+	[to be constant*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_fatigability;; 
+concept_fatigability => nrel_main_idtf:
+[утомляемость](*<-lang_ru;;*);
+	[fatigability](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_value;; 
+nrel_value => nrel_main_idtf:
+[значение*](*<-lang_ru;;*);
+	[value*](*<-lang_en;;*);;
+
+nrel_steering_system_ratio <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_ratio;; 
+		->nrel_steering_wheel_angle;; 
+		->nrel_managed_wheel;;
+		->nrel_average_rotation_angle_of_managed_wheels;;
+	*);;
+=> nrel_main_idtf: [Опр.(передаточное отношение рулевого управления*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Передаточное отношение рулевого управления* - отношение угла поворота рулевого колеса к среднему углу поворота управляемых колес.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	  
+nrel_steering_system_ratio <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_to_increase; nrel_to_reduce; concept_effort; nrel_managed_wheel; nrel_wheel_turning; nrel_wheel_turning_speed; concept_maneuverability; nrel_work; rrel_driver; nrel_not_change; nrel_to_cause; concept_fatigability;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Путём значительного увеличения передаточного числа рулевого управления, можно уменьшить усилия, необходимые для поворота управляемых колес, однако это ведет к снижению скорости поворота колес, а следовательно, к ухудшению маневренности автомобиля, при этом величина работы, выполняемой водителем, не изменяется, что, естественно, приводит к утомляемости водителя.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(передаточное число рулевого управления*, увеличивать*, уменьшать*, усилие, управляемое колесо*, поворот колеса*, снижать*, скорость поворота колеса*, манёвренность автомобиля, величина, работа*, водитель', не изменять*, приводить к*, утомляемость)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_determine; nrel_value; nrel_steering_wheel_angle;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Передаточное отношение рулевого управления может быть определено при любом значении угла поворота рулевого колеса.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(передаточное отношение рулевого управления*, определять*, значение*, угол поворота рулевого колеса*)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_steering_system_ratio => nrel_first_domain: concept_steering_system;;
+nrel_steering_system_ratio => nrel_second_domain: value;;
+nrel_steering_system_ratio => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_system;;
+				->value;;
+			*);;
+	*);;
+		
+oriented_relation->nrel_steering_system_ratio;;
+binary_relation->nrel_steering_system_ratio;;
+antisymmetric_relation->nrel_steering_system_ratio;;
+antitransitive_relation->nrel_steering_system_ratio;;
+antireflexive_relation->nrel_steering_system_ratio;;

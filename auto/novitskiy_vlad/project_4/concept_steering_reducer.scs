@@ -1,0 +1,163 @@
+sc_node_not_relation -> concept_steering_reducer;;
+concept_steering_reducer => nrel_main_idtf:
+[рулевой редуктор](*<-lang_ru;;*);
+[steering reducer](*<-lang_en;;*);;
+concept_steering_reducer => nrel_idtf:
+[редуктор](*<-lang_ru;;*);
+	[reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_mechanical_transfer;;
+concept_mechanical_transfer => nrel_main_idtf:
+[механическая передача](*<-lang_ru;;*);
+	[mechanical transfer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_reducer_housing;;
+concept_reducer_housing => nrel_main_idtf:
+[корпус редуктора](*<-lang_ru;;*);
+	[reducer housing](*<-lang_en;;*);;
+sc_node_not_relation -> concept_worm_reducer;;
+concept_worm_reducer => nrel_main_idtf:
+[червячный редуктор](*<-lang_ru;;*);
+	[worm reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_gear_reducer;;
+concept_gear_reducer => nrel_main_idtf:
+[зубчатый редуктор](*<-lang_ru;;*);
+	[gear reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_gear_worm_reducer;;
+concept_gear_worm_reducer => nrel_main_idtf:
+[зубчато-червячный редуктор](*<-lang_ru;;*);
+	[gear-worm reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_single_stage_reducer;;
+concept_single_stage_reducer => nrel_main_idtf:
+[одноступенчатый редуктор](*<-lang_ru;;*);
+	[single-stage reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_multistage_reducer;;
+concept_multistage_reducer => nrel_main_idtf:
+[многоступенчатый редуктор](*<-lang_ru;;*);
+	[multistage reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_cylindrical_reducer;;
+concept_cylindrical_reducer => nrel_main_idtf:
+[цилиндрический редуктор](*<-lang_ru;;*);
+	[cylindrical reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_bevel_reducer;;
+concept_bevel_reducer => nrel_main_idtf:
+[цилиндрический редуктор](*<-lang_ru;;*);
+	[bevel reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_bevel_cylindrical_reducer;;
+concept_bevel_cylindrical_reducer => nrel_main_idtf:
+[коническо-цилиндрический редуктор](*<-lang_ru;;*);
+	[bevel-cylindrical reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_horizontal_reducer;;
+concept_horizontal_reducer => nrel_main_idtf:
+[горизонтальный редуктор](*<-lang_ru;;*);
+	[horizontal reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_vertical_reducer;;
+concept_vertical_reducer => nrel_main_idtf:
+[вертикальный редуктор](*<-lang_ru;;*);
+	[vertical reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_reducer_with_double_stage;;
+concept_reducer_with_double_stage => nrel_main_idtf:
+[редуктор с раздвоенной ступенью](*<-lang_ru;;*);
+	[reducer with double stage](*<-lang_en;;*);;
+sc_node_not_relation -> concept_reducer_with_deployed_coaxial_scheme;;
+concept_reducer_with_deployed_coaxial_scheme => nrel_main_idtf:
+[редуктор с развернутой соосной схемой](*<-lang_ru;;*);
+	[reducer with deployed coaxial scheme](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_reducer_efficiency;;
+nrel_reducer_efficiency => nrel_main_idtf:
+[КПД редуктора*](*<-lang_ru;;*);
+    [reducer efficiency*](*<-lang_en;;*);;
+
+concept_steering_reducer <= nrel_subdividing: ...
+(*
+->concept_worm_reducer;;  
+->concept_gear_reducer;;
+->concept_gear_worm_reducer;;
+=> nrel_main_idtf: [Разбиение по признаку тип используемой передачи](* <- lang_ru;; *);;
+*);;
+
+concept_steering_reducer <= nrel_subdividing: ...
+(*
+->concept_single_stage_reducer;;  
+->concept_multistage_reducer;;
+=> nrel_main_idtf: [Разбиение по признаку число ступеней](* <- lang_ru;; *);;
+*);;
+
+concept_steering_reducer <= nrel_subdividing: ...
+(*
+->concept_cylindrical_reducer;;  
+->concept_bevel_reducer;;
+->concept_bevel_cylindrical_reducer;;
+=> nrel_main_idtf: [Разбиение по признаку тип используемых зубчатых колёс](* <- lang_ru;; *);;
+*);;
+
+concept_steering_reducer <= nrel_subdividing: ...
+(*
+->concept_horizontal_reducer;;  
+->concept_vertical_reducer;;
+=> nrel_main_idtf: [Разбиение по признаку расположения валов редуктора в пространстве](* <- lang_ru;; *);;
+*);;
+
+concept_steering_reducer <= nrel_subdividing: ...
+(*
+->concept_reducer_with_double_stage;;  
+->concept_reducer_with_deployed_coaxial_scheme;;
+=> nrel_main_idtf: [Разбиение по признаку особенности кинематической схемы](* <- lang_ru;; *);;
+*);;
+
+concept_steering_reducer <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_device;; 
+		->nrel_torque_transmission;; 
+		->nrel_to_convert;;
+		->nrel_circle_moment;;
+	*);;
+=> nrel_main_idtf: [Опр.(рулевой редуктор)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Рулевой редуктор – это устройство, передающее и преобразующе крутящий момент.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_reducer <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_reducer_housing; concept_mechanical_transfer;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Рулевой редуктор состоит из корпуса, а также одной или более механических передач.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевой редуктор, составная часть*, корпус редуктора, механическая передача)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_mass; concept_car; nrel_be_more; nrel_reducer_efficiency; nrel_provide; concept_managed;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Чем больше масса машины, тем большим должен быть КПД рулевого редуктора, для обеспечения автомобилю нормальной управляемости.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевой редуктор, масса*, автомобиль, больше*, КПД редуктора*, обеспечивать*, автомобиль, управляемый)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	<- rrel_key_sc_element: ... 
+		(*
+		<-explanation;;
+		<=nrel_sc_text_translation: ... 
+			(* 
+				-> rrel_example: [1. Уплотнительный колпачок; 2. Гайка низкая; 3. Шайба стопорная; 4. Пластина регулировочного винта; 5. Винт регулировочный;6. Вал сошки; 7. Сепаратор с шариками: 8. Кольцо нижнего подшипника червячного вала; 9. Прокладка регулировочная; 10. Крышка картера нижняя; 11. Винт; 12. Сошка; 13. Шайба 20 пружинная; 14. Пробка мк; 15. Крышка картера верхняя; 16. Прокладка верхней крышки; 17. Сальник червяка;18. Картер рулевого механизма: 19. Втулка вала сошки; 20. Сальник вала сошки; 21. Кольцо верхнего подшипника; 22. Вал червячный; 23. Гайка М20×1.5.](*<-lang_ru;;*);;
+			*);;
+		*);;
+	-> rrel_key_sc_element: concept_steering_reducer;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/steering_reducer.png";;
+		*);;
+	*);;

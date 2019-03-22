@@ -1,0 +1,85 @@
+sc_node_not_relation -> concept_steering_system;;
+concept_steering_system => nrel_main_idtf:
+[система рулевого управления](*<-lang_ru;;*);
+[steering system](*<-lang_en;;*);;
+concept_steering_system => nrel_idtf:
+	[рулевое управление](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_steering_position;;
+nrel_steering_position => nrel_main_idtf:
+[положение рулевого колеса*](*<-lang_ru;;*);
+[steering position*](*<-lang_en;;*);;
+nrel_steering_position => nrel_idtf:
+	[положение руля*](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_to_synchronize;;
+nrel_to_synchronize => nrel_main_idtf:
+[синхронизировать*](*<-lang_ru;;*);
+	[synchronize*](*<-lang_en;;*);;
+
+concept_steering_system <= nrel_subdividing: ...
+(*
+->concept_steering_system_with_hydraulic_power_steering;;  
+->concept_steering_system_with_electro_hydraulic_power_steering;;
+->concept_steering_system_with_electric_power_steering;;
+=> nrel_main_idtf: [Разбиение по признаку вид используемого усилителя](* <- lang_ru;; *);;
+*);;
+
+concept_steering_system <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_system;; 
+		->nrel_to_be_intended;; 
+		->concept_car;;
+		->rrel_driver;; 
+		->nrel_driving_direction;;
+	*);;
+=> nrel_main_idtf: [Опр.(система рулевого управления)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Система рулевого управления - система, предназначенная для обеспечения движения автомобиля
+							    в заданном водителем направлении.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_system <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_modern_car; concept_steering_wheel;
+                                           concept_steering_column; concept_steering_mechanism; concept_steering_drive;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Составными частями рулевого управления современного автомобиля являются рулевое колесо, рулевая колонка,
+                                           рулевой механизм и рулевой привод.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевое управление, cоставная часть*, современный автомобиль, рулевое колесо, рулевая колонка, 
+							 рулевой механизм, рулевой привод)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_system; set; concept_car_node; concept_device; nrel_to_be_intended; nrel_to_synchronize;
+								     nrel_steering_position; nrel_managed_wheel; nrel_rotation_angle_of_wheel;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Рулевое управление - система автомобиля, которая представляет собой совокупность узлов и механизмов,
+ предназначенных для синхронизации положения рулевого колеса и угла поворота управляемых колес.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевое управление, система, множество, автомобильный узел, механизм, быть предназначенным*,
+								    синхронизировать*, положение рулевого колеса*, управляемое колесо*, поворот колеса*, угол поворота колеса*)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_systems;;
+	<-concept_statement_of_the_defining_type;;
+	*);;
+
+concept_steering_system -> rrel_example: exemplar_steering_system_of_Infiniti_Q50;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_steering_system;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/steering_system.png";;
+		*);;
+	*);;

@@ -1,0 +1,95 @@
+sc_node_not_relation -> concept_stub_axle;;
+concept_stub_axle => nrel_main_idtf:
+[поворотная цапфа](*<-lang_ru;;*);
+    [stub axle](*<-lang_en;;*);;
+sc_node_not_relation -> concept_front_stub_axle;;
+concept_front_stub_axle => nrel_main_idtf:
+[передняя поворотная цапфа](*<-lang_ru;;*);
+    [front stub axle](*<-lang_en;;*);;
+sc_node_not_relation -> concept_rear_stub_axle;;
+concept_rear_stub_axle => nrel_main_idtf:
+[задняя поворотная цапфа](*<-lang_ru;;*);
+    [rear stub axle](*<-lang_en;;*);;
+sc_node_not_relation -> concept_shaft;;
+concept_shaft => nrel_main_idtf:
+[вал](*<-lang_ru;;*);
+    [shaft](*<-lang_en;;*);;
+sc_node_not_relation -> concept_hub_bearing;;
+concept_hub_bearing => nrel_main_idtf:
+[подшипник ступицы](*<-lang_ru;;*);
+    [hub bearing](*<-lang_en;;*);;
+sc_node_not_relation -> concept_stub_axle_MTZ_70_3001085;;
+concept_stub_axle_MTZ_70_3001085 => nrel_main_idtf:
+[поворотная цапфа МТЗ 70-3001085](*<-lang_ru;;*);
+	[stub axle MTZ 70-3001085](*<-lang_en;;*);;
+concept_stub_axle_MTZ_70_3001085 -> exemplar_stub_axle_MTZ_70_3001085;;
+exemplar_stub_axle_MTZ_70_3001085 => nrel_main_idtf:
+[Поворотная цапфа МТЗ 70-3001085](*<-lang_ru;;*);
+	[Stub axle MTZ 70-3001085](*<-lang_en;;*);;
+
+concept_stub_axle <= nrel_subdividing: ...
+(*
+->concept_axle_spike;;  
+->concept_axle_neck;;
+->concept_axle_heel;;
+=> nrel_main_idtf: [Разбиение по признаку расположение на валу](* <- lang_ru;; *);;
+*);;
+
+concept_stub_axle <= nrel_subdividing: ...
+(*
+->concept_front_stub_axle;;  
+->concept_rear_stub_axle;;
+=> nrel_main_idtf: [Разбиение по признаку расположение в автомобиле](* <- lang_ru;; *);;
+*);;
+
+concept_stub_axle <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_element;; 
+		->concept_steering_system;; 
+		->nrel_to_be_intended;;
+		->nrel_connection;;
+		->nrel_with_the_help_of;;
+		->concept_wheel_hub;;
+		->concept_ball_joint;;
+	*);;
+=> nrel_main_idtf: [Опр.(поворотная цапфа)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Поворотная цапфа – это элемент рулевого управления, предназначеный для соединения ступицы и шаровой опоры.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_stub_axle <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_shaft; concept_axis; nrel_located; concept_hub_bearing;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Поворотная цапфа представляет собой часть вала или ось, на которой расположен подшипник ступицы.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(шаровая опора, часть*, вал, ось, быть расположенным*, подшипник ступицы)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_statement_of_the_defining_type;;
+	*);;
+
+concept_stub_axle -> rrel_example: exemplar_stub_axle_MTZ_70_3001085;;
+
+illustration -> ...
+	(*
+	<- rrel_key_sc_element: ... 
+		(*
+		<-explanation;;
+		<=nrel_sc_text_translation: ... 
+			(* 
+				-> rrel_example: [1. поворотный рычаг; 2. ось цапфы; 3. вилка цапфы; 4. втулка шкворня; 5. шкворень.](*<-lang_ru;;*);;
+			*);;
+		*);;
+	-> rrel_key_sc_element: concept_stub_axle;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/stub_axle.png";;
+		*);;
+	*);;

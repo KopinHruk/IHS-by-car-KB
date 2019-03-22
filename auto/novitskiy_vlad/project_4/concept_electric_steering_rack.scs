@@ -1,0 +1,77 @@
+sc_node_not_relation -> concept_electric_steering_rack;;
+concept_electric_steering_rack => nrel_main_idtf:
+[электрическая рулевая рейка](*<-lang_ru;;*);
+	[electric steering rack](*<-lang_en;;*);;
+sc_node_not_relation -> concept_power_steering_electric_motor;;
+concept_power_steering_electric_motor => nrel_main_idtf:
+[электромотор усилителя руля](*<-lang_ru;;*);
+	[power steering electric motor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_rack_of_Chevrolet_Cruze;;
+concept_steering_rack_Chevrolet_Cruze => nrel_main_idtf:
+[рулевая рейка Chevrolet Cruze](*<-lang_ru;;*);
+	[steering rack of Chevrolet Cruze](*<-lang_en;;*);;
+exemplar_steering_rack_Chevrolet_Cruze => nrel_main_idtf:
+[Рулевая рейка Chevrolet Cruze](*<-lang_ru;;*);
+	[Steering rack of Chevrolet Cruze](*<-lang_en;;*);;
+
+concept_electric_steering_rack <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_rack;; 
+		->concept_power_steering_electric_motor;; 
+		->nrel_to_strengthen;;
+		->concept_effort;;
+		->nrel_to_exert_effort;;
+		->rrel_driver;;
+		->concept_steering_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(электрическая рулевая рейка)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Электрическая рулевая рейка – рулевая рейка, электромотор которой усиливает механическое воздействие, которое оказывает водитель на руль.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_electric_steering_rack <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_electric_power_steering; nrel_be_built_in; nrel_located; concept_steering_shaft;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В электрической рулевой рейке электроусилитель может быть интегрированным, либо находиться на рулевом валу.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(гидравлическая рулевая рейка, электроусилитель, быть интегрированным*, находиться*, рулевой вал)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_electric_steering_rack <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [К плюсам электрической рулевой рейки относятся: высокий коэффициент полезного действия; простота и компактность; невосприимчивость к погодным условиям; отсутствие рабочих жидкостей; высокая надежность из-за отсутствия прокладок, сальников, трубок; экономичность (электромотор работает только при повороте руля, а при высокой скорости отключается); небольшая стоимость; быстрый возврат руля в нейтральное положение.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_electric_steering_rack <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Минусом электрической рулевой рейки является пониженная по сравнению с гидравлической рулевой рейкой безопастность.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_electric_steering_rack -> rrel_example: exemplar_steering_rack_Chevrolet_Cruze (*<- concept_steering_rack_Chevrolet_Cruze;;*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_electric_steering_rack;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/electric_steering_rack.png";;
+		*);;
+	*);;

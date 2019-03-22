@@ -1,0 +1,108 @@
+sc_node_not_relation -> concept_hydraulic_steering_rack;;
+concept_hydraulic_steering_rack => nrel_main_idtf:
+[гидравлическая рулевая рейка](*<-lang_ru;;*);
+	[hydraulic steering rack](*<-lang_en;;*);;
+sc_node_not_relation -> concept_maneuverable;; 
+concept_maneuverable => nrel_main_idtf:
+[манёвренный](*<-lang_ru;;*);
+[maneuverable](*<-lang_en;;*);;
+concept_maneuverable => nrel_idtf:
+	[высокая манёвренность](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_managed;; 
+concept_managed => nrel_main_idtf:
+[управляемый](*<-lang_ru;;*);
+[managed](*<-lang_en;;*);;
+concept_maneuverable => nrel_idtf:
+	[лёгкое управление](*<-lang_ru;;*);;
+sc_node_not_relation -> nrel_to_depend;;
+nrel_to_depend => nrel_main_idtf:
+[зависеть*](*<-lang_ru;;*);
+     [to depend*](*<-lang_en;;*);;
+sc_node_not_relation -> nrel_to_strengthen;;
+nrel_to_strengthen => nrel_main_idtf:
+[усиливать*](*<-lang_ru;;*);
+     [to strengthen*](*<-lang_en;;*);;
+sc_node_not_relation -> nrel_to_exert_effort;;
+nrel_to_exert_effort => nrel_main_idtf:
+[прилагать усилие*](*<-lang_ru;;*);
+[to exert effort*](*<-lang_en;;*);;
+nrel_to_exert_effort => nrel_idtf:
+	[оказывать усилие*](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_steering_rack_MOTORHERZ_R23001NW;;
+concept_steering_rack_MOTORHERZ_R23001NW => nrel_main_idtf:
+[рулевая рейка MOTORHERZ R23001NW](*<-lang_ru;;*);
+	[steering rack MOTORHERZ R23001NW](*<-lang_en;;*);;
+exemplar_steering_rack_MOTORHERZ_R23001NW => nrel_main_idtf:
+[Рулевая рейка MOTORHERZ R23001NW](*<-lang_ru;;*);
+	[Steering rack MOTORHERZ R23001NW](*<-lang_en;;*);;
+
+concept_hydraulic_steering_rack <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_rack;; 
+		->concept_hydraulic_power_steering;; 
+		->nrel_to_strengthen;;
+		->concept_effort;;
+		->nrel_to_exert_effort;;
+		->rrel_driver;;
+		->concept_steering_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(гидравлическая рулевая рейка)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Гидравлическая рулевая рейка – рулевая рейка, гидроусилитель которой усиливает механическое воздействие, которое оказывает водитель на руль.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_hydraulic_steering_rack <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_provide; concept_managed; concept_car; concept_maneuverable; nrel_to_depend; nrel_speed;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Гидравлическая рулевая рейка обеспечивает лёгкость управления автомобилем и высокую маневренность, вне зависимости от скорости езды.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(гидравлическая рулевая рейка, обеспечивать*, лёгкое управление, автомобиль, высокая манёвренность, зависеть*, скорость*)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_hydraulic_steering_rack <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [К минусам гидравлической рулевой рейки относятся: плохая информативность руля, отсутствия хорошей обратной связи; плохая надежность из-за большого давления при работе; протечка и регулярная замена сальников, прокладок, трубок; постоянная работа системы, даже если неподвижно стоите с заведенным мотором, насос будет циркулировать жидкость в системе; проблемы при ремонте, приходиться менять жидкость.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_hydraulic_steering_rack -> rrel_example: exemplar_steering_rack_MOTORHERZ_R23001NW (*<- concept_steering_rack_MOTORHERZ_R23001NW;;*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_hydraulic_steering_rack;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/hydraulic_steering_rack_1.png";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_hydraulic_steering_rack;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/hydraulic_steering_rack_2.png";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_hydraulic_steering_rack;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/hydraulic_steering_rack_3.png";;
+		*);;
+	*);;

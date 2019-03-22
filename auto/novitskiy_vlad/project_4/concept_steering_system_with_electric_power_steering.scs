@@ -1,0 +1,76 @@
+sc_node_not_relation -> concept_steering_system_with_electric_power_steering;;
+concept_steering_system_with_electric_power_steering => nrel_main_idtf:
+[система рулевого управления с ЭУР](*<-lang_ru;;*);
+[steering system with electric power steering](*<-lang_en;;*);;
+concept_steering_system_with_electric_power_steering => nrel_idtf:
+[рулевое управление с ЭУР](*<-lang_ru;;*);
+	[электрическое рулевое управление](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_be_more_progressive;; 
+nrel_be_more_progressive => nrel_main_idtf:
+[быть прогрессивнее*](*<-lang_ru;;*);
+	[be more progressive*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_easy_adjustment_of_control_settings;;
+concept_easy_adjustment_of_control_settings => nrel_main_idtf:
+[простая регулировка настроек управления](*<-lang_ru;;*);
+	[easy adjustment of control settings](*<-lang_en;;*);;
+sc_node_not_relation -> concept_high_reliability;;
+concept_high_reliability => nrel_main_idtf:
+[высокая надёжность](*<-lang_ru;;*);
+[high reliability](*<-lang_en;;*);;
+concept_high_reliability => nrel_idtf:
+	[высокая надёжность работы](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_economical_fuel_consumption;;
+concept_economical_fuel_consumption => nrel_main_idtf:
+[экономный расход топлива](*<-lang_ru;;*);
+	[economical fuel consumption](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_system_of_Honda_S2000;;
+concept_steering_system_of_Honda_S2000 => nrel_main_idtf:
+[рулевое управление Honda S2000](*<-lang_ru;;*);
+	[steering system of Honda S2000](*<-lang_en;;*);;
+concept_steering_system_of_Honda_S2000 -> exemplar_steering_system_of_Honda_S2000;;
+exemplar_steering_system_of_Honda_S2000 => nrel_main_idtf:
+[Рулевое управление Honda S2000](*<-lang_ru;;*);
+	[Steering system of Honda S2000](*<-lang_en;;*);;
+
+concept_steering_system_with_electric_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_system;; 
+		->nrel_design;; 
+		->concept_electric_power_steering;;
+	*);;
+=> nrel_main_idtf: [Опр.(система рулевого управления с ЭУР)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Система рулевого управления с ЭУР – рулевое управление, в конструкцию которого входит электрический усилитель руля.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_system_with_electric_power_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_be_more_progressive; concept_steering_system_with_hydraulic_power_steering;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Система рулевого управления с электрическим усилителем считается более прогрессивной, чем система с гидравлическим усилителем.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система рулевого управления с ЭУР, быть прогрессивнее*, система рулевого управления с ГУР)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_advantage; concept_easy_adjustment_of_control_settings; concept_high_reliability; concept_economical_fuel_consumption;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Достоинствами электрического рулевого управления являются простота регулировки настроек управления, высокая надежность работы и экономный расход топлива.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(электрическое рулевое управление, достоинство*, простая регулировка настроек управления, высокая надёжность работы, экономный расход топлива)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_steering_system_with_electric_power_steering -> rrel_example: exemplar_steering_system_of_Honda_S2000;;

@@ -1,0 +1,61 @@
+sc_node_not_relation -> concept_power_steering_type;;
+concept_power_steering_type => nrel_main_idtf:
+[тип усилителя рулевого управления](*<-lang_ru;;*);
+[power steering type](*<-lang_en;;*);;
+concept_power_steering_type => nrel_idtf:
+[тип системы рулевого усилителя](*<-lang_ru;;*);
+[тип усилителя руля](*<-lang_ru;;*);
+	[wheel strengthener type](*<-lang_en;;*);;
+sc_node_not_relation -> concept_rare_car;;
+concept_rare_car => nrel_main_idtf:
+[раритетный автомобиль](*<-lang_ru;;*);
+	[rare car](*<-lang_en;;*);;
+	 
+concept_power_steering_type <= nrel_subdividing: ...
+(*
+->concept_electric_power_steering;;  
+->concept_electro_hydraulic_power_steering;;
+->concept_hydraulic_power_steering;;
+->concept_mechanical_power_steering;;
+->concept_pneumatic_power_steering;;
+=> nrel_main_idtf: [Разбиение по признаку устройство и принцип работы](* <- lang_ru;; *);;
+*);;
+
+//определение и утверждения используются в nrel_power_steering	
+concept_power_steering_type <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_power_steering;;
+		->nrel_to_use;;
+		->concept_car;; 
+	*);;
+=> nrel_main_idtf: [Опр.(тип усилителя рулевого управления)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Усилитель рулевого управления, использумый в данном автомобиле.](*<-lang_ru;;*);; 
+	*);; 
+*);;		
+
+concept_power_steering_type <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_rare_car; nrel_to_use; concept_pneumatic_power_steering;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В автомобилях 30-40-ых годовов прошлого столетия преимущественно использовался пневмоусилитель руля.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(раритетный автомобиль, использовать*, пневмоусилитель руля)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_general_form_statement;;
+	*);; 
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_power_steering_type;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/concept_power_steering_type.png";;
+		*);;
+	*);;

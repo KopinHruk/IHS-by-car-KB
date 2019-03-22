@@ -1,0 +1,46 @@
+sc_node_norole_relation -> nrel_reducer_ratio;; 
+nrel_reducer_ratio => nrel_main_idtf:
+[передаточное отношение редуктора*](*<-lang_ru;;*);
+[reducer ratio*](*<-lang_en;;*);;
+nrel_reducer_ratio => nrel_idtf:
+	[передаточное число редуктора*](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_teeth_number;; 
+nrel_teeth_number => nrel_main_idtf:
+[количество зубъев*](*<-lang_ru;;*);
+	[teeth number*](*<-lang_en;;*);;
+
+nrel_reducer_ratio <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_characteristic;; 
+		->concept_steering_reducer;;
+		->concept_ratio;; 
+		->nrel_teeth_number;;
+		->rrel_drive_pinion;;
+		->rrel_driven_pinion;;
+	*);;
+=> nrel_main_idtf: [Опр.(передаточное отношение редуктора*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Передаточное отношение редуктора* – характеристика редуктора, которая определяется как соотношение количества зубьев на ведущей и ведомой шестернях.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	  
+nrel_reducer_ratio => nrel_first_domain: concept_steering_reducer;;
+nrel_reducer_ratio => nrel_second_domain: value;;
+nrel_reducer_ratio => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_reducer;;
+				->value;;
+			*);;
+	*);;
+		
+oriented_relation->nrel_reducer_ratio;;
+binary_relation->nrel_reducer_ratio;;
+antisymmetric_relation->nrel_reducer_ratio;;
+antitransitive_relation->nrel_reducer_ratio;;
+antireflexive_relation->nrel_reducer_ratio;;

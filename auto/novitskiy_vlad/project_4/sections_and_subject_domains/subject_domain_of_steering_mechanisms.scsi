@@ -1,0 +1,10 @@
+subject_domain -> subject_domain_of_steering_mechanisms;;
+subject_domain_of_steering_mechanisms => nrel_main_idtf:
+[Предметная область механизмов рулевого управления](*<-lang_ru;;*);
+	[Subject domain of steering mechanisms](*<-lang_en;;*);;
+
+subject_domain_of_steering_mechanisms -> rrel_explored_relation: nrel_steering_mechanism_ratio; nrel_reducer_ratio; nrel_steering_mechanism_efficiency; nrel_direct_efficiency_of_steering_mechanism; nrel_reverse_efficiency_of_steering_mechanism;;
+
+subject_domain_of_steering_mechanisms -> rrel_maximum_studied_object_class: concept_steering_mechanism; concept_steering_reducer;;
+
+subject_domain_of_steering_mechanisms -> rrel_not_maximum_studied_object_class: concept_electric_steering_rack; concept_globoid_worm; concept_steering_bipod; concept_hydraulic_steering_rack; concept_mechanical_steering_rack; concept_rack_and_pinion; concept_screw_and_nut; concept_steering_rack; concept_worm_and_sector; concept_worm_wheel; concept_steering_damper;;

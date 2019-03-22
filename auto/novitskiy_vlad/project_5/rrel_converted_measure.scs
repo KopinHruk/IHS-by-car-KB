@@ -1,0 +1,6 @@
+sc_node_role_relation -> rrel_converted_measure;;
+rrel_converted_measure => nrel_main_idtf:
+[конвертированная единица измерения'](*<-lang_ru;;*);
+[converted measure'](*<-lang_en;;*);;
+rrel_converted_measure => nrel_idtf:
+	[единица измерения, в которую происходит конвертирование'](*<-lang_ru;;*);;

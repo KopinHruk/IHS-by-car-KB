@@ -1,0 +1,80 @@
+sc_node_not_relation -> concept_axle_spike;;
+concept_axle_spike => nrel_main_idtf:
+[цапфа "шип"](*<-lang_ru;;*);
+[axle "spike"](*<-lang_en;;*);;
+concept_axle_spike => nrel_idtf:
+[шип](*<-lang_ru;;*);
+    [spike](*<-lang_en;;*);;
+sc_node_not_relation -> concept_cylindrical_spike;;
+concept_cylindrical_spike => nrel_main_idtf:
+[цилиндрический "шип"](*<-lang_ru;;*);
+    [cylindrical "spike"](*<-lang_en;;*);;
+sc_node_not_relation -> concept_conical_spike;;
+concept_conical_spike => nrel_main_idtf:
+[конический "шип"](*<-lang_ru;;*);
+    [conical "spike"](*<-lang_en;;*);;
+sc_node_not_relation -> concept_spherical_spike;;
+concept_spherical_spike => nrel_main_idtf:
+[сферический "шип"](*<-lang_ru;;*);
+    [spherical "spike"](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_part_edge;;
+nrel_part_edge => nrel_main_idtf:
+[край детали*](*<-lang_ru;;*);
+[part edge*](*<-lang_en;;*);;
+nrel_part_edge => nrel_idtf:
+	[конец детали*](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_bearing;;
+concept_bearing => nrel_main_idtf:
+[подшипник](*<-lang_ru;;*);
+    [bearing](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_axle_support;;
+nrel_axle_support => nrel_main_idtf:
+[опора цапфы*](*<-lang_ru;;*);
+    [axle support*](*<-lang_en;;*);;
+
+concept_axle_spike <= nrel_subdividing: ...
+(*
+->concept_cylindrical_spike;;  
+->concept_conical_spike;;
+->concept_spherical_spike;;
+=> nrel_main_idtf: [Разбиение по признаку геометрическая форма](* <- lang_ru;; *);;
+*);;
+
+concept_axle_spike <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_stub_axle;; 
+		->nrel_located;; 
+		->nrel_part_edge;;
+		->concept_shaft;;
+	*);;
+=> nrel_main_idtf: [Опр.(цапфа "шип")](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Цапфа "шип" – цапфа, находящаяся на краю вала.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_axle_spike <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_axle_support; concept_bearing;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Опорами для шипов являются подшипники.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(шип, опора цапфы*, подшипник)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_axle_spike;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/axle_spike.png";;
+		*);;
+	*);;

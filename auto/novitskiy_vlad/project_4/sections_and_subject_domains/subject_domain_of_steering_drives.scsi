@@ -1,0 +1,10 @@
+subject_domain -> subject_domain_of_steering_drives;;
+subject_domain_of_steering_drives => nrel_main_idtf:
+[Предметная область приводов рулевого управления](*<-lang_ru;;*);
+	[Subject domain of steering drives](*<-lang_en;;*);;
+
+subject_domain_of_steering_drives -> rrel_explored_relation: nrel_steering_drive_ratio;;
+
+subject_domain_of_steering_drives -> rrel_maximum_studied_object_class: concept_steering_drive;;
+
+subject_domain_of_steering_drives -> rrel_not_maximum_studied_object_class: concept_axle_heel; concept_axle_neck; concept_axle_spike; concept_ball_joint; concept_longitudinal_tie_rod; concept_relay_rod; concept_steering_linkage; concept_steering_rod; concept_stub_axle; concept_one_piece_steering_linkage; concept_front_steering_linkage; concept_rear_steering_linkage; concept_split_steering_linkage; concept_steering_rod_end;;

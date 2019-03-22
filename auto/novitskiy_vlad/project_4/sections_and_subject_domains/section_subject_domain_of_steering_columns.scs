@@ -1,0 +1,10 @@
+atomic_section -> section_subject_domain_of_steering_columns;;
+section_subject_domain_of_steering_columns => nrel_main_idtf:
+[Раздел. Предметная область рулевых колонок](*<-lang_ru;;*);
+	[Section. Subject domain of steering columns](*<-lang_en;;*);;
+
+section_subject_domain_of_steering_columns <- not_enough_formed_structure;;
+
+section_subject_domain_of_steering_columns = [*^"file://subject_domain_of_steering_columns.scsi"*];;
+
+section_subject_domain_of_steering_columns -> rrel_key_sc_element: subject_domain_of_steering_columns;;

@@ -1,0 +1,10 @@
+concept_amount -> amount_5
+(*
+    <= nrel_value: ... 
+    (*
+        -> 1170 
+        (*
+            <- rrel_kilometer: number;;
+        *);;
+    *);;
+*);;

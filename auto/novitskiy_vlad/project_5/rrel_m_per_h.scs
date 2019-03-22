@@ -1,0 +1,22 @@
+sc_node_role_relation->rrel_m_per_sec;;
+rrel_m_per_sec => nrel_main_idtf:
+[метры в секунду'](*<-lang_ru;;*);
+[metre per second'](*<-lang_en;;*);;
+rrel_m_per_sec => nrel_idtf:
+[м/с'](*<-lang_ru;;*);
+	[m per sec'](*<-lang_en;;*);;
+
+rrel_m_per_sec <- rrel_key_sc_element:...
+	(*
+		<- definition;;
+		<= nrel_using_constants: ... 
+		(*
+			-> rrel_main_measure_in_SI;; 
+			-> nrel_speed;;
+		*);; 
+		=> nrel_main_idtf: [Опр.(метры в секунду')](*<-lang_ru;;*);; 
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [<b>Метры в секунду'</b> - это <sc_element sys_idtf="rrel_main_measure_in_SI">основная единица измерения</sc_element> <sc_element sys_idtf="nrel_speed">скорости</sc_element> в СИ.](*<-lang_ru;; => nrel_format: format_html;;*);;
+			*);; 
+	*);;

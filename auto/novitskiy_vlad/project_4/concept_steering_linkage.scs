@@ -1,0 +1,93 @@
+sc_node_not_relation -> concept_steering_linkage;;
+concept_steering_linkage => nrel_main_idtf:
+[рулевая трапеция](*<-lang_ru;;*);
+[steering linkage](*<-lang_en;;*);;
+concept_steering_linkage => nrel_idtf:
+[система тяг](*<-lang_ru;;*);
+	[system of steering rods](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_lower_base_of_steering_linkage;;
+nrel_lower_base_of_steering_linkage => nrel_main_idtf:
+[нижнее основание рулевой трапеции*](*<-lang_ru;;*);
+    [lower base of steering linkage*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_upper_base_of_steering_linkage;;
+nrel_upper_base_of_steering_linkage => nrel_main_idtf:
+[верхнее основание рулевой трапеции*](*<-lang_ru;;*);
+    [upper base of steering linkage*](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_side_of_steering_linkage;;
+nrel_side_of_steering_linkage => nrel_main_idtf:
+[боковая сторона рулевой трапеции*](*<-lang_ru;;*);
+    [side of steering linkage*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_linkage_VAZ_2101_2107;;
+concept_steering_linkage_VAZ_2101_2107 => nrel_main_idtf:
+[рулевая трапеция ВАЗ 2101-2107](*<-lang_ru;;*);
+	[steering linkage VAZ 2101-2107](*<-lang_en;;*);;
+concept_steering_linkage_VAZ_2101_2107 -> exemplar_steering_linkage_VAZ_2101_2107;;
+exemplar_steering_linkage_VAZ_2101_2107 => nrel_main_idtf:
+[Рулевая трапеция ВАЗ 2101-2107](*<-lang_ru;;*);
+	[Steering linkage VAZ 2101-2107](*<-lang_en;;*);;
+
+concept_steering_linkage <= nrel_subdividing: ...
+(*
+->concept_front_steering_linkage;;  
+->concept_rear_steering_linkage;;
+=> nrel_main_idtf: [Разбиение по признаку расположения относительно оси управляемых колёс](* <- lang_ru;; *);;
+*);;
+
+concept_steering_linkage <= nrel_subdividing: ...
+(*
+->concept_one_piece_steering_linkage;;  
+->concept_split_steering_linkage;;
+=> nrel_main_idtf: [Разбиение по признаку используемая поперечная рулевая тяга](* <- lang_ru;; *);;
+*);;
+
+concept_steering_linkage <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_element;; 
+		->concept_steering_rod;; 
+		->nrel_provide;;
+		->nrel_managed_wheel;;
+		->nrel_wheel_turning;;
+		->nrel_rotation_angle_of_wheel;;
+		->nrel_difference;;
+	*);;
+=> nrel_main_idtf: [Опр.(рулевая трапеция)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Рулевая трапеция – система тяг, обеспечивающая поворот управляемых колёс на разные углы.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_linkage <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_lower_base_of_steering_linkage; concept_front_axle; nrel_upper_side_steering_linkage; concept_relay_rod; nrel_side_of_steering_linkage; concept_stub_axle_lever;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Нижним основанием трапеции является передняя ось ко­лес, верхней – поперечные тяги, а боковыми сторо­нами — рычаги поворотных цапф.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевая трапеция, нижнее основание рулевой трапеции*, передняя ось колёс, верхнее основание рулевой трапеции*, поперечная рулевая тяга, боковая сторона рулевой трапеции*, рычаг поворотной цапфы)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_steering_linkage -> rrel_example: exemplar_steering_linkage_VAZ_2101_2107;;
+
+illustration -> ...
+	(*
+	<- rrel_key_sc_element: ... 
+		(*
+		<-explanation;;
+		<=nrel_sc_text_translation: ... 
+			(* 
+				-> rrel_example: [1,8. поворотные цапфы; 2,6. поворотные рычаги; 3. передняя ось; 4. поперечная рулевая тяга; 5. рычаг; 7. продольная рулевая тяга.](*<-lang_ru;;*);;
+			*);;
+		*);;
+	-> rrel_key_sc_element: concept_steering_linkage;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/steering_linkage.png";;
+		*);;
+	*);; 

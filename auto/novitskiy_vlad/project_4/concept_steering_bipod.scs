@@ -1,0 +1,62 @@
+sc_node_not_relation -> concept_steering_bipod;;
+concept_steering_bipod => nrel_main_idtf:
+[рулевая сошка](*<-lang_ru;;*);
+	[steering bipod](*<-lang_en;;*);;
+sc_node_not_relation -> concept_sector_shaft;;
+concept_sector_shaft => nrel_main_idtf:
+[вал сектора](*<-lang_ru;;*);
+	[sector shaft](*<-lang_en;;*);;
+sc_node_not_relation -> concept_bipod_slot_lever;;
+concept_bipod_slot_lever => nrel_main_idtf:
+[шлицевый рычаг сошки](*<-lang_ru;;*);
+	[bipod slot lever](*<-lang_en;;*);;
+sc_node_not_relation -> concept_bipod_seat;;
+concept_bipod_seat => nrel_main_idtf:
+[сиденье сошки](*<-lang_ru;;*);
+	[bipod seat](*<-lang_en;;*);;
+sc_node_not_relation -> concept_bipod_bearing_pin;;
+concept_bipod_bearing_pin => nrel_main_idtf:
+[резьбовая шпилька подшипника сошки](*<-lang_ru;;*);
+	[bipod bearing pin](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_bipod_LEMFORDER_1492701;;
+concept_steering_bipod_LEMFORDER_1492701 => nrel_main_idtf:
+[рулевая сошка LEMFORDER 1492701](*<-lang_ru;;*);
+	[concept steering bipod LEMFORDER 1492701](*<-lang_en;;*);;
+exemplar_steering_bipod_LEMFORDER_1492701 => nrel_main_idtf:
+[Рулевая сошка LEMFORDER 1492701](*<-lang_ru;;*);
+	[Concept steering bipod LEMFORDER 1492701](*<-lang_en;;*);;
+
+concept_steering_bipod <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_element;; 
+		->concept_steering_mechanism;; 
+		->nrel_to_be_intended;; 
+		->nrel_to_transfer_effort;; 
+		->concept_effort;;
+		->concept_sector_shaft;;
+		->concept_longitudinal_tie_rod;;
+	*);;
+=> nrel_main_idtf: [Опр.(рулевая сошка)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Рулевая сошка – элемент рулевого механизма, предназначеный для передачи усилия от вала сектора к продольной тяге.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_bipod <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_bipod_slot_lever; concept_bipod_seat; concept_bipod_bearing_pin;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В состав рулевой сошки входят шлицевый рычаг, сиденье и резьбовая шпилька подшипника.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевая сошка, составная часть*, шлицевый рычаг сошки, сиденье сошки, резьбовая шпилька подшипника сошки)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_steering_bipod -> rrel_example: exemplar_steering_bipod_LEMFORDER_1492701 (*<- concept_steering_bipod_LEMFORDER_1492701 ;;*);;

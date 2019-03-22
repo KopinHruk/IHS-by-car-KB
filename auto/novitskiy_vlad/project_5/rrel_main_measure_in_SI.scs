@@ -1,0 +1,4 @@
+sc_node_role_relation -> rrel_main_measure_in_SI;;
+rrel_main_measure_in_SI => nrel_main_idtf:
+[основная единица измерения в СИ'](*<-lang_ru;;*);
+	[convertible parameter'](*<-lang_en;;*);;

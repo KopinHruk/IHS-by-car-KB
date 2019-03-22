@@ -1,0 +1,73 @@
+sc_node_norole_relation -> nrel_neutral_position_of_steering_wheel;; 
+nrel_neutral_position_of_steering_wheel => nrel_main_idtf:
+[нейтральное положение рулевого колеса*](*<-lang_ru;;*);
+[neutral position of steering wheel*](*<-lang_en;;*);;
+nrel_neutral_position_of_steering_wheel => nrel_idtf:
+	[нейтральное положение руля*](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_position_of_steering_wheel;; 
+nrel_position_of_steering_wheel => nrel_main_idtf:
+[положение руля*](*<-lang_ru;;*);
+[position of steering wheel*](*<-lang_en;;*);;
+nrel_neutral_position_of_steering_wheel => nrel_idtf:
+[текущее положение руля*](*<-lang_ru;;*);
+	[current position of steering wheel*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_disturbing_effect;;
+concept_disturbing_effect => nrel_main_idtf:
+[возмущающее воздействие](*<-lang_ru;;*);
+	[disturbing effect](*<-lang_en;;*);;
+sc_node_not_relation -> concept_forward_direction;;
+concept_forward_direction => nrel_main_idtf:
+[прямое направление](*<-lang_ru;;*);
+	[forward direction](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_improve;; 
+nrel_to_improve => nrel_main_idtf:
+[улучшать*](*<-lang_ru;;*);
+	[to improve*](*<-lang_en;;*);;
+
+nrel_neutral_position_of_steering_wheel <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_position_of_steering_wheel;; 
+		->nrel_driving_direction;;
+		->concept_forward_direction;; 
+		->concept_car;;
+		->concept_disturbing_effect;;
+	*);;
+=> nrel_main_idtf: [Опр.(нейтральное положение рулевого колеса*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Нейтральное положение рулевого колеса* – положение рулевого колеса, соответствующее прямолинейному движению автомобиля при отсутствии возмущающих воздействий.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	  
+nrel_neutral_position_of_steering_wheel <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_steering_wheel_adjustment; nrel_to_improve; concept_maneuverability; concept_car;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Регулировка нейтрального положения рулевого колеса улучшает маневренность автомобиля.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(нейтральное положение рулевого колеса*, регулировка рулевого колеса*, улучшать*, манёвренность, автомобиль)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_wheels;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_neutral_position_of_steering_wheel => nrel_first_domain: concept_steering_wheel;;
+nrel_neutral_position_of_steering_wheel => nrel_second_domain: value;;
+nrel_neutral_position_of_steering_wheel => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_wheel;;
+				->value;;
+			*);;
+	*);;
+		
+oriented_relation->nrel_neutral_position_of_steering_wheel;;
+binary_relation->nrel_neutral_position_of_steering_wheel;;
+antisymmetric_relation->nrel_neutral_position_of_steering_wheel;;
+antitransitive_relation->nrel_neutral_position_of_steering_wheel;;
+antireflexive_relation->nrel_neutral_position_of_steering_wheel;;

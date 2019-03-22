@@ -1,0 +1,10 @@
+atomic_section -> section_subject_domain_of_steering_drives;;
+section_subject_domain_of_steering_drives => nrel_main_idtf:
+[Раздел. Предметная область рулевых приводов](*<-lang_ru;;*);
+	[Section. Subject domain of steering drives](*<-lang_en;;*);;
+
+section_subject_domain_of_steering_drives <- not_enough_formed_structure;;
+
+section_subject_domain_of_steering_drives = [*^"file://subject_domain_of_steering_drives.scsi"*];;
+
+section_subject_domain_of_steering_drives -> rrel_key_sc_element: subject_domain_of_steering_drives;;

@@ -1,0 +1,125 @@
+sc_node_not_relation -> concept_rack_and_pinion;;
+concept_rack_and_pinion => nrel_main_idtf:
+[реечный рулевой механизм](*<-lang_ru;;*);
+[rack-and-pinion](*<-lang_en;;*);;
+concept_rack_and_pinion => nrel_idtf:
+	[rack steering gear](*<-lang_en;;*);;
+sc_node_role_relation -> rrel_the_most_common;; 
+rrel_the_most_common => nrel_main_idtf:
+[самый распространнёный'](*<-lang_ru;;*);
+	[the most common'](*<-lang_en;;*);;
+sc_node_not_relation -> concept_pinion;;
+concept_pinion => nrel_main_idtf:
+[шестерня](*<-lang_ru;;*);
+[pinion](*<-lang_en;;*);;
+concept_pinion => nrel_idtf:
+[зубчатое колесо](*<-lang_ru;;*);
+	[toothed wheel](*<-lang_en;;*);;
+sc_node_not_relation -> concept_rack_and_pinion_housing;;
+concept_rack_and_pinion_housing => nrel_main_idtf:
+[корпус реечного рулевого механизма](*<-lang_ru;;*);
+	[rack and pinion housing](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_apply;; 
+nrel_to_apply => nrel_main_idtf:
+[применяться*](*<-lang_ru;;*);
+[to apply*](*<-lang_en;;*);;
+nrel_to_apply => nrel_idtf:
+	[быть применимым*](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_efficiency;;
+concept_efficiency => nrel_main_idtf:
+[высокий КПД](*<-lang_ru;;*);
+	[high efficiency](*<-lang_en;;*);;
+sc_node_not_relation -> concept_compact;;
+concept_compact => nrel_main_idtf:
+[компактный](*<-lang_ru;;*);
+	[compact](*<-lang_en;;*);;
+sc_node_not_relation -> concept_sensitive_to_shocks;;
+concept_sensitive_to_shocks => nrel_main_idtf:
+[чувствительный к ударам](*<-lang_ru;;*);
+	[sensitive to shocks](*<-lang_en;;*);;
+
+concept_rack_and_pinion <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->rrel_the_most_common;; 
+		->concept_steering_mechanism;; 
+		->nrel_be_installed;;
+		->concept_passenger_car;;
+		->nrel_use;; 
+		->concept_pinion;;
+		->concept_steering_rack;;
+	*);;
+=> nrel_main_idtf: [Опр.(реечный рулевой механизм)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Реечный рулевой механизм – самый распространенный тип рулевого механизма, устанавливаемый на легковые автомобили и использующий шестерню и рулевую рейку.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_rack_and_pinion <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_to_apply; concept_car; concept_independent_suspension; nrel_managed_wheel;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Реечный рулевой механизм применим на автомобилях с независимой подвеской управляемых колес.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(реечный рулевой механизм, быть применимым*, автомобиль, независимая подвеска, управляемое колесо*)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_element; concept_rack_and_pinion_housing; concept_pinion; concept_steering_rack;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В реечный рулевой механизм входят следующие элементы: корпус механизма, шестерня и рулевая рейка.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(реечный рулевой механизм, элемент*, корпус реечного рулевого механизма, шестерня, рулевая рейка)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_simple_construction; concept_efficiency; nrel_advantage; concept_compact; concept_low_cost; concept_high_reliability;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Механизм «шестерня-рейка» отличается простотой конструкции и высоким КПД. К ее преимуществам также можно отнести: компактность, невысокая цена и надежность.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(реечный рулевой механизм, простая конструкция, высокий КПД, преимущество*, компактный, невысокая цена, высокая надёжность)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_disadvantage; concept_sensitive_to_shocks;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Недостатком реечного рулевого механизма является чувствительность к ударам от неровностей дороги.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(реечный рулевой механизм, недостаток*, чувствительный к ударам)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_rack_and_pinion;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/rack_and_pinion_1.png";;
+		*);;
+	*);
+...
+	(*
+	-> rrel_key_sc_element: concept_rack_and_pinion;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/rack_and_pinion_2.png";;
+		*);;
+	*);;

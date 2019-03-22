@@ -1,0 +1,135 @@
+sc_node_norole_relation -> nrel_steering_sensitivity;; 
+nrel_steering_sensitivity => nrel_main_idtf:
+[чувствительность рулевого управления*](*<-lang_ru;;*);
+[steering sensitivity*](*<-lang_en;;*);;
+nrel_steering_sensitivity => nrel_idtf:
+[чувствительность рулевого механизма*](*<-lang_ru;;*);
+	[чувствительность руля*](*<-lang_ru;;*);;
+sc_node_no_relation -> concept_sensitivite_steering;; 
+concept_sensitivite_steering => nrel_main_idtf:
+[чувствительное рулевое управление](*<-lang_ru;;*);
+[sensitivite steering](*<-lang_en;;*);;
+concept_sensitivite_steering => nrel_idtf:
+[короткое рулевое управление](*<-lang_ru;;*);
+[короткий рулевой механизм](*<-lang_ru;;*);
+[чувствительный рулевой механизм](*<-lang_ru;;*);
+	[чувствительный руль](*<-lang_ru;;*);;
+sc_node_no_relation -> concept_insensitive_steering;; 
+concept_insensitive_steering => nrel_main_idtf:
+[нечувствительное рулевое управление](*<-lang_ru;;*);
+[insensitive steering](*<-lang_en;;*);;
+concept_insensitive_steering => nrel_idtf:
+[длинное рулевое управление](*<-lang_ru;;*);
+[длинный рулевой механизм](*<-lang_ru;;*);
+[нечувствительный рулевой механизм](*<-lang_ru;;*);
+	[нечувствительный руль](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_to_cause;; 
+nrel_to_cause => nrel_main_idtf:
+[вызывать*](*<-lang_ru;;*);
+[to cause*](*<-lang_en;;*);;
+nrel_to_cause => nrel_idtf:
+[приводить к*](*<-lang_ru;;*);
+	[to lead to*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_racing_car;;
+concept_racing_car => nrel_main_idtf:
+[гоночный автомобиль](*<-lang_ru;;*);
+    [racing car](*<-lang_en;;*);;
+sc_node_not_relation -> concept_ease_of_turning;;
+concept_ease_of_turning => nrel_main_idtf:
+[удобство при прохождении поворота](*<-lang_ru;;*);
+    [convenience of turning](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_move_straight;;
+nrel_to_move_straight => nrel_main_idtf:
+[двигаться прямо*](*<-lang_ru;;*);
+[to move straight*](*<-lang_en;;*);;
+nrel_to_move_straight => nrel_idtf:
+[двигаться по прямой*](*<-lang_ru;;*);
+	[to move in a straight line*](*<-lang_en;;*);;
+
+nrel_steering_sensitivity <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_to_depend;;
+		->nrel_wheel_turning;; 
+		->concept_wheel;;
+		->nrel_steering_wheel_turning;; 
+	*);;
+=> nrel_main_idtf: [Опр.(чувствительность рулевого управления*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Чувствительность рулевого управления* – характеристика зависимости
+							    поворота колес автомобиля от поворота руля.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	  
+nrel_steering_sensitivity <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_sensitivite_steering; nrel_steering_wheel_turning; nrel_to_cause; nrel_rotation_angle_of_wheel;
+								     concept_wheel; nrel_be_more; concept_insensitive_steering;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [При более чувствительном (коротком) рулевом механизме поворот руля вызывает больший угол поворота колес,
+								    чем при менее чувствительном (длинном).](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(чувствительность рулевого механизма*, чувствительный рулевой механизм, поворот руля*, вызывать*,
+								    угол поворота колёса*, колесо, больше*, нечувствительный рулевой механизм)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_insensitive_steering; nrel_provide; concept_managed; concept_car; nrel_to_move_straight;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Длинный руль обеспечивает лучшую управляемость автомобиля при движении по прямой.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(чувствительность руля*, длинный руль, обеспечивать*, управляемый, автомобиль, двигаться по прямой*)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_sensitivite_steering; nrel_to_apply; concept_sport_car; concept_racing_car;
+							          nrel_provide; rrel_additional; concept_convenience_of_turning;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Короткое рулевое управление применяется на спортивных и гоночных автомобилях,
+								    обеспечивая дополнительное удобство при прохождении поворота.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(чувствительность руля*, короткое рулевое управление, применяться*, спортивный автомобиль,
+								    гоночный автомобиль, обеспечивать*, дополнительный', удобство при проходении поворота)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_steering_sensitivity => nrel_first_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_system;;
+				->concept_steering_mechanism;;
+				->concept_steering_wheel;;
+			*);;
+	*);;
+nrel_steering_sensitivity => nrel_second_domain: value;;
+nrel_steering_sensitivity => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_system;;
+				->concept_steering_mechanism;;
+				->concept_steering_wheel;;
+				->value;;
+			*);;
+	*);;
+		
+oriented_relation->nrel_steering_sensitivity;;
+binary_relation->nrel_steering_sensitivity;;
+antisymmetric_relation->nrel_steering_sensitivity;;
+antitransitive_relation->nrel_steering_sensitivity;;
+antireflexive_relation->nrel_steering_sensitivity;;

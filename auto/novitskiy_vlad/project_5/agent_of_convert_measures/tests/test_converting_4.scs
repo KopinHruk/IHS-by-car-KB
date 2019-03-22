@@ -1,0 +1,7 @@
+test_converting_4 => nrel_main_idtf:
+[Тестирование конвертирования единицы измерения в СИ во внесистемную единицу измерения](*<-lang_ru;;*);
+    [Testing of converting measure in SI to non systemic measure](*<-lang_en;;*);;
+
+test_converting_4 -> rrel_convertible_measure: rrel_kilometer;;
+test_converting_4 -> rrel_converted_measure: rrel_mile;;
+test_converting_4 -> amount_4;;

@@ -1,0 +1,39 @@
+sc_node_not_relation -> concept_one_piece_steering_linkage;;
+concept_one_piece_steering_linkage => nrel_main_idtf:
+[цельная рулевая трапеция](*<-lang_ru;;*);
+[one-piece steering linkage](*<-lang_en;;*);;
+concept_one_piece_steering_linkage => nrel_idtf:
+[неразрезная рулевая трапеция](*<-lang_ru;;*);
+	[uncut steering linkage](*<-lang_en;;*);;
+
+concept_one_piece_steering_linkage <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_linkage;; 
+		->nrel_composite_part;; 
+		->concept_solid_relay_rod;;
+		->nrel_connection;;
+		->concept_wheel;;
+		->nrel_managed_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(цельная рулевая трапеция)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Цельной рулевая трапеция - рулевая трапеция, имеющая сплош­ную поперечную рулевую тягу, соединяющую управляемые коле­са.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_one_piece_steering_linkage <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_steering_linkage; nrel_to_apply; concept_car; nrel_composite_part; concept_dependent_suspension;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Цельная рулевая трапеция применяется в автомобилях с зависимой подвеской колес.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(цельная рулевая трапеция, применяться*, автомобиль, составная часть*, зависимая подвеска колес)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;

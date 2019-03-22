@@ -1,0 +1,4 @@
+sc_node_norole_relation -> nrel_conversion_rate;;
+nrel_conversion_rate => nrel_main_idtf:
+[коэффициент конвертирования*](*<-lang_ru;;*);
+	[conversion rate*](*<-lang_en;;*);;

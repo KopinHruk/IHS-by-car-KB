@@ -1,0 +1,68 @@
+sc_node_not_relation -> concept_torsion_distributor;;
+concept_torsion_distributor => nrel_main_idtf:
+[торсион распределителя](*<-lang_ru;;*);
+	[torsion distributor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_tracking_device;;
+concept_tracking_device => nrel_main_idtf:
+[следящее устройство](*<-lang_ru;;*);
+	[tracking device](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_shaft_cut;;
+concept_steering_shaft_cut => nrel_main_idtf:
+[разрез рулевого вала](*<-lang_ru;;*);
+	[steering shaft cut](*<-lang_en;;*);;
+sc_node_not_relation -> concept_thin;;
+concept_thin => nrel_main_idtf:
+[тонкий](*<-lang_ru;;*);
+	[thin](*<-lang_en;;*);;
+sc_node_not_relation -> concept_springy;;
+concept_springy => nrel_main_idtf:
+[пружинистый](*<-lang_ru;;*);
+	[springy](*<-lang_en;;*);;
+sc_node_not_relation -> concept_metal;;
+concept_metal => nrel_main_idtf:
+[металлический](*<-lang_ru;;*);
+	[metal](*<-lang_en;;*);;
+sc_node_not_relation -> concept_rod;;
+concept_rod => nrel_main_idtf:
+[стержень](*<-lang_ru;;*);
+	[rod](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_to_twist;;
+nrel_to_twist => nrel_main_idtf:
+[закручиваться*](*<-lang_ru;;*);
+     [to twist*](*<-lang_en;;*);;
+
+concept_torsion_distributor <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_tracking_device;; 
+		->nrel_be_built_in;; 
+		->concept_steering_shaft_cut;;
+		->nrel_to_control;; 
+		->nrel_to_exert_effort;;
+		->concept_effort;;
+		->concept_steering_wheel;;
+		->nrel_with_the_help_of;;
+		->nrel_managed_wheel;;
+		->nrel_wheel_turning;;
+	*);;
+=> nrel_main_idtf: [Опр.(торсион распределителя)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Торсион распределителя - следящее устройство, встроенное в разрез рулевого вала, которое отслеживает усилие на руле и помогает поворачивать управляемые колеса.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_torsion_distributor <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_element; concept_power_steering_distributor; concept_thin; concept_springy; concept_metal; concept_rod; nrel_to_twist; nrel_steering_wheel_turning;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Торсион распределителя – элемент распределителя гидроусилителя, представляющий собой тонкий пружинистый металлический стержень, который закручивается при повороте рулевого колеса.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(фильтр гидроусилителя, элемент*, распределитель гидроусилителя, тонкий, пружинистый, металлический, стержень, закручиваться*, поворот рулевого колеса*)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_statement_of_the_defining_type;;
+	*);;

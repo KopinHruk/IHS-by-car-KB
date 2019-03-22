@@ -1,0 +1,65 @@
+sc_node_not_relation -> concept_input_sensor_of_power_steering;;
+concept_input_sensor_of_power_steering => nrel_main_idtf:
+[входной датчик усилителя](*<-lang_ru;;*);
+	[input sensor of power steering](*<-lang_en;;*);;
+sc_node_not_relation -> concept_torque_sensor;;
+concept_torque_sensor => nrel_main_idtf:
+[датчик крутящего момента](*<-lang_ru;;*);
+	[torque sensor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_car_speed_sensor;;
+concept_car_speed_sensor => nrel_main_idtf:
+[датчик скорости автомобиля](*<-lang_ru;;*);
+	[car speed sensor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_car_speed_sensor_of_motor_shaft;;
+concept_car_speed_sensor_of_motor_shaft => nrel_main_idtf:
+[датчик частоты вращения вала двигателя](*<-lang_ru;;*);
+	[speed sensor of motor shaft](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_sensor;;
+concept_steering_sensor => nrel_main_idtf:
+[датчик поворота руля](*<-lang_ru;;*);
+	[steering sensor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_speed_steering_sensor;;
+concept_speed_steering_sensor => nrel_main_idtf:
+[датчик скорости поворота руля](*<-lang_ru;;*);
+	[steering speed sensor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_car_speed_sensor_ASAM_30667;;
+concept_car_speed_sensor_ASAM_30667 => nrel_main_idtf:
+[датчик скорости автомобиля ASAM 30667](*<-lang_ru;;*);
+	[car speed sensor ASAM 30667](*<-lang_en;;*);;
+exemplar_car_speed_sensor_ASAM_30667 => nrel_main_idtf:
+[Датчик скорости автомобиля ASAM 30667](*<-lang_ru;;*);
+	[Car speed sensor ASAM 30667](*<-lang_en;;*);;
+
+concept_input_sensor_of_power_steering <= nrel_subdividing: ...
+(*
+->concept_torque_sensor;;  
+->concept_steering_sensor;;
+->concept_car_speed_sensor;;
+->concept_car_speed_sensor_of_motor_shaft;;
+=> nrel_main_idtf: [Разбиение по признаку контролируемый параметр](* <- lang_ru;; *);;
+*);;
+
+concept_input_sensor_of_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_composite_part;; 
+		->concept_electric_power_steering;; 
+		->concept_electro_hydraulic_power_steering;;
+		->nrel_to_control;;
+		->nrel_characteristic;;
+		->concept_car;;
+		->nrel_to_transmit_signal;;
+		->concept_electric_signal;;
+		->nrel_to_change;;
+		->concept_electronic_unit_of_power_steering;;
+	*);;
+=> nrel_main_idtf: [Опр.(гидравлический насос)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Входной датчик усилителя – часть электрогидравлического или электрического усилителя руля, которая контролирует некоторую характеристику автомобиля или его части, и передаёт сигнал при её изменении электронному блоку усилителя.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_input_sensor_of_power_steering -> rrel_example: exemplar_car_speed_sensor_ASAM_30667 (*<- concept_car_speed_sensor_ASAM_30667;;*);;

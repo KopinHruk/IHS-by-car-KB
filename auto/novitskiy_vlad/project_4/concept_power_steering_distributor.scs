@@ -1,0 +1,71 @@
+sc_node_not_relation -> concept_power_steering_distributor;;
+concept_power_steering_distributor => nrel_main_idtf:
+[распределитель гидроусилителя](*<-lang_ru;;*);
+	[power steering distributor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_axial_distributor_of_power_steering;;
+concept_axial_distributor_of_power_steering => nrel_main_idtf:
+[осевой распределитель гидроусилителя](*<-lang_ru;;*);
+	[axial distributor of power steering](*<-lang_en;;*);;
+sc_node_not_relation -> concept_rotary_distributor_of_power_steering;;
+concept_rotary_distributor_of_power_steering => nrel_main_idtf:
+[роторный распределитель гидроусилителя](*<-lang_ru;;*);
+	[rotary distributor of power steering](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_to_direct_fluid_flow;;
+nrel_to_direct_fluid_flow => nrel_main_idtf:
+[направлять поток жидкости*](*<-lang_ru;;*);
+    [to direct fluid flow*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_hydraulic_cylinder_chamber;;
+concept_hydraulic_cylinder_chamber => nrel_main_idtf:
+[полость гидроцилиндра](*<-lang_ru;;*);
+	[hydraulic cylinder chamber](*<-lang_en;;*);;
+sc_node_not_relation -> concept_high_precision_node;;
+concept_high_precision_node => nrel_main_idtf:
+[высокоточный узел](*<-lang_ru;;*);
+[high-precision node](*<-lang_en;;*);;
+concept_high_precision_node => nrel_idtf:
+	[прецизионный узел](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_sensitive_to_oil_contamination;;
+concept_sensitive_to_oil_contamination => nrel_main_idtf:
+[чувствительный к загрязнению масла](*<-lang_ru;;*);
+	[sensitive to oil contamination](*<-lang_en;;*);;
+
+concept_power_steering_distributor <= nrel_subdividing: ...
+(*
+->concept_axial_distributor_of_power_steering;;  
+->concept_rotary_distributor_of_power_steering;;
+=> nrel_main_idtf: [Разбиение по признаку способ перемещения золотника](* <- lang_ru;; *);;
+*);;
+
+concept_power_steering_distributor <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_composite_part;; 
+		->concept_hydraulic_power_steering;; 
+		->concept_electro_hydraulic_power_steering;;
+		->nrel_to_direct_fluid_flow;; 
+		->concept_working_fluid_of_power_steering;;
+		->concept_hydraulic_cylinder_chamber;;
+		->concept_hydrocylinder;;
+		->concept_power_steering_tank;;
+	*);;
+=> nrel_main_idtf: [Опр.(распределитель гидроусилителя)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Распределитель гидроусилителя – часть гидравлического или электрогидравлического усилителя руля, направляющая поток жидкости в необходимую полость гидроцилиндра или обратно в бачок.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_power_steering_distributor <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: concept_high_precision_node; concept_sensitive_to_oil_contamination;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Распределитель гидроусилителя является прецизионным узлом, очень чувствительным к загрязнению масла.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(распределитель гидроусилителя, прецизионный узел, чувствительный к загрязнению масла)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_power_steerings;;
+	<-concept_general_form_statement;;
+	*);;

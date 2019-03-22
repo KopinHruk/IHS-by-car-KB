@@ -1,0 +1,25 @@
+sc_node_norole_relation -> nrel_distance;;
+nrel_distance => nrel_main_idtf:
+[расстояние*](* <-lang_ru;; *);
+    [distance*](* <- lang_en;; *);;
+sc_node_not_relation -> concept_segment;;
+concept_segment => nrel_main_idtf:
+[отрезок](* <-lang_ru;; *);
+    [segment](* <- lang_en;; *);;
+
+nrel_distance <- rrel_key_sc_element:...
+	(*
+		<- definition;; 
+		<= nrel_using_constants: ... 
+		(*
+			-> concept_physical_quantity;; 
+			-> nrel_lenght;; 
+			-> concept_segment;;
+			-> concept_object;;
+		*);;
+		=> nrel_main_idtf: [Опр.(расстояние*)](*<-lang_ru;;*);; 
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [<b>Расстояние*</b> - <sc_element sys_idtf="concept_physical_quantity">физическая величина</sc_element>, определяющаяся, как <sc_element sys_idtf="nrel_lenght">длина</sc_element> <sc_element sys_idtf="concept_segment">отрезка прямой</sc_element>, соединяющей два <sc_element sys_idtf="concept_object">объекта</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+			*);; 
+	*);;

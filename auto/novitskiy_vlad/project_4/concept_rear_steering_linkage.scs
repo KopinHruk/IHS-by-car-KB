@@ -1,0 +1,45 @@
+sc_node_not_relation -> concept_rear_steering_linkage;;
+concept_rear_steering_linkage => nrel_main_idtf:
+[задняя рулевая трапеция](*<-lang_ru;;*);
+	[rear steering linkage](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_located_behind;;
+nrel_located_behind => nrel_main_idtf:
+[быть расположенным за*](*<-lang_ru;;*);
+[located behind*](*<-lang_en;;*);;
+nrel_located_behind => nrel_idtf:
+[располагаться за*](*<-lang_ru;;*);
+    [находиться за*](*<-lang_ru;;*);;
+
+concept_rear_steering_linkage <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_linkage;; 
+		->nrel_located_behind;; 
+		->concept_axis;;
+		->nrel_managed_wheel;;
+	*);;
+=> nrel_main_idtf: [Опр.(задняя рулевая трапеция)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Задняя рулевая трапеция – рулевая трапеция, которая располагается за осью управляемых колес.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+illustration -> ...
+	(*
+	<- rrel_key_sc_element: ... 
+		(*
+		<-explanation;;
+		<=nrel_sc_text_translation: ... 
+			(* 
+				-> rrel_example: [1. рулевой механизм; 2. рулевая сошка; 3. продольная тяга; 4. рычаг поворотной цапфы; 5. поперечная тяга; 6. поворотный кулак; 7. рычаг продольной тяги.](*<-lang_ru;;*);;
+			*);;
+		*);;
+	-> rrel_key_sc_element: concept_rear_steering_linkage; concept_one_piece_steering_linkage;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/rear_one_piece_steering_linkage.png";;
+		*);;
+	*);;

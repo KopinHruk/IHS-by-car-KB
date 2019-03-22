@@ -1,0 +1,7 @@
+test_converting_1 => nrel_main_idtf:
+[Тестирование конвертирования основной единицы измерения в СИ во внесистемную единицу измерения](*<-lang_ru;;*);
+    [Testing of converting main measure in SI to non systemic measure](*<-lang_en;;*);;
+
+test_converting_1 -> rrel_convertible_measure: rrel_meter;;
+test_converting_1 -> rrel_converted_measure: rrel_mile;;
+test_converting_1 -> amount_1;;

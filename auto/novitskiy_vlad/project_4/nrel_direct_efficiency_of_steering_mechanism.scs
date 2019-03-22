@@ -1,0 +1,55 @@
+sc_node_norole_relation -> nrel_direct_efficiency_of_steering_mechanism;; 
+nrel_direct_efficiency_of_steering_mechanism => nrel_main_idtf:
+[прямой КПД рулевого механизма*](*<-lang_ru;;*);
+	[direct efficiency of steering mechanism*](*<-lang_en;;*);;
+
+nrel_direct_efficiency_of_steering_mechanism <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_characteristic;;
+		->concept_steering_mechanism;; 
+		->nrel_to_quantify;;
+		->nrel_mechanical_losses;;
+		->nrel_to_transfer_effort;;
+		->concept_effort;; 
+		->concept_steering_wheel;;
+		->concept_steering_bipod;;
+	*);;
+=> nrel_main_idtf: [Опр.(прямой КПД рулевого механизма*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Прямой КПД рулевого механизма* – характеристика рулевого механизма, которая количественно оценивает механические потери при передаче усилия от рулевого колеса к сошке.](*<-lang_ru;;*);; 
+	*);;
+*);;	
+
+nrel_direct_efficiency_of_steering_mechanism <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: rrel_if; nrel_be_more; rrel_then; nrel_mechanical_losses; concept_steering_mechanism; nrel_wheel_turning; nrel_managed_wheel; nrel_to_be_better; concept_manageability;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Чем больше прямой КПД, тем меньше потери в рулевом механизме при повороте управляемых колес и тем легче управлять автомобилем.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(прямой КПД рулевого механизма*, если', больше*, то', больше*, механические потери*, рулевой механизм, поворот колеса*, управляемое колесо*, быть лучше*, управляемость)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_direct_efficiency_of_steering_mechanism => nrel_first_domain: concept_steering_mechanism;;
+nrel_direct_efficiency_of_steering_mechanism => nrel_second_domain: value;;
+nrel_direct_efficiency_of_steering_mechanism => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_mechanism;;
+				->value;;
+			*);;
+	*);;
+		
+oriented_relation->nrel_direct_efficiency_of_steering_mechanism;;
+binary_relation->nrel_direct_efficiency_of_steering_mechanism;;
+antisymmetric_relation->nrel_direct_efficiency_of_steering_mechanism;;
+antitransitive_relation->nrel_direct_efficiency_of_steering_mechanism;;
+antireflexive_relation->nrel_direct_efficiency_of_steering_mechanism;;

@@ -1,0 +1,11 @@
+concept_amount -> amount_1 
+(*
+    <= nrel_value: ... 
+    (*
+        -> ... 
+        (*
+            <- rrel_meter: number;;
+            => nrel_main_idtf: [123,45];;
+        *);;
+    *);;
+*);;

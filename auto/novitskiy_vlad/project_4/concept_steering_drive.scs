@@ -1,0 +1,102 @@
+sc_node_not_relation -> concept_steering_drive;;
+concept_steering_drive => nrel_main_idtf:
+[рулевой привод](*<-lang_ru;;*);
+[steering drive](*<-lang_en;;*);;
+concept_steering_drive => nrel_idtf:
+	[привод руля](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_rack_and_pinion_drive;;
+concept_rack_and_pinion_drive => nrel_main_idtf:
+[рулевой привод механизма шестерня-рейка](*<-lang_ru;;*);
+	[rack-and-pinion drive](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_drive_with_steering_linkage;;
+concept_steering_drive_with_steering_linkage => nrel_main_idtf:
+[рулевой привод с рулевой трапецией](*<-lang_ru;;*);
+	[steering drive with steering linkage](*<-lang_en;;*);;
+sc_node_not_relation -> concept_pendulum_lever;;
+concept_pendulum_lever => nrel_main_idtf:
+[маятниковый рычаг](*<-lang_ru;;*);
+	[pendulum lever](*<-lang_en;;*);;
+sc_node_not_relation -> concept_stub_axle_lever;;
+concept_stub_axle_lever => nrel_main_idtf:
+[рычаг поворотной цапфы](*<-lang_ru;;*);
+	[stub axle lever](*<-lang_en;;*);;
+sc_node_not_relation -> concept_ball_joint;;
+concept_ball_joint => nrel_main_idtf:
+[шаровой шарнир](*<-lang_ru;;*);
+	[ball joint](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_provide;; 
+nrel_provide => nrel_main_idtf:
+[обеспечивать*](*<-lang_ru;;*);
+[provide*](*<-lang_en;;*);;
+nrel_provide => nrel_idtf:
+	[предоставлять*](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_rotation_angle_of_wheel;; 
+nrel_rotation_angle_of_wheel => nrel_main_idtf:
+[угол поворота колеса*](*<-lang_ru;;*);
+	[rotation angle of wheel*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_efficiency;;
+concept_steering_efficiency => nrel_main_idtf:
+[эффективность рулевого управления](*<-lang_ru;;*);
+	[steering efficiency](*<-lang_en;;*);;
+
+concept_steering_drive <= nrel_subdividing: ...
+(*
+->concept_rack_and_pinion_drive;;  
+->concept_steering_drive_with_steering_linkage;;
+=> nrel_main_idtf: [Разбиение по признаку тип используемой в автомобиле подвески и рулевого механизма](* <- lang_ru;; *);;
+*);;
+
+concept_steering_drive <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_device;; 
+		->nrel_to_be_intended;; 
+		->nrel_to_transfer_effort;;
+		->concept_steering_mechanism;;
+		->concept_effort;; 
+		->nrel_managed_wheel;;
+		->nrel_wheel_turning;;
+		->nrel_car_side;;
+	*);;
+=> nrel_main_idtf: [Опр.(рулевой привод)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Рулевой привод – это устройство, предназначенное для передачи от рулевого механизма усилия, необходимого для поворота управляемых колес обоих сторон автомобиля.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_drive <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_pendulum_lever; concept_stub_axle_lever; concept_steering_rod; concept_ball_joint;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Составными частями рулевого привода являются маятниковые рычаги, рычаги поворотных цапф, рулевые тяги и шаровые шарниры.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевой привод, составная часть*, маятниковый рычаг, рычаг поворотной цапфы, рулевая тяга, шаровой шарнир)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_provide; concept_ratio; nrel_rotation_angle_of_wheel; nrel_affect; concept_steering_efficiency;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Рулевой привод обеспечивает необходимое соотношение углов поворота колес, что влияет на эффективность рулевого управления.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевой привод, обеспечивать*, соотношение, угол поворота колеса*, влиять*, эффективность рулевого управления)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_drives;;
+	<-concept_general_form_statement;;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_steering_drive;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/steering_drive.png";;
+		*);;
+	*);;

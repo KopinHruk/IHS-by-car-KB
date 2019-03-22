@@ -1,0 +1,120 @@
+sc_node_not_relation -> concept_hydraulic_power_steering;;
+concept_hydraulic_power_steering => nrel_main_idtf:
+[гидроусилитель рулевого управления](*<-lang_ru;;*);
+[hydraulic power steering](*<-lang_en;;*);;
+concept_hydraulic_power_steering => nrel_idtf:
+[ГУР](*<-lang_ru;;*);
+[гидравлический усилитель рулевого управления](*<-lang_ru;;*);
+[гидравлический усилитель руля](*<-lang_ru;;*);
+	[гидроусилитель руля](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_hydraulic_system;;
+concept_hydraulic_system => nrel_main_idtf:
+[гидравлическая система](*<-lang_ru;;*);
+	[hydraulic system](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_move_cyclically;;
+nrel_to_move_cyclically => nrel_main_idtf:
+[двигаться циклически*](*<-lang_ru;;*);
+[to move cyclically*](*<-lang_en;;*);;
+nrel_to_move_cyclically => nrel_idtf:
+[функционировать*](*<-lang_ru;;*);
+    [to function*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_produce;;
+nrel_to_produce => nrel_main_idtf:
+[создавать*](*<-lang_ru;;*);
+    [to produce*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_hydraulic_drive;;
+concept_hydraulic_drive => nrel_main_idtf:
+[гидравлический привод](*<-lang_ru;;*);
+	[hydraulic drive](*<-lang_en;;*);;
+sc_node_not_relation -> concept_working_fluid_of_power_steering;;
+concept_working_fluid_of_power_steering => nrel_main_idtf:
+[рабочая жидкость гидроусилителя](*<-lang_ru;;*);
+	[working fluid of power steering](*<-lang_en;;*);;
+sc_node_not_relation -> concept_power_steering_of_Volkswagen_Sharan;;
+concept_power_steering_of_Volkswagen_Sharan => nrel_main_idtf:
+[усилитель руля Volkswagen Sharan](*<-lang_ru;;*);
+	[power steering of Volkswagen Sharan](*<-lang_en;;*);;
+exemplar_power_steering_of_Volkswagen_Sharan => nrel_main_idtf:
+[Усилитель руля Volkswagen Sharan](*<-lang_ru;;*);
+	[Power steering of Volkswagen Sharan](*<-lang_en;;*);;
+
+concept_hydraulic_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_hydraulic_system;; 
+		->nrel_to_be_intended;; 
+		->nrel_to_ease;;
+		->nrel_managed_wheel;;
+		->nrel_wheel_turning;;
+		->nrel_to_move_cyclically;;
+		->concept_working_fluid_of_power_steering;;
+	*);;
+=> nrel_main_idtf: [Опр.(гидравлический усилитель руля)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Гидравлический усилитель руля – автомобильная гидравлическая система, предназначенная для облегчения поворота управляемых колёс, что обеспечивается за счёт функционирования в ней рабочей жидкости.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_hydraulic_power_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_element; concept_steering_system; rrel_additional_effort; concept_effort; nrel_steering_wheel_turning; nrel_to_produce; concept_hydraulic_drive;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Гидроусилителем рулевого управления называется конструктивный элемент рулевого управления автомобиля, в котором дополнительное усилие при повороте рулевого колеса создается с помощью гидравлического привода.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(гидроусилитель рулевого управления, конструктивный элемент*, рулевое управление, дополнительное усилие', усилие, поворот рулевого колеса*, создавать*, гидравлический привод)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_statement_of_the_defining_type;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_hydrocylinder; concept_hydraulic_pump; concept_working_fluid_of_power_steering; concept_power_steering_tank; concept_power_steering_distributor; concept_connecting_hose_of_power_steering; concept_power_steering_filter;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Гидроусилитель рулевого управления состоит из таких частей, как: силовой гидроцилиндр, насос, рабочая жидкость, бачок, распределитель, соединительные шланги, фильтр.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(гидроусилитель рулевого управления, составная часть*, силовой гидроцилиндр, насос гидроусилителя, рабочая жидкость гидроусилителя, бачок гидроусилителя, распределитель гидроусилителя, соединительный шланг гидроусилителя, фильтр гидроусилителя)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_hydraulic_power_steering <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Изобрел и запатентовал гидроусилитель впервые Фредерик Ланчестер.](*<-lang_ru;;*);;
+		*);;
+	*);
+... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Достоинствами гидроусилителя руля являются: сохранение «обратной связи»; обеспечение устойчивости на дороге; повышение безопасности. То есть происходит контроль над ТС после повреждения передней шины и возможность увильнуть от столкновения; позволяет «чувствовать» дорожное полотно и создает кинематическое следящее действие; уменьшает передаточное отношение рулевой системы, что повышает маневренность; продлевает время службы деталей рулевого узла.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_hydraulic_power_steering -> rrel_example: exemplar_power_steering_of_Volkswagen_Sharan (*<- concept_power_steering_of_Volkswagen_Sharan;;*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_hydraulic_power_steering;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/hydraulic_power_steering_1.png";;
+		*);;
+	*);
+...
+	(*
+	-> rrel_key_sc_element: concept_hydraulic_power_steering;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/hydraulic_power_steering_2.png";;
+		*);;
+	*);;

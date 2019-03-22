@@ -1,0 +1,90 @@
+sc_node_not_relation -> concept_steering_system_with_hydraulic_power_steering;;
+concept_steering_system_with_hydraulic_power_steering => nrel_main_idtf:
+[система рулевого управления с ГУР](*<-lang_ru;;*);
+[steering system with hydraulic power steering](*<-lang_en;;*);;
+concept_steering_system_with_hydraulic_power_steering => nrel_idtf:
+[рулевое управление с ГУР](*<-lang_ru;;*);
+	[гидравлическое рулевое управление](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_compactness;;
+concept_compactness => nrel_main_idtf:
+[компактность](*<-lang_ru;;*);
+	[compactness](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_disadvantage;; 
+nrel_disadvantage => nrel_main_idtf:
+[недостаток*](*<-lang_ru;;*);
+	[disadvantage*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_control;; 
+nrel_to_control => nrel_main_idtf:
+[контролировать*](*<-lang_ru;;*);
+	[to control*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_working_fluid_level;; 
+nrel_working_fluid_level => nrel_main_idtf:
+[уровень рабочей жидкости*](*<-lang_ru;;*);
+	[working fluid level*](*<-lang_en;;*);;
+sc_node_role_relation -> rrel_the_most_common;;
+rrel_the_most_common => nrel_main_idtf:
+[самый распространённый'](*<-lang_ru;;*);
+	[the most common'](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_system_of_Nissan_Patrol;;
+concept_steering_system_of_Nissan_Patrol => nrel_main_idtf:
+[рулевое управление Nissan Patrol](*<-lang_ru;;*);
+	[steering system of Nissan Patrol](*<-lang_en;;*);;
+concept_steering_system_of_Nissan_Patrol -> exemplar_steering_system_of_Nissan_Patrol;;
+exemplar_steering_system_of_Nissan_Patrol => nrel_main_idtf:
+[Рулевое управление Nissan Patrol](*<-lang_ru;;*);
+	[Steering system of Nissan Patrol](*<-lang_en;;*);;
+
+concept_steering_system_with_hydraulic_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_system;; 
+		->nrel_design;; 
+		->concept_hydraulic_power_steering;;
+	*);;
+=> nrel_main_idtf: [Опр.(система рулевого управления с ГУР)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Система рулевого управления с ГУР - рулевое управление, в конструкцию которого входит гидравлический усилитель руля.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_system_with_hydraulic_power_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_advantage; concept_compactness; concept_simple_construction;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Основным достоинством рулевого управления с ГУР является компактность и простота конструкции.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевое управление с ГУР, достоинство*, компактность, простая конструкция)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_disadvantage; nrel_to_control; nrel_working_fluid_level;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Недостатком рулевого управления с ГУР является необходимость контроля уровня рабочей жидкости.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевое управление с ГУР, недостаток*, контролировать*, уровень рабочей жидкости*)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: concept_modern_car; rrel_the_most_common;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Гидравлическое рулевое управление среди современных автомобилей является одним из наиболее распространенных.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(гидравлическое рулевое управление, современный автомобиль, самый распространённый')](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_steering_system_with_hydraulic_power_steering -> rrel_example: exemplar_steering_system_of_Nissan_Patrol;;

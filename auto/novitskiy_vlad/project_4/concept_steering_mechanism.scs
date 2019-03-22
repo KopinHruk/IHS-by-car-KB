@@ -1,0 +1,69 @@
+sc_node_not_relation -> concept_steering_mechanism;;
+concept_steering_mechanism => nrel_main_idtf:
+[рулевой механизм](*<-lang_ru;;*);
+[steering mechanism](*<-lang_en;;*);;
+concept_steering_mechanism => nrel_idtf:
+[рулевая передача](*<-lang_ru;;*);
+	[steering gear](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_steering_wheel_turning;; 
+nrel_steering_wheel_turning => nrel_main_idtf:
+[поворот рулевого колеса*](*<-lang_ru;;*);
+	[steering wheel turning*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_transfer_effort;; 
+nrel_to_transfer_effort => nrel_main_idtf:
+[передавать усилие*](*<-lang_ru;;*);
+	[to transfer effort*](*<-lang_en;;*);;
+ 
+concept_steering_mechanism <= nrel_subdividing: ...
+(*
+->concept_screw_and_nut;;  
+->concept_worm_and_sector;;
+->concept_rack_and_pinion;;
+=> nrel_main_idtf: [Разбиение по признаку способ преобразования крутящего момента](* <- lang_ru;; *);;
+*);;
+
+concept_steering_mechanism <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_reducer;; 
+		->nrel_reducer_ratio;; 
+		->nrel_to_convert;;
+		->concept_effort;;
+		->rrel_driver;; 
+		->nrel_steering_wheel_turning;;
+		->nrel_to_transfer_effort;;
+		->concept_drive_unit_type;;
+	*);;
+=> nrel_main_idtf: [Опр.(рулевой механизм)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Рулевой механизм – редуктор с некоторым передаточным отношением, который выполняет преобразование усилия, создаваемого водителем через поворот рулевого колеса, и передает его приводу колес.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_mechanism <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_assignment; concept_steering_wheel; nrel_neutral_position_of_steering_wheel; concept_effort;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Одной из задач рулевого механизма является возврат рулевого колеса в нейтральное положение после исчезновения прикладываемого к нему усилия.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевой механизм, задача*, рулевое колесо, нейтральное положение руля*, усилие)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_characteristic; nrel_steering_mechanism_ratio;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Основной характеристикой рулевого механизма является передаточное число.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевой механизм, характеристика*, передаточное число рулевого механизма*)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;

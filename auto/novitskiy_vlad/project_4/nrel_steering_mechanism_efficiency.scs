@@ -1,0 +1,45 @@
+sc_node_norole_relation -> nrel_steering_mechanism_efficiency;; 
+nrel_steering_mechanism_efficiency => nrel_main_idtf:
+[КПД рулевого механизма*](*<-lang_ru;;*);
+	[steering mechanism efficiency*](*<-lang_en;;*);;
+
+nrel_steering_mechanism_efficiency <= nrel_subdividing: ...
+(*
+->nrel_direct_efficiency_of_steering_mechanism;;  
+->nrel_reverse_efficiency_of_steering_mechanism;;
+=> nrel_main_idtf: [Разбиение по признаку путь передачи усилия](* <- lang_ru;; *);;
+*);;
+
+nrel_steering_mechanism_efficiency <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_characteristic;;
+		->concept_steering_mechanism;; 
+		->nrel_to_quantify;;
+		->nrel_mechanical_losses;;
+	*);;
+=> nrel_main_idtf: [Опр.(КПД рулевого механизма*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [КПД рулевого механизма* – характеристика рулевого механизма, которая количественно оценивает механические потери в нём.](*<-lang_ru;;*);; 
+	*);;
+*);;	
+	  
+nrel_steering_mechanism_efficiency => nrel_first_domain: concept_steering_mechanism;;
+nrel_steering_mechanism_efficiency => nrel_second_domain: value;;
+nrel_steering_mechanism_efficiency => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_mechanism;;
+				->value;;
+			*);;
+	*);;
+		
+oriented_relation->nrel_steering_mechanism_efficiency;;
+binary_relation->nrel_steering_mechanism_efficiency;;
+antisymmetric_relation->nrel_steering_mechanism_efficiency;;
+antitransitive_relation->nrel_steering_mechanism_efficiency;;
+antireflexive_relation->nrel_steering_mechanism_efficiency;;

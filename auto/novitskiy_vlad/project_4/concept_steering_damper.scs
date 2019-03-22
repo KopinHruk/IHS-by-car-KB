@@ -1,0 +1,103 @@
+sc_node_not_relation -> concept_steering_damper;;
+concept_steering_damper => nrel_main_idtf:
+[рулевой демпфер](*<-lang_ru;;*);
+[steering damper](*<-lang_en;;*);;
+concept_steering_damper => nrel_idtf:
+[демпфер](*<-lang_ru;;*);
+	[damper](*<-lang_en;;*);;
+sc_node_not_relation -> concept_telescopic_damper;;
+concept_telescopic_damper => nrel_main_idtf:
+[телескопический демпфер](*<-lang_ru;;*);
+	[telescopic damper](*<-lang_en;;*);;
+sc_node_not_relation -> concept_rotary_damper;;
+concept_rotary_damper => nrel_main_idtf:
+[роторный демпфер](*<-lang_ru;;*);
+	[rotary damper](*<-lang_en;;*);;
+sc_node_not_relation -> concept_car_shock_absorber;;
+concept_car_shock_absorber => nrel_main_idtf:
+[амортизатор автомобиля](*<-lang_ru;;*);
+	[car shock absorber](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_dampen_vibrations;;
+nrel_dampen_vibrations => nrel_main_idtf:
+[гасить колебания*](*<-lang_ru;;*);
+    [dampen vibrations*](*<-lang_en;;*);;
+sc_node_role_relation->rrel_unwanted;;
+rrel_unwanted => nrel_main_idtf:
+[нежелательный'](*<-lang_ru;;*);
+[unwanted'](*<-lang_en;;*);;
+rrel_unwanted => nrel_idtf:
+[паразитный'](*<-lang_ru;;*);
+     [parasitic'](*<-lang_en;;*);;
+sc_node_not_relation -> concept_heavy_machinery;;
+concept_heavy_machinery => nrel_main_idtf:
+[тяжёлая спецтехника](*<-lang_ru;;*);
+[heavy machinery](*<-lang_en;;*);;
+concept_heavy_machinery => nrel_idtf:
+[тяжёлая специфическая техника](*<-lang_ru;;*);
+	[heavy specific technique](*<-lang_en;;*);;
+sc_node_not_relation -> concept_large_suv;;
+concept_large_suv => nrel_main_idtf:
+[крупный внедорожник](*<-lang_ru;;*);
+	[large SUV](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_damper_SWAG_10520003;;
+concept_steering_damper_SWAG_10520003 => nrel_main_idtf:
+[рулевой демпфер SWAG 10520003](*<-lang_ru;;*);
+	[steering damper SWAG 10520003](*<-lang_en;;*);;
+concept_steering_damper_SWAG_10520003 -> exemplar_steering_damper_SWAG_10520003;;
+exemplar_steering_damper_SWAG_10520003 => nrel_main_idtf:
+[Рулевой демпфер SWAG 10520003](*<-lang_ru;;*);
+	[Steering damper SWAG 10520003](*<-lang_en;;*);;
+
+concept_steering_damper <= nrel_subdividing: ...
+(*
+->concept_telescopic_damper;;  
+->concept_rotary_damper;;
+=> nrel_main_idtf: [Разбиение по признаку конструкция](* <- lang_ru;; *);;
+*);;
+
+concept_steering_damper <= nrel_inclusion: concept_car_shock_absorber;;
+
+concept_steering_damper <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_car_shock_absorber;; 
+		->rrel_option;; 
+		->nrel_element;;
+		->concept_steering_mechanism;;
+		->nrel_provide;; 
+		->nrel_dampen_vibrations;;
+		->concept_fluctuation;;
+		->rrel_unwanted;;
+	*);;
+=> nrel_main_idtf: [Опр.(рулевой демпфер)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Рулевой демпфер – это амортизатор, который является опциональным элементом рулевого механизма, обеспечивающим гашение нежелательных колебаний его элементов.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_damper <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_to_apply; concept_heavy_machinery; concept_large_suv; concept_sport_car;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Рулевой демпфер применяется в тяжёлой специфической технике, крупных внедорожниках и спортивных авто.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(рулевой демпфер, применяться*, тяжёлая специфическая техника, крупный внедорожник, спортивный автомобиль)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_steering_damper -> rrel_example: exemplar_steering_damper_SWAG_10520003;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_steering_damper;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/steering_damper.png";;
+		*);;
+	*);;

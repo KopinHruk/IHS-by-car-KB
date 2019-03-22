@@ -1,0 +1,61 @@
+sc_node_norole_relation -> nrel_steering_efficiency;; 
+nrel_steering_efficiency => nrel_main_idtf:
+[КПД рулевого управления*](*<-lang_ru;;*);
+	[steering coefficient of efficiency*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_mechanical_losses;; 
+nrel_mechanical_losses => nrel_main_idtf:
+[механические потери*](*<-lang_ru;;*);
+	[mechanical losses*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_steering_drive_efficiency;; 
+nrel_steering_drive_efficiency => nrel_main_idtf:
+[КПД рулевого привод*](*<-lang_ru;;*);
+	[steering drive efficiency*](*<-lang_en;;*);;
+
+nrel_steering_efficiency <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_characteristic;;
+		->concept_steering_system;; 
+		->nrel_to_quantify;;
+		->nrel_mechanical_losses;;
+		->nrel_determine;;
+		->concept_manageability;; 
+	*);;
+=> nrel_main_idtf: [Опр.(КПД рулевого управления*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [КПД рулевого управления* – характеристика рулевого управления, которая количественно оценивает потери в системе рулевого управления и определяет степень управляемости автомобиля.](*<-lang_ru;;*);; 
+	*);;
+*);;	
+
+nrel_steering_efficiency <- rrel_key_sc_element: ...
+	(*
+	->rrel_key_sc_element: value; nrel_composition_of_quantities; nrel_steering_mechanism_efficiency; nrel_steering_drive_efficiency;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [КПД рулевого управления вычисляется как произведение КПД рулевого механизма на КПД рулевого привода.](*<-lang_ru;;*);;
+		*);;
+	=> nrel_main_idtf: [Утв.(КПД рулевого управления*, величина, произведение величин, КПД рулевого механизма*, КПД рулевого привода*)](*<-lang_ru;;*);; 
+	<-rrel_axiom:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);;
+	  
+nrel_steering_efficiency => nrel_first_domain: concept_steering_system;;
+nrel_steering_efficiency => nrel_second_domain: value;;
+nrel_steering_efficiency => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_steering_system;;
+				->value;;
+			*);;
+	*);;
+		
+oriented_relation->nrel_steering_efficiency;;
+binary_relation->nrel_steering_efficiency;;
+antisymmetric_relation->nrel_steering_efficiency;;
+antitransitive_relation->nrel_steering_efficiency;;
+antireflexive_relation->nrel_steering_efficiency;;

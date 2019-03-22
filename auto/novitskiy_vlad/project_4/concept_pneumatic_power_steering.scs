@@ -1,0 +1,102 @@
+sc_node_not_relation -> concept_pneumatic_power_steering;;
+concept_pneumatic_power_steering => nrel_main_idtf:
+[пневматический усилитель рулевого управления](*<-lang_ru;;*);
+[pneumatic power steering](*<-lang_en;;*);;
+concept_pneumatic_power_steering => nrel_idtf:
+[пневматический усилитель руля](*<-lang_ru;;*);
+[пневмоусилитель рулевого управления](*<-lang_ru;;*);
+	[пневмоусилитель руля](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_compressed_air;;
+concept_compressed_air => nrel_main_idtf:
+[сжатый воздух](*<-lang_ru;;*);
+	[compressed air](*<-lang_en;;*);;
+sc_node_role_relation->rrel_additional;;
+rrel_additional => nrel_main_idtf:
+[дополнительный'](*<-lang_ru;;*);
+     [additional'](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_to_ease;;
+nrel_to_ease => nrel_main_idtf:
+[облегчать*](*<-lang_ru;;*);
+    [to ease*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_air_brake_system;;
+concept_air_brake_system => nrel_main_idtf:
+[пневматическая тормозная система](*<-lang_ru;;*);
+	[air brake system](*<-lang_en;;*);;
+sc_node_not_relation -> concept_double_acting_cylinder;;
+concept_double_acting_cylinder => nrel_main_idtf:
+[цилиндр двойного действия](*<-lang_ru;;*);
+	[double acting cylinder](*<-lang_en;;*);;
+sc_node_not_relation -> concept_tracking_device_of_pneumatic_power_steering;;
+concept_tracking_device_of_pneumatic_power_steering => nrel_main_idtf:
+[следящее устройство пневмоусилителя](*<-lang_ru;;*);
+	[tracking device of pneumatic power steering](*<-lang_en;;*);;
+sc_node_not_relation -> concept_air_brake_system;;
+concept_air_brake_system => nrel_main_idtf:
+[пневматическая тормозная система](*<-lang_ru;;*);
+	[air brake system](*<-lang_en;;*);;
+sc_node_not_relation -> concept_power_steering_of_URAL_377;;
+concept_power_steering_of_URAL_377 => nrel_main_idtf:
+[усилитель руля УРАЛ-377](*<-lang_ru;;*);
+	[power steering of URAL-377](*<-lang_en;;*);;
+exemplar_power_steering_of_URAL_377 => nrel_main_idtf:
+[Усилитель руля УРАЛ-377](*<-lang_ru;;*);
+	[Power steering of URAL-377](*<-lang_en;;*);;
+
+concept_pneumatic_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_power_steering_type;; 
+		->nrel_use;; 
+		->concept_compressed_air;;
+		->nrel_to_produce;;
+		->rrel_additional;; 
+		->concept_effort;; 
+		->concept_steering_linkage;;
+		->nrel_to_ease;;
+		->nrel_managed_wheel;;
+		->nrel_wheel_turning;;
+	*);;
+=> nrel_main_idtf: [Опр.(пневмоусилитель рулевого управления)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Пневмоусилитель рулевого управления – усилитель рулевого управления, использующий сжатый воздух, который обеспечивает получение дополнительного усилия на рулевой трапеции для облегчения поворота управляемых колёс.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_pneumatic_power_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_double_acting_cylinder; concept_tracking_device_of_pneumatic_power_steering;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Пневмоусилитель руля состоит из цилиндра двойного действия и следящего устройства.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(пневмоусилитель руля, составная часть*, цилиндр двойного действия, следящее устройство пневмоусилителя)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_power_steerings;;
+	<-concept_general_form_statement;;
+	*);
+... 
+	(*
+	->rrel_key_sc_element: nrel_to_apply; concept_heavy_duty_truck; nrel_composite_part; concept_air_brake_system;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Пневмоусилители руля применяют на грузовых автомобилях большой грузоподъемности с пневматической тормозной системой.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(пневмоусилитель руля, быть применимым*, грузовой автомобиль большой грузоподъёмности, составная часть*, пневматическая тормозная система)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_power_steerings;;
+	<-concept_general_form_statement;;
+	*);; 
+
+concept_pneumatic_power_steering <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Первые пневматические усилители рулевого управления появились на тяжелой технике — карьерных самосвалах в конце 30-х годов 20-го века. Они были несложными и запитывались от компрессора уже существующих пневматических тормозов.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_pneumatic_power_steering -> rrel_example: exemplar_power_steering_of_URAL_377 (*<- concept_power_steering_of_URAL_377;;*);;

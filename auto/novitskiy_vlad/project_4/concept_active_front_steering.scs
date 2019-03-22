@@ -1,0 +1,174 @@
+sc_node_not_relation -> concept_active_front_steering;;
+concept_active_front_steering => nrel_main_idtf:
+[активное рулевое управление](*<-lang_ru;;*);
+[active front steering](*<-lang_en;;*);;
+concept_active_front_steering => nrel_idtf:
+[система активного рулевого управления](*<-lang_ru;;*);
+	[AFS](*<-lang_en;;*);;
+Bosch_company => nrel_main_idtf:
+[компания Bosch](*<-lang_ru;;*);
+[Bosch company](*<-lang_en;;*);;
+Bosch_company => nrel_idtf:
+	[Bosch](*<-lang_en;;*);;
+ZF_company => nrel_main_idtf:
+[компания ZF](*<-lang_ru;;*);
+[ZF company](*<-lang_en;;*);;
+ZF_company => nrel_idtf:
+	[ZF](*<-lang_en;;*);;
+BMW_brand => nrel_main_idtf:
+[марка BMW](*<-lang_ru;;*);
+[BMW brand](*<-lang_en;;*);;
+BMW_brand => nrel_idtf:
+[БМВ](*<-lang_ru;;*);
+	[BMW](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_turn_car;;
+nrel_to_turn_car => nrel_main_idtf:
+[поворачивать автомобиль*](*<-lang_ru;;*);
+    [to turn car*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_brake;;
+nrel_to_brake => nrel_main_idtf:
+[тормозить*](*<-lang_ru;;*);
+[to brake*](*<-lang_en;;*);;
+nrel_to_brake => nrel_idtf:
+	[снижать скорость*](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_pavement_coating;;
+concept_pavement_coating => nrel_main_idtf:
+[дорожное покрытие](*<-lang_ru;;*);
+	[pavement coating](*<-lang_en;;*);;
+sc_node_not_relation -> concept_slippery;;
+concept_slippery => nrel_main_idtf:
+[скользкий](*<-lang_ru;;*);
+	[slippery](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_interact_with;;
+nrel_to_interact_with => nrel_main_idtf:
+[взаимодействовать*](*<-lang_ru;;*);
+    [to interact with*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_dynamic_stability_control;;
+concept_dynamic_stability_control => nrel_main_idtf:
+[система динамической стабилизации DSC](*<-lang_ru;;*);
+[dynamic stability control](*<-lang_en;;*);;
+concept_dynamic_stability_control => nrel_idtf:
+	[DSC](*<-lang_en;;*);;
+sc_node_not_relation -> concept_control_system_of_AFS;;
+concept_control_system_of_AFS => nrel_main_idtf:
+[система управления AFS](*<-lang_ru;;*);
+[control system of AFS](*<-lang_en;;*);;
+concept_control_system_of_AFS => nrel_main_idtf:
+[электронная система управления AFS](*<-lang_ru;;*);
+	[electronic control system of AFS](*<-lang_en;;*);;
+sc_node_not_relation -> concept_comfortable_during_the_operation;;
+concept_comfortable_during_the_operation => nrel_main_idtf:
+[комфортный при эксплуатации](*<-lang_ru;;*);
+	[comfortable during the operation](*<-lang_en;;*);;
+sc_node_not_relation -> concept_safe_during_the_operation;;
+concept_safe_during_the_operation => nrel_main_idtf:
+[безопасный при эксплуатации](*<-lang_ru;;*);
+	[safe during the operation](*<-lang_en;;*);;
+
+concept_active_front_steering <= nrel_inclusion: concept_steering_system;;
+
+concept_active_front_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_system;; 
+		->nrel_to_be_intended;; 
+		->nrel_to_change;;
+		->nrel_steering_mechanism_ratio;; 
+		->nrel_influence;;
+		->nrel_speed;;
+		->nrel_rotation_angle_of_wheel;;
+		->rrel_front_wheel;; 
+		->concept_wheel;; 
+		->nrel_to_turn_car;;
+		->nrel_to_brake;;
+		->concept_slippery;;
+		->concept_pavement_coating;;
+	*);;
+=> nrel_main_idtf: [Опр.(активное рулевое управление)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [<b>Активное рулевое управление</b> – <sc_element sys_idtf="concept_steering_system">рулевое управление</sc_element>, <sc_element sys_idtf="nrel_to_be_intended">предназначенное для</sc_element> <sc_element sys_idtf="nrel_to_change">изменения</sc_element> <sc_element sys_idtf="nrel_steering_mechanism_ratio">передаточного отношения рулевого механизма</sc_element> в <sc_element sys_idtf="nrel_influence">зависимости от</sc_element> <sc_element sys_idtf="nrel_speed">скорости движения</sc_element>, а также корректирования <sc_element sys_idtf="nrel_rotation_angle_of_wheel">угла поворота</sc_element> <sc_element sys_idtf="rrel_front_wheel">передних</sc_element> <sc_element sys_idtf="concept_wheel">колес</sc_element> при <sc_element sys_idtf="nrel_to_turn_car">прохождении поворотов</sc_element> и <sc_element sys_idtf="nrel_to_brake">торможении</sc_element> на <sc_element sys_idtf="concept_slippery">скользком</sc_element> <sc_element sys_idtf="concept_pavement_coating">покрытии</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);; 
+	*);; 
+*);;	
+
+concept_active_front_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_to_interact_with; concept_servotronic; concept_dynamic_stability_control;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [<sc_element sys_idtf="concept_active_front_steering">Система активного рулевого управления</sc_element> в своей работе <sc_element sys_idtf="nrel_to_interact_with">взаимодействует с</sc_element> другими системами, в т.ч. с <sc_element sys_idtf="concept_servotronic">гидроусилителем руля Servotronic</sc_element>, <sc_element sys_idtf="concept_dynamic_stability_control">системой динамической стабилизации DSC</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система активного рулевого управления, взаимодействовать с*, гидроусилитель руля Servotronic, система динамической стабилизации DSC)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_to_be_developed; Bosch_company; ZF_company;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [<sc_element sys_idtf="concept_active_front_steering">Система активного рулевого управления</sc_element> <sc_element sys_idtf="nrel_to_be_developed">была разработана</sc_element> компаниями <sc_element sys_idtf="Bosch_company">Bosch</sc_element> и <sc_element sys_idtf="ZF_company">ZF</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система активного рулевого управления, быть разработанным*, компания Bosch, компания ZF)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_to_be_common_in; concept_car; BMW_brand;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [<sc_element sys_idtf="concept_active_front_steering">Система активного рулевого управления</sc_element> <sc_element sys_idtf="nrel_to_be_common_in">получила наибольшее распространение</sc_element> в <sc_element sys_idtf="concept_car">автомобилях</sc_element> <sc_element sys_idtf="BMW_brand">марки BMW</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система активного рулевого управления, наибольшее распространение*, марка BMW)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_design; concept_planetary_reducer; concept_control_system_of_AFS;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [<sc_element sys_idtf="nrel_design">Конструкция</sc_element> <sc_element sys_idtf="concept_active_front_steering">системы AFS</sc_element> объединяет <sc_element sys_idtf="concept_planetary_reducer">планетарный редуктор</sc_element> и <sc_element sys_idtf="concept_control_system_of_AFS">систему управления</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система активного управления, конструкция, планетарный редуктор, система управления)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_advantage; concept_comfortable_during_the_operation; concept_safe_during_the_operation;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [<sc_element sys_idtf="nrel_advantage">Преимуществами</sc_element> <sc_element sys_idtf="concept_active_front_steering">системы активного рулевого управления</sc_element> являются <sc_element sys_idtf="concept_comfortable_during_the_operation">повышенный комфорт</sc_element> и <sc_element sys_idtf="concept_safe_during_the_operation">безопасность при эксплуатации автомобиля</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система активного рулевого управления, преимущество*, комфортный при эксплуатации, безопасный при эксплуатации)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_active_front_steering -> rrel_example: exemplar_steering_system_of_Bmw_X5_e70;;
+
+illustration -> ...
+	(*
+	<- rrel_key_sc_element: ... 
+		(*
+		<-explanation;;
+		<=nrel_sc_text_translation: ... 
+			(* 
+				-> rrel_example: [1. насос гидроусилителя руля; 2. шланги; 3. бачок для рабочей жидкости; 4. электронный блок управления; 5. шина обмена данными; 6. электродвигатель; 7. датчик угла поворота электродвигателя; 8. клапан системы Servotronic; 9. планетарный редуктор; 10. аварийный фиксатор; 11. датчик суммарного угла поворота; 12. рулевой механизм.](*<-lang_ru;;*);;
+			*);;
+		*);;
+	-> rrel_key_sc_element: concept_active_front_steering;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/active_front_steering.png";;
+		*);;
+	*);;

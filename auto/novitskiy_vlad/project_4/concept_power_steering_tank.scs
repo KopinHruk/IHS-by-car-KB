@@ -1,0 +1,28 @@
+sc_node_not_relation -> concept_power_steering_tank;;
+concept_power_steering_tank => nrel_main_idtf:
+[бачок гидроусилителя](*<-lang_ru;;*);
+	[power steering tank](*<-lang_en;;*);;
+sc_node_norole_relation->nrel_storage;;
+nrel_storage => nrel_main_idtf:
+[хранение*](*<-lang_ru;;*);
+     [storage*](*<-lang_en;;*);;
+
+concept_power_steering_tank <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->nrel_composite_part;; 
+		->concept_hydraulic_power_steering;; 
+		->concept_electro_hydraulic_power_steering;;
+		->nrel_function;;
+		->nrel_storage;;
+		->concept_working_fluid_of_power_steering;;
+		->nrel_to_move_cyclically;;
+	*);;
+=> nrel_main_idtf: [Опр.(бачок гидроусилителя)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Бачок гидроусилителя – часть гидравлического или электрогидравлического усилителя руля, главной функцией которой является хранение рабочей жидкости, циркулирующей в системе усилителя.](*<-lang_ru;;*);; 
+	*);; 
+*);;	

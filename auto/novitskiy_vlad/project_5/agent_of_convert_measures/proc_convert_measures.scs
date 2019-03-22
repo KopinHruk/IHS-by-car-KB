@@ -1,0 +1,304 @@
+scp_program -> proc_convert_measures (*
+	-> rrel_params: .proc_convert_measures_params (*
+		-> rrel_1: rrel_in: _param;;
+		-> rrel_2: rrel_in: _answer;;
+	*);;
+	
+	-> rrel_operators: ... (*
+
+		// Копируем входное множество входных параметров для его дальнейшего обхода
+		-> rrel_init: .proc_convert_measures_copy_param (*
+			<- searchSetStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _param_element;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _param_set;;
+
+			=> nrel_then: .proc_convert_measures_search_next_param_element;;
+		 	=> nrel_else: .proc_convert_measures_print_exception_no_params;;	
+		*);;
+		
+		// Проходим циклом по элементам множества входных параметров, разбираемся что есть что
+		-> .proc_convert_measures_search_next_param_element (*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _erased_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _param_element;;
+
+			=> nrel_then: .proc_convert_measures_check_is_amount;;
+		 	=> nrel_else: .proc_convert_measures_search_set_of_common_first_second;;	
+		*);;
+
+		// Проверяем является ли текущий входной параметр величиной
+		-> .proc_convert_measures_check_is_amount (*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: concept_amount;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param_element;;
+
+			=> nrel_then: .proc_convert_measures_assign_value_to_current_amount;;
+		 	=> nrel_else: .proc_convert_measures_check_is_first_measure;;	
+		*);;
+
+		// Присваиваем значение текущего входного параметра переменной _current_amount
+		-> .proc_convert_measures_assign_value_to_current_amount (*
+			<- searchElStr3;;
+			-> rrel_1: rrel_assign: rrel_scp_var: _el1;;
+			-> rrel_2: rrel_fixed: rrel_pos_const_perm: rrel_scp_var: _erased_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _current_amount;;
+
+			//=> nrel_goto: .proc_convert_measures_erase_pased_element_arc;;	
+			=> nrel_then: .proc_convert_measures_erase_pased_element_arc;;
+		 	=> nrel_else: .proc_convert_measures_print_error_dont_assign_param;;
+		*);;
+
+		// Проверяем является ли текущий входной параметр конвертируемой величиной
+		-> .proc_convert_measures_check_is_first_measure (*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param_element;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc4;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_convertible_measure;;
+
+			=> nrel_then: .proc_convert_measures_assign_value_to_current_first_measure;;
+		 	=> nrel_else: .proc_convert_measures_check_is_second_measure;;	
+		*);;
+
+		// Присваиваем значение текущего входного параметра переменной _current_first_measure
+		-> .proc_convert_measures_assign_value_to_current_first_measure (*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _current_first_measure;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc4;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_convertible_measure;;
+
+			//=> nrel_goto: .proc_convert_measures_erase_pased_element_arc;;
+			=> nrel_then: .proc_convert_measures_erase_pased_element_arc;;
+		 	=> nrel_else: .proc_convert_measures_print_error_dont_assign_param;;
+		*);;
+
+		// Проверяем является ли текущий входной параметр конвертированной величиной
+		-> .proc_convert_measures_check_is_second_measure (*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param_element;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc4;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_converted_measure;;
+
+			=> nrel_then: .proc_convert_measures_assign_value_to_current_second_measure;;
+		 	=> nrel_else: .proc_convert_measures_print_error_dont_assign_param;;	
+		*);;
+
+		// Присваиваем значение текущего входного параметра переменной _current_second_measure
+		-> .proc_convert_measures_assign_value_to_current_second_measure (*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _current_second_measure;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc4;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_converted_measure;;
+
+			//=> nrel_goto: .proc_convert_measures_erase_pased_element_arc;;	
+			=> nrel_then: .proc_convert_measures_erase_pased_element_arc;;
+		 	=> nrel_else: .proc_convert_measures_print_error_dont_assign_param;;
+		*);;
+
+		// Удаляем из множества дугу принадлежности найденного элемента (т.е. мы его прошли в цикле)
+		-> .proc_convert_measures_erase_pased_element_arc (*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _erased_arc;;
+
+			=> nrel_goto: .proc_convert_measures_search_next_param_element;; 
+		*);;
+
+		// Проверяем является ли конвертируемая величина основной единицей измерения в СИ
+		-> .proc_convert_measures_search_set_of_common_first_second (*
+			<- searchSetStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _current_first_measure;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _current_second_measure;;
+
+			-> rrel_set_2: rrel_assign: rrel_scp_var: _commonSet;;
+
+			=> nrel_then: .proc_convert_measures_next_common_first_second;;
+		 	=> nrel_else: .proc_convert_measures_search_set_of_common_second_first;;	
+		*);;
+
+		-> .proc_convert_measures_next_common_first_second (*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _commonSet;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _currCommon;;
+
+			=> nrel_then: .proc_convert_measures_erase_common_first_second;;
+		 	=> nrel_else: .proc_convert_measures_search_set_of_common_second_first;;	
+		*);;
+
+		-> .proc_convert_measures_erase_common_first_second (*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc2;;
+
+			=> nrel_goto: .proc_convert_measures_check_measure_to_main_measure;; 
+		*);;
+
+		-> .proc_convert_measures_check_measure_to_main_measure (*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _currCommon;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _currNumber;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc4;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_conversion_rate;;
+
+			=> nrel_then: .proc_convert_measures_call_proc_convert_measure_to_main_measure;;
+		 	=> nrel_else: .proc_convert_measures_next_common_first_second;;	
+		*);;
+
+		// Запускаем подпрограмму конвертирования некоторой ЕИ в основную ЕИ
+		-> .proc_convert_measures_call_proc_convert_measure_to_main_measure (*
+			<- call;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_convert_measure_to_main_measure;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_convert_measures_call_proc_convert_measure_to_main_measure_params (*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _current_first_measure;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _current_second_measure;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _current_amount;;
+				-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+			*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .proc_convert_measures_call_proc_convert_measure_to_main_measure_wait;;
+		*);;
+
+		// Ждём возврата результата из подпрограммы
+		-> .proc_convert_measures_call_proc_convert_measure_to_main_measure_wait (*
+			<- waitReturn;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .proc_convert_measures_erase_common_set;;
+		*);;
+
+		// Проверяем является ли конвертированная величина основной единицей измерения в СИ
+		-> .proc_convert_measures_search_set_of_common_second_first (*
+			<- searchSetStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _current_second_measure;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _current_first_measure;;
+
+			-> rrel_set_2: rrel_assign: rrel_scp_var: _commonSet;;
+
+			=> nrel_then: .proc_convert_measures_next_common_second_first;;
+		 	=> nrel_else: .proc_convert_measures_call_proc_convert_measure_to_measure;;	
+		*);;
+
+		-> .proc_convert_measures_next_common_second_first (*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _commonSet;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _currCommon;;
+
+			=> nrel_then: .proc_convert_measures_erase_common_second_first;;
+		 	=> nrel_else: .proc_convert_measures_call_proc_convert_measure_to_measure;;	
+		*);;
+
+		-> .proc_convert_measures_erase_common_second_first (*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc2;;
+
+			=> nrel_goto: .proc_convert_measures_check_main_measure_to_measure;; 
+		*);;
+
+		-> .proc_convert_measures_check_main_measure_to_measure (*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _currCommon;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _currNumber;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc4;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_conversion_rate;;
+
+			=> nrel_then: .proc_convert_measures_call_proc_convert_main_measure_to_measure;;
+		 	=> nrel_else: .proc_convert_measures_next_common_second_first;;	
+		*);;
+
+		// Запускаем подпрограмму конвертирования основной ЕИ в другую ЕИ
+		-> .proc_convert_measures_call_proc_convert_main_measure_to_measure (*
+			<- call;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_convert_main_measure_to_measure;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_convert_measures_call_proc_convert_main_measure_to_measure_params (*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _current_first_measure;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _current_second_measure;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _current_amount;;
+				-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+			*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .proc_convert_measures_call_proc_convert_main_measure_to_measure_wait;;
+		*);;
+
+		// Ждём возврата результата из подпрограммы
+		-> .proc_convert_measures_call_proc_convert_main_measure_to_measure_wait (*
+			<- waitReturn;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .proc_convert_measures_erase_common_set;;
+		*);;
+
+		// Запускаем подпрограмму конвертирования некоторой ЕИ в другую ЕИ
+		-> .proc_convert_measures_call_proc_convert_measure_to_measure (*
+			<- call;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_convert_measure_to_measure;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_convert_measures_call_proc_convert_measure_to_measure_params (*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _current_first_measure;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _current_second_measure;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _current_amount;;
+				-> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+			*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .proc_convert_measures_call_proc_convert_measure_to_measure_wait;;
+		*);;
+
+		// Ждём возврата результата из подпрограммы
+		-> .proc_convert_measures_call_proc_convert_measure_to_measure_wait (*
+			<- waitReturn;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .proc_convert_measures_erase_param_set;;
+		*);;
+
+		-> .proc_convert_measures_erase_common_set (*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _commonSet;;
+
+			=> nrel_goto: .proc_convert_measures_erase_param_set;; 
+		*);;
+
+		-> .proc_convert_measures_print_exception_no_params (*
+			<- printNl;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: [Converting without entering params is unacceptable!];;
+
+			=> nrel_goto: .proc_convert_measures_return;;
+		*);;
+
+		-> .proc_convert_measures_print_error_dont_assign_param (*
+			<- printNl;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: [ERROR! Some param didn't assign!];;
+
+			=> nrel_goto: .proc_convert_measures_erase_param_set;;
+		*);;
+
+		-> .proc_convert_measures_erase_param_set (*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _param_set;;
+
+			=> nrel_goto: .proc_convert_measures_return;; 
+		*);;
+
+		-> .proc_convert_measures_return (*
+			<- return;;
+		*);;
+
+	*);;
+*);;

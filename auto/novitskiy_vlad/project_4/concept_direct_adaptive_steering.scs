@@ -1,0 +1,152 @@
+sc_node_not_relation -> concept_direct_adaptive_steering;;
+concept_direct_adaptive_steering => nrel_main_idtf:
+[адаптивное рулевое управление](*<-lang_ru;;*);
+[direct adaptive steering](*<-lang_en;;*);;
+concept_direct_adaptive_steering => nrel_idtf:
+[система адаптивного рулевого управления](*<-lang_ru;;*);
+[электронная система адаптивного рулевого управления](*<-lang_ru;;*);
+[рулевое управление по проводам](*<-lang_ru;;*);
+[steer-by-wire](*<-lang_en;;*);
+	[DAS](*<-lang_en;;*);;
+sc_node_not_relation -> concept_electronics;;
+concept_electronics => nrel_main_idtf:
+[электроника](*<-lang_ru;;*);
+	[electronics](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_adapt_work;;
+nrel_to_adapt_work => nrel_main_idtf:
+[адаптировать работу*](* <- lang_ru;; *);
+    [to adapt work*](* <- lang_en;; *);;
+sc_node_norole_relation -> nrel_movement_condition;;
+nrel_movement_condition => nrel_main_idtf:
+[условие движения*](* <- lang_ru;; *);
+    [movement condition*](* <- lang_en;; *);;
+sc_node_norole_relation -> nrel_driver_request;;
+nrel_driver_request => nrel_main_idtf:
+[запрос водителя*](* <- lang_ru;; *);
+    [driver request*](* <- lang_en;; *);;
+sc_node_norole_relation -> nrel_to_be_developed;;
+nrel_to_be_developed => nrel_main_idtf:
+[быть разработанным*](* <- lang_ru;; *);
+    [to be developed*](* <- lang_en;; *);;
+sc_node_norole_relation -> nrel_to_be_implemented;;
+nrel_to_be_implemented => nrel_main_idtf:
+[быть внедрённым*](* <- lang_ru;; *);
+    [to be implemented*](* <- lang_en;; *);;
+sc_node_not_relation -> concept_production_car;;
+concept_production_car => nrel_main_idtf:
+[серийный автомобиль](*<-lang_ru;;*);
+	[production car](*<-lang_en;;*);;
+Nissan_company => nrel_main_idtf:
+[компания Nissan](*<-lang_ru;;*);
+[Nissan company](*<-lang_en;;*);;
+Nissan_company => nrel_idtf:
+[Ниссан](*<-lang_ru;;*);
+	[Nissan](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_rigid_mechanical_connection;;
+nrel_rigid_mechanical_connection => nrel_main_idtf:
+[жёсткая механическая связь*](* <- lang_ru;; *);
+    [rigid mechanical connection*](* <- lang_en;; *);;
+sc_node_not_relation -> concept_adaptive_steering_input_sensor;;
+concept_adaptive_steering_input_sensor => nrel_main_idtf:
+[входной датчик адаптивного рулевого управления](*<-lang_ru;;*);
+	[adaptive steering input sensor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_adaptive_steering_electronic_control_unit;;
+concept_adaptive_steering_electronic_control_unit => nrel_main_idtf:
+[электронный блок адаптивного рулевого управления](*<-lang_ru;;*);
+	[adaptive steering electronic control unit](*<-lang_en;;*);;
+sc_node_not_relation -> concept_adaptive_steering_execution_unit;;
+concept_adaptive_steering_execution_unit => nrel_main_idtf:
+[исполнительное устройство адаптивного рулевого управления](*<-lang_ru;;*);
+	[adaptive steering execution unit](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_system_of_Infiniti_Q50;;
+concept_steering_system_of_Infiniti_Q50 => nrel_main_idtf:
+[рулевое управление Infiniti Q50](*<-lang_ru;;*);
+	[steering system of Infiniti Q50](*<-lang_en;;*);;
+exemplar_steering_system_of_Infiniti_Q50 => nrel_main_idtf:
+[Рулевое управление Infiniti Q50](*<-lang_ru;;*);
+	[Steering system of Infiniti Q50](*<-lang_en;;*);;
+
+concept_direct_adaptive_steering <= nrel_inclusion: concept_steering_system;;
+
+concept_direct_adaptive_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_system;; 
+		->concept_electronics;; 
+		->nrel_to_adapt_work;;
+		->nrel_movement_condition;; 
+		->nrel_driver_request;;
+	*);;
+=> nrel_main_idtf: [Опр.(адаптивное рулевое управление)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Адаптивное рулевое управление – рулевое управление, электроника которого позволяет адаптировать собственную работу к конкретным условиям движения и индивидуальным запросам водителя.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_direct_adaptive_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_to_be_developed; nrel_to_be_implemented; concept_production_car; Nissan_company;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Система адаптивного рулевого управления была разработана и внедрена на серийных автомобилях компанией Nissan.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система адаптивного рулевого управления, быть разработанным*, быть внедрённым*, серийный автомобиль, компания Nissan)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_feature; set; nrel_rigid_mechanical_connection; concept_steering_wheel; concept_wheel;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Особенностью адаптивной рулевой системы является отсутствие жёсткой механической связи между рулём и колёсами.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(адаптивная рулевая система, особенность*, жёсткая механическая связь*, руль, колесо)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_adaptive_steering_input_sensor; concept_adaptive_steering_electronic_control_unit; concept_adaptive_steering_execution_unit;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Электронная система адаптивного рулевого управления включает входные датчики, электронные блоки управления и исполнительные устройства.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(электронная система адаптивного рулевого управления, составная часть*, входной датчик адаптивного рулевого управления, электронный блок адаптивного рулевого управления, исполнительное устройство адаптивного рулевого управления)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_direct_adaptive_steering <- rrel_key_sc_element: ... 
+	(*
+	<-explanation;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Система адаптивного рулевого управления имеет несколько существенных преимуществ, отличающих ее от традиционного механического управления: быстродействие; точность управления; отсутствие вибраций на рулевом колесе; возможность реализации новых функций.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_direct_adaptive_steering -> rrel_example: exemplar_steering_system_of_Infiniti_Q50 (*<- concept_steering_system_of_Infiniti_Q50;;*);;
+
+illustration -> ...
+	(*
+	<- rrel_key_sc_element: ... 
+		(*
+		<-explanation;;
+		<=nrel_sc_text_translation: ... 
+			(* 
+				-> rrel_example: [1. сервопривод рулевого колеса; 2. электромагнитное сцепление; 3. электронные блоки управления; 4. сервоприводы рулевого механизма.](*<-lang_ru;;*);;
+			*);;
+		*);;
+	-> rrel_key_sc_element: concept_direct_adaptive_steering;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/direct_adaptive_steering.png";;
+		*);;
+	*);;

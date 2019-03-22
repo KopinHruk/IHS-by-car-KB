@@ -1,0 +1,71 @@
+sc_node_not_relation -> concept_steering_system_with_electro_hydraulic_power_steering;;
+concept_steering_system_with_electro_hydraulic_power_steering => nrel_main_idtf:
+[система рулевого управления с ЭГУР](*<-lang_ru;;*);
+[steering system with electro-hydraulic power steering](*<-lang_en;;*);;
+concept_steering_system_with_electro_hydraulic_power_steering => nrel_idtf:
+[рулевое управление с ЭГУР](*<-lang_ru;;*);
+	[электрогидравлическое рулевое управление](*<-lang_ru;;*);;
+sc_node_norole_relation -> nrel_functionality;; 
+nrel_functionality => nrel_main_idtf:
+[функционирование*](*<-lang_ru;;*);
+[functionality*](*<-lang_en;;*);;
+nrel_functionality => nrel_idtf:
+[принцип действия*](*<-lang_ru;;*);
+	[action principle*](*<-lang_en;;*);;
+nrel_analogy => nrel_idtf:
+[быть аналогичным*](*<-lang_ru;;*);
+	[to be same*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_power_steering_engine;;
+concept_power_steering_engine => nrel_main_idtf:
+[электродвигатель усилителя руля](*<-lang_ru;;*);
+	[power steering engine](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_system_of_Bmw_X5_e70;;
+concept_steering_system_of_Bmw_X5_e70 => nrel_main_idtf:
+[рулевое управление Bmw X5 e70](*<-lang_ru;;*);
+	[steering system of Bmw X5 e70](*<-lang_en;;*);;
+exemplar_steering_system_of_Bmw_X5_e70 => nrel_main_idtf:
+[Рулевое управление Bmw X5 e70](*<-lang_ru;;*);
+	[Steering system of Bmw X5 e70](*<-lang_en;;*);;
+
+concept_steering_system_with_electro_hydraulic_power_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_system;; 
+		->nrel_design;; 
+		->concept_electro_hydraulic_power_steering;;
+	*);;
+=> nrel_main_idtf: [Опр.(система рулевого управления с ЭГУР)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Система рулевого управления с ЭГУР - рулевое управление, в конструкцию которого входит электрогидравлический усилитель руля.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_steering_system_with_electro_hydraulic_power_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_functionality; nrel_analogy; concept_steering_system_with_hydraulic_power_steering;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Принцип действия системы с ЭГУР аналогичен системе с гидравлическим усилителем.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система рулевого управления с ЭГУР, принцип действия*, быть аналогичным*, система рулевого управления с ГУР)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_difference; concept_steering_system_with_hydraulic_power_steering; concept_hydraulic_pump; nrel_activate; concept_power_steering_engine; concept_internal_combustion_engine;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Главное отличие между рулевым управлением с ЭГУР и ГУР заключается в том, что насос усилителя приводится в действие электродвигателем, а не ДВС.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система рулевого управления с ЭГУР, отличие*, система рулевого управления с ГУР, насос усилителя, приводить в действие*, электродвигатель усилителя руля, ДВС)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_steering_system_with_electro_hydraulic_power_steering -> rrel_example: exemplar_steering_system_of_Bmw_X5_e70 (*<- concept_steering_system_of_Bmw_X5_e70;;*);;

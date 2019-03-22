@@ -1,0 +1,75 @@
+sc_node_not_relation -> concept_mechanical_steering_rack;;
+concept_mechanical_steering_rack => nrel_main_idtf:
+[механическая рулевая рейка](*<-lang_ru;;*);
+	[mechanical steering rack](*<-lang_en;;*);;
+sc_node_not_relation -> concept_toothed_rack;;
+concept_toothed_rack => nrel_main_idtf:
+[зубчатая рейка](*<-lang_ru;;*);
+	[toothed rack](*<-lang_en;;*);;
+sc_node_not_relation -> concept_toothed_mechanism;;
+concept_toothed_mechanism => nrel_main_idtf:
+[зубчатый механизм](*<-lang_ru;;*);
+	[toothed mechanism](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_autopart_end;;
+nrel_autopart_end => nrel_main_idtf:
+[конец запчасти*](*<-lang_ru;;*);
+    [autopart end*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_rack_of_Golf_2_gti;;
+concept_steering_rack_Golf_2_gti => nrel_main_idtf:
+[рулевая рейка Golf 2 gti](*<-lang_ru;;*);
+	[steering rack of Golf 2 gti](*<-lang_en;;*);;
+exemlar_steering_rack_Golf_2_gti => nrel_main_idtf:
+[Рулевая рейка Golf 2 gti](*<-lang_ru;;*);
+	[Steering rack of Golf 2 gti](*<-lang_en;;*);;
+
+concept_mechanical_steering_rack <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_elementary;; 
+		->concept_steering_rack;; 
+		->nrel_wheel_turning;;
+		->nrel_with_the_help_of;;
+		->concept_effort;;
+		->rrel_driver;;
+	*);;
+=> nrel_main_idtf: [Опр.(механическая рулевая рейка)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Механическая рулевая рейка – наиболее простой вариант рулевой рейки, поворот колес с помощью которой осуществляется исключительно за счет усилия водителя.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_mechanical_steering_rack <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_composite_part; concept_toothed_rack; nrel_affect; concept_steering_drive; concept_toothed_mechanism; nrel_located; nrel_autopart_end;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В состав механической рулевой рейки входят зубчатая рейка, взаимодействующая с приводом руля, и зубчатый механизм, расположенный на одном из концов рейки.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(механическая рулевая рейка, составная часть*, зубчатая рейка, взаимодействовать*, привод руля, зубчатый механизм, быть расположенным*, конец запчасти*, зубчатая рейка)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_mechanisms;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_mechanical_steering_rack -> rrel_example: exemlar_steering_rack_Golf_2_gti (*<- concept_steering_rack_of_Golf_2_gti;;*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_mechanical_steering_rack;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/mechanical_steering_rack_1.png";;
+		*);;
+	*);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_mechanical_steering_rack;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/mechanical_steering_rack_2.png";;
+		*);;
+	*);;

@@ -1,0 +1,140 @@
+sc_node_not_relation -> concept_variable_gear_ratio_steering;;
+concept_variable_gear_ratio_steering => nrel_main_idtf:
+[динамическое рулевое управление](*<-lang_ru;;*);
+[variable gear ratio steering](*<-lang_en;;*);;
+concept_variable_gear_ratio_steering => nrel_idtf:
+[система динамического рулевого управления](*<-lang_ru;;*);
+	[VGRS](*<-lang_en;;*);;
+sc_node_not_relation -> concept_planetary_reducer;;
+concept_planetary_reducer => nrel_main_idtf:
+[планетарный редуктор](*<-lang_ru;;*);
+	[planetary reducer](*<-lang_en;;*);;
+sc_node_not_relation -> concept_wave_transmission;;
+concept_wave_transmission => nrel_main_idtf:
+[волновая передача](*<-lang_ru;;*);
+	[wave transmission](*<-lang_en;;*);;
+Toyota_company => nrel_main_idtf:
+[компания Toyota](*<-lang_ru;;*);
+[Toyota company](*<-lang_en;;*);;
+Toyota_company => nrel_idtf:
+[Тойота](*<-lang_ru;;*);
+	[Toyota](*<-lang_en;;*);;
+Audi_brand => nrel_main_idtf:
+[марка Audi](*<-lang_ru;;*);
+[Audi brand](*<-lang_en;;*);;
+Audi_brand => nrel_idtf:
+[Ауди](*<-lang_ru;;*);
+	[Audi](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_be_common_in;;
+nrel_to_be_common_in => nrel_main_idtf:
+[быть распространённым в*](*<-lang_ru;;*);
+     [to be common in*](*<-lang_en;;*);;
+rrel_base => nrel_idtf:
+[базовый конструктивный элемент'](* <- lang_ru;; *);
+	[basic structural element'](* <- lang_en;; *);;
+sc_node_not_relation -> concept_summing_mechanism;;
+concept_summing_mechanism => nrel_main_idtf:
+[суммирующий механизм](*<-lang_ru;;*);
+	[summing mechanism](*<-lang_en;;*);;
+sc_node_not_relation -> concept_steering_system_of_Audi_A4_2008;;
+concept_steering_system_of_Audi_A4_2008 => nrel_main_idtf:
+[рулевое управление Audi A4 2008](*<-lang_ru;;*);
+	[steering system of Audi A4 2008](*<-lang_en;;*);;
+concept_steering_system_of_Audi_A4_2008 -> exemplar_steering_system_of_Audi_A4_2008;;
+exemplar_steering_system_of_Audi_A4_2008 => nrel_main_idtf:
+[Рулевое управление Audi A4 2008](*<-lang_ru;;*);
+	[Steering system of Audi A4 2008](*<-lang_en;;*);;
+
+concept_variable_gear_ratio_steering <= nrel_inclusion: concept_steering_system;;
+
+concept_variable_gear_ratio_steering <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_steering_system;; 
+		->nrel_feature;; 
+		->nrel_to_change;;
+		->nrel_steering_mechanism_ratio;; 
+		->nrel_influence;;
+		->nrel_speed;;
+		->nrel_steering_wheel_angle;;
+	*);;
+=> nrel_main_idtf: [Опр.(динамическое рулевое управление)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Динамическое рулевое управление – рулевое управление, особенностью которого является изменение передаточного отношения рулевого механизма в зависимости от скорости движения автомобиля и угла поворота рулевого колеса.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+
+concept_variable_gear_ratio_steering <- rrel_key_sc_element: ... 
+	(*
+	->rrel_key_sc_element: nrel_functionality; nrel_analogy; concept_active_front_steering;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [В функциональном плане система динамического рулевого управления аналогична системе активного рулевого управления.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система динамического рулевого управления, функционирование*, быть аналогичным*, система активного рулевого управления)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_difference; concept_active_front_steering; nrel_to_use; nrel_to_change; nrel_steering_mechanism_ratio; concept_planetary_reducer; concept_wave_transmission;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Основное отличие между динамической и активной системами рулевого управления заключается в использовании для изменения передаточного отношения вместо планетарного редуктора волновой передачи.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система динамического рулевого управления, отличие*, система активного рулевого управления, использовать*, изменять*, передаточное отношение рулевого механизма*, планетарный редуктор, волновая передача)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_to_be_developed; Toyota_company;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Система динамического рулевого управления была разработана компанией Toyota.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система динамического рулевого управления, быть разработанным*, компания Тойота)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: nrel_to_be_common_in; Audi_brand;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Система динамического рулевого управления получила наибольшее распространение в автомобилях марки Audi.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система динамического рулевого управления, быть распространённым в*, марка Toyota)](*<-lang_ru;;*);;
+	<-rrel_theorem:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);
+...
+	(*
+	->rrel_key_sc_element: rrel_base; concept_summing_mechanism; nrel_to_change; nrel_managed_wheel; nrel_wheel_turning; nrel_rotation_angle_of_wheel;;
+	<-statement;;
+	<=nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Основным конструктивным элементом системы динамического управления является суммирующий механизм, который изменяет угол поворота управляемых колес.](*<-lang_ru;;*);;
+		*);;
+	=>nrel_main_idtf: [Утв.(система динамического управления, основной конструктивный элемент', суммирующий механизм, изменять*, управляемое колесо*, поворот колеса*, угол поворота колеса*)](*<-lang_ru;;*);;
+	<-rrel_axiom:subject_domain_of_steering_systems;;
+	<-concept_general_form_statement;;
+	*);;
+
+concept_variable_gear_ratio_steering -> rrel_example: exemplar_steering_system_of_Audi_A4_2008;;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_variable_gear_ratio_steering;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> rrel_example: "file://content/variable_gear_ratio_steering.png";;
+		*);;
+	*);;

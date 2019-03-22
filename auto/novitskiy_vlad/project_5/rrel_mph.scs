@@ -1,0 +1,25 @@
+sc_node_role_relation->rrel_mph;;
+rrel_mph => nrel_main_idtf:
+[мили в час'](*<-lang_ru;;*);
+[mile per hour'](*<-lang_en;;*);;
+rrel_mph => nrel_idtf:
+[миль/ч'](*<-lang_ru;;*);
+	[km per h'](*<-lang_en;;*);;
+
+rrel_mph <- rrel_key_sc_element:...
+	(*
+		<- definition;;
+		<= nrel_using_constants: ... 
+		(*
+			-> rrel_non_systemic_measure;; 
+			-> nrel_speed;;
+		*);; 
+		=> nrel_main_idtf: [Опр.(мили в час')](*<-lang_ru;;*);; 
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [<b>Мили в час'</b> - это <sc_element sys_idtf="rrel_non_systemic_measure">внесистемная единица измерения</sc_element> <sc_element sys_idtf="nrel_speed">скорости</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+			*);; 
+	*);;
+
+//задание коэффициента конвертирования*
+0_447 <= nrel_conversion_rate: (rrel_mph => rrel_m_per_sec);;

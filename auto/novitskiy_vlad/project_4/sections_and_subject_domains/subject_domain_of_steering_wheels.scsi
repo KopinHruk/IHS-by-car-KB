@@ -1,0 +1,10 @@
+subject_domain -> subject_domain_of_steering_wheels;;
+subject_domain_of_steering_wheels => nrel_main_idtf:
+[Предметная область рулевых колёс](*<-lang_ru;;*);
+	[Subject domain of steering wheels](*<-lang_en;;*);;
+
+subject_domain_of_steering_wheels -> rrel_explored_relation: nrel_backlash_steering; nrel_neutral_position_of_steering_wheel;;
+
+subject_domain_of_steering_wheels -> rrel_maximum_studied_object_class: concept_steering_wheel;;
+
+subject_domain_of_steering_wheels -> rrel_not_maximum_studied_object_class: concept_right_hand_drive_layout; concept_left_hand_drive_layout;;

@@ -1,0 +1,8 @@
+subject_domain -> subject_domain_of_steering_columns;;
+subject_domain_of_steering_columns => nrel_main_idtf:
+[Предметная область рулевых колонок](*<-lang_ru;;*);
+	[Subject domain of steering columns](*<-lang_en;;*);;
+
+subject_domain_of_steering_columns -> rrel_maximum_studied_object_class: concept_steering_column;;
+
+subject_domain_of_steering_columns -> rrel_not_maximum_studied_object_class: concept_folding_steering_column; concept_steering_shaft;;

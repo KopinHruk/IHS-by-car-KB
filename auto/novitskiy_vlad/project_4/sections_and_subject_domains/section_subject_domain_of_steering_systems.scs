@@ -1,0 +1,35 @@
+non_atomic_section -> section_subject_domain_of_steering_systems;;
+section_subject_domain_of_steering_systems => nrel_main_idtf:
+[Раздел. Предметная область систем рулевого управления](*<-lang_ru;;*);
+	[Section. Subject domain of steering systems](*<-lang_en;;*);;
+
+section_subject_domain_of_steering_systems <- not_enough_formed_structure;;
+
+section_subject_domain_of_steering_systems = [*^"file://subject_domain_of_steering_systems.scsi"*];;
+
+section_subject_domain_of_steering_systems -> rrel_key_sc_element: subject_domain_of_steering_systems;;
+
+section_subject_domain_of_steering_systems <= nrel_section_decomposition:
+{
+	section_subject_domain_of_steering_wheels
+	(*
+	=> nrel_section_base_order: 
+		section_subject_domain_of_steering_columns;;
+	*);
+	section_subject_domain_of_steering_columns
+	(*
+	=> nrel_section_base_order:
+		section_subject_domain_of_steering_mechanisms;;
+	*);
+	section_subject_domain_of_steering_mechanisms
+	(*
+	=> nrel_section_base_order: 
+		section_subject_domain_of_steering_drives;;
+	*);
+	section_subject_domain_of_steering_drives
+	(*
+	=> nrel_section_base_order: 
+		section_subject_domain_of_power_steerings;;
+	*);
+	section_subject_domain_of_power_steerings
+};;
