@@ -1,0 +1,27 @@
+sc_node_role_relation -> rrel_gram;;
+rrel_gram => nrel_main_idtf:
+[грамм'](*<-lang_ru;;*);
+[gram'](*<-lang_en;;*);;
+rrel_gram => nrel_idtf:
+[г'](* <- lang_ru;; *);
+[g'](* <- lang_en;; *);
+	[gr'](*<-lang_en;;*);;
+
+
+rrel_gram <- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		<= nrel_using_constants: ... 
+		(*
+			-> rrel_measure_in_SI;; 
+			-> nrel_mass;;
+		*);; 
+		=> nrel_main_idtf: [Опр.(грамм')](*<-lang_ru;;*);; 
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [<b>Грамм'</b> - это <sc_element sys_idtf="rrel_measure_in_SI">единица измерения</sc_element> <sc_element sys_idtf="nrel_mass">массы</sc_element> в СИ.](*<-lang_ru;; => nrel_format: format_html;;*);;
+			*);; 
+	*);;
+
+//задание коэффициента конвертирования*
+0_001 <= nrel_conversion_rate: (rrel_gram => rrel_kilogram);;

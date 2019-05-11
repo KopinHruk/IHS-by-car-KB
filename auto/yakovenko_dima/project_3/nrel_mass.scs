@@ -1,3 +1,7 @@
+nrel_mass => nrel_main_idtf: 
+[масса*] (* <- lang_ru;; *);
+	[mass*] (* <- lang_en;; *);;
+
 nrel_mass
 
 <- rrel_key_sc_element:
