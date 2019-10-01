@@ -1,7 +1,9 @@
 sc_node_role_relation -> rrel_Nm;;
 rrel_Nm => nrel_main_idtf:
-[Нм'](*<-lang_ru;;*);
 [Ньютон на метр'](*<-lang_ru;;*);
+[Newton per meter'](*<-lang_en;;*);;
+rrel_Nm => nrel_idtf:
+[Нм'](*<-lang_ru;;*);
 	[Nm'](*<-lang_en;;*);;
 sc_node_norole_relation -> nrel_moment_of_force;; 
 nrel_moment_of_force => nrel_main_idtf:

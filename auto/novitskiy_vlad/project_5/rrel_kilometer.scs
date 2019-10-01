@@ -13,7 +13,7 @@ rrel_kilometer <- rrel_key_sc_element:...
 			-> rrel_measure_in_SI;; 
 			-> nrel_distance;;
 		*);;
-		=> nrel_main_idtf: [Опр.(километр)](*<-lang_ru;;*);; 
+		=> nrel_main_idtf: [Опр.(километр')](*<-lang_ru;;*);; 
 		<= nrel_sc_text_translation: ...
 			(*
 				-> [<b>Километр'</b> - это <sc_element sys_idtf="rrel_measure_in_SI">единица измерения</sc_element> <sc_element sys_idtf="nrel_distance">расстояния</sc_element> в СИ.](*<-lang_ru;; => nrel_format: format_html;;*);;

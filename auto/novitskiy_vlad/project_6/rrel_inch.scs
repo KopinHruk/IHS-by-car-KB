@@ -1,0 +1,27 @@
+sc_node_role_relation -> rrel_inch;;
+rrel_inch => nrel_main_idtf:
+[дюйм'](*<-lang_ru;;*);
+[inch'](*<-lang_en;;*);;
+rrel_inch => nrel_idtf:
+[международный дюйм'](*<-lang_ru;;*);
+[international inch'](*<-lang_en;;*);
+	[in'](*<-lang_en;;*);;
+
+rrel_inch <- rrel_key_sc_element:...
+	(*
+		<- definition;;
+		<= nrel_using_constants: ... 
+		(*
+			-> rrel_non_systemic_measure;; 
+			-> nrel_distance;;
+		*);; 
+		=> nrel_main_idtf: [Опр.(дюйм')](*<-lang_ru;;*);; 
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [<b>Дюйм'</b> - это <sc_element sys_idtf="rrel_non_systemic_measure">внесистемная единица измерения</sc_element> <sc_element sys_idtf="nrel_distance">расстояния</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+			*);; 
+	*);;
+
+//задание коэффициента конвертирования*
+0_0254 <= nrel_conversion_rate: (rrel_inch => rrel_meter);;
+

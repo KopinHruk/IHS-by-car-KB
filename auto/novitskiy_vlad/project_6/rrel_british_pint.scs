@@ -1,0 +1,23 @@
+sc_node_role_relation -> rrel_british_pint;;
+rrel_british_pint => nrel_main_idtf:
+[английская пинта'](*<-lang_ru;;*);
+	[british pint'](*<-lang_en;;*);;
+
+rrel_british_pint <- rrel_key_sc_element:...
+	(*
+		<- definition;;
+		<= nrel_using_constants: ... 
+		(*
+			-> rrel_non_systemic_measure;; 
+			-> nrel_fuel_volume;;
+		*);; 
+		=> nrel_main_idtf: [Опр.(английская пинта')](*<-lang_ru;;*);; 
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [<b>Английская пинта'</b> - это <sc_element sys_idtf="rrel_non_systemic_measure">внесистемная единица измерения</sc_element> <sc_element sys_idtf="nrel_fuel_volume">объема топлива</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+			*);; 
+	*);;
+
+//задание коэффициента конвертирования*
+0_56826127 <= nrel_conversion_rate: (rrel_british_pint => rrel_liter);;
+

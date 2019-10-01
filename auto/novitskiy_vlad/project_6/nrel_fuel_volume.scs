@@ -1,0 +1,4 @@
+sc_node_norole_relation -> nrel_fuel_volume;;
+concept_fuel_volume => nrel_main_idtf:
+[объем топлива*](* <-lang_ru;; *);
+	[fuel volume*](* <- lang_en;; *);;

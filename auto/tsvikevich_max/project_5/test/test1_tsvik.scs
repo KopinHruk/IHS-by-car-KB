@@ -39,3 +39,7 @@ bmw_535 => nrel_spring_type: bmw_535_spring;;
 bmw_535_spring <- concept_spring_torsional;;
 audia8 => nrel_spring_type: audia8_spring;;
 audia8_spring <- concept_spring_mainspring;;
+details_kurs -> nrel_spring_type;;
+details_kurs -> nrel_brake_pad_type;;
+details_kurs -> nrel_transmission_type1;;
+concept_automobili -> scoda_rapid; mazda6; audia4; bmw_525; bmw_535; audia8;;

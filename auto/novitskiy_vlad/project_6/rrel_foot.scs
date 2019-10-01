@@ -1,0 +1,27 @@
+sc_node_role_relation -> rrel_foot;;
+rrel_foot => nrel_main_idtf:
+[фут'](*<-lang_ru;;*);
+[foot'](*<-lang_en;;*);;
+rrel_foot => nrel_idtf:
+[международный фут'](*<-lang_ru;;*);
+[international foot'](*<-lang_en;;*);
+	[ft'](*<-lang_en;;*);;
+
+rrel_foot <- rrel_key_sc_element:...
+	(*
+		<- definition;;
+		<= nrel_using_constants: ... 
+		(*
+			-> rrel_non_systemic_measure;; 
+			-> nrel_distance;;
+		*);; 
+		=> nrel_main_idtf: [Опр.(фут')](*<-lang_ru;;*);; 
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [<b>Фут'</b> - это <sc_element sys_idtf="rrel_non_systemic_measure">внесистемная единица измерения</sc_element> <sc_element sys_idtf="nrel_distance">расстояния</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+			*);; 
+	*);;
+
+//задание коэффициента конвертирования*
+0_3048 <= nrel_conversion_rate: (rrel_foot => rrel_meter);;
+

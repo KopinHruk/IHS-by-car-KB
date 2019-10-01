@@ -1,0 +1,81 @@
+concept_bearing
+=> nrel_main_idtf: [подшипник]
+(* <- lang_ru;; *);
+[bearing](*<-lang_en;;*);;
+
+concept_group_yoke_axis
+=> nrel_main_idtf: [групповая ось коромысел]
+(* <- lang_ru;; *);
+[group yoke axix](*<-lang_en;;*);;
+
+concept_individual_yoke_axis
+=> nrel_main_idtf: [индивидуальная ось коромысел]
+(* <- lang_ru;; *);
+[individual yoke axis](*<-lang_en;;*);;
+
+concept_pin
+=> nrel_main_idtf: [штифт]
+(* <- lang_ru;; *);
+[pin](*<-lang_en;;*);;
+
+concept_thrust_washer
+=> nrel_main_idtf: [упорная шайба]
+(* <- lang_ru;; *);
+[thrust washer](*<-lang_en;;*);;
+
+concept_regulator
+=> nrel_main_idtf: [регулятор]
+(* <- lang_ru;; *);
+[regulator](*<-lang_en;;*);;
+
+concept_carburetor
+=> nrel_main_idtf: [карбюратор]
+(* <- lang_ru;; *);
+[carburetor](*<-lang_en;;*);;
+
+concept_collector
+=> nrel_main_idtf: [коллектор]
+(* <- lang_ru;; *);
+[collector](*<-lang_en;;*);;
+
+concept_jet
+=> nrel_main_idtf: [жиклер]
+(* <- lang_ru;; *);
+[jet](*<-lang_en;;*);;
+
+concept_cast_pulley
+=> nrel_main_idtf: [литой шкив]
+(* <- lang_ru;; *);
+[cast pulley](*<-lang_en;;*);;
+
+concept_forged_pulley
+=> nrel_main_idtf: [кованый шкив]
+(* <- lang_ru;; *);
+[forged pulley](*<-lang_en;;*);;
+
+concept_stamed_pulley
+=> nrel_main_idtf: [штампованный шкив]
+(* <- lang_ru;; *);
+[stamed pulley](*<-lang_en;;*);;
+
+concept_mechanical_restoration_pulley
+=> nrel_main_idtf: [шкив механической обработки]
+(* <- lang_ru;; *);
+[mechanical restoration pulley](*<-lang_en;;*);;
+
+concept_print_pulley
+=> nrel_main_idtf: [шкив 3D печати]
+(* <- lang_ru;; *);
+[print pulley](*<-lang_en;;*);;
+
+concept_carter
+=> nrel_main_idtf: [картер]
+(* <- lang_ru;; *);
+[carter](*<-lang_en;;*);;
+
+sc_node_role_relation->rrel_db;;
+rrel_db => nrel_main_idtf:
+[дБ'](*<-lang_ru;;*);
+[Децибел'](*<-lang_ru;;*);
+	[decibel'](*<-lang_en;;*);;
+

@@ -1,0 +1,27 @@
+sc_node_role_relation -> rrel_ton;;
+rrel_ton => nrel_main_idtf:
+[тонна'](*<-lang_ru;;*);
+[ton'](*<-lang_en;;*);;
+rrel_ton => nrel_idtf:
+[т'](* <- lang_ru;; *);
+[t'](* <- lang_en;; *);
+	[tonne'](* <- lang_en;; *);;
+
+
+rrel_ton <- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		<= nrel_using_constants: ... 
+		(*
+			-> rrel_non_systemic_measure;; 
+			-> nrel_mass;;
+		*);; 
+		=> nrel_main_idtf: [Опр.(тонна')](*<-lang_ru;;*);; 
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [<b>Тонна'</b> - это <sc_element sys_idtf="rrel_non_systemic_measure">внесистемная единица измерения</sc_element> <sc_element sys_idtf="nrel_mass">массы</sc_element>.](*<-lang_ru;; => nrel_format: format_html;;*);;
+			*);; 
+	*);;
+
+//задание коэффициента конвертирования*
+1000 <= nrel_conversion_rate: (rrel_ton => rrel_kilogram);;

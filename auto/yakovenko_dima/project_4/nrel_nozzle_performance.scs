@@ -1,0 +1,62 @@
+nrel_nozzle_performance
+=> nrel_main_idtf:
+[производительность форсунок*](*<-lang_ru;;*);
+	[nozzle performance*](*<-lang_en;;*);
+
+<- rrel_key_sc_element:
+	 Definition_of_the_nrel_nozzle_performance
+(* 
+	=> nrel_main_idtf: [Опр. (производительность форсунок*)](*<- lang_ru;;*);;
+	<- definition;;
+	<= nrel_sc_text_translation: ...
+		(* 
+			-> [<b>Производительность форсунки*</b> — это ее максимальная пропускная способность в открытом состоянии (рассчитывается как подача максимального количества горючего за единицу времени).] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		*);;
+        <= nrel_using_constants: ... 
+	(* 
+		-> concept_injector;;
+		-> concept_combustible_substance;;
+	*);;
+*);
+
+<- binary_relation (* <- arity (* <- concept_parameter;; *);;
+                              => nrel_measurement: 2;; *);
+ 
+=> nrel_first_domain: 
+	... 
+	(* <- concept_value;; <= nrel_value: ... (* <- concept_number;; *);; *);
+
+=> nrel_second_domain: 
+	concept_value;
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://nrel_nozzle_performance.JPG"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+=> nrel_definitional_domain: ... 
+(* 
+	<= nrel_combination: ...
+           (* 
+		-> concept_value;; 
+		-> ... 
+		(* 	
+		<- concept_value;; 
+		<= nrel_value: ... (* <- concept_number;; *);; *);; *);;
+
+
+<- oriented_relation;;
+<- antireflexive_relation;;
+<- antitransitive_relation;;
+<- antisymmetric_relation;;
+
+<- sc_node_norole_relation;;
+*);;

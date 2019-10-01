@@ -1,0 +1,24 @@
+sc_node_role_relation -> rrel_decimeter;;
+rrel_decimeter => nrel_main_idtf:
+[дециметр'](*<-lang_ru;;*);
+[decimeter'](*<-lang_en;;*);;
+rrel_decimeter => nrel_idtf:
+	[dm'](*<-lang_en;;*);;
+
+rrel_decimeter <- rrel_key_sc_element:...
+	(*
+		<- definition;;
+		<= nrel_using_constants: ... 
+		(*
+			-> rrel_measure_in_SI;; 
+			-> nrel_distance;;
+		*);; 
+		=> nrel_main_idtf: [Опр.(дециметр')](*<-lang_ru;;*);; 
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [<b>Дециметр'</b> - это <sc_element sys_idtf="rrel_measure_in_SI">единица измерения</sc_element> <sc_element sys_idtf="nrel_distance">расстояния</sc_element> в СИ.](*<-lang_ru;; => nrel_format: format_html;;*);;
+			*);; 
+	*);;
+
+//задание коэффициента конвертирования*
+0_1 <= nrel_conversion_rate: (rrel_decimeter => rrel_meter);;
