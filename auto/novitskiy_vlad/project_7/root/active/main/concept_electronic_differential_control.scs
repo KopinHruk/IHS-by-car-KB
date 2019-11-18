@@ -1,0 +1,32 @@
+sc_node_not_relation -> concept_electronic_differential_control;;
+concept_electronic_differential_control => nrel_main_idtf:
+[электронное управление дифференциалом](*<-lang_ru;;*);
+	[electronic differential control](*<-lang_en;;*);;
+sc_node_not_relation -> concept_differential;;
+concept_differential => nrel_main_idtf:
+[дифференциал](*<-lang_ru;;*);
+	[differential](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_block;; 
+nrel_to_block => nrel_main_idtf:
+[блокировать*](*<-lang_ru;;*);
+	[to block*](*<-lang_en;;*);;
+
+concept_electronic_differential_control <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_active_safety_system;;
+			-> nrel_to_block;;
+			-> concept_differential;;
+			-> nrel_use;;
+			-> concept_brake_system;;
+		*);;
+	=> nrel_main_idtf: [Опр.(электронное управление дифференциалом)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Электронное управление дифференциалом - система активной безопасности, 
+			которая имитирует блокировку дифференциала с помощью штатной тормозной 
+			системы автомобиля.](* <- lang_ru;; *);; 
+		*);; 
+	*);;

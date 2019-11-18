@@ -1,0 +1,41 @@
+sc_node_not_relation -> concept_active_safety_system;;
+concept_active_safety_system => nrel_main_idtf:
+[система активной безопасности](*<-lang_ru;;*);
+	[active safety system](*<-lang_en;;*);;
+sc_node_not_relation -> concept_crash_constructive_preconditions;;
+concept_crash_constructive_preconditions => nrel_main_idtf:
+[конструктивные предпосылки аварий](*<-lang_ru;;*);
+	[crash constructive preconditions](*<-lang_en;;*);;
+
+concept_active_safety_system <= nrel_subdividing: ...
+	(*
+	-> concept_anti_lock_braking_system;;  
+	-> concept_traction_system;;
+	-> concept_external_light_fixtures;;
+	-> concept_course_stability_system;;
+	-> concept_electronic_brakeforce_distribution;;
+	-> concept_brake_assist_system;;
+	-> concept_electronic_differential_control;;
+	=> nrel_main_idtf: [Разбиение по признаку выполняемая функция](* <- lang_ru;; *);;
+	*);;
+
+concept_active_safety_system <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_safety_system;;
+			-> concept_device;;
+			-> nrel_use;;
+			-> nrel_to_prevent;;
+			-> concept_crash;;
+			-> concept_crash_constructive_preconditions;;
+		*);;
+	=> nrel_main_idtf: [Опр.(система активной безопасности)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Система активной безопасности - система безопасности, устройства которого используются 
+			для предотвращение дорожно-транспортных происшествий и исключение предпосылок их возникновения, связанных с 
+			конструктивными особенностями автомобиля.](* <- lang_ru;; *);; 
+		*);; 
+	*);;

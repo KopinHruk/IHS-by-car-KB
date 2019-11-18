@@ -1,0 +1,4 @@
+sc_node_not_relation -> concept_seat_belt_tensioners;;
+concept_seat_belt_tensioners => nrel_main_idtf:
+[натяжители ремней безопасности](*<-lang_ru;;*);
+	[seat belt tensioners](*<-lang_en;;*);;

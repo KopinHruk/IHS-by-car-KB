@@ -1,0 +1,4 @@
+sc_node_not_relation -> concept_help_system_during_the_descent;;
+concept_help_system_during_the_descent => nrel_main_idtf:
+[система помощи при спуске](*<-lang_ru;;*);
+	[help system during the descent](*<-lang_en;;*);;

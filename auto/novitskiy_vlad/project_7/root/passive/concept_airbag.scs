@@ -1,0 +1,4 @@
+sc_node_not_relation -> concept_airbag;;
+concept_airbag => nrel_main_idtf:
+[подушки безопасности](*<-lang_ru;;*);
+	[airbag](*<-lang_en;;*);;

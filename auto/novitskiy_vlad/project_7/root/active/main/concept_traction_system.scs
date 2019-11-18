@@ -1,0 +1,43 @@
+sc_node_not_relation -> concept_traction_system;;
+concept_traction_system => nrel_main_idtf:
+[противобуксовочная система](*<-lang_ru;;*);
+[traction system](*<-lang_en;;*);;
+concept_traction_system => nrel_idtf:
+[антипробуксовочная система](*<-lang_ru;;*);
+[traction control system](*<-lang_en;;*);
+[ПБС](*<-lang_ru;;*);
+[TCS](*<-lang_en;;*);
+[АПС](*<-lang_ru;;*);
+	[APS](*<-lang_en;;*);;
+sc_node_not_relation -> concept_wheel_grip;;
+concept_wheel_grip => nrel_main_idtf:
+[сцепление колёс](*<-lang_ru;;*);
+	[wheel grip](*<-lang_en;;*);;
+sc_node_not_relation -> concept_slip_controll;;
+concept_slip_controll => nrel_main_idtf:
+[контроль за буксованием](*<-lang_ru;;*);
+	[slip controll](*<-lang_en;;*);;
+
+concept_traction_system <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_active_safety_system;;
+			-> nrel_to_be_intended;;
+			-> nrel_to_prevent;;
+			-> nrel_to_reduce;;
+			-> concept_wheel_grip;;
+			-> concept_road;;
+			-> nrel_use;;
+			-> concept_slip_controll;;
+			-> rrel_driving_wheel;;
+		*);;
+	=> nrel_main_idtf: [Опр.(противобуксовочная система)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Противобуксовочная система - система активной безопасности автомобиля, 
+			предназначенная для предотвращения потери сцепления колёс с дорогой посредством контроля за буксованием 
+			ведущих колёс.](* <- lang_ru;; *);; 
+		*);; 
+	*);;

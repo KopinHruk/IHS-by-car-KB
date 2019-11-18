@@ -1,0 +1,4 @@
+sc_node_not_relation -> concept_lift_assist_system;;
+concept_lift_assist_system => nrel_main_idtf:
+[система помощи при подъёме](*<-lang_ru;;*);
+	[lift assist system](*<-lang_en;;*);;

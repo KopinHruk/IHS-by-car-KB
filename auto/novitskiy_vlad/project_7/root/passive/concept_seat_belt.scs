@@ -1,0 +1,4 @@
+sc_node_not_relation -> concept_seat_belt;;
+concept_seat_belt => nrel_main_idtf:
+[ремни безопасности](*<-lang_ru;;*);
+	[seat belt](*<-lang_en;;*);;

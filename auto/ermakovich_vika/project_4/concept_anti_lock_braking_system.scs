@@ -1,28 +1,71 @@
 sc_node_not_relation->concept_anti_lock_braking_system;;
 concept_anti_lock_braking_system => nrel_main_idtf:
 [антиблокировочная система](*<-lang_ru;;*);
-[antilock Brake System](*<-lang_en;;*);;
+[anti-lock braking system](*<-lang_en;;*);;
 concept_anti_lock_braking_system => nrel_idtf:
+[антиблокировочная система тормозов](*<-lang_ru;;*);
 [АБС](*<-lang_ru;;*);
-[ABS](*<-lang_en;;*);;
+	[ABS](*<-lang_en;;*);;
+sc_node_not_relation -> concept_wheel_lock;;
+concept_wheel_lock => nrel_main_idtf:
+[блокировка колёс](*<-lang_ru;;*);
+	[wheel lock](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_when;; 
+nrel_when => nrel_main_idtf:
+[когда*](*<-lang_ru;;*);
+[when*](*<-lang_en;;*);;
+nrel_when => nrel_idtf:
+	[при каком обстоятельстве*](*<-lang_ru;;*);;
 
-concept_anti_lock_braking_system <- rrel_key_sc_element: ... 
-    (*
-       <- definition;;
-       => nrel_main_idtf: [Опр.(АБС)]  (* <- lang_ru;; *);;
-       <=nrel_sc_text_translation: ... (*-> [<b>Антиблокировочная система</b> - система, предназначенная предотвратить блокировку колес при торможении и сохранить управляемость автомобиля, а также повышает эффективность <sc_element sys_idtf="concept_braking">торможения</sc_element>, уменьшает длину <sc_element sys_idtf="nrel_braking_distances">тормозного пути</sc_element> на сухом и мокром покрытии, обеспечивает лучшую маневренность на скользкой дороге, управляемость при экстренном торможении.](* <- lang_ru;;  => nrel_format: format_html;;*);; *);;
-	   <=nrel_used_constants: nrel_braking_distances;  concept_braking;;
-     *);;
+concept_anti_lock_braking_system <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_system;;
+			-> nrel_to_prevent;;
+			-> concept_wheel_lock;;
+			-> nrel_when;;
+			-> concept_braking;;
+		*);;
+	=> nrel_main_idtf: [Опр.(антиблокировочная система тормозов)](*<-lang_ru;;*);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Антиблокировочная система тормозов - система, предотвращающая блокировку колёс 
+			автомобиля при торможении.](*<-lang_ru;;*);; 
+		*);; 
+	*);;
 
 concept_anti_lock_braking_system <- rrel_key_sc_element: ... 
      (*
-        ->rrel_key_sc_element: nrel_pressure; concept_brake;;
-        <-statement;;
-        <=nrel_sc_text_translation: ... (* -> [<b>Антиблокировочная система  (ABS)</b> уменьшает <sc_element sys_idtf="nrel_pressure"> давление </sc_element>в <sc_element sys_idtf="concept_brake"> тормозах</sc_element> соответствующих колёс до тех пор, пока между шиной и покрытием не восстановится трение покоя, при котором возможна передача максимального тормозящего усилия.](*<-lang_ru;; => nrel_format: format_html;;*);; *);;
-        =>nrel_main_idtf: [Утв.(тормоз, давление)](*<-lang_ru;;*);;
-	   <-rrel_axiom:concept_IHS_by_car;;
-	   <-concept_statement_of_the_defining_type;;
+        -> rrel_key_sc_element: nrel_pressure; concept_brake;;
+        <- statement;;
+        <= nrel_sc_text_translation: ... (* -> [<b>Антиблокировочная система  (ABS)</b> уменьшает 
+		<sc_element sys_idtf="nrel_pressure">давление</sc_element> в 
+		<sc_element sys_idtf="concept_brake">тормозах</sc_element> соответствующих колёс до тех пор, 
+		пока между шиной и покрытием не восстановится трение покоя, при котором возможна передача 
+		максимального тормозящего усилия.](*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+        => nrel_main_idtf: [Утв.(тормоз, давление)](*<-lang_ru;;*);;
+	   <- rrel_axiom:concept_IHS_by_car;;
+	   <- concept_statement_of_the_defining_type;;
 	*);;
+
+concept_anti_lock_braking_system <- rrel_key_sc_element: ... 
+	(*
+	-> rrel_key_sc_element: nrel_braking_distances; concept_braking;;
+	<- statement;;
+	<= nrel_sc_text_translation: ... 
+		(* 
+			-> rrel_example: [Система позволяет сохранить управляемость автомобиля, а также повышает эффективность 
+	   		<sc_element sys_idtf="concept_braking">торможения</sc_element>, уменьшает длину 
+	   		<sc_element sys_idtf="nrel_braking_distances">тормозного пути</sc_element> на сухом и мокром покрытии, 
+	   		обеспечивает лучшую маневренность на скользкой дороге, управляемость при экстренном торможении.](*<-lang_ru;;*);;
+		*);;
+	=> nrel_main_idtf: [Утв.(пята, опора цапфы*, подпятник)](*<-lang_ru;;*);;
+	<- rrel_axiom:subject_domain_of_steering_drives;;
+	<- concept_general_form_statement;;
+	*);;
+
 illustration -> ...
 	(*
 	-> rrel_key_sc_element: concept_anti_lock_braking_system;;

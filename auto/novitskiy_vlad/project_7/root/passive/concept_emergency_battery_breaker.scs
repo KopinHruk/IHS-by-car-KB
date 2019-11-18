@@ -1,0 +1,4 @@
+sc_node_not_relation -> concept_emergency_battery_breaker;;
+concept_emergency_battery_breaker => nrel_main_idtf:
+[аварийный размыкатель аккумуляторной батареи](*<-lang_ru;;*);
+	[emergency battery breaker](*<-lang_en;;*);;

@@ -1,0 +1,4 @@
+sc_node_not_relation -> concept_passive_safety_system;;
+concept_passive_safety_system => nrel_main_idtf:
+[система пассивной безопасности](*<-lang_ru;;*);
+	[passive safety system](*<-lang_en;;*);;

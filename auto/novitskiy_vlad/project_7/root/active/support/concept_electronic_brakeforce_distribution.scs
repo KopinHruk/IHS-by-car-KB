@@ -1,0 +1,26 @@
+sc_node_not_relation -> concept_electronic_brakeforce_distribution;;
+concept_electronic_brakeforce_distribution => nrel_main_idtf:
+[система распределения тормозных усилий](*<-lang_ru;;*);
+[electronic brakeforce distribution](*<-lang_en;;*);;
+concept_electronic_brakeforce_distribution => nrel_idtf:
+	[EBD](*<-lang_en;;*);;
+/*
+concept_electronic_brakeforce_distribution <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_active_safety_support_system;;
+			-> concept_parking_brake_system;;
+			-> nrel_to_use;;
+			-> concept_brake_mechanisms_electromechanical_drive;;
+		*);;
+	=> nrel_main_idtf: [Опр.(система распределения тормозных усилий)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Система распределения тормозных усилий - вспомогательная система активной безопаности, 
+			являющаяся современной конструкцией стояночной тормозной системы, в которой используется 
+			электромеханический привод тормозных механизмов.](* <- lang_ru;; *);; 
+		*);; 
+	*);;
+*/

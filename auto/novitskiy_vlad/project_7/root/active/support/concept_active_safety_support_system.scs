@@ -1,0 +1,41 @@
+sc_node_not_relation -> concept_active_safety_support_system;;
+concept_active_safety_support_system => nrel_main_idtf:
+[вспомогательная система активной безопасности](*<-lang_ru;;*);
+[active safety support system](*<-lang_en;;*);;
+concept_active_safety_support_system => nrel_idtf:
+[assistant system](*<-lang_en;;*);
+	[система-ассистент](*<-lang_ru;;*);;
+
+concept_active_safety_support_system <= nrel_subdividing: ...
+	(*
+	-> concept_rebuild_help_system;;
+	-> concept_blind_spot_detection;;
+	-> concept_brake_assist_system;;
+	-> concept_circular_review_system;;
+	-> concept_course_stability_system;;
+	-> concept_adaptive_cruise_control;;
+	-> concept_electromechanical_parking_brake;;
+	-> concept_help_system_during_the_descent;;
+	-> concept_lift_assist_system;;
+	-> concept_parktronic;;
+	=> nrel_main_idtf: [Разбиение по признаку выполняемая функция](* <- lang_ru;; *);;
+	*);;
+
+concept_active_safety_support_system <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_safety_system;;
+			-> nrel_use;;
+			-> nrel_to_help;;
+			-> rrel_driver;;
+			-> rrel_difficult_driving_situation;;
+		*);;
+	=> nrel_main_idtf: [Опр.(вспомогательная система активной безопасности)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Вспомогательная система активной безопасности - система безопасности, 
+			предназначенная для помощи водителю в трудных с точки зрения вождения ситуациях.](* <- lang_ru;; *);; 
+		*);; 
+	*);;

@@ -1,0 +1,8 @@
+sc_node_not_relation -> concept_parktronic;;
+concept_parktronic => nrel_main_idtf:
+[парктроник](*<-lang_ru;;*);
+[parktronic](*<-lang_en;;*);;
+concept_parktronic => nrel_idtf:
+[parking radar](*<-lang_en;;*);
+[парковочный радар](*<-lang_ru;;*);
+	[АПС](*<-lang_ru;;*);;

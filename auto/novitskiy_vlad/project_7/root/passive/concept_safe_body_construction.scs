@@ -1,0 +1,7 @@
+sc_node_not_relation -> concept_safe_body_construction;;
+concept_safe_body_construction => nrel_main_idtf:
+[безопасная конструкция кузова](*<-lang_ru;;*);
+[safe body construction](*<-lang_en;;*);;
+concept_safe_body_construction => nrel_idtf:
+[deformation zones](*<-lang_en;;*);
+	[зоны деформации](*<-lang_ru;;*);;

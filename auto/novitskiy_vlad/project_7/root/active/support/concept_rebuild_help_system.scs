@@ -1,0 +1,4 @@
+sc_node_not_relation -> concept_rebuild_help_system;;
+concept_rebuild_help_system => nrel_main_idtf:
+[система помощи при перестроении](*<-lang_ru;;*);
+	[rebuild help system](*<-lang_en;;*);;

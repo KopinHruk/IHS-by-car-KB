@@ -1,0 +1,38 @@
+sc_node_not_relation -> concept_brake_assist_system;;
+concept_brake_assist_system => nrel_main_idtf:
+[система помощи при экстренном торможении](*<-lang_ru;;*);
+[brake assist system](*<-lang_en;;*);;
+concept_brake_assist_system => nrel_idtf:
+[дотормаживатель](*<-lang_ru;;*);
+[тормозной ассистент](*<-lang_ru;;*);
+[СПЭТ](*<-lang_ru;;*);
+[emergency brake assist](*<-lang_en;;*);
+[brake assistant](*<-lang_en;;*);
+	[BAS](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_to_analyze;; 
+nrel_to_analyze => nrel_main_idtf:
+[анализировать*](*<-lang_ru;;*);
+	[to analyze*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_applied_forces_speed;; 
+nrel_applied_forces_speed => nrel_main_idtf:
+[скорость прикладываемых усилий*](*<-lang_ru;;*);
+	[applied forces speed*](*<-lang_en;;*);;
+
+concept_brake_assist_system <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_active_safety_system;;
+			-> nrel_to_analyze;;
+			-> nrel_applied_forces_speed;;
+			-> rrel_driver;;
+			-> concept_brake_pedal;;
+		*);;
+	=> nrel_main_idtf: [Опр.(система помощи при экстренном торможении)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Система помощи при экстренном торможении - система активной безопасности, 
+			анализирующая скорость прикладываемого водителем усилия к педали тормоза.](* <- lang_ru;; *);; 
+		*);; 
+	*);;

@@ -1,0 +1,4 @@
+sc_node_not_relation -> concept_active_headrest;;
+concept_active_headrest => nrel_main_idtf:
+[активные подголовники](*<-lang_ru;;*);
+	[active headrest](*<-lang_en;;*);;
