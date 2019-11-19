@@ -2,3 +2,33 @@ sc_node_not_relation -> concept_passive_safety_system;;
 concept_passive_safety_system => nrel_main_idtf:
 [система пассивной безопасности](*<-lang_ru;;*);
 	[passive safety system](*<-lang_en;;*);;
+
+concept_passive_safety_system <= nrel_subdividing: ...
+	(*
+	-> concept_active_headrest;;
+	-> concept_airbag;;
+	-> concept_emergency_battery_breaker;;
+	-> concept_safe_body_construction;;
+	-> concept_seat_belt_tensioners;;
+	-> concept_seat_belt;;
+	=> nrel_main_idtf: [Разбиение по признаку выполняемая функция](* <- lang_ru;; *);;
+	*);;
+
+concept_passive_safety_system <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_safety_system;;
+			-> nrel_to_be_intended;;
+			-> nrel_to_help;;
+			-> rrel_driver;;
+			-> rrel_difficult_driving_situation;;
+		*);;
+	=> nrel_main_idtf: [Опр.(система пассивной безопасности)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Система пассивной безопасности - система безопасности, предназначенная для защиты 
+			пассажиров от травм при аварии и снижения тяжести ДТП в целом.](* <- lang_ru;; *);; 
+		*);; 
+	*);;

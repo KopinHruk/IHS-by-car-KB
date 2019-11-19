@@ -1,4 +1,38 @@
 sc_node_not_relation -> concept_seat_belt;;
 concept_seat_belt => nrel_main_idtf:
-[ремни безопасности](*<-lang_ru;;*);
+[ремень безопасности](*<-lang_ru;;*);
 	[seat belt](*<-lang_en;;*);;
+sc_node_not_relation -> concept_stopping;;
+concept_stopping => nrel_main_idtf:
+[остановка](*<-lang_ru;;*);
+	[stopping](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_hold_in_place;; 
+nrel_hold_in_place => nrel_main_idtf:
+[удерживать на месте*](*<-lang_ru;;*);
+	[hold in place*](*<-lang_en;;*);;
+sc_node_role_relation -> rrel_sudden;;
+rrel_sudden => nrel_main_idtf:
+[внезапный'](*<-lang_ru;;*);
+	[sudden'](*<-lang_en;;*);;
+
+concept_seat_belt_tensioners <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_passive_safety_system;;
+			-> nrel_to_be_intended;;
+			-> nrel_hold_in_place;;
+			-> rrel_passenger;;
+			-> nrel_when;;
+			-> concept_crash;;
+			-> rrel_sudden;;
+			-> concept_stopping;;
+		*);;
+	=> nrel_main_idtf: [Опр.(ремень безопасности)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Ремень безопасности - система пассивной безопасности, предназначенная для 
+			удержания пассажира на месте в случае аварии либо внезапной остановки.](* <- lang_ru;; *);; 
+		*);; 
+	*);;

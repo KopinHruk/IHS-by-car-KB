@@ -34,7 +34,7 @@ concept_safety_system <- rrel_key_sc_element: ...
 			-> set;;
 			-> concept_design_property;;
 			-> concept_operational_property;;
-			-> nrel_use;;
+			-> nrel_to_be_intended;;
 			-> nrel_to_help;;
 			-> rrel_driver;;
 			-> nrel_to_prevent;;

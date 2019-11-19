@@ -2,3 +2,27 @@ sc_node_not_relation -> concept_airbag;;
 concept_airbag => nrel_main_idtf:
 [подушки безопасности](*<-lang_ru;;*);
 	[airbag](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_impact_force;; 
+nrel_impact_force => nrel_main_idtf:
+[сила удара*](*<-lang_ru;;*);
+	[force of impact*](*<-lang_en;;*);;
+
+concept_airbag <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_passive_safety_system;;
+			-> nrel_to_be_intended;;
+			-> nrel_to_reduce;;
+			-> nrel_impact_force;;
+			-> nrel_when;;
+			-> concept_crash;;
+		*);;
+	=> nrel_main_idtf: [Опр.(подушки безопасности)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Подушки безопасности - система пассивной безопасности, предназначенная для смягчения удара 
+			в случае автомобильного столкновения.](* <- lang_ru;; *);; 
+		*);; 
+	*);;
