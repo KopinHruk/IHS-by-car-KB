@@ -1,0 +1,36 @@
+subject_domain -> subject_domain_of_active_safety_support_systems;;
+subject_domain_of_active_safety_support_systems => nrel_main_idtf:
+[Предметная область вспомогательных систем активной безопасности](*<-lang_ru;;*);
+	[Subject domain of active safety support systems](*<-lang_en;;*);;
+
+subject_domain_of_active_safety_support_systems 
+    <= nrel_primary_elements_class_private_subject_domain: concept_IHS_by_car;;
+
+/*
+subject_domain_of_active_safety_support_systems 
+    => nrel_primary_elements_class_private_subject_domain: 
+        subject_domain_of_steering_mechanisms;
+        subject_domain_of_steering_wheels;;
+*/
+
+/*
+subject_domain_of_active_safety_support_systems -> rrel_explored_relation: 
+nrel_steering_system_ratio; 
+nrel_steering_sensitivity; 
+nrel_steering_efficiency;;
+*/
+
+subject_domain_of_active_safety_support_systems 
+    -> rrel_maximum_studied_object_class: concept_active_safety_support_system;;
+
+subject_domain_of_active_safety_support_systems 
+    -> rrel_not_maximum_studied_object_class:
+        concept_blind_spot_detection;
+        concept_circular_review_system;
+        concept_adaptive_cruise_control;
+        concept_electromechanical_parking_brake;
+        concept_electronic_brakeforce_distribution;
+        concept_help_system_during_the_descent;
+        concept_lift_assist_system;
+        concept_parktronic;
+        concept_rebuild_help_system;;

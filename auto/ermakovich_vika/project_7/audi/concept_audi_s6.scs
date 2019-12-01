@@ -1,0 +1,47 @@
+concept_audi_s6
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Ауди С 6](* <- lang_ru;; *);
+=> nrel_main_idtf:[Audi S 6](* <- lang_en;; *);
+
+<-concept_model;
+=>nrel_auto_mark: concept_Audi;
+=>nrel_car_body: concept_universal; concept_sedan;
+=>nrel_production_period: concept_period_1993_1997; concept_period_1998_2004; concept_period_2005_2010; concept_period_2011_2015; concept_period_2016_2019; 
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Ауди С 6)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_universal; concept_sedan;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Ауди С6</b>- это спортивный представительский полноразмерный автомобиль премиум сегмента. Существует как в <sc_element sys_idtf="concept_sedan">седане</sc_element> так и в <sc_element sys_idtf="concept_universal">универсале</sc_element>.](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Ауди С 6)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[<b>Audi S6</b> - это V-образная дизельная трехлитровая шестерка TDI с индексом EA897. От гражданской модификации он отличается поршнями, шатунами, коленчатым валом, более производительной смазывающей системой и дополнительными охлаждающими каналами в головке и самом блоке.](* <- lang_en;; => nrel_format: format_html;;*);;
+		*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- illustration;;
+	=> nrel_main_idtf:
+		[Рис. (Ауди С 6)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://image/audi_s6.png"(* => nrel_format: format_png;;*);;
+		*);;
+*);;

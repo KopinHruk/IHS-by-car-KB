@@ -6,10 +6,6 @@ sc_node_not_relation -> concept_torque_sensor;;
 concept_torque_sensor => nrel_main_idtf:
 [датчик крутящего момента](*<-lang_ru;;*);
 	[torque sensor](*<-lang_en;;*);;
-sc_node_not_relation -> concept_car_speed_sensor;;
-concept_car_speed_sensor => nrel_main_idtf:
-[датчик скорости автомобиля](*<-lang_ru;;*);
-	[car speed sensor](*<-lang_en;;*);;
 sc_node_not_relation -> concept_car_speed_sensor_of_motor_shaft;;
 concept_car_speed_sensor_of_motor_shaft => nrel_main_idtf:
 [датчик частоты вращения вала двигателя](*<-lang_ru;;*);

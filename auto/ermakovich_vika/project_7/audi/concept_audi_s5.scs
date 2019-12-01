@@ -1,0 +1,47 @@
+concept_audi_s5
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Ауди С 5](* <- lang_ru;; *);
+=> nrel_main_idtf:[Audi S 5](* <- lang_en;; *);
+
+<-concept_model;
+=>nrel_auto_mark: concept_Audi;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_2005_2010; concept_period_2011_2015; concept_period_2016_2019; 
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Ауди С 5)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_hatchback;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Ауди С5</b>- это спортивный премиальный <sc_element sys_idtf="concept_hatchback">xэтчбек</sc_element> среднеразмерного класса.](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Ауди С 5)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[<b>Audi S5</b> будет оснащаться двумя силовыми агрегатами. Оба имеют V-образную компоновку, систему турбонаддува и объем в три литра. Базовый агрегат TFSI будет поставляться только на экспорт. Он развивает 354 лошадиные силы и 500 Нм крутящего момента. В качестве альтернативы, можно заказать более продвинутый дизельный агрегат с отдельной 48-вольтовой сетью, питающей стартер-генератор и электрический компрессор, позволяющий создать необходимое давление во впускном коллекторе уже при начале движения, когда поток выхлопных газов, проходящий через крыльчатку основного турбокомпрессора слишком мал.](* <- lang_en;; => nrel_format: format_html;;*);;
+		*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- illustration;;
+	=> nrel_main_idtf:
+		[Рис. (Ауди С 5)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://image/audi_s5.png"(* => nrel_format: format_png;;*);;
+		*);;
+*);;

@@ -1,0 +1,6 @@
+sc_node_not_relation -> concept_car_speed_sensor;;
+concept_car_speed_sensor => nrel_main_idtf:
+[датчик скорости автомобиля](*<-lang_ru;;*);
+	[car speed sensor](*<-lang_en;;*);;
+
+concept_car_speed_sensor <= nrel_inclusion: concept_autopart;;

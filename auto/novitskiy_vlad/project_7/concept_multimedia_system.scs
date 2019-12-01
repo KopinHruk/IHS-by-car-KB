@@ -1,4 +1,0 @@
-sc_node_not_relation -> concept_multimedia_system;;
-concept_multimedia_system => nrel_main_idtf:
-[мультимедийная система](*<-lang_ru;;*);
-	[multimedia system](*<-lang_en;;*);;

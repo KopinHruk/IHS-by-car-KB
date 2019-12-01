@@ -1,0 +1,62 @@
+sc_node_not_relation -> concept_vw_jetta8;;
+concept_vw_jetta8 => nrel_main_idtf:
+[VW Jetta 8](*<-lang_ru;;*);
+     [VW Jetta 8](*<-lang_en;;*);;
+concept_vw_jetta8 <-  concept_model;;
+concept_vw_jetta8=>nrel_auto_mark: concept_Volkswagen;;
+concept_vw_jetta8=>nrel_car_body: concept_sedan;;
+concept_vw_jetta8=>nrel_production_period: concept_period_2016_2019;;
+
+
+concept_vw_jetta8 <-rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_car;; 
+		->concept_concern;; 
+		->concept_Volkswagen;;
+	*);;
+=> nrel_main_idtf: [Опр.(VW Jetta 8)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+(* 
+		->		[<b>VW Jetta 8</b> - <sc_element sys_idtf="concept_car">автомобиль</sc_element> восьмого поколения, выпускаемый <sc_element sys_idtf="concept_concern">концерном</sc_element> <sc_element sys_idtf="concept_Volkswagen">Volkswagen</sc_element>.]
+(*<-lang_ru;; => nrel_format: format_html;;*);; 
+*);; 
+*);;
+
+concept_vw_jetta8 <- rrel_key_sc_element: ... 
+     (*
+        ->rrel_key_sc_element: concept_hatchback; concept_car_body; concept_sedan;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* 
+-> [Разработан на базе VW Golf. В отличие от Гольфа со стандартным кузовом <sc_element sys_idtf="concept_hatchback">хэтчбек</sc_element> (укороченным), стандартный <sc_element sys_idtf="concept_car_body">кузов</sc_element> Джетты — классический <sc_element sys_idtf="concept_sedan">седан</sc_element>.]
+(*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+        =>nrel_main_idtf: [Утв.(хэтчбек, кузов, седан)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+
+     *);;
+
+concept_vw_jetta8 <- rrel_key_sc_element: ... 
+     (*
+        ->rrel_key_sc_element: concept_period_2016_2019;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* 
+-> [
+Выпускается <sc_element sys_idtf="concept_period_2016_2019">с 2019 года</sc_element>.]
+(*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+        =>nrel_main_idtf: [Утв.(2016-2019)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+
+     *);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_vw_jetta8;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> "file://content/concept_vw_jetta8.jpg";;
+		*);;
+	*);;

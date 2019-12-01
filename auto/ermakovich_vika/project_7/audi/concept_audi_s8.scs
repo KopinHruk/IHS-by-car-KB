@@ -1,0 +1,47 @@
+concept_audi_s8
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Ауди С 8](* <- lang_ru;; *);
+=> nrel_main_idtf:[Audi S 8](* <- lang_en;; *);
+
+<-concept_model;
+=>nrel_auto_mark: concept_Audi;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_1993_1997; concept_period_1998_2004; concept_period_2005_2010; concept_period_2011_2015; concept_period_2016_2019;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Ауди С 8)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_sedan;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Ауди С8</b> - это полноразмерный пятиместный <sc_element sys_idtf="concept_sedan">седан</sc_element> премиум класса, являющийся флагманом легковой линейки немецкого производителя.](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Ауди С 8)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[Под капотом <b>Audi S8</b> расположился V-образный бензиновый восьмицилиндровый турбированный агрегат на 4 литра. Благодаря двум турбокомпрессорам, непосредственной подаче топлива, продвинутой системе фаз газораспределения, инженерам удалось выжать 571 лошадиную силу и 800 Нм крутящего момента. Более того ,силовой агрегат комплектуется умеренной гибридной системой. В ее основе лежит 48-вольтовый стартер-генератор. Благодаря нему, система старт-стоп функционирует более продуктивно, а также появилась возможность вовсе глушить силовой агрегат во время движения накатом.](* <- lang_en;; => nrel_format: format_html;;*);;
+		*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- illustration;;
+	=> nrel_main_idtf:
+		[Рис. (Ауди С 8)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://image/audi_s8.png"(* => nrel_format: format_png;;*);;
+		*);;
+*);;

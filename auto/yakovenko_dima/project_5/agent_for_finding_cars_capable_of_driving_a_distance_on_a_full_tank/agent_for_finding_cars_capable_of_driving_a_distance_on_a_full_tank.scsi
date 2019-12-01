@@ -1,0 +1,357 @@
+agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank
+=>nrel_main_idtf:
+[агентная scp-программа поиска автомобилей, способных проехать дистанцию на полном баке] (* <- lang_ru;; *);
+[agent scp-program for finding cars capable of driving a distance on a full tank] (* <- lang_en;; *);
+<- agent_scp_program;;
+
+
+scp_program -> agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank
+(*
+	-> rrel_params : ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_params
+	(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+	*);;
+	-> rrel_operators : ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operators
+	(*
+		-> rrel_init : ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_quest_1
+		(*
+			<- searchElStr3;;
+		
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+		
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_quest_2 ;;
+		*);;
+		
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_quest_2
+		(*
+			<- searchElStr3;;
+	
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finding_cars_capable_of_driving_a_distance_on_a_full_tank ;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=>nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_quest_3 ;;
+			=>nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_return;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_quest_3
+		(*
+			<- searchElStr5;;
+	
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _param1;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
+
+			=>nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_quest_4;;
+			=>nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_return;;
+		*);;
+		
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_quest_4
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _param2;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_2;;
+
+			=>nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_quest_5 ;;
+			=>nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_return;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_quest_5
+		(*
+			<- genEl ;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: rrel_const: _answer ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_1 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_1
+		(*
+			<- searchElStr3 ;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: concept_human_settlement ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc: _arc ;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param1 ;;
+
+			=> nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_2 ;;
+			=> nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_return ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_2
+		(*
+			<- searchElStr3 ;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: concept_human_settlement ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc: _arc ;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param2 ;;
+
+			=> nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_3 ;;
+			=> nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_return ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_3
+		(*
+			<- sys_search ;;
+			
+			-> rrel_1 : rrel_fixed : rrel_scp_const : search_distance_template ;;
+			-> rrel_2 : rrel_fixed : rrel_scp_const : ...
+			(*
+				-> ...
+				(*
+					-> rrel_1: rrel_fixed: rrel_scp_const: _value ;;
+					-> rrel_2: rrel_assign: rrel_scp_var: rrel_link: _distance ;;
+				*);;
+			*);;
+			-> rrel_3 : rrel_fixed : rrel_scp_const : ...
+			(*
+				-> ...
+				(*
+					-> rrel_1 : rrel_fixed : rrel_scp_const : _A ;;
+					-> rrel_2 : rrel_fixed : rrel_scp_var : _param1 ;;
+				*);;
+				-> ...
+				(*
+					-> rrel_1 : rrel_fixed : rrel_scp_const : _B ;;
+					-> rrel_2 : rrel_fixed : rrel_scp_var : _param2 ;;
+				*);;
+			*);;
+	
+			=> nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_4 ;;
+			=> nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_return ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_4
+		(*
+			<- searchSetStr5 ;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_const: concept_car ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _com ;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_not_relation: _type_of_car ;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_inclusion ;;
+
+			-> rrel_set_3 : rrel_assign: rrel_scp_var: rrel_node: _set_of_types ;;
+
+			=> nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_5 ;;
+			=> nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_return ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_5
+		(*
+			<- searchElStr3 ;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_types ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_not_relation: _type_of_car ;;
+
+			=> nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_6 ;;
+			=> nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_22 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_6
+		(*
+			<- eraseEl ;;
+	
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_7 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_7
+		(*
+			<- searchSetStr3 ;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _type_of_car ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _car ;;
+			
+			-> rrel_set_3 : rrel_assign: rrel_scp_var: rrel_node: _set_of_cars ;;
+
+			=> nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_8 ;;
+			=> nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_3 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_8
+		(*
+			<- searchElStr3 ;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_cars ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _car ;;
+
+			=> nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_9 ;;
+			=> nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_18 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_9
+		(*
+			<- eraseEl ;;
+	
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_10 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_10
+		(*
+			<- searchElStr5 ;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _car ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _com ;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_link: _tank_volume ;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_tank_volume ;;
+
+			=> nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_11 ;;
+			=> nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_8 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_11
+		(*
+			<- searchElStr5 ;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _car ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _com ;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_link: _fuel_consumption ;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_fuel_consumption ;;
+
+			=> nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_12 ;;
+			=> nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_8 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_12
+		(*
+			<- contDiv ;;
+	
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_link: _temp1 ;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _tank_volume ;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _fuel_consumption ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_13 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_13
+		(*
+			<- contMult ;;
+	
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_link: _temp2 ;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _temp1 ;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: [100] ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_14 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_14
+		(*
+			<- ifGr ;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp2 ;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _distance ;;
+
+			=> nrel_then: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_15 ;;
+			=> nrel_else: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_8 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_15
+		(*
+			<- searchElStr3 ;;
+		
+			-> rrel_1: rrel_fixed: rrel_scp_var: _type_of_car ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _answer_arc ;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _car ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_16 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_16
+		(*
+			<- genElStr3 ;;
+		
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_arc ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_17 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_17
+		(*
+			<- genElStr3 ;;
+		
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _car ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_8 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_18
+		(*
+			<- genElStr3 ;;
+		
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _type_of_car ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_19 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_19
+		(*
+			<- searchElStr5 ;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_const: concept_car ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _answer_com ;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: rrel_not_relation: _type_of_car ;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _answer_arc_main ;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_inclusion ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_20 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_20
+		(*
+			<- genElStr3 ;;
+		
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_com ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_21 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_21
+		(*
+			<- genElStr3 ;;
+		
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_arc_main ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_5 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_22
+		(*
+			<- genElStr3 ;;
+		
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_inclusion ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_23 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_23
+		(*
+			<- genElStr3 ;;
+		
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer ;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: concept_car ;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_24 ;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_24 
+		(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _com6;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc12;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+			=> nrel_goto: ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_return;;
+		*);;
+		-> ..agent_for_finding_cars_capable_of_driving_a_distance_on_a_full_tank_operator_return
+		(*
+			<- return ;;
+		*);;
+	*);;
+*);;

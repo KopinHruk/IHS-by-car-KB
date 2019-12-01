@@ -1,0 +1,6 @@
+sc_node_not_relation -> concept_relay_rod_end;;
+concept_relay_rod_end => nrel_main_idtf:
+[наконечник поперечной рулевой тяги](*<-lang_ru;;*);
+	[relay rod end](*<-lang_en;;*);;
+
+concept_relay_rod_end <= nrel_inclusion: concept_autopart;;

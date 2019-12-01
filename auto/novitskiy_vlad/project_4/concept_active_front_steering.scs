@@ -41,7 +41,7 @@ concept_slippery => nrel_main_idtf:
 	[slippery](*<-lang_en;;*);;
 sc_node_norole_relation -> nrel_to_interact_with;;
 nrel_to_interact_with => nrel_main_idtf:
-[взаимодействовать*](*<-lang_ru;;*);
+[взаимодействовать с*](*<-lang_ru;;*);
     [to interact with*](*<-lang_en;;*);;
 sc_node_not_relation -> concept_dynamic_stability_control;;
 concept_dynamic_stability_control => nrel_main_idtf:

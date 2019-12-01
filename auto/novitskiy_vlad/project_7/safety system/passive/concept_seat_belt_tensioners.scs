@@ -1,0 +1,31 @@
+sc_node_not_relation -> concept_seat_belt_tensioners;;
+concept_seat_belt_tensioners => nrel_main_idtf:
+[натяжители ремней безопасности](*<-lang_ru;;*);
+	[seat belt tensioners](*<-lang_en;;*);;
+sc_node_not_relation -> concept_fall_forward;;
+concept_fall_forward => nrel_main_idtf:
+[падение вперёд](*<-lang_ru;;*);
+	[fall forward](*<-lang_en;;*);;
+
+concept_seat_belt_tensioners <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_passive_safety_system;;
+			-> nrel_to_be_intended;;
+			-> nrel_to_prevent;;
+			-> concept_fall_forward;;
+			-> rrel_driver;;
+			-> rrel_passenger;;
+			-> nrel_when;;
+			-> concept_crash;;
+		*);;
+	=> nrel_main_idtf: [Опр.(натяжители ремней безопасности)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Натяжители ремней безопасности - система пассивной безопасности, предназначенная 
+			для заблаговременного предотвращается перемещение водителя или пассажира вперёд 
+			(относительно движения автомобиля) при аварии.](* <- lang_ru;; *);; 
+		*);; 
+	*);;

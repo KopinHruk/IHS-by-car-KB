@@ -1,0 +1,49 @@
+concept_audi_a1
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Ауди А1](* <- lang_ru;; *);
+=> nrel_main_idtf:[Audi A1](* <- lang_en;; *);
+
+<-concept_model;
+=>nrel_auto_mark: concept_Audi;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_2016_2019;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Audi A1)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_concern; concept_Volkswagen;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Audi A1</b> - <sc_element sys_idtf="concept_car">автомобиль</sc_element> второго поколения, выпускаемый <sc_element sys_idtf="concept_concern">концерном</sc_element> <sc_element sys_idtf="concept_Volkswagen">Volkswagen</sc_element>.](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	->rrel_key_sc_element: concept_Volkswagen; concept_hatchback;;
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Audi A1, Volkswagen, хэтчбек)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[Первый Audi на базе VW Polo был создан в 1970-х, это был Audi 50 на базе VW Polo I. В 2011 на базе VW Polo V вышел Audi A1. С технической точки зрения Audi А1 создан на базе трёхдверного <sc_element sys_idtf="concept_Volkswagen">Volkswagen</sc_element> Polo V, в продажу поступил в сентябре 2010 года. Изначально Audi A1 выпускался в виде трёхдверного <sc_element sys_idtf="concept_hatchback">хэтчбека</sc_element>. В конце 2011 года появился пятидверный хэтчбэк.](* <- lang_en;; => nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- illustration;;
+	=> nrel_main_idtf:
+		[Рис. (Audi A1)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://image/audi_a1.png"(* => nrel_format: format_png;;*);;
+		*);;
+*);;

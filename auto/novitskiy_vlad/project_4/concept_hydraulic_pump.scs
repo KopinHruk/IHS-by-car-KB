@@ -26,6 +26,8 @@ concept_gear_type_hydraulic_pump => nrel_main_idtf:
 [шестерёночный гидравлический насос](*<-lang_ru;;*);
 	[gear type hydraulic pump](*<-lang_en;;*);;
 
+concept_hydraulic_pump <= nrel_inclusion: concept_autopart;;
+
 concept_hydraulic_pump <= nrel_subdividing: ...
 (*
 ->concept_adjustable_hydraulic_pump;;  

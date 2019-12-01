@@ -1,0 +1,47 @@
+sc_node_not_relation -> concept_blind_spot_detection;;
+concept_blind_spot_detection => nrel_main_idtf:
+[систем контроля «слепых зон»](*<-lang_ru;;*);
+[«blind spot» detection](*<-lang_en;;*);;
+concept_blind_spot_detection => nrel_idtf:
+[система обнаружения автомобилей в "слепых зонах"](*<-lang_ru;;*);
+[система помощи при перестроении](*<-lang_ru;;*);
+[rebuild help system](*<-lang_en;;*);
+	[СКСЗ](*<-lang_ru;;*);;
+sc_node_role_relation -> rrel_dangerous_approach;;
+rrel_dangerous_approach => nrel_main_idtf:
+[опасное сближение'](*<-lang_ru;;*);
+	[dangerous approach'](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_lane_change;; 
+nrel_lane_change => nrel_main_idtf:
+[перестроение*](*<-lang_ru;;*);
+	[lane change*](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_blind_spot;; 
+nrel_blind_spot => nrel_main_idtf:
+[«слепая зона»*](*<-lang_ru;;*);
+	[«blind spot»*](*<-lang_en;;*);;
+
+concept_blind_spot_detection <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_active_safety_support_system;;
+			-> nrel_to_help;;
+			-> nrel_to_prevent;;
+			-> rrel_dangerous_approach;;
+			-> concept_crash;;
+			-> nrel_when;;
+			-> nrel_lane_change;;
+			-> concept_car;;
+			-> nrel_blind_spot;;
+			-> concept_visibility;;
+			-> rrel_driver;;
+		*);;
+	=> nrel_main_idtf: [Опр.(система контроля «слепых зон»)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Система контроля «слепых зон» - вспомогательная система активной безопаности, которая 
+			помогает избежать опасных сближений и аварийных ситуаций при перестроении, когда другой автомобиль попадает 
+			в "слепую зону" обзора водителя.](* <- lang_ru;; *);; 
+		*);; 
+	*);;

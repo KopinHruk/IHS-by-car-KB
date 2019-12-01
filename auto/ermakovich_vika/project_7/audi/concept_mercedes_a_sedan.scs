@@ -1,0 +1,47 @@
+concept_mercedes_a_sedan
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес А Седан](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes A Sedan](* <- lang_en;; *);
+
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_2016_2019;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Мерседес А Седан)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_sedan;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Мерседес А Седан</b> - это компактный трехобъемник Гольф класса в <sc_element sys_idtf="concept_sedan">седане</sc_element>.](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Мерседес А Седан)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[<b>Mercedes A-Class Sedan</b> обладает довольно богатым списком опций. Автомобиль может быть оборудован семью подушками безопасности, кожаным салоном, климатической системой, виртуальной приборной панелью, полным электропакетом, 18-дюймовыми легкосплавными колесными дисками, а также продвинутым мультимедийным центром с семидюймовым сенсорным экраном и навигацией.](* <- lang_en;; => nrel_format: format_html;;*);;
+		*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- illustration;;
+	=> nrel_main_idtf:
+		[Рис. (Мерседес А Седан)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://image/mercedes_a_sedan.png"(* => nrel_format: format_png;;*);;
+		*);;
+*);;

@@ -1,0 +1,36 @@
+sc_node_not_relation -> concept_lift_assist_system;;
+concept_lift_assist_system => nrel_main_idtf:
+[система помощи при подъёме](*<-lang_ru;;*);
+	[lift assist system](*<-lang_en;;*);;
+sc_node_not_relation -> concept_car_rolling_back;;
+concept_car_rolling_back => nrel_main_idtf:
+[откатывание автомобиля](*<-lang_ru;;*);
+	[car rolling back](*<-lang_en;;*);;
+sc_node_norole_relation -> nrel_start_moving;; 
+nrel_start_moving => nrel_main_idtf:
+[начать движение*](*<-lang_ru;;*);
+	[start moving*](*<-lang_en;;*);;
+sc_node_not_relation -> concept_lifting;;
+concept_lifting => nrel_main_idtf:
+[подъём](*<-lang_ru;;*);
+	[lifting](*<-lang_en;;*);;
+
+concept_lift_assist_system <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_active_safety_support_system;;
+			-> nrel_to_be_intended;;
+			-> nrel_to_prevent;;
+			-> concept_car_rolling_back;;
+			-> nrel_start_moving;;
+			-> concept_lifting;;
+		*);;
+	=> nrel_main_idtf: [Опр.(система помощи при подъёме)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Система помощи при подъёме - вспомогательная система активной безопасности, предназначеная 
+			для предотвращения откатывания автомобиля при трогании на подъеме (наклонной плоскости).](* <- lang_ru;; *);; 
+		*);; 
+	*);;

@@ -1,0 +1,38 @@
+sc_node_not_relation -> concept_parktronic;;
+concept_parktronic => nrel_main_idtf:
+[парктроник](*<-lang_ru;;*);
+[parktronic](*<-lang_en;;*);;
+concept_parktronic => nrel_idtf:
+[parking radar](*<-lang_en;;*);
+[парковочный радар](*<-lang_ru;;*);
+	[АПС](*<-lang_ru;;*);;
+sc_node_not_relation -> concept_parking_sensor;;
+concept_parking_sensor => nrel_main_idtf:
+[датчик парковки](*<-lang_ru;;*);
+	[parking sensor](*<-lang_en;;*);;
+sc_node_not_relation -> concept_parking_maneuvering;;
+concept_parking_maneuvering => nrel_main_idtf:
+[парковочное маневрирование](*<-lang_ru;;*);
+	[parking maneuvering](*<-lang_en;;*);;
+
+concept_parktronic <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_active_safety_support_system;;
+			-> rrel_option;;
+			-> set;;
+			-> concept_parking_sensor;;
+			-> nrel_to_be_intended;;
+			-> nrel_to_ease;;
+			-> concept_parking_maneuvering;;
+		*);;
+	=> nrel_main_idtf: [Опр.(парктроник)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Парктроник - вспомогательная система активной безопасности, 
+			опционально устанавливаемая совокупность бесконтактных датчиков, предназначенная 
+			для облегчения маневрирования при парковке.](* <- lang_ru;; *);; 
+		*);; 
+	*);;

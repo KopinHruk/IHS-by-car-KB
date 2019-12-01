@@ -1,0 +1,47 @@
+concept_audi_tt
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Ауди ТТ](* <- lang_ru;; *);
+=> nrel_main_idtf:[Audi TT](* <- lang_en;; *);
+
+<-concept_model;
+=>nrel_auto_mark: concept_Audi;
+=>nrel_car_body: concept_crossover;
+=>nrel_production_period: concept_period_1998_2004; concept_period_2005_2010; concept_period_2011_2015;  concept_period_2016_2019;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Ауди ТТ)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_crossover;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Ауди ТТ</b> - это двухдверный <sc_element sys_idtf="concept_crossover">кроссовер</sc_element> премиального класса.](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Ауди ТТ)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[Салон <b>Audi TT</b> выполнен в архитектуре Virtual cockpit. Его ключевой особенностью является наличие крупной, полностью виртуальной панели приборов, с которой водитель может управлять всеми системами автомобиля. Отдельного экрана мультимедийной системы на центральной консоли не предусмотрено, там располагаются дефлекторы воздуховодов. Стоит отметить, что после рестайлинга, базовые версии получили новые пункты в списке стандартного оборудования. ](* <- lang_en;; => nrel_format: format_html;;*);;
+		*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- illustration;;
+	=> nrel_main_idtf:
+		[Рис. (Ауди ТТ)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://image/audi_tt.png"(* => nrel_format: format_png;;*);;
+		*);;
+*);;

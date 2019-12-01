@@ -1,0 +1,9 @@
+sc_node_not_relation -> concept_abs_control_unit;;
+concept_abs_control_unit => nrel_main_idtf:
+[блок управления антиблокировочной системой](*<-lang_ru;;*);
+[anti-lock control unit](*<-lang_en;;*);;
+concept_abs_control_unit => nrel_idtf:
+[ABS control unit](*<-lang_en;;*);
+	[блок управления АБС](*<-lang_ru;;*);;
+
+concept_abs_control_unit <= nrel_inclusion: concept_autopart;;

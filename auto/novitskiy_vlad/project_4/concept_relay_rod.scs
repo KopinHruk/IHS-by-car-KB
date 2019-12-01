@@ -31,6 +31,8 @@ nrel_wheel_position => nrel_main_idtf:
 [положение колеса*](*<-lang_ru;;*);
     [wheel position*](*<-lang_en;;*);;
 
+concept_relay_rod <= nrel_inclusion: concept_autopart;;
+
 concept_relay_rod <= nrel_subdividing: ...
 (*
 ->concept_solid_relay_rod;;  

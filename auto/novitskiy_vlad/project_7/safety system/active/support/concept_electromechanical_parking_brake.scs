@@ -1,0 +1,31 @@
+sc_node_not_relation -> concept_electromechanical_parking_brake;;
+concept_electromechanical_parking_brake => nrel_main_idtf:
+[электромеханический стояночный тормоз](*<-lang_ru;;*);
+[electromechanical parking brake](*<-lang_en;;*);;
+concept_electromechanical_parking_brake => nrel_idtf:
+	[EPB](*<-lang_en;;*);;
+sc_node_not_relation -> concept_brake_mechanisms_electromechanical_drive;;
+concept_brake_mechanisms_electromechanical_drive => nrel_main_idtf:
+[электромеханический привод тормозных механизмов](*<-lang_ru;;*);
+	[brake mechanisms electromechanical drive](*<-lang_en;;*);;
+
+concept_electromechanical_parking_brake <= nrel_inclusion: concept_parking_brake_system;;
+
+concept_electromechanical_parking_brake <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_active_safety_support_system;;
+			-> concept_parking_brake_system;;
+			-> nrel_to_use;;
+			-> concept_brake_mechanisms_electromechanical_drive;;
+		*);;
+	=> nrel_main_idtf: [Опр.(электромеханический стояночный тормоз)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Электромеханический стояночный тормоз - вспомогательная система активной безопаности, 
+			являющаяся современной конструкцией стояночной тормозной системы, в которой используется 
+			электромеханический привод тормозных механизмов.](* <- lang_ru;; *);; 
+		*);; 
+	*);;

@@ -5,10 +5,6 @@ concept_steering_rod_end => nrel_main_idtf:
 concept_steering_rod_end => nrel_idtf:
 [рулевой наконечник](*<-lang_ru;;*);
 	[steering tip](*<-lang_en;;*);;
-sc_node_not_relation -> concept_relay_rod_end;;
-concept_relay_rod_end => nrel_main_idtf:
-[наконечник поперечной рулевой тяги](*<-lang_ru;;*);
-	[relay rod end](*<-lang_en;;*);;
 sc_node_not_relation -> concept_longitudinal_tie_rod_end;;
 concept_longitudinal_tie_rod_end => nrel_main_idtf:
 [наконечник продольной рулевой тяги](*<-lang_ru;;*);

@@ -1,0 +1,49 @@
+concept_audi_a8
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Ауди А8](* <- lang_ru;; *);
+=> nrel_main_idtf:[Audi A8](* <- lang_en;; *);
+
+<-concept_model;
+=>nrel_auto_mark: concept_Audi;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_1993_1997; concept_period_1998_2004; concept_period_2005_2010; concept_period_2011_2015; concept_period_2016_2019;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Ауди А8)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Audi A8</b> — <sc_element sys_idtf="concept_car">автомобиль</sc_element> представительского класса производимый концерном Audi AG в городе Неккарзульм, Германия, преемник модели Audi V8.](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	->rrel_key_sc_element: concept_Volkswagen;;
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Ауди A6, фольцваген)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[Значительная часть технических компонентов Audi A8 применялась также в модели <sc_element sys_idtf="concept_Volkswagen">Volkswagen Phaeton</sc_element>.](* <- lang_en;; => nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- illustration;;
+	=> nrel_main_idtf:
+		[Рис. (Ауди A6)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://image/audi_a8.png"(* => nrel_format: format_png;;*);;
+		*);;
+*);;

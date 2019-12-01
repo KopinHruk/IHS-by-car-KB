@@ -1,0 +1,47 @@
+concept_mercedes_b_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес В Класс](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes B Class](* <- lang_en;; *);
+
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_2005_2010; concept_period_2011_2015; concept_period_2016_2019; 
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Мерседес В Класс)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_hatchback;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Мерседес В Класс</b> - то пятиместный компактвэн премиум сегмента в <sc_element sys_idtf="concept_hatchback">xэтчбеке</sc_element>.](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Мерседес В Класс)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[На старте продаж, для российского рынка будут предложены только две комплектации. В обоих случаях, по умолчанию, предложен весь спектр опций, необходимых для комфортной и безопасной поездки. За дополнительную плату, можно заказать оборудование из премиального сегмента: панорамное стекло на крышу, вентиляцию сидений, проекционный дисплей, виртуальную приборную панель, пневматическую подвеску, систему кругового обзора, подсветку салона, кожаную отделку, розетку на 220V, адаптивный головной свет, систему распознавания дорожных знаков, а также автономный предпусковой отопитель.](* <- lang_en;; => nrel_format: format_html;;*);;
+		*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- illustration;;
+	=> nrel_main_idtf:
+		[Рис. (Мерседес В Класс)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://image/mercedes_b_class.png"(* => nrel_format: format_png;;*);;
+		*);;
+*);;

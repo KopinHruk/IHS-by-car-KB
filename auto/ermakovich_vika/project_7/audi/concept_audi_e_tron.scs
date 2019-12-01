@@ -1,0 +1,49 @@
+concept_audi_e_tron
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Ауди е-трон](* <- lang_ru;; *);
+=> nrel_main_idtf:[Audi e-tron](* <- lang_en;; *);
+
+<-concept_model;
+=>nrel_auto_mark: concept_Audi;
+=>nrel_car_body: concept_crossover;
+=>nrel_production_period: concept_period_2011_2015; concept_period_2016_2019;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Ауди е-трон)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_crossover;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Ауди е-трон</b> - это полноприводный полноразмерный <sc_element sys_idtf="concept_crossover">кроссовер</sc_element> премиум класса.](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	->rrel_key_sc_element: concept_cruise_control; concept_disc;;
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Ауди е-трон, круиз-контроль, колесный диск)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[В списке оснащения находятся: полностью светодиодная оптика, масса подушек безопасности, <sc_element sys_idtf="concept_cruise_control">адаптивный круиз-контроль</sc_element>, способный поддерживать дистанцию за автомобилем, система слежения за рядностью движения, парковочные ассистенты, камера заднего вида, подогрев и электрические регулировки сидений, климатическая установка, <sc_element sys_idtf="concept_disc">21-дюймовые легкосплавные колесные диски</sc_element>, электрический привод пятой двери, а также продвинутая мультимедийная система с навигацией.](* <- lang_en;; => nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- illustration;;
+	=> nrel_main_idtf:
+		[Рис. (Ауди е-трон)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://image/audi_e_tron.png"(* => nrel_format: format_png;;*);;
+		*);;
+*);;

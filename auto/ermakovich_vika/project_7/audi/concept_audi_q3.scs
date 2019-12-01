@@ -1,0 +1,49 @@
+concept_audi_q3
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Ауди Ку3](* <- lang_ru;; *);
+=> nrel_main_idtf:[Audi Q3](* <- lang_en;; *);
+
+<-concept_model;
+=>nrel_auto_mark: concept_Audi;
+=>nrel_car_body: concept_crossover;
+=>nrel_production_period: concept_period_2011_2015; concept_period_2016_2019;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Ауди Ку3)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_crossover;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Ауди Ку3</b>- это пятиместный компактный <sc_element sys_idtf="concept_crossover">кроссовер</sc_element> премиум класса.](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	->rrel_key_sc_element: concept_cruise_control;;
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Ауди Ку3, круиз-контроль)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[В базовой комплектации, Q3 будет оснащаться полностью светодиодными фарами головного освещения, четырьмя подушками безопасности (двумя фронтальными и двумя боковыми), климат-контролем с двумя зонами, полным электропаткетом, виртуальной приборной доской, <sc_element sys_idtf="concept_cruise_control">круиз-контролем</sc_element> и продвинутой мультимедийной системой с 8,8-дюймовым экраном.](* <- lang_en;; => nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- illustration;;
+	=> nrel_main_idtf:
+		[Рис. (Ауди Ку3)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://image/audi_q3.png"(* => nrel_format: format_png;;*);;
+		*);;
+*);;

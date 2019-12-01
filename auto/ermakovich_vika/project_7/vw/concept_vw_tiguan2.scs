@@ -1,0 +1,8 @@
+sc_node_not_relation -> concept_vw_tiguan2;;
+concept_vw_tiguan2 => nrel_main_idtf:
+[VW Tiguan 2](*<-lang_ru;;*);
+     [VW Tiguan 2](*<-lang_en;;*);;
+concept_vw_tiguan2 <-  concept_model;;
+concept_vw_tiguan2=>nrel_auto_mark: concept_Volkswagen;;
+concept_vw_tiguan2=>nrel_car_body: concept_crossover;;
+concept_vw_tiguan2=>nrel_production_period: concept_period_2016_2019;;

@@ -1,0 +1,67 @@
+concept_model 
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[модель](*<-lang_ru;;*);
+     [model](*<-lang_en;;*);;
+	 
+
+
+concept_Mercedec 
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[Мерседес](*<-lang_ru;;*);
+     [Mercedec](*<-lang_en;;*);;
+
+concept_sedan
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[седан](*<-lang_ru;;*);
+     [sedan](*<-lang_en;;*);;
+	 
+concept_hatchback
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[xэтчбек](*<-lang_ru;;*);
+     [hatchback](*<-lang_en;;*);;
+	 
+concept_universal
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[универсал](*<-lang_ru;;*);
+     [station wagon](*<-lang_en;;*);;
+	 
+concept_crossover
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[кроссовер](*<-lang_ru;;*);
+     [crossover](*<-lang_en;;*);;
+	 
+concept_period_1993_1997
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[1993-1997](*<-lang_ru;;*);
+     [1993-1997](*<-lang_en;;*);;
+	 
+concept_period_1998_2004
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[1998-2004](*<-lang_ru;;*);
+     [1998-2004](*<-lang_en;;*);;
+	 
+concept_period_2005_2010
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2005-2010](*<-lang_ru;;*);
+     [2005-2010](*<-lang_en;;*);;
+	 
+concept_period_2011_2015
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2011-2015](*<-lang_ru;;*);
+     [2011-2015](*<-lang_en;;*);;
+	 
+concept_period_2016_2019
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2016-2019](*<-lang_ru;;*);
+     [2016-2019](*<-lang_en;;*);;

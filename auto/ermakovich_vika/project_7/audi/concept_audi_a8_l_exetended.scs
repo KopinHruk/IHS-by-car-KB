@@ -1,0 +1,48 @@
+concept_audi_a8_l_exetended
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Ауди А8 Л Экстендид](* <- lang_ru;; *);
+=> nrel_main_idtf:[Audi A8 L Extended](* <- lang_en;; *);
+
+<-concept_model;
+=>nrel_auto_mark: concept_Audi;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_2016_2019;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Ауди А8 Л Экстендид)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_sedan;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Ауди А8 Эль Экстендет</b>- это шестидверный удлиненный <sc_element sys_idtf="concept_sedan">седан</sc_element> премиум класса.](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ...
+(*
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Ауди А8 Л Экстендид)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[<b>Audi A8 L Extended</b> оснащается огромной панорамной крышей длинной 2,4 метра с персональными шторками для каждого ряда, климатической установкой с несколькими зонами работы, охладителями, премиальной аудиосистемой, продвинутым мультимедийным центром с сенсорным экраном, а также сиденьями с электрическими регулировками, подогревом, вентиляцией и отделкой из эксклюзивной кожи Valcona.](* <- lang_en;; => nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- illustration;;
+	=> nrel_main_idtf:
+		[Рис. (Ауди А8 Л Экстендид)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://image/audi_a8_l_extended.png"(* => nrel_format: format_png;;*);;
+		*);;
+*);;

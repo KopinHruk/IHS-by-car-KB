@@ -1,0 +1,56 @@
+sc_node_not_relation -> concept_circular_review_system;;
+concept_circular_review_system => nrel_main_idtf:
+[система кругового обзора](*<-lang_ru;;*);
+	[circular review system](*<-lang_en;;*);;
+sc_node_not_relation -> concept_constrained_condition;;
+concept_constrained_condition => nrel_main_idtf:
+[стеснённое условие](*<-lang_ru;;*);
+	[constrained condition](*<-lang_en;;*);;
+sc_node_not_relation -> concept_parallel_parking;;
+concept_parallel_parking => nrel_main_idtf:
+[параллельная парковка](*<-lang_ru;;*);
+	[parallel parking](*<-lang_en;;*);;
+sc_node_not_relation -> concept_parallel_parking;;
+concept_parallel_parking => nrel_main_idtf:
+[параллельная парковка](*<-lang_ru;;*);
+	[parallel parking](*<-lang_en;;*);;
+sc_node_not_relation -> concept_perpendicular_parking;;
+concept_perpendicular_parking => nrel_main_idtf:
+[перпендикулярная парковка](*<-lang_ru;;*);
+	[perpendicular parking](*<-lang_en;;*);;
+sc_node_not_relation -> concept_movement_between_lines;;
+concept_movement_between_lines => nrel_main_idtf:
+[движение между рядами](*<-lang_ru;;*);
+	[movement between lines](*<-lang_en;;*);;
+sc_node_not_relation -> concept_blind_intersection_departure;;
+concept_blind_intersection_departure => nrel_main_idtf:
+[выезд на «слепой» перекресток](*<-lang_ru;;*);
+	["blind" intersection departure] (*<-lang_en;;*);;
+
+concept_circular_review_system <= nrel_inclusion: concept_multimedia_system;;
+
+concept_circular_review_system <- rrel_key_sc_element: ...
+	(*
+	<- definition;;
+	<= nrel_using_constants: ... 
+		(*
+			-> concept_active_safety_support_system;;
+			-> nrel_assignment;;
+			-> nrel_to_help;;
+			-> rrel_driver;;
+			-> nrel_to_maneuver;;
+			-> concept_constrained_condition;;
+			-> rrel_example;;
+			-> concept_parallel_parking;;
+			-> concept_perpendicular_parking;;
+			-> concept_movement_between_lines;;
+			-> concept_blind_intersection_departure;;
+		*);;
+	=> nrel_main_idtf: [Опр.(система кругового обзора)](* <- lang_ru;; *);; 
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Система кругового обзора - вспомогательная система активной безопаности, которая 
+			предназначена для оказания помощи водителю при выполнении маневрирования в стесненных условиях 
+			(параллельная парковка, перпендикулярная парковка, движение между рядами, выезд на «слепой» перекресток).](* <- lang_ru;; *);; 
+		*);; 
+	*);;
