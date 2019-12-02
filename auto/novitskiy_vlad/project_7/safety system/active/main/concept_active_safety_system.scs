@@ -65,6 +65,6 @@ concept_active_safety_system <- rrel_key_sc_element: ...
 		*);;
 	=> nrel_main_idtf: [Утв.(система активной безопасности, конструктивно связан с*, взаимодействовать с*, 
 						тормозная система, значительно', повышать*, эффективность тормозной системы)](*<-lang_ru;;*);;
-	<- rrel_axiom: subject_domain_of_steering_drives;;
+	<- rrel_axiom: subject_domain_of_active_safety_systems;;
 	<- concept_general_form_statement;;
 	*);;

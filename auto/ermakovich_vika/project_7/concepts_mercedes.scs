@@ -1,0 +1,172 @@
+concept_mercedes_a_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес А Класс](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes A Class](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_1998_2004;
+concept_period_2005_2010; concept_period_2011_2015;
+concept_period_2016_2019;; 
+
+
+concept_mercedes_a_class_amg
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес А Класс АМГ](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes A Class AMG](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_2016_2019;; 
+
+
+concept_mercedes_b_class_electric_drive
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес В Класс Электрик Драйв](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes B Class Electric drive](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_2011_2015; concept_period_2016_2019;;
+
+
+concept_mercedes_c_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес С Класс](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes C Class](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_1998_2004; concept_period_2005_2010; concept_period_2011_2015; concept_period_2016_2019;;
+
+
+concept_mercedes_c_class_amg
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес С Класс АМГ](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes C Class AMG](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_1998_2004; concept_period_2005_2010; concept_period_2011_2015; concept_period_2016_2019;;
+
+
+concept_mercedes_cla
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес ЦЛА](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes CLA](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_universal;
+=>nrel_production_period: concept_period_2011_2015; concept_period_2016_2019;;
+
+
+concept_mercedes_cla_shooting_brake
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес ЦЛА Шутинг Брэйк](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes CLA Shooting Brake](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_universal;
+=>nrel_production_period: concept_period_2016_2019;;
+
+
+concept_mercedes_clc_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес ЦЛЦ Класс](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes CLC Class](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_2005_2010;;
+
+
+concept_mercedes_cl_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес ЦЛ Класс](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes CL Class](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_1998_2004;
+concept_period_2005_2010; concept_period_2011_2015;
+concept_period_2005_2010; concept_period_2016_2019;;
+
+
+concept_mercedes_cl_class_amg
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес ЦЛ Класс АМГ](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes CL Class AMG](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_1998_2004;
+concept_period_2005_2010; concept_period_2011_2015;
+concept_period_2005_2010; concept_period_2016_2019;;
+
+
+concept_mercedes_cls_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес ЦЛС Класс](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes CLS Class](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_1998_2004;
+concept_period_2005_2010; concept_period_2011_2015;
+concept_period_2005_2010; concept_period_2016_2019;;
+
+
+concept_mercedes_cls_class_amg
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес ЦЛС Класс АМГ](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes CLS Class AMG](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_1998_2004;
+concept_period_2005_2010; concept_period_2011_2015;
+concept_period_2005_2010; concept_period_2016_2019;;
+
+
+concept_mercedes_e_class
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес Е Класс](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes E Class](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_1998_2004;
+concept_period_2005_2010; concept_period_2011_2015;
+concept_period_2005_2010; concept_period_2016_2019;;
+
+
+concept_mercedes_e_class_all_terrain
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес Е Класс Олл Терайн](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes E Class All Terrain](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_universal;
+=>nrel_production_period: concept_period_2016_2019;;
+
+
+concept_mercedes_e_class_amg
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес Е Класс АМГ](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes E Class AMG](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_2005_2010; 
+concept_period_2011_2015; concept_period_2016_2019;;
+
+
+concept_mercedes_e_class_amg
+<- sc_node_not_relation;
+=> nrel_main_idtf:[Мерседес Е Класс АМГ](* <- lang_ru;; *);
+=> nrel_main_idtf:[Mercedes E Class AMG](* <- lang_en;; *);
+<-concept_model;
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_2005_2010; 
+concept_period_2011_2015; concept_period_2016_2019;;
