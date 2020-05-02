@@ -1,0 +1,71 @@
+
+    sc_node_not_relation -> concept_GAZ_53;;
+    concept_GAZ_53 => nrel_main_idtf:
+    [ГАЗ-53](*<-lang_ru;;*);
+         [GAZ-53](*<-lang_en;;*);;
+    concept_GAZ_53 <-  concept_model;;
+    concept_GAZ_53=>nrel_auto_mark: concept_GAZ;;
+    concept_GAZ_53 => nrel_drive_type: concept_four_wheel_drive;;
+    concept_GAZ_53=>nrel_production_period: concept_period_1961_1993;;
+   
+    concept_GAZ_53=>nrel_engine_type: ZMZ_53;;
+    concept_GAZ_53 => nrel_transmission_type: concept_mechanic_transmission;;
+    concept_mechanic_transmission <- concept_transmission;;
+    
+    concept_GAZ_53 <-rrel_key_sc_element: ...
+    (*
+    <- definition;;
+    <= nrel_using_constants: ... 
+        (*
+            ->concept_car;; 
+            ->concept_concern;; 
+            ->concept_GAZ;;
+        *);;
+    => nrel_main_idtf: [Опр.(ГАЗ-53)](*<-lang_ru;;*);; 
+    <= nrel_sc_text_translation:...
+    (* 
+            ->    [<b>ГАЗ-53</b> - <sc_element sys_idtf="concept_car">автомобиль</sc_element> , выпускавшийся <sc_element sys_idtf="concept_concern">концерном</sc_element> <sc_element sys_idtf="concept_GAZ">ГАЗ</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; 
+    *);; 
+    *);;
+    
+    concept_GAZ_53 <- rrel_key_sc_element: ... 
+         (*
+            ->rrel_key_sc_element: concept_GAZ_53; concept_GAZ_51; concept_truck;;
+            <-statement;;
+            <=nrel_sc_text_translation: ... (* 
+    -> [<sc_element sys_idtf="concept_GAZ_53">ГАЗ-53</sc_element> представляет собой третье (после ГАЗ-АА/ММ и <sc_element sys_idtf="concept_GAZ_51">ГАЗ-51</sc_element>) поколение среднетоннажных <sc_element sys_idtf="concept_truck">грузовиков</sc_element> ГАЗ.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+            =>nrel_main_idtf: [Утв.(Грузовой автомобиль)](*<-lang_ru;;*);;
+           <-rrel_axiom:concept_IHS_by_car;;
+           <-concept_general_form_statement;;
+
+         *);;
+    
+    concept_GAZ_53 <- rrel_key_sc_element: ... 
+         (*
+            ->rrel_key_sc_element: concept_period_1961_1993;;
+            <-statement;;
+            <=nrel_sc_text_translation: ... (* 
+    -> [
+    Выпускался в <sc_element sys_idtf="concept_period_1961_1993">период с 1961 по 1993 гг</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+            =>nrel_main_idtf: [Утв.(1961-1993)](*<-lang_ru;;*);;
+           <-rrel_axiom:concept_IHS_by_car;;
+           <-concept_general_form_statement;;
+
+         *);;
+         
+    sc_node_not_relation->concept_period_1961_1993;;
+    concept_period_1961_1993=>nrel_main_idtf: [1961-1993] (* <- lang_ru;; *);
+                                       [1961-1993] (* <- lang_en;; *);;
+    
+    illustration -> ...
+        (*
+        -> rrel_key_sc_element: concept_GAZ_53;;
+        <= nrel_sc_text_translation: ...
+            (*
+            -> "file://../content/concept_GAZ_53.jpg";;
+            *);;
+        *);;
+    

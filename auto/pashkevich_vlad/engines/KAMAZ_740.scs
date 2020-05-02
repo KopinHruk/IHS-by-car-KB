@@ -1,0 +1,133 @@
+
+    KAMAZ_740<-concept_engine;;
+    KAMAZ_740<-concept_internal_combustion_engine;;
+    KAMAZ_740 => nrel_main_idtf:
+        [КамАЗ-740](*<-lang_ru;;*);
+             [KAMAZ_740](*<-lang_en;;*);;
+    
+    
+    KAMAZ_740=>nrel_fuel: concept_diesel;;
+    KAMAZ_740=>nrel_engine_volume: ...
+    (*
+        <=nrel_value: ...
+        (*
+            <-concept_amount;;
+            ->rrel_cm3: 10850;;
+        *);;
+    *);;
+
+    KAMAZ_740=>nrel_engine_power: ...
+    (*
+        <=nrel_value: ...
+        (*
+            <-concept_amount;;
+            ->rrel_hp: 300;;
+        *);;
+    *);;
+
+
+    KAMAZ_740=>nrel_consunble: ...
+    (*
+        <-concept_oil;;
+        =>nrel_replacement_policy: ...
+        (*
+            <= nrel_value: ...
+            (*
+
+                ->rrel_km: 16000;;
+                ->rrel_mounth: 14;;
+            *);;
+            <-concept_amount;;
+        *);;
+    *);;
+
+    KAMAZ_740=>nrel_consunble: ...
+    (*
+        <-concept_air_filter;;
+        =>nrel_replacement_policy: ...
+        (*
+            <= nrel_value: ...
+            (*
+
+                ->rrel_km: 16000;;
+                ->rrel_mounth: 23;;
+            *);;
+            <-concept_amount;;
+        *);;
+    *);;
+
+    KAMAZ_740=>nrel_consunble: ...
+    (*
+        <-concept_fuel_filter;;
+        =>nrel_replacement_policy: ...
+        (*
+            <= nrel_value: ...
+            (*
+
+                ->rrel_km: 83000;;
+                ->rrel_mounth: 68;;
+            *);;
+            <-concept_amount;;
+        *);;
+    *);;
+
+    KAMAZ_740=>nrel_consunble: ...
+    (*
+        <-concept_spark_plug;;
+        =>nrel_replacement_policy: ...
+        (*
+            <= nrel_value: ...
+            (*
+
+                ->rrel_km: 35000;;
+                ->rrel_mounth: 29;;
+            *);;
+            <-concept_amount;;
+        *);;
+    *);;
+
+    KAMAZ_740=>nrel_consunble: ...
+    (*
+        <-concept_grm;;
+        =>nrel_replacement_policy: ...
+        (*
+            <= nrel_value: ...
+            (*
+
+                ->rrel_km: 17000;;
+                ->rrel_mounth: 31;;
+            *);;
+            <-concept_amount;;
+        *);;
+    *);;
+
+    KAMAZ_740=>nrel_consunble: ...
+    (*
+        <-concept_coolant;;
+        =>nrel_replacement_policy: ...
+        (*
+            <= nrel_value: ...
+            (*
+
+                ->rrel_km: 31000;;
+                ->rrel_mounth: 29;;
+            *);;
+            <-concept_amount;;
+        *);;
+    *);;
+
+    mechanic=>nrel_consunble: ...
+    (*
+        <-concept_gearbox_oil;;
+        =>nrel_replacement_policy: ...
+        (*
+            <= nrel_value: ...
+            (*
+
+                ->rrel_km: 37000;;
+                ->rrel_mounth: 23;;
+            *);;
+            <-concept_amount;;
+        *);;
+    *);;
+    

@@ -1,0 +1,71 @@
+
+    sc_node_not_relation -> concept_ZIL_135;;
+    concept_ZIL_135 => nrel_main_idtf:
+    [ЗИЛ-135](*<-lang_ru;;*);
+         [ZIL-135](*<-lang_en;;*);;
+    concept_ZIL_135 <-  concept_model;;
+    concept_ZIL_135=>nrel_auto_mark: concept_ZIL;;
+    concept_ZIL_135 => nrel_drive_type: concept_four_wheel_drive;;
+    concept_ZIL_135=>nrel_production_period: concept_period_1963_1995;;
+   
+    concept_ZIL_135=>nrel_engine_type: ZIL_375;;
+    concept_ZIL_135 => nrel_transmission_type: concept_mechanic_transmission;;
+    concept_mechanic_transmission <- concept_transmission;;
+    
+    concept_ZIL_135 <-rrel_key_sc_element: ...
+    (*
+    <- definition;;
+    <= nrel_using_constants: ... 
+        (*
+            ->concept_car;; 
+            ->concept_concern;; 
+            ->concept_ZIL;;
+        *);;
+    => nrel_main_idtf: [Опр.(ЗИЛ-135)](*<-lang_ru;;*);; 
+    <= nrel_sc_text_translation:...
+    (* 
+            ->    [<b>ЗИЛ-135</b> - <sc_element sys_idtf="concept_car">автомобиль</sc_element> , производившийся <sc_element sys_idtf="concept_concern">концерном</sc_element> <sc_element sys_idtf="concept_ZIL">ЗИЛ</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; 
+    *);; 
+    *);;
+    
+    concept_ZIL_135 <- rrel_key_sc_element: ... 
+         (*
+            ->rrel_key_sc_element: concept_ZIL_135; concept_automobile;;
+            <-statement;;
+            <=nrel_sc_text_translation: ... (* 
+    -> [<sc_element sys_idtf="concept_ZIL_135">ЗИЛ-135</sc_element> семейство советских четырёхосных военных <sc_element sys_idtf="concept_automobile">автомобилей</sc_element> , включает более двадцати различных модификаций.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+            =>nrel_main_idtf: [Утв.(Автомобиль)](*<-lang_ru;;*);;
+           <-rrel_axiom:concept_IHS_by_car;;
+           <-concept_general_form_statement;;
+
+         *);;
+    
+    concept_ZIL_135 <- rrel_key_sc_element: ... 
+         (*
+            ->rrel_key_sc_element: concept_period_1963_1995;;
+            <-statement;;
+            <=nrel_sc_text_translation: ... (* 
+    -> [
+    Выпускался в <sc_element sys_idtf="concept_period_1963_1995">период с 1963 по 1995 гг</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+            =>nrel_main_idtf: [Утв.(1963-1995)](*<-lang_ru;;*);;
+           <-rrel_axiom:concept_IHS_by_car;;
+           <-concept_general_form_statement;;
+
+         *);;
+         
+    sc_node_not_relation->concept_period_1963_1995;;
+    concept_period_1963_1995=>nrel_main_idtf: [1963-1995] (* <- lang_ru;; *);
+                                       [1963-1995] (* <- lang_en;; *);;
+    
+    illustration -> ...
+        (*
+        -> rrel_key_sc_element: concept_ZIL_135;;
+        <= nrel_sc_text_translation: ...
+            (*
+            -> "file://../content/concept_ZIL_135.jpg";;
+            *);;
+        *);;
+    

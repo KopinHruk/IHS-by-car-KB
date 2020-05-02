@@ -1,0 +1,71 @@
+
+    sc_node_not_relation -> concept_ZIS_5;;
+    concept_ZIS_5 => nrel_main_idtf:
+    [ЗИС-5](*<-lang_ru;;*);
+         [ZIS-5](*<-lang_en;;*);;
+    concept_ZIS_5 <-  concept_model;;
+    concept_ZIS_5=>nrel_auto_mark: concept_ZIS;;
+    concept_ZIS_5 => nrel_drive_type: concept_four_wheel_drive;;
+    concept_ZIS_5=>nrel_production_period: concept_period_1933_1958;;
+   
+    concept_ZIS_5=>nrel_engine_type: ZIS_5;;
+    concept_ZIS_5 => nrel_transmission_type: concept_mechanic_transmission;;
+    concept_mechanic_transmission <- concept_transmission;;
+    
+    concept_ZIS_5 <-rrel_key_sc_element: ...
+    (*
+    <- definition;;
+    <= nrel_using_constants: ... 
+        (*
+            ->concept_car;; 
+            ->concept_concern;; 
+            ->concept_ZIS;;
+        *);;
+    => nrel_main_idtf: [Опр.(ЗИС-5)](*<-lang_ru;;*);; 
+    <= nrel_sc_text_translation:...
+    (* 
+            ->    [<b>ЗИС-5</b> - <sc_element sys_idtf="concept_car">автомобиль</sc_element> , производившийся <sc_element sys_idtf="concept_concern">концерном</sc_element> <sc_element sys_idtf="concept_ZIS">ЗИС</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; 
+    *);; 
+    *);;
+    
+    concept_ZIS_5 <- rrel_key_sc_element: ... 
+         (*
+            ->rrel_key_sc_element: concept_ZIS_5; concept_truck;;
+            <-statement;;
+            <=nrel_sc_text_translation: ... (* 
+    -> [<sc_element sys_idtf="concept_ZIS_5">ЗИС-5</sc_element> («трёхтонка») — советский <sc_element sys_idtf="concept_truck">грузовой автомобиль</sc_element> грузоподъёмностью 3 т; второй по массовости (после ГАЗ-АА) грузовик 1930-40-х.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+            =>nrel_main_idtf: [Утв.(Грузовой автомобиль)](*<-lang_ru;;*);;
+           <-rrel_axiom:concept_IHS_by_car;;
+           <-concept_general_form_statement;;
+
+         *);;
+    
+    concept_ZIS_5 <- rrel_key_sc_element: ... 
+         (*
+            ->rrel_key_sc_element: concept_period_1933_1958;;
+            <-statement;;
+            <=nrel_sc_text_translation: ... (* 
+    -> [
+    Выпускался в <sc_element sys_idtf="concept_period_1933_1958">период с 1933 по 1958 гг</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+            =>nrel_main_idtf: [Утв.(1933-1958)](*<-lang_ru;;*);;
+           <-rrel_axiom:concept_IHS_by_car;;
+           <-concept_general_form_statement;;
+
+         *);;
+         
+    sc_node_not_relation->concept_period_1933_1958;;
+    concept_period_1933_1958=>nrel_main_idtf: [1933-1958] (* <- lang_ru;; *);
+                                       [1933-1958] (* <- lang_en;; *);;
+    
+    illustration -> ...
+        (*
+        -> rrel_key_sc_element: concept_ZIS_5;;
+        <= nrel_sc_text_translation: ...
+            (*
+            -> "file://../content/concept_ZIS_5.jpg";;
+            *);;
+        *);;
+    

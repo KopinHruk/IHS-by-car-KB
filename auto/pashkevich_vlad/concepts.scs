@@ -1,0 +1,45 @@
+sc_node_not_relation->concept_ZIL;;
+concept_concern->concept_ZIL;;
+concept_company->concept_ZIL;;
+concept_ZIL=>nrel_main_idtf: [ЗИЛ] (* <- lang_ru;; *);
+								   [ZIL] (* <- lang_en;; *);;
+
+
+sc_node_not_relation->concept_URAL;;
+concept_concern->concept_URAL;;
+concept_company->concept_URAL;;
+concept_URAL=>nrel_main_idtf: [Урал] (* <- lang_ru;; *);
+								   [URAL] (* <- lang_en;; *);;								   
+
+sc_node_not_relation->concept_MAZ;;
+concept_concern->concept_MAZ;;
+concept_company->concept_MAZ;;
+concept_MAZ=>nrel_main_idtf: [МАЗ] (* <- lang_ru;; *);
+								   [MAZ] (* <- lang_en;; *);;
+sc_node_not_relation->concept_GAZ;;
+concept_concern->concept_GAZ;;
+concept_company->concept_GAZ;;
+concept_GAZ=>nrel_main_idtf: [ГАЗ] (* <- lang_ru;; *);
+								   [GAZ] (* <- lang_en;; *);;
+
+sc_node_not_relation->concept_KAMAZ;;
+concept_concern->concept_KAMAZ;;
+concept_company->concept_KAMAZ;;
+concept_KAMAZ=>nrel_main_idtf: [КамАЗ] (* <- lang_ru;; *);
+								   [KAMAZ] (* <- lang_en;; *);;
+
+
+sc_node_not_relation->concept_BAZ;;
+concept_concern->concept_BAZ;;
+concept_company->concept_BAZ;;
+concept_BAZ=>nrel_main_idtf: [БАЗ] (* <- lang_ru;; *);
+								   [BAZ] (* <- lang_en;; *);;
+
+
+
+
+
+sc_node_norole_relation -> nrel_drive_type;;
+nrel_drive_type => nrel_main_idtf:
+[тип привода*](*<-lang_ru;;*);
+     [drive type*](*<-lang_en;;*);;

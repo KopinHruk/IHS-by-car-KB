@@ -1,0 +1,71 @@
+
+    sc_node_not_relation -> concept_BAZ_6953;;
+    concept_BAZ_6953 => nrel_main_idtf:
+    [БАЗ-6953](*<-lang_ru;;*);
+         [BAZ-6953](*<-lang_en;;*);;
+    concept_BAZ_6953 <-  concept_model;;
+    concept_BAZ_6953=>nrel_auto_mark: concept_BAZ;;
+    concept_BAZ_6953 => nrel_drive_type: concept_four_wheel_drive;;
+    concept_BAZ_6953=>nrel_production_period: concept_period_1987_1995;;
+   
+    concept_BAZ_6953=>nrel_engine_type: KAMAZ_740;;
+    concept_BAZ_6953 => nrel_transmission_type: concept_mechanic_transmission;;
+    concept_mechanic_transmission <- concept_transmission;;
+    
+    concept_BAZ_6953 <-rrel_key_sc_element: ...
+    (*
+    <- definition;;
+    <= nrel_using_constants: ... 
+        (*
+            ->concept_car;; 
+            ->concept_concern;; 
+            ->concept_BAZ;;
+        *);;
+    => nrel_main_idtf: [Опр.(БАЗ-6953)](*<-lang_ru;;*);; 
+    <= nrel_sc_text_translation:...
+    (* 
+            ->    [<b>БАЗ-6953</b> - <sc_element sys_idtf="concept_car">автомобиль</sc_element> , производившийся <sc_element sys_idtf="concept_concern">концерном</sc_element> <sc_element sys_idtf="concept_BAZ">БАЗ</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; 
+    *);; 
+    *);;
+    
+    concept_BAZ_6953 <- rrel_key_sc_element: ... 
+         (*
+            ->rrel_key_sc_element: concept_BAZ_6953; concept_unit; concept_all_terrain_car;;
+            <-statement;;
+            <=nrel_sc_text_translation: ... (* 
+    -> [<sc_element sys_idtf="concept_BAZ_6953">БАЗ-6953</sc_element> балластный тягач <sc_element sys_idtf="concept_unit">рамной</sc_element> конструкции для работы в составе автопоездов полной массой до 45 т и буксировки по <sc_element sys_idtf="concept_all_terrain_car">всем видам дорог</sc_element> и местности артиллерийских систем и прицепов полной массой до 15 т.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+            =>nrel_main_idtf: [Утв.(Рама)](*<-lang_ru;;*);;
+           <-rrel_axiom:concept_IHS_by_car;;
+           <-concept_general_form_statement;;
+
+         *);;
+    
+    concept_BAZ_6953 <- rrel_key_sc_element: ... 
+         (*
+            ->rrel_key_sc_element: concept_period_1987_1995;;
+            <-statement;;
+            <=nrel_sc_text_translation: ... (* 
+    -> [
+    Выпускался в <sc_element sys_idtf="concept_period_1987_1995">период с 1987 по 1995 гг</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+            =>nrel_main_idtf: [Утв.(1987-1995)](*<-lang_ru;;*);;
+           <-rrel_axiom:concept_IHS_by_car;;
+           <-concept_general_form_statement;;
+
+         *);;
+         
+    sc_node_not_relation->concept_period_1987_1995;;
+    concept_period_1987_1995=>nrel_main_idtf: [1987-1995] (* <- lang_ru;; *);
+                                       [1987-1995] (* <- lang_en;; *);;
+    
+    illustration -> ...
+        (*
+        -> rrel_key_sc_element: concept_BAZ_6953;;
+        <= nrel_sc_text_translation: ...
+            (*
+            -> "file://../content/concept_BAZ_6953.jpg";;
+            *);;
+        *);;
+    

@@ -1,0 +1,44 @@
+
+    sc_node_not_relation -> concept_diesel;;
+    concept_diesel => nrel_main_idtf:
+    [Дизельное топливо](*<-lang_ru;;*);
+         [Diesel](*<-lang_en;;*);;
+    concept_diesel <- concept_basic_fuel;;
+    
+    concept_diesel <-rrel_key_sc_element: ...
+    (*
+    <- definition;;
+    <= nrel_using_constants: ... 
+        (*
+            ->concept_fuel;; ->concept_diesel_engine;; ->concept_internal_combustion_engine;; 
+        *);;
+    => nrel_main_idtf: [Опр.(Дизельное топливо)](*<-lang_ru;;*);; 
+    <= nrel_sc_text_translation:...
+    (* 
+            ->    [<b>Ди́зельное то́пливо</b> — жидкий продукт, использующийся как <sc_element sys_idtf="concept_fuel">топливо</sc_element> в <sc_element sys_idtf="concept_diesel_engine">дизельном</sc_element> <sc_element sys_idtf="concept_internal_combustion_engine">двигателе внутреннего сгорания</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; 
+    *);; 
+    *);;
+    
+    concept_diesel <- rrel_key_sc_element: ... 
+         (*
+            ->rrel_key_sc_element: concept_diesel; concept_truck;;
+            <-statement;;
+            <=nrel_sc_text_translation: ... (* 
+    -> [Основные потребители <sc_element sys_idtf="concept_diesel">дизельного топлива</sc_element> — железнодорожный транспорт (тепловозы, автомотрисы, дизель-поезда), <sc_element sys_idtf="concept_truck"> грузовой автотранспорт</sc_element> , водный транспорт, военная техника]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+            =>nrel_main_idtf: [Утв.(Солярка, грузовик)](*<-lang_ru;;*);;
+           <-rrel_axiom:concept_IHS_by_car;;
+           <-concept_general_form_statement;;
+
+         *);;
+    
+    illustration -> ...
+        (*
+        -> rrel_key_sc_element: concept_diesel;;
+        <= nrel_sc_text_translation: ...
+            (*
+            -> "file://../content/concept_diesel.jpg";;
+            *);;
+        *);;
+    

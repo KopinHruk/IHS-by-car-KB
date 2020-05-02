@@ -1,0 +1,71 @@
+
+    sc_node_not_relation -> concept_URAL_4320;;
+    concept_URAL_4320 => nrel_main_idtf:
+    [Урал-4320](*<-lang_ru;;*);
+         [Ural-4320](*<-lang_en;;*);;
+    concept_URAL_4320 <-  concept_model;;
+    concept_URAL_4320=>nrel_auto_mark: concept_URAL;;
+    concept_URAL_4320 => nrel_drive_type: concept_four_wheel_drive;;
+    concept_URAL_4320=>nrel_production_period: concept_period_1977_2020;;
+   
+    concept_URAL_4320=>nrel_engine_type: YAMZ_236;;
+    concept_URAL_4320 => nrel_transmission_type: concept_mechanic_transmission;;
+    concept_mechanic_transmission <- concept_transmission;;
+    
+    concept_URAL_4320 <-rrel_key_sc_element: ...
+    (*
+    <- definition;;
+    <= nrel_using_constants: ... 
+        (*
+            ->concept_car;; 
+            ->concept_concern;; 
+            ->concept_URAL;;
+        *);;
+    => nrel_main_idtf: [Опр.(Урал-4320)](*<-lang_ru;;*);; 
+    <= nrel_sc_text_translation:...
+    (* 
+            ->    [<b>Урал-4320</b> - <sc_element sys_idtf="concept_car">автомобиль</sc_element> двойного назначения с колёсной формулой 6 × 6, производящийся <sc_element sys_idtf="concept_concern">концерном</sc_element> <sc_element sys_idtf="concept_URAL">Урал</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; 
+    *);; 
+    *);;
+    
+    concept_URAL_4320 <- rrel_key_sc_element: ... 
+         (*
+            ->rrel_key_sc_element: concept_URAL_4320; concept_cargo; concept_road;;
+            <-statement;;
+            <=nrel_sc_text_translation: ... (* 
+    -> [<sc_element sys_idtf="concept_URAL_4320">Урал-4320</sc_element> был разработан для транспортировки <sc_element sys_idtf="concept_cargo">грузов</sc_element>, людей и трейлеров на всех типах <sc_element sys_idtf="concept_road">дорог</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+            =>nrel_main_idtf: [Утв.(Груз)](*<-lang_ru;;*);;
+           <-rrel_axiom:concept_IHS_by_car;;
+           <-concept_general_form_statement;;
+
+         *);;
+    
+    concept_URAL_4320 <- rrel_key_sc_element: ... 
+         (*
+            ->rrel_key_sc_element: concept_period_1977_2020;;
+            <-statement;;
+            <=nrel_sc_text_translation: ... (* 
+    -> [
+    Выпускался в <sc_element sys_idtf="concept_period_1977_2020">период с 1977 по 2020 гг</sc_element>.]
+    (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+            =>nrel_main_idtf: [Утв.(1977-2020)](*<-lang_ru;;*);;
+           <-rrel_axiom:concept_IHS_by_car;;
+           <-concept_general_form_statement;;
+
+         *);;
+         
+    sc_node_not_relation->concept_period_1977_2020;;
+    concept_period_1977_2020=>nrel_main_idtf: [1977-2020] (* <- lang_ru;; *);
+                                       [1977-2020] (* <- lang_en;; *);;
+    
+    illustration -> ...
+        (*
+        -> rrel_key_sc_element: concept_URAL_4320;;
+        <= nrel_sc_text_translation: ...
+            (*
+            -> "file://../content/concept_URAL_4320.jpg";;
+            *);;
+        *);;
+    
