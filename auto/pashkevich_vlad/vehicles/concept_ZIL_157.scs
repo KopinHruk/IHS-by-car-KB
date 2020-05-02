@@ -31,7 +31,7 @@
     
     concept_ZIL_157 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_ZIL_157; concept_ZIL_131; concept_URAL_375;;
+            ->rrel_key_sc_element: concept_ZIL_131; concept_URAL_375;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [Использовалась кабина от <b>ЗИС-151</b> с незначительными изменениями. <sc_element sys_idtf="concept_ZIL_157">ЗИЛ-157</sc_element> был впоследствии заменён на <sc_element sys_idtf="concept_ZIL_131">ЗИЛ-131</sc_element> и <sc_element sys_idtf="concept_URAL_375">Урал-375</sc_element>.]

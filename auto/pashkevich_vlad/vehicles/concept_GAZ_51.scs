@@ -31,7 +31,7 @@
     
     concept_GAZ_51 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_GAZ_51; concept_truck;;
+            ->rrel_key_sc_element: concept_truck;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [<sc_element sys_idtf="concept_GAZ_51">ГАЗ-51</sc_element> - советский <sc_element sys_idtf="concept_truck">грузовой автомобиль</sc_element> грузоподъёмностью 2,5 т; наиболее массовая грузовая модель 1950—1970-х годов.]

@@ -31,7 +31,7 @@
     
     concept_BTR_80 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_BTR_80; concept_BTR_70;;
+            ->rrel_key_sc_element: concept_BTR_70;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [<sc_element sys_idtf="concept_BTR_80">БТР-80</sc_element> создан в начале 1980-х годов как дальнейшее развитие бронетранспортёра <sc_element sys_idtf="concept_BTR_70">БТР-70</sc_element>.]

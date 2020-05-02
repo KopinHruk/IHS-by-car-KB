@@ -31,7 +31,7 @@
     
     concept_ZIL_137 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_tractor_unit; concept_ZIL_137;;
+            ->rrel_key_sc_element: concept_ZIL_137;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [Автопоезд состоял из специального <sc_element sys_idtf="concept_tractor_unit">седельного тягача</sc_element> ЗИЛ-137Т, выполненного на агрегатах серийной 150-сильной машины ЗИЛ-131В, и одного из двух типов двухосных 7,2-тонных полуприцепов-шасси – стандартного <sc_element sys_idtf="concept_ZIL_137">ЗИЛ-137А</sc_element> и варианта ЗИЛ-137Б с удлиненным на полметра задним свесом безбортовой грузовой платформы.]

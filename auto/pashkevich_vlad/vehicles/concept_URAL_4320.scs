@@ -31,7 +31,7 @@
     
     concept_URAL_4320 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_URAL_4320; concept_cargo; concept_road;;
+            ->rrel_key_sc_element: concept_cargo; concept_road;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [<sc_element sys_idtf="concept_URAL_4320">Урал-4320</sc_element> был разработан для транспортировки <sc_element sys_idtf="concept_cargo">грузов</sc_element>, людей и трейлеров на всех типах <sc_element sys_idtf="concept_road">дорог</sc_element>.]

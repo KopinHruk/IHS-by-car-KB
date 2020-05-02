@@ -31,10 +31,10 @@
     
     concept_BTR_152 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_BTR_152; concept_car_aggregate; concept_truck; concept_ZIL_157;;
+            ->rrel_key_sc_element: concept_car_aggregate; concept_truck; concept_ZIL_157;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
-    -> [<sc_element sys_idtf="concept_BTR_152">БТР-152</sc_element> - советский бронетранспортёр, созданный на базе узлов и <sc_element sys_idtf=" concept_car_aggregate">агрегатов</sc_element>  <sc_element sys_idtf="concept_truck">грузового автомобиля</sc_element> <sc_element sys_idtf="concept_ZIL_157">ЗИЛ-157</sc_element> .]
+    -> [<sc_element sys_idtf="concept_BTR_152">БТР-152</sc_element> - советский бронетранспортёр, созданный на базе узлов и <sc_element sys_idtf="concept_car_aggregate">агрегатов</sc_element>  <sc_element sys_idtf="concept_truck">грузового автомобиля</sc_element> <sc_element sys_idtf="concept_ZIL_157">ЗИЛ-157</sc_element> .]
     (*<-lang_ru;; => nrel_format: format_html;;*);; *);;
             =>nrel_main_idtf: [Утв.(Агрегат)](*<-lang_ru;;*);;
            <-rrel_axiom:concept_IHS_by_car;;

@@ -31,7 +31,7 @@
     
     concept_ZIL_135 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_ZIL_135; concept_automobile;;
+            ->rrel_key_sc_element: concept_automobile;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [<sc_element sys_idtf="concept_ZIL_135">ЗИЛ-135</sc_element> семейство советских четырёхосных военных <sc_element sys_idtf="concept_automobile">автомобилей</sc_element> , включает более двадцати различных модификаций.]

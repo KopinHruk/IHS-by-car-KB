@@ -31,7 +31,7 @@
     
     concept_GAZ_66 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_GAZ_66; concept_truck; concept_cabin;;
+            ->rrel_key_sc_element: concept_truck; concept_cabin;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [<sc_element sys_idtf="concept_GAZ_66">ГАЗ-66</sc_element>- советский и российский <sc_element sys_idtf="concept_truck">грузовой автомобиль</sc_element>  с колёсной формулой 4 × 4, <sc_element sys_idtf="nrel_load_capacity">грузоподъёмностью</sc_element> 2,0 тонны и <sc_element sys_idtf="concept_cabin">кабиной</sc_element>  над двигателем.]

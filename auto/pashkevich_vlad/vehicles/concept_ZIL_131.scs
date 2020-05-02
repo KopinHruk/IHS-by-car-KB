@@ -31,7 +31,7 @@
     
     concept_ZIL_131 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_ZIL_131; concept_truck; concept_all_terrain_car;;
+            ->rrel_key_sc_element: concept_truck; concept_all_terrain_car;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [<sc_element sys_idtf="concept_ZIL_131">ЗИЛ-131</sc_element> — советский и российский <sc_element sys_idtf="concept_truck">грузовой автомобиль</sc_element> <sc_element sys_idtf="concept_all_terrain_car">повышенной проходимости</sc_element>.]

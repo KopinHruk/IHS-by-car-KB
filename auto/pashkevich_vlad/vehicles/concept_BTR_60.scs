@@ -31,7 +31,7 @@
     
     concept_BTR_60 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_BTR_60; concept_BTR_152;;
+            ->rrel_key_sc_element: concept_BTR_152;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [<sc_element sys_idtf="concept_BTR_60">БТР-60</sc_element> - <sc_element sys_idtf="nrel_to_be_developed">разработан</sc_element>   в 1956—1959 годах для оснащения мотострелковых подразделений и замены в них устаревшего <sc_element sys_idtf="concept_BTR_152">БТР-152</sc_element>, от которого он отличался значительно улучшенной <sc_element sys_idtf="nrel_patency">проходимостью</sc_element>.]

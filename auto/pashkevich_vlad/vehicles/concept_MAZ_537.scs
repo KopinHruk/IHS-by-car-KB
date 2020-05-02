@@ -31,7 +31,7 @@
     
     concept_MAZ_537 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_tractor_unit; concept_cabin; concept_MAZ_537;;
+            ->rrel_key_sc_element: concept_cabin; concept_MAZ_537;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [<b>МАЗ-537</b> - четырёхосный <sc_element sys_idtf="concept_tractor_unit">седельный тягач</sc_element>. sys_idtf="concept_cabin">Кабина</sc_element> <sc_element sys_idtf="concept_MAZ_537">МАЗ-537</sc_element> — металлическая четырёхместная, с двумя дверьми, оборудована дополнительным независимым отопителем. ]

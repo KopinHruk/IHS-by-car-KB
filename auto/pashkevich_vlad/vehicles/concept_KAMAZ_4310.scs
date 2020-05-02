@@ -31,7 +31,7 @@
     
     concept_KAMAZ_4310 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_KAMAZ_4310; concept_four_wheel_drive; concept_truck;;
+            ->rrel_key_sc_element: concept_four_wheel_drive; concept_truck;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [<sc_element sys_idtf="concept_KAMAZ_4310">КамАЗ-4310</sc_element> - <sc_element sys_idtf="concept_four_wheel_drive">полноприводный</sc_element> <sc_element sys_idtf="concept_truck">грузовой автомобиль</sc_element>,   использовался для транспортировки войск, грузов, а также в качестве шасси для ударного вооружения.]

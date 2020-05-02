@@ -31,7 +31,7 @@
     
     concept_BTR_70 <- rrel_key_sc_element: ... 
          (*
-            ->rrel_key_sc_element: concept_BTR_70; concept_wheel;;
+            ->rrel_key_sc_element: concept_wheel;;
             <-statement;;
             <=nrel_sc_text_translation: ... (* 
     -> [<sc_element sys_idtf="concept_BTR_70">БТР-70</sc_element> - боевая <sc_element sys_idtf="concept_wheel">колёсная</sc_element> плавающая бронемашина.]
