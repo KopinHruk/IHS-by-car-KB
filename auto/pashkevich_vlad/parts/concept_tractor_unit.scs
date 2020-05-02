@@ -3,7 +3,7 @@
     concept_tractor_unit => nrel_main_idtf:
     [Седельный тягач](*<-lang_ru;;*);
          [Tractor unit](*<-lang_en;;*);;
-    concept_tractor_unit <- concept_truck;;
+    concept_tractor_unit <= nrel_inclusion: concept_truck;;
     
     concept_tractor_unit <-rrel_key_sc_element: ...
     (*

@@ -1,6 +1,6 @@
 
-    GAZ_11<-concept_engine;;
-    GAZ_11<-concept_internal_combustion_engine;;
+    GAZ_11<= nrel_inclusion: concept_engine;;
+    GAZ_11<= nrel_inclusion: concept_internal_combustion_engine;;
     GAZ_11 => nrel_main_idtf:
         [ГАЗ-11](*<-lang_ru;;*);
              [GAZ_11](*<-lang_en;;*);;
@@ -34,8 +34,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 13000;;
-                ->rrel_mounth: 1;;
+                ->rrel_km: 24000;;
+                ->rrel_mounth: 10;;
             *);;
             <-concept_amount;;
         *);;
@@ -50,7 +50,7 @@
             (*
 
                 ->rrel_km: 31000;;
-                ->rrel_mounth: 11;;
+                ->rrel_mounth: 28;;
             *);;
             <-concept_amount;;
         *);;
@@ -64,8 +64,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 80000;;
-                ->rrel_mounth: 74;;
+                ->rrel_km: 81000;;
+                ->rrel_mounth: 56;;
             *);;
             <-concept_amount;;
         *);;
@@ -79,8 +79,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 31000;;
-                ->rrel_mounth: 33;;
+                ->rrel_km: 22000;;
+                ->rrel_mounth: 19;;
             *);;
             <-concept_amount;;
         *);;
@@ -94,7 +94,7 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 33000;;
+                ->rrel_km: 26000;;
                 ->rrel_mounth: 14;;
             *);;
             <-concept_amount;;
@@ -109,8 +109,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 21000;;
-                ->rrel_mounth: 22;;
+                ->rrel_km: 28000;;
+                ->rrel_mounth: 28;;
             *);;
             <-concept_amount;;
         *);;
@@ -124,8 +124,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 41000;;
-                ->rrel_mounth: 24;;
+                ->rrel_km: 42000;;
+                ->rrel_mounth: 35;;
             *);;
             <-concept_amount;;
         *);;

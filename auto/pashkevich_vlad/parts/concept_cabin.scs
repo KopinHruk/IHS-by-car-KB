@@ -3,7 +3,7 @@
     concept_cabin => nrel_main_idtf:
     [Кабина](*<-lang_ru;;*);
          [Сabin](*<-lang_en;;*);;
-    concept_cabin <- concept_autopart;;
+    concept_cabin <= nrel_inclusion: concept_autopart;;
     
     concept_cabin <-rrel_key_sc_element: ...
     (*

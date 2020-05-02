@@ -3,7 +3,7 @@
     concept_mechanic_transmission => nrel_main_idtf:
     [Механическая КПП](*<-lang_ru;;*);
          [Mechanic transmission](*<-lang_en;;*);;
-    concept_mechanic_transmission <- concept_autopart;;
+    concept_mechanic_transmission <= nrel_inclusion: concept_autopart;;
     
     concept_mechanic_transmission <-rrel_key_sc_element: ...
     (*

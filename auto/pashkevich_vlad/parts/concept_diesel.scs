@@ -3,7 +3,7 @@
     concept_diesel => nrel_main_idtf:
     [Дизельное топливо](*<-lang_ru;;*);
          [Diesel](*<-lang_en;;*);;
-    concept_diesel <- concept_basic_fuel;;
+    concept_diesel <= nrel_inclusion: concept_basic_fuel;;
     
     concept_diesel <-rrel_key_sc_element: ...
     (*

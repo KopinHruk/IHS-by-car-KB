@@ -1,6 +1,6 @@
 
-    KAMAZ_740<-concept_engine;;
-    KAMAZ_740<-concept_internal_combustion_engine;;
+    KAMAZ_740<= nrel_inclusion: concept_engine;;
+    KAMAZ_740<= nrel_inclusion: concept_internal_combustion_engine;;
     KAMAZ_740 => nrel_main_idtf:
         [КамАЗ-740](*<-lang_ru;;*);
              [KAMAZ_740](*<-lang_en;;*);;
@@ -34,8 +34,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 16000;;
-                ->rrel_mounth: 14;;
+                ->rrel_km: 24000;;
+                ->rrel_mounth: 19;;
             *);;
             <-concept_amount;;
         *);;
@@ -49,8 +49,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 16000;;
-                ->rrel_mounth: 23;;
+                ->rrel_km: 20000;;
+                ->rrel_mounth: 26;;
             *);;
             <-concept_amount;;
         *);;
@@ -64,8 +64,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 83000;;
-                ->rrel_mounth: 68;;
+                ->rrel_km: 89000;;
+                ->rrel_mounth: 71;;
             *);;
             <-concept_amount;;
         *);;
@@ -79,8 +79,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 35000;;
-                ->rrel_mounth: 29;;
+                ->rrel_km: 29000;;
+                ->rrel_mounth: 17;;
             *);;
             <-concept_amount;;
         *);;
@@ -94,8 +94,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 17000;;
-                ->rrel_mounth: 31;;
+                ->rrel_km: 33000;;
+                ->rrel_mounth: 25;;
             *);;
             <-concept_amount;;
         *);;
@@ -109,8 +109,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 31000;;
-                ->rrel_mounth: 29;;
+                ->rrel_km: 34000;;
+                ->rrel_mounth: 16;;
             *);;
             <-concept_amount;;
         *);;
@@ -124,8 +124,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 37000;;
-                ->rrel_mounth: 23;;
+                ->rrel_km: 29000;;
+                ->rrel_mounth: 38;;
             *);;
             <-concept_amount;;
         *);;

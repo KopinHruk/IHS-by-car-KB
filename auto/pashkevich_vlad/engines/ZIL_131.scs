@@ -1,6 +1,6 @@
 
-    ZIL_131<-concept_engine;;
-    ZIL_131<-concept_internal_combustion_engine;;
+    ZIL_131<= nrel_inclusion: concept_engine;;
+    ZIL_131<= nrel_inclusion: concept_internal_combustion_engine;;
     ZIL_131 => nrel_main_idtf:
         [ЗИЛ-131](*<-lang_ru;;*);
              [ZIL_131](*<-lang_en;;*);;
@@ -34,8 +34,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 11000;;
-                ->rrel_mounth: 1;;
+                ->rrel_km: 19000;;
+                ->rrel_mounth: 6;;
             *);;
             <-concept_amount;;
         *);;
@@ -49,8 +49,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 27000;;
-                ->rrel_mounth: 29;;
+                ->rrel_km: 18000;;
+                ->rrel_mounth: 22;;
             *);;
             <-concept_amount;;
         *);;
@@ -64,8 +64,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 83000;;
-                ->rrel_mounth: 57;;
+                ->rrel_km: 81000;;
+                ->rrel_mounth: 67;;
             *);;
             <-concept_amount;;
         *);;
@@ -79,7 +79,7 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 28000;;
+                ->rrel_km: 17000;;
                 ->rrel_mounth: 22;;
             *);;
             <-concept_amount;;
@@ -94,8 +94,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 25000;;
-                ->rrel_mounth: 25;;
+                ->rrel_km: 19000;;
+                ->rrel_mounth: 20;;
             *);;
             <-concept_amount;;
         *);;
@@ -109,8 +109,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 18000;;
-                ->rrel_mounth: 21;;
+                ->rrel_km: 29000;;
+                ->rrel_mounth: 14;;
             *);;
             <-concept_amount;;
         *);;
@@ -124,8 +124,8 @@
             <= nrel_value: ...
             (*
 
-                ->rrel_km: 26000;;
-                ->rrel_mounth: 32;;
+                ->rrel_km: 38000;;
+                ->rrel_mounth: 31;;
             *);;
             <-concept_amount;;
         *);;

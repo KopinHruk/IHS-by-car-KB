@@ -3,7 +3,7 @@
     concept_semitrailer => nrel_main_idtf:
     [Полуприцеп](*<-lang_ru;;*);
          [Semitrailer](*<-lang_en;;*);;
-    concept_semitrailer <- concept_wheeled_vehicle;;
+    concept_semitrailer <= nrel_inclusion: concept_wheeled_vehicle;;
     
     concept_semitrailer <-rrel_key_sc_element: ...
     (*
