@@ -1,0 +1,11 @@
+non_atomic_section -> section_subject_domain_of_fuel_system;;
+section_subject_domain_of_fuel_system => nrel_main_idtf:
+[Раздел. Предметная область топливной системы](*<-lang_ru;;*);
+	[Section. Subject domain of fuel system](*<-lang_en;;*);;
+
+section_subject_domain_of_fuel_system <- not_enough_formed_structure;;
+
+
+section_subject_domain_of_fuel_system = [*^"file://subject_domain_of_fuel_system.scsi"*];;
+
+section_subject_domain_of_fuel_system -> rrel_key_sc_element: subject_domain_of_fuel_system;;

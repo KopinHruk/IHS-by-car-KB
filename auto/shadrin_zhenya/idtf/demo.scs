@@ -1,0 +1,127 @@
+concept_lcv
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[малотоннажный грузовой автомобиль](*<-lang_ru;;*);
+[light commercial vehicle](*<-lang_en;;*);;
+
+concept_small_mpv
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[субкомпактвэн](*<-lang_ru;;*);
+[mpv](*<-lang_en;;*);;
+
+
+concept_period_2010_2020
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2010-2020](*<-lang_ru;;*);
+     [2010-2020](*<-lang_en;;*);;
+
+concept_period_2019_2020
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2019-2020](*<-lang_ru;;*);
+     [2019-2020](*<-lang_en;;*);;
+
+concept_period_2010_2018
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2010-2018](*<-lang_ru;;*);
+     [2010-2018](*<-lang_en;;*);;
+
+concept_period_2007_2017
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2007-2017](*<-lang_ru;;*);
+[2007-2017](*<-lang_en;;*);;
+
+concept_period_2002_2010
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2002-2010](*<-lang_ru;;*);
+[2002-2010](*<-lang_en;;*);;
+
+concept_period_2012_2015
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2012-2015](*<-lang_ru;;*);
+     [2012-2015](*<-lang_en;;*);;
+
+concept_period_1997_2005
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[1997-2005](*<-lang_ru;;*);
+     [1997-2005](*<-lang_en;;*);;
+
+concept_period_2015_2020
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2015-2020](*<-lang_ru;;*);
+     [2015-2020](*<-lang_en;;*);;
+
+concept_period_2006_2010
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2006-2010](*<-lang_ru;;*);
+     [2006-2010](*<-lang_en;;*);;
+
+concept_period_2016_2020
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2016-2020](*<-lang_ru;;*);
+     [2016-2020](*<-lang_en;;*);;
+
+concept_period_2005_2009
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2005-2009](*<-lang_ru;;*);
+     [2005-2009](*<-lang_en;;*);;
+
+concept_period_2009_2020
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2009-2020](*<-lang_ru;;*);
+     [2009-2020](*<-lang_en;;*);;
+
+
+concept_period_2009_2013
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2009-2013](*<-lang_ru;;*);
+     [2009-2013](*<-lang_en;;*);;
+
+concept_period_2013_2020
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2013-2020](*<-lang_ru;;*);
+     [2013-2020](*<-lang_en;;*);;
+
+concept_period_2017_2020
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2017-2020](*<-lang_ru;;*);
+     [2017-2020](*<-lang_en;;*);;
+
+concept_period_2002_2011
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2002-2011](*<-lang_ru;;*);
+     [2002-2011](*<-lang_en;;*);;
+
+concept_period_2011_2020
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2011-2020](*<-lang_ru;;*);
+     [2011-2020](*<-lang_en;;*);;
+
+concept_period_2008_2020
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[2008-2020](*<-lang_ru;;*);
+     [2008-2020](*<-lang_en;;*);;
+
+concept_coupe
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[купе](*<-lang_ru;;*);
+     [coupe](*<-lang_en;;*);;

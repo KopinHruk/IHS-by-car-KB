@@ -318,10 +318,6 @@ concept_head_gasket
 (* <- lang_ru;; *);
 [head gasket](*<-lang_en;;*);;
 
-concept_injector
-=> nrel_main_idtf: [форсунка]
-(* <- lang_ru;; *);
-[injector](*<-lang_en;;*);;
 
 concept_spark_plug
 => nrel_main_idtf: [свеча зажигания]

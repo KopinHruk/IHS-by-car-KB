@@ -1,0 +1,6 @@
+concept_single_injection
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[моновпрыск](*<-lang_ru;;*);
+[single injection](*<-lang_en;;*);;
+

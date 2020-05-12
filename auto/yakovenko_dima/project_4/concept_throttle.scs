@@ -57,6 +57,6 @@ concept_throttle
 		*);;
 	*);
 
-<= nrel_inclusion: concept_fuel_system_type;
+
 
 <-sc_node_not_relation;;

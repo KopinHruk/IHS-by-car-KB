@@ -1,0 +1,6 @@
+concept_distributed_injection
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+[распределённый впрыск](*<-lang_ru;;*);
+[distributed injection](*<-lang_en;;*);;
+

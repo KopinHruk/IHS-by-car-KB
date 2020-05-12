@@ -1,8 +1,0 @@
-sc_node_not_relation -> concept_vw_tuareg2;;
-concept_vw_tuareg2 => nrel_main_idtf:
-[VW Tuareg 2](*<-lang_ru;;*);
-     [VW Tuareg 2](*<-lang_en;;*);;
-concept_vw_tuareg2 <-  concept_model;;
-concept_vw_tuareg2=>nrel_auto_mark: concept_Volkswagen;;
-concept_vw_tuareg2=>nrel_car_body: concept_crossover;;
-concept_vw_tuareg2=>nrel_production_period: concept_period_2010_2015; concept_period_2016_2019;;

@@ -1,0 +1,65 @@
+concept_injection_fuel_supply_system
+
+<- rrel_key_sc_element:
+	 Definition_of_injection_fuel_supply_system_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (инжекторная система подачи топлива)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Инжекторная система подачи топлива</b> - система подачи топлива, при которой подача топлива осуществляется путём принудительного впрыска топлива с помощью форсунок во впускной коллектор или в цилиндр.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_injector; concept_collector; concept_engine_cylinder;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_injection_fuel_supply_system
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (инжекторная система подачи топлива)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_fuel_system;;
+		->rrel_key_sc_element: concept_injection_fuel_supply_system;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [Автомобили с такой системой питания часто называют <b>инжекторными</b>. В авиации на поршневых моторах такая система начала применяться значительно раньше — с 1930-х годов, но по причине низкого уровня электронной техники и точной механики тех лет оставалась несовершенной. Наступление реактивной эры привело к прекращению работ над системами впрыска топлива. «Второе пришествие» впрыска в авиацию (легкомоторную) произошло уже в конце 1990-х годов.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+
+
+<= nrel_subdividing: ...
+(*
+->concept_single_injection;;  
+->concept_distributed_injection;;
+=> nrel_main_idtf: [Разбиение по точке установки и количеству форсунок: ](* <- lang_ru;; *);;
+*);
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_injection_fuel_supply_system.jpg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+
+
+<-sc_node_not_relation;;

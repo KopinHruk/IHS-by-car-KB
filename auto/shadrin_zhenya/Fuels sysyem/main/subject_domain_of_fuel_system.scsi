@@ -1,0 +1,42 @@
+subject_domain -> subject_domain_of_fuel_system;;
+subject_domain_of_fuel_system => nrel_main_idtf:
+[Предметная область топливной системы](*<-lang_ru;;*);
+[Subject domain of fuel system](*<-lang_en;;*);;
+
+subject_domain_of_fuel_system <= nrel_primary_elements_class_private_subject_domain:
+concept_IHS_by_car;;
+
+subject_domain_of_fuel_system -> rrel_maximum_studied_object_class:
+concept_fuel_system_type;;
+
+subject_domain_of_fuel_system -> rrel_not_maximum_studied_object_class:
+concept_fuel_system_type;
+concept_fuel_tank;
+concept_throttle;
+concept_throttle_valve;
+concept_pulley;
+concept_fuel_pump;
+concept_fuel_filter;
+concept_injector;
+concept_fuel_line;
+concept_injection_fuel_supply_system;
+concept_fuel_system_of_carburetor_engine;
+concept_accumulator_fuel_system;
+concept_fuel_leak;
+concept_fuel_type;
+concept_fuel_characteristics;
+concept_basic_fuel_type;
+concept_carburetor;
+concept_inlet_pipe;
+concept_fuel;;
+
+subject_domain_of_fuel_system -> rrel_explored_relation: 
+nrel_tank_volume;
+nrel_fuel_injection;
+nrel_fuel;
+concept_fuel_volume;
+nrel_engine_fuel_quality;
+nrel_fuel_circulation;
+nrel_fuel_purification;
+nrel_fuel_consumption;
+nrel_mixture_formation;;

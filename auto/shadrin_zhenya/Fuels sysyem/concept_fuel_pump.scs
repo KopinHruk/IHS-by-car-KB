@@ -1,0 +1,56 @@
+concept_fuel_pump
+<- rrel_key_sc_element:
+	 Definition_of_fuel_pump_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (топливный насос)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Топливный насос</b> - агрегат для перекачки жидкого топлива и создания требуемого давления в топливной магистрали.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> nrel_pressure; concept_fuel; concept_fuel_line;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_fuel_pump
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (топливный насос, топливо, автомобиль)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_fuel_system;;
+		->rrel_key_sc_element: concept_fuel; concept_car;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Топливные насосы</b> применяются в различных областях техники, машинах и механизмах. Могут работать на разных принципах и иметь совершенно различную конструкцию.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_fuel_pump.jpg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+
+
+<-sc_node_not_relation;;

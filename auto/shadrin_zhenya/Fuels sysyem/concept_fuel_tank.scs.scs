@@ -1,0 +1,59 @@
+sc_node_not_relation -> concept_fuel_tank;;
+concept_fuel_tank => nrel_main_idtf:
+[топливный бак](* <-lang_ru;; *);
+	[fuel tank](* <- lang_en;; *);
+<- rrel_key_sc_element:
+	 Definition_of_fuel_tank_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (топливный бак)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Топливный бак</b>(бензобак) — ёмкость для хранения запаса жидкого топлива (бензин, керосин, дизельное топливо) непосредственно на борту транспортного средства или технического устройства, получающего энергию от жидкотопливного двигателя внутреннего сгорания.] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_fuel;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_fuel_tank
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (топливный бак, автомобиль)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_fuel_system;;
+		->rrel_key_sc_element:  concept_car;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Топливный бак,</b> установленный на борту транспортного средства, состоит из герметичного корпуса с имеющейся на его поверхности заливной горловиной, снабжённой запорной крышкой. Также на корпусе топливного бака в случае необходимости располагается отверстие для введения датчиков контроля уровня топлива, или его давления. Топливные баки также могут иметь сливное отверстие, снабжаемое запорной пробкой или краником (например, на тепловозах). ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_fuel_tank.jpg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+
+
+<-sc_node_not_relation;;

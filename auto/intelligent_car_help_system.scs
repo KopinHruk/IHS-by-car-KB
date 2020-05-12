@@ -13,6 +13,7 @@ intelligent_car_help_system <= nrel_section_decomposition:
 		section_subject_domain_of_suspension;;
 	*);
 	section_subject_domain_of_suspension
+
 	(*
 	=> nrel_section_base_order:
 		section_subject_domain_of_steering_systems;;
@@ -33,6 +34,12 @@ intelligent_car_help_system <= nrel_section_decomposition:
 		section_subject_domain_of_salon;;
 	*);
 	section_subject_domain_of_salon
+	
+	(*
+	=> nrel_section_base_order:
+		section_subject_domain_of_fuel_system;;
+	*);
+	section_subject_domain_of_fuel_system
 };;
 
 intelligent_car_help_system -> rrel_key_sc_element: concept_IHS_by_car;;

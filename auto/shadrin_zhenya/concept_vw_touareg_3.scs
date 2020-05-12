@@ -1,0 +1,62 @@
+sc_node_not_relation -> concept_vw_touareg_3;;
+concept_vw_touareg_3 => nrel_main_idtf:
+[VW Touareg 3](*<-lang_ru;;*);
+     [VW Touareg 3](*<-lang_en;;*);;
+concept_vw_touareg_3 <-  concept_model;;
+concept_vw_touareg_3=>nrel_auto_mark: concept_Volkswagen;;
+concept_vw_touareg_3=>nrel_car_body: concept_suv;;
+concept_vw_touareg_3=>nrel_production_period: concept_period_2019_2020;;
+
+
+concept_vw_touareg_3<-rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->concept_car;; 
+		->concept_concern;; 
+		->concept_Volkswagen;;
+	*);;
+=> nrel_main_idtf: [Опр.(VW Touareg 3)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+(* 
+		->		[<b>VW Touareg 3</b> - <sc_element sys_idtf="concept_car">автомобиль</sc_element> третьего поколения, выпускаемый <sc_element sys_idtf="concept_concern">концерном</sc_element> <sc_element sys_idtf="concept_Volkswagen">Volkswagen</sc_element>.]
+(*<-lang_ru;; => nrel_format: format_html;;*);; 
+*);; 
+*);;
+
+concept_vw_touareg_3 <- rrel_key_sc_element: ... 
+     (*
+        ->rrel_key_sc_element: concept_suv; concept_model; concept_Volkswagen; concept_car_body;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* 
+-> [<b>VW Touareg 3</b> Выпускается с <sc_element sys_idtf="concept_car_body">кузовом</sc_element> типа <sc_element sys_idtf="concept_suv">внедорожник</sc_element>.]
+(*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+        =>nrel_main_idtf: [Утв.(внедорожник, кузов)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+
+     *);;
+
+concept_vw_touareg_3 <- rrel_key_sc_element: ... 
+     (*
+        ->rrel_key_sc_element:  concept_period_2019_2020;;
+        <-statement;;
+        <=nrel_sc_text_translation: ... (* 
+-> [
+Выпускался в <sc_element sys_idtf="concept_period_2019_2020">период с 2019 по 2020 гг.</sc_element>.]
+(*<-lang_ru;; => nrel_format: format_html;;*);; *);;
+        =>nrel_main_idtf: [Утв.(2019-2020)](*<-lang_ru;;*);;
+	   <-rrel_axiom:concept_IHS_by_car;;
+	   <-concept_general_form_statement;;
+
+     *);;
+
+illustration -> ...
+	(*
+	-> rrel_key_sc_element: concept_vw_touareg_3;;
+ 	<= nrel_sc_text_translation: ...
+		(*
+		-> "file://concept_vw_touareg_3.jpg";;
+		*);;
+	*);;

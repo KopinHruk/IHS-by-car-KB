@@ -1,0 +1,59 @@
+sc_node_not_relation->concept_fuel_filter;;										
+concept_fuel_filter=>nrel_main_idtf: 
+[топливный фильтр] (* <- lang_ru;; *);
+[fuel filter] (* <- lang_en;; *);
+<- rrel_key_sc_element:
+	 Definition_of_fuel_filter_concept
+	(* 
+		=> nrel_main_idtf:
+			[Опр. (топливный фильтр)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Топливный фильтр</b> представляет собой фильтрующий элемент в топливной магистрали, задерживающий частицы грязи и ржавчины из топлива, как правило, содержит картриджи с фильтрующей бумагой. Их можно найти на большинстве двигателей внутреннего сгорания. ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+			*);;
+                <=nrel_using_constants: ... (* -> concept_internal_combustion_engine; concept_fuel_line;; *);;
+	*);
+	
+<- rrel_key_sc_element:	 
+         Statement_for_fuel_filter
+	(* 
+		=> nrel_main_idtf:
+			[Утв. (топливный фильтр, топливо, топливный бак, топливопривод)]
+			(*
+			<- lang_ru;;
+			*);;
+
+		<-rrel_axiom:subject_domain_of_fuel_system;;
+		->rrel_key_sc_element: concept_fuel; concept_fuel_line; concept_fuel_tank;;
+		<- statement;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example: [<b>Топливные фильтры</b> служат жизненно важную функцию для современных автомобилей, чувствительным к качеству моторного топлива. Не фильтрованное топливо может содержать несколько видов загрязнений, например, кусочки краски и грязи, которая могла попасть в топливный бак при заправке, или ржавчина вызванная влагой в стальных баках. Если эти вещества не удаляются до того, как топливо поступает в систему, они приведут к быстрому износу и выходу из строя топливного насоса и форсунок, из-за абразивного воздействия частиц на высокоточные компоненты, используемые в современных системах впрыска. Топливные фильтры также повышают мощность двигателя, так как чем меньше в топливе присутствует загрязняющих веществ, тем более эффективно происходит горение. ] (* <-lang_ru;; => nrel_format: format_html;; *);; 
+		
+			*);;
+	*);
+
+
+<- rrel_key_sc_element: ...
+	(*
+	<-sc_illustration;;
+	<=nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example: "file://concept_fuel_filter.jpg"
+			(*
+			=> nrel_format: format_png;;
+			*);;
+		*);;
+	*);
+
+
+
+<-sc_node_not_relation;;
