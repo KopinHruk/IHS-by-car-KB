@@ -1,0 +1,35 @@
+concept_speedometr
+
+=> nrel_location: concept_car_dashboard;
+
+<-sc_node_not_relation;
+
+
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Спидометр)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[ Спидо́метр  — измерительный прибор для определения модуля мгновенной скорости движения.   ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ... (*
+	<- illustration;;
+	<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example: "file://images/speedometr.jpg"
+		(*
+			=> nrel_format: format_jpg;;
+		*);;
+	*);;
+*);;

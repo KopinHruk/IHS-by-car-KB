@@ -1,0 +1,46 @@
+concept_mercedes_a_w169
+=> nrel_main_idtf:[Мерседес А-класс W169](* <- lang_ru;; *);
+[Mercedes A-class W169](* <- lang_en;; *);
+
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_2005_2010;
+=>nrel_drive_unit: concept_front_wheel_drive;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Мерседес А-класс W169)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[Второе поколение <b>Mercedes A-class W169</b> было представлено в 2004 году. Кузов автомобиля был собран из высокопрочных стальных сплавов со специальными клеевыми соединениями, наследуя от своего предшественника «сэндвичную» архитектуру ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+<- rrel_key_sc_element: ... (*
+<- illustration;;
+<= nrel_sc_text_translation: ...
+(*
+-> rrel_example: "file://images/w169.jpg"
+(*
+=> nrel_format: format_jpg;;
+*);;
+*);;
+*);
+<- rrel_key_sc_element: ...
+(*
+	->rrel_key_sc_element: concept_sport_car;;
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Мерседес А-класс W169)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[В сентябре 2010 года компания Mercedes-Benz представила электромобиль E-Cell на базе второго поколения A-класса, дебют которого состоялся в октябре того же года на Парижском автосалоне. Модификация построена на пятидверной версии А-класса и оснащена 67-сильным электромотором. ](* <- lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+*);;
+

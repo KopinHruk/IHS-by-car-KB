@@ -1,0 +1,38 @@
+concept_tachometer
+
+=> nrel_location: concept_car_dashboard;
+=> nrel_main_idtf:     
+	 [тахометр]   (*<-lang_ru;;*);
+      [tachometer]  (*<-lang_en;;*);  
+
+<-sc_node_not_relation;
+
+
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Тахометр)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[Тахометр - прибор для измерения скорости вращения коленчатого вала двигателя внутреннего сгорания. Индикатор (указатель, вторичный прибор) обычно расположен на <sc_element sys_idtf="concept_car_dashboard">панели приборов</sc_element> автотранспортного средства, рядом со <sc_element sys_idtf="concept_speedometr">спидометром</sc_element>.  ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ... (*
+	<- illustration;;
+	<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example: "file://images/tachometer.jpg"
+		(*
+			=> nrel_format: format_jpg;;
+		*);;
+	*);;
+*);;

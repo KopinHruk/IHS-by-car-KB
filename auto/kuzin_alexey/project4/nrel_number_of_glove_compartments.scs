@@ -1,0 +1,50 @@
+sc_node_norole_relation -> nrel_number_of_glove_compartments;; 
+nrel_number_of_glove_compartments => nrel_main_idtf:
+[количество бардачков*](*<-lang_ru;;*);
+[number of glovecompartments*](*<-lang_en;;*);;
+
+
+nrel_number_of_glove_compartments <- rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_using_constants: ... 
+	(*
+		->number;; 
+		->nrel_to_be_equipped_with;; 
+		->concept_car;;
+	*);;
+=> nrel_main_idtf: [Опр.(количество бардачков*)](*<-lang_ru;;*);; 
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Число бардачков, которыми оснащён данный автомобиль.](*<-lang_ru;;*);; 
+	*);; 
+*);;	
+	  
+
+nrel_number_of_glove_compartments => nrel_first_domain: concept_car;;
+nrel_number_of_glove_compartments => nrel_second_domain: concept_amount;;
+nrel_number_of_glove_compartments => nrel_definitional_domain: ...
+	(*
+		<=nrel_combination: ...																	
+			(*
+				->concept_car;;
+				->concept_amount;;
+			*);;
+	*);;
+		
+concept_oriented_relation->nrel_number_of_glove_compartments;;
+concept_binari_relation->nrel_number_of_glove_compartments;;
+concept_antisymmetric_relation->nrel_number_of_glove_compartments;;
+concept_antitransitive_relation->nrel_number_of_glove_compartments;;
+concept_antireflexive_relation->nrel_number_of_glove_compartments;
+
+<- rrel_key_sc_element: ... (*
+<- illustration;;
+<= nrel_sc_text_translation: ...
+(*
+-> rrel_example: "file://images/qwe.jpg"
+(*
+=> nrel_format: format_jpg;;
+*);;
+*);;
+*);;

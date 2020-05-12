@@ -1,0 +1,46 @@
+concept_mercedes_a_w168
+=> nrel_main_idtf:[Мерседес А-класс W168](* <- lang_ru;; *);
+[Mercedes A-class W168](* <- lang_en;; *);
+
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_1998_2004;
+=>nrel_drive_unit: concept_front_wheel_drive;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Мерседес А-класс W168)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Mercedes A-class W168</b>  — пятидверный компактный легковой <sc_element sys_idtf="concept_car">автомобиль</sc_element> , выпускаемый <sc_element sys_idtf="concept_Mercedec">Mercedes</sc_element>. Был представлен осенью 1997 года на Франкфуртском автосалоне. ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+<- rrel_key_sc_element: ... (*
+<- illustration;;
+<= nrel_sc_text_translation: ...
+(*
+-> rrel_example: "file://images/w168.jpg"
+(*
+=> nrel_format: format_jpg;;
+*);;
+*);;
+*);
+<- rrel_key_sc_element: ...
+(*
+	->rrel_key_sc_element: concept_sport_car;;
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Мерседес А-класс W168)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[В 2001 году модель претерпела небольшой рестайлинг, результатом которого стали едва заметные изменения во внешнем облике (передняя и задняя конструкции бампера). Обновлённая версия была представлена на Женевском автосалоне зимой того же года.](* <- lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+*);;
+

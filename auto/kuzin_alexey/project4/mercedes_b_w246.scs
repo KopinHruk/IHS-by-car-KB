@@ -1,0 +1,46 @@
+concept_mercedes_b_w246
+=> nrel_main_idtf:[Мерседес B-класс W246](* <- lang_ru;; *);
+[Mercedes B-class W246](* <- lang_en;; *);
+
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_2011_2015;
+=>nrel_drive_unit: concept_front_wheel_drive;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Мерседес B-класс W246)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Mercedes B-class W246</b>  — пятидверный компактный  <sc_element sys_idtf="concept_car">автомобиль</sc_element> , выпускаемый <sc_element sys_idtf="concept_Mercedec">Mercedes</sc_element>. Был представлен в марте 2011 года на Франкфуртском автосалоне. Первоначальными версиями модели были B180, B200, B200 CDI. B160 CDI, B180 CDI BlueEFFICIENCY Edition, B220 4MATIC появились позже, в сентябре 2012 года. ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+<- rrel_key_sc_element: ... (*
+<- illustration;;
+<= nrel_sc_text_translation: ...
+(*
+-> rrel_example: "file://images/w246.jpg"
+(*
+=> nrel_format: format_jpg;;
+*);;
+*);;
+*);
+<- rrel_key_sc_element: ...
+(*
+	->rrel_key_sc_element: concept_sport_car;;
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Мерседес B-класс W246)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[Электрическая версия модели W246 была представлена широкой публике на Парижском автосалоне в октябре 2012 года. Блок батарей разместили под полом рядом с задней осью. Запаса аккумуляторов хватает на 200 км пути.](* <- lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+*);;
+

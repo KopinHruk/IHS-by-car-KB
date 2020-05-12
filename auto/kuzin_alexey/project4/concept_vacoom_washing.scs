@@ -1,0 +1,25 @@
+concept_vacoom_washing
+=> nrel_main_idtf:     
+	 [чистка салона пылесосом]   (*<-lang_ru;;*);
+      [vacoom salon washing]  (*<-lang_en;;*);  
+
+<= nrel_inclusion:concept_salon_washing;
+
+<-sc_node_not_relation;
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (чистка салона пылесосом)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[ Xистка салона пылесосом - процесс очистки салона с применением специального автомобильного пылесоса.  ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);;

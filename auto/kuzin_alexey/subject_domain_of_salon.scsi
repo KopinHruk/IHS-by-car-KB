@@ -1,0 +1,72 @@
+subject_domain -> subject_domain_of_salon;;
+subject_domain_of_salon => nrel_main_idtf:
+[Предметная область салона](*<-lang_ru;;*);
+	[Subject domain of salon](*<-lang_en;;*);;
+
+subject_domain_of_salon-> rrel_explored_relation: 
+nrel_dashboard; 
+nrel_dashboard_type; 
+nrel_number_of_glove_compartments; 
+nrel_number_of_sockets; 
+nrel_washing_type;;
+
+subject_domain_of_salon -> rrel_maximum_studied_object_class: concept_car_salon;;
+
+
+subject_domain_of_salon -> rrel_not_maximum_studied_object_class: 
+concept_airbag;
+concept_air_duct;
+concept_alarm_switch;
+concept_analog_dashboard;
+concept_armrest;
+concept_ashtray;
+concept_bonnet_lever;
+concept_brake_pedal;
+concept_car_dashboard;
+concept_car_door_block;
+concept_car_mat;
+concept_car_seat;
+concept_car_socket;
+concept_ceiling_handle;
+concept_chemical_washing;
+concept_cigarette_lighter;
+concept_climate_control;
+concept_clutch_pedal;
+concept_coolant_termometr;
+concept_cup_holde;
+concept_curtains;
+concept_dashboard_type;
+concept_electric_dashboard;
+concept_fuel_sensor;
+concept_gas_pedal;
+concept_gear_selector;
+concept_glove_compartment;
+concept_headlight_switch;
+concept_headrest;
+concept_high_beam_switch;
+concept_magnitola;
+concept_multimedia_control_block;
+concept_odometr;
+concept_oil_manometer;
+concept_parking_brake_lever;
+concept_salon_washing;
+concept_seat_belt;
+concept_seats_heating_control;
+concept_speedometr;
+concept_steering_wheel_heating_control;
+concept_sunshield;
+concept_tachometer;
+concept_vacoom_washing;
+concept_window_raiser_block;;
+
+
+
+
+
+
+
+
+
+
+
+

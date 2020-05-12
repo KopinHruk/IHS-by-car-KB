@@ -1,0 +1,46 @@
+concept_mercedes_c_w203
+=> nrel_main_idtf:[Мерседес C-класс W203](* <- lang_ru;; *);
+[Mercedes C-class W203](* <- lang_en;; *);
+
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_2005_2010;
+=>nrel_drive_unit: concept_rear_drive; concept_four_wheel_drive;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Мерседес C-класс W203)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Mercedes c-class W203</b>  —  компактный представительский   <sc_element sys_idtf="concept_car">автомобиль</sc_element> , выпускаемый <sc_element sys_idtf="concept_Mercedec">Mercedes</sc_element>. ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+<- rrel_key_sc_element: ... (*
+<- illustration;;
+<= nrel_sc_text_translation: ...
+(*
+-> rrel_example: "file://images/w203.jpg"
+(*
+=> nrel_format: format_jpg;;
+*);;
+*);;
+*);
+<- rrel_key_sc_element: ...
+(*
+
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Мерседес C-класс W203)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[Как и его предшественник автомобиль имел несколько линий исполнения — стандартную Classic, роскошную Elegance и спортивную Avantgarde. Значительную часть парка выпущенных машин составляла дизельная версия CDI.](* <- lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+*);;
+

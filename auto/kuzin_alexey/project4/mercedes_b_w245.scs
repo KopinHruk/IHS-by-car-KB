@@ -1,0 +1,46 @@
+concept_mercedes_b_w245
+=> nrel_main_idtf:[Мерседес B-класс W245](* <- lang_ru;; *);
+[Mercedes B-class W245](* <- lang_en;; *);
+
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_2005_2010;
+=>nrel_drive_unit: concept_front_wheel_drive;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Мерседес B-класс W245)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Mercedes B-class W245</b>  — пятидверный компактный  <sc_element sys_idtf="concept_car">автомобиль</sc_element> , выпускаемый <sc_element sys_idtf="concept_Mercedec">Mercedes</sc_element>. Был представлен в марте 2005 года на Женевском автосалоне. ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+<- rrel_key_sc_element: ... (*
+<- illustration;;
+<= nrel_sc_text_translation: ...
+(*
+-> rrel_example: "file://images/w245.jpg"
+(*
+=> nrel_format: format_jpg;;
+*);;
+*);;
+*);
+<- rrel_key_sc_element: ...
+(*
+	->rrel_key_sc_element: concept_sport_car;;
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Мерседес B-класс W245)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[Серия представляла собой автомобили с переднеприводной переднемоторной компоновкой, с конструкцией пола типа «сандвич» и оснащённые параболической задней подвеской. Многие решения были позаимствованы у A-класса.](* <- lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+*);;
+

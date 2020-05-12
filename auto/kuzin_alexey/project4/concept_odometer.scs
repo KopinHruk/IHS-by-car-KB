@@ -1,0 +1,35 @@
+concept_odometr
+
+=> nrel_location: concept_car_dashboard;
+
+<-sc_node_not_relation;
+
+
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Одометр)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[ Одометр - прибор для измерения и отображения количества оборотов колеса. При помощи него может быть измерен пройденный транспортным средством путь. Обычно расположен на <sc_element sys_idtf="concept_car_dashboard">панели приборов</sc_element> автотранспортного средства, рядом со <sc_element sys_idtf="concept_speedometr">спидометром</sc_element>.  ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ... (*
+	<- illustration;;
+	<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example: "file://images/odometer.jpg"
+		(*
+			=> nrel_format: format_jpg;;
+		*);;
+	*);;
+*);;

@@ -1,0 +1,25 @@
+concept_chemical_washing
+=> nrel_main_idtf:     
+	 [химическая чистка салона]   (*<-lang_ru;;*);
+      [chemical salon washing]  (*<-lang_en;;*);  
+
+<= nrel_inclusion:concept_salon_washing;
+
+<-sc_node_not_relation;
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (химическая чистка салона)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[ Химическая чистка салона - химический процесс очистки изделий из текстильных материалов с использованием органических растворителей. Основное назначение химической чистки — удаление грязи и пятен, которые не поддаются очистке при обычной стирке.  ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);;

@@ -1,0 +1,46 @@
+concept_mercedes_c_w204
+=> nrel_main_idtf:[Мерседес C-класс W204](* <- lang_ru;; *);
+[Mercedes C-class W204](* <- lang_en;; *);
+
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_sedan;
+=>nrel_production_period: concept_period_2011_2015;
+=>nrel_drive_unit: concept_rear_drive; concept_four_wheel_drive;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Мерседес C-класс W204)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Mercedes c-class W204</b>  —  компактный представительский   <sc_element sys_idtf="concept_car">автомобиль</sc_element> , выпускаемый <sc_element sys_idtf="concept_Mercedec">Mercedes</sc_element>. ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+<- rrel_key_sc_element: ... (*
+<- illustration;;
+<= nrel_sc_text_translation: ...
+(*
+-> rrel_example: "file://images/w204.jpg"
+(*
+=> nrel_format: format_jpg;;
+*);;
+*);;
+*);
+<- rrel_key_sc_element: ...
+(*
+
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Мерседес C-класс W204)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[В 2013 году был проведён рестайлинг модели. В результате доработок обновлению подверглась передняя оптика, бампера, а также фонари автомобиля. Изменения также затронули интерьер и модельную гамму двигателей модели.](* <- lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+*);;
+

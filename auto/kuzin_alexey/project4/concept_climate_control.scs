@@ -1,0 +1,37 @@
+concept_climate_control
+=> nrel_location: concept_car_salon;
+=> nrel_main_idtf:     
+	 [климат-контроль]   (*<-lang_ru;;*);
+      [climate control]  (*<-lang_en;;*);  
+
+<-sc_node_not_relation;
+
+
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Климат-контроль)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[ Климат-контроль - технологии поддержания в заданных пределах параметров воздуха: температуры, влажности и химического состава в салоне автомобиля.   ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ... (*
+	<- illustration;;
+	<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example: "file://images/climate.jpg"
+		(*
+			=> nrel_format: format_jpg;;
+		*);;
+	*);;
+*);;

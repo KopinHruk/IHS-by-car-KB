@@ -1,0 +1,24 @@
+concept_salon_washing
+=> nrel_main_idtf:     
+	 [чистка салона]   (*<-lang_ru;;*);
+      [salon washing]  (*<-lang_en;;*);  
+
+
+<-sc_node_not_relation;
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (чистка салона)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[ Чистка салона - процесс очистки салона автомобиля не только для эстетического удовольствия, но также в целях обеспечения безопасности себе и своему здоровью.   ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);;

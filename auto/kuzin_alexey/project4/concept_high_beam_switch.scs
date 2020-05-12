@@ -1,0 +1,27 @@
+concept_high_beam_switch
+
+=> nrel_location: concept_car_salon;
+=> nrel_main_idtf:     
+	 [переключатель фар дальнего света]   (*<-lang_ru;;*);
+      [high beam switch]  (*<-lang_en;;*);  
+
+<-sc_node_not_relation;
+
+
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Переключатель фар дальнего света)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[ Переключатель фар дальнего света - устройство в автомобиле, позволяющее включить или выключить фары дальнего света.   ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);;

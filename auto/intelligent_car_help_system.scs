@@ -28,6 +28,11 @@ intelligent_car_help_system <= nrel_section_decomposition:
 		section_subject_domain_of_trucks;;
 	*);
 	section_subject_domain_of_trucks
+	(*
+	=> nrel_section_base_order:
+		section_subject_domain_of_salon;;
+	*);
+	section_subject_domain_of_salon
 };;
 
 intelligent_car_help_system -> rrel_key_sc_element: concept_IHS_by_car;;

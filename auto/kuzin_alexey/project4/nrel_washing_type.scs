@@ -1,0 +1,37 @@
+sc_node_norole_relation ->nrel_washing_type;;
+
+nrel_washing_type=> nrel_main_idtf:     
+	 [тип чистки салона*]   (*<-lang_ru;;*);
+      [salon washing type*]  (*<-lang_en;;*);;
+ 
+nrel_washing_type <- binary_relation;;
+nrel_washing_type <- antisymmetric_relation;;
+nrel_washing_type <- antitransitive_relation;;
+nrel_washing_type <- antireflexive_relation;;
+nrel_washing_type <- concept_oriented_relation;;
+
+nrel_washing_type => nrel_first_domain: concept_car_salon;;
+nrel_washing_type => nrel_second_domain: concept_salon_washing;;
+
+
+nrel_washing_type <- rrel_key_sc_element:...
+(*
+<- definition;;
+
+=> nrel_main_idtf: [Опр.(тип чистки салона*)](*<-lang_ru;;*);;
+<= nrel_sc_text_translation:...
+    (*
+        -> rrel_example: [Чистка салона - процесс очистки салона автомобиля не только для эстетического удовольствия, но также в целях обеспечения безопасности себе и своему здоровью. ](*<-lang_ru;;*);; 
+*);; 
+*);
+
+<- rrel_key_sc_element: ... (*
+<- illustration;;
+<= nrel_sc_text_translation: ...
+(*
+-> rrel_example: "file://images/washing.jpg"
+(*
+=> nrel_format: format_jpg;;
+*);;
+*);;
+*);;

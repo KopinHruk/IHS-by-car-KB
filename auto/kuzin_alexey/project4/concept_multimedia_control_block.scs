@@ -1,0 +1,38 @@
+concept_multimedia_control_block
+
+=> nrel_location: concept_car_salon;
+=> nrel_main_idtf:     
+	 [блок управления мультимедией]   (*<-lang_ru;;*);
+      [multimedia control block]  (*<-lang_en;;*);  
+
+<-sc_node_not_relation;
+
+
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Блок управления мультимедией)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[ Блок управления мультимедией - средство управления <sc_element sys_idtf="concept_multimedia_system">мультимейдиной системой</sc_element> автомобиля.   ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ... (*
+	<- illustration;;
+	<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example: "file://images/multimedia.jpg"
+		(*
+			=> nrel_format: format_jpg;;
+		*);;
+	*);;
+*);;

@@ -1,0 +1,19 @@
+concept_airbag
+
+=> nrel_location: concept_car_salon;
+
+
+<-sc_node_not_relation;
+
+
+
+<- rrel_key_sc_element: ... (*
+	<- illustration;;
+	<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example: "file://images/airbag.jpg"
+		(*
+			=> nrel_format: format_jpg;;
+		*);;
+	*);;
+*);;

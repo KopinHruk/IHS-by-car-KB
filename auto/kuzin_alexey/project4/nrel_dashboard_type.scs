@@ -1,0 +1,37 @@
+sc_node_norole_relation ->nrel_dashboard_type;;
+
+nrel_dashboard_type=> nrel_main_idtf:     
+	 [тип панели приборов*]   (*<-lang_ru;;*);
+      [dashboard type*]  (*<-lang_en;;*);;
+ 
+nrel_dashboard_type <- binary_relation;;
+nrel_dashboard_type <- antisymmetric_relation;;
+nrel_dashboard_type <- antitransitive_relation;;
+nrel_dashboard_type <- antireflexive_relation;;
+nrel_dashboard_type <- concept_oriented_relation;;
+
+nrel_dashboard_type => nrel_first_domain: concept_car_dashboard;;
+nrel_dashboard_type => nrel_second_domain: concept_dashboard_type;;
+
+
+nrel_dashboard_type <- rrel_key_sc_element:...
+(*
+<- definition;;
+
+=> nrel_main_idtf: [Опр.(панель приборов*)](*<-lang_ru;;*);;
+<= nrel_sc_text_translation:...
+    (*
+        -> rrel_example: [Панель приборов - средство отображения информации, в наибольшей степени определяет внутреннюю визуальную информативность автомобиля. ](*<-lang_ru;;*);; 
+*);; 
+*);
+
+<- rrel_key_sc_element: ... (*
+<- illustration;;
+<= nrel_sc_text_translation: ...
+(*
+-> rrel_example: "file://images/nrelpaneltype.jpg"
+(*
+=> nrel_format: format_jpg;;
+*);;
+*);;
+*);;

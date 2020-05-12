@@ -1,0 +1,27 @@
+concept_seats_heating_control
+
+=> nrel_location: concept_car_salon;
+=> nrel_main_idtf:     
+	 [блок управления подогревом сидений]   (*<-lang_ru;;*);
+      [seats heating control]  (*<-lang_en;;*);  
+
+<-sc_node_not_relation;
+
+
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Блок управления подогревом сидений)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[ Блок управления подогревом сидений - совокупность кнопок и рычагов, позволяющая включить или выключить подогрев <sc_element sys_idtf="concept_car_seat">сидений</sc_element>, выбрать температуру и интенсивность подогрева.   ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);;

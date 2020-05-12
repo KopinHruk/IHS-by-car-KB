@@ -1,0 +1,46 @@
+concept_mercedes_c_w202
+=> nrel_main_idtf:[Мерседес C-класс W202](* <- lang_ru;; *);
+[Mercedes C-class W202](* <- lang_en;; *);
+
+=>nrel_auto_mark: concept_Mercedec;
+=>nrel_car_body: concept_hatchback;
+=>nrel_production_period: concept_period_1998_2004;
+=>nrel_drive_unit: concept_rear_drive; concept_four_wheel_drive;
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (Мерседес C-класс W202)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Mercedes c-class W202</b>  —  компактный представительский   <sc_element sys_idtf="concept_car">автомобиль</sc_element> , выпускаемый <sc_element sys_idtf="concept_Mercedec">Mercedes</sc_element>. Изначально автомобиль  выпускался только в кузовах седан и универсал. ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+<- rrel_key_sc_element: ... (*
+<- illustration;;
+<= nrel_sc_text_translation: ...
+(*
+-> rrel_example: "file://images/w202.jpg"
+(*
+=> nrel_format: format_jpg;;
+*);;
+*);;
+*);
+<- rrel_key_sc_element: ...
+(*
+	->rrel_key_sc_element: concept_sport_car;;
+	<- explanation;;
+	=> nrel_main_idtf:
+		[Утв. (Мерседес C-класс W202)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example:[Внешне автомобиль оказался крупнее своего предшественника, и предлагался сразу в четырёх линиях исполнения начиная от стандартного Classic, подтянутый Esprit (отличавшийся сдвоенными выхлопными трубами), более серьёзный Sport (широкие шины, спортивные диски и салон) и роскошный Elegance (кожаный салон и т. д.)](* <- lang_ru;; => nrel_format: format_html;;*);;
+		*);;
+*);;
+

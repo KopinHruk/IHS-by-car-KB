@@ -1,0 +1,38 @@
+concept_ceiling_handle
+
+=> nrel_location: concept_car_salon;
+=> nrel_main_idtf:     
+	 [потолочная ручка]   (*<-lang_ru;;*);
+      [ceiling handle]  (*<-lang_en;;*);  
+
+<-sc_node_not_relation;
+
+
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (потолочная ручка)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[ Потолочная ручка - присособление в автомобиле, за которое может держаться пассажир для удержания равновесия при резких поворотах или торможениях.   ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ... (*
+	<- illustration;;
+	<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example: "file://images/ceilinghadle.jpg"
+		(*
+			=> nrel_format: format_jpg;;
+		*);;
+	*);;
+*);;

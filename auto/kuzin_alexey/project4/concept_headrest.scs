@@ -1,0 +1,38 @@
+concept_headrest
+
+=> nrel_location: concept_car_seat;
+=> nrel_main_idtf:     
+	 [подголовник]   (*<-lang_ru;;*);
+      [headrest]  (*<-lang_en;;*);  
+
+<-sc_node_not_relation;
+
+
+
+
+<- rrel_key_sc_element: ...
+(*
+	<- definition;;
+	=> nrel_main_idtf:
+		[Опр. (подголовник)](* <- lang_ru;; *);;
+	<= nrel_using_constants:...
+	(*
+		-> concept_car; concept_Mercedec;;
+	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[Подголовник -  защитное средство, встроенное в верхнюю часть сиденья, являющееся предохранительным упором для затылочной части головы водителя или пассажира автомобиля.    ](* <- lang_ru;;
+		     => nrel_format: format_html;; *);;
+	*);;
+*);
+
+<- rrel_key_sc_element: ... (*
+	<- illustration;;
+	<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example: "file://images/headrest.jpg"
+		(*
+			=> nrel_format: format_jpg;;
+		*);;
+	*);;
+*);;
