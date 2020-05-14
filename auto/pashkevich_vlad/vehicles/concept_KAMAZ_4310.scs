@@ -2,15 +2,15 @@
     sc_node_not_relation -> concept_KAMAZ_4310;;
     concept_KAMAZ_4310 => nrel_main_idtf:
     [КамАЗ-4310](*<-lang_ru;;*);
-         [КамАЗ-4310](*<-lang_en;;*);;
+         [KAMAZ-4310](*<-lang_en;;*);;
     concept_KAMAZ_4310 <-  concept_model;;
     concept_KAMAZ_4310=>nrel_auto_mark: concept_KAMAZ;;
     concept_KAMAZ_4310 => nrel_drive_type: concept_four_wheel_drive;;
     concept_KAMAZ_4310=>nrel_production_period: concept_period_1979_2019;;
    
     concept_KAMAZ_4310=>nrel_engine_type: KAMAZ_740;;
-    concept_KAMAZ_4310 => nrel_transmission_type: concept_concept_KAMAZ_4310_transmission;;
-    concept_concept_KAMAZ_4310_transmission <- concept_mechanic_transmission;;
+    concept_KAMAZ_4310 => nrel_transmission_type: concept_KAMAZ_4310_transmission;;
+    concept_KAMAZ_4310_transmission <- concept_mechanic_transmission;;
     
     concept_KAMAZ_4310 <-rrel_key_sc_element: ...
     (*

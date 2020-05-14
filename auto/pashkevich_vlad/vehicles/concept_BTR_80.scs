@@ -9,8 +9,8 @@
     concept_BTR_80=>nrel_production_period: concept_period_1984_2020;;
    
     concept_BTR_80=>nrel_engine_type: KAMAZ_740;;
-    concept_BTR_80 => nrel_transmission_type: concept_concept_BTR_80_transmission;;
-    concept_concept_BTR_80_transmission <- concept_mechanic_transmission;;
+    concept_BTR_80 => nrel_transmission_type: concept_BTR_80_transmission;;
+    concept_BTR_80_transmission <- concept_mechanic_transmission;;
     
     concept_BTR_80 <-rrel_key_sc_element: ...
     (*

@@ -9,8 +9,8 @@
     concept_BAZ_6953=>nrel_production_period: concept_period_1987_1995;;
    
     concept_BAZ_6953=>nrel_engine_type: KAMAZ_740;;
-    concept_BAZ_6953 => nrel_transmission_type: concept_concept_BAZ_6953_transmission;;
-    concept_concept_BAZ_6953_transmission <- concept_mechanic_transmission;;
+    concept_BAZ_6953 => nrel_transmission_type: concept_BAZ_6953_transmission;;
+    concept_BAZ_6953_transmission <- concept_mechanic_transmission;;
     
     concept_BAZ_6953 <-rrel_key_sc_element: ...
     (*

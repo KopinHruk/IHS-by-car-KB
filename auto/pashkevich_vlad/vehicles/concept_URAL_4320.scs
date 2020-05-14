@@ -9,8 +9,8 @@
     concept_URAL_4320=>nrel_production_period: concept_period_1977_2020;;
    
     concept_URAL_4320=>nrel_engine_type: YAMZ_236;;
-    concept_URAL_4320 => nrel_transmission_type: concept_concept_URAL_4320_transmission;;
-    concept_concept_URAL_4320_transmission <- concept_mechanic_transmission;;
+    concept_URAL_4320 => nrel_transmission_type: concept_URAL_4320_transmission;;
+    concept_URAL_4320_transmission <- concept_mechanic_transmission;;
     
     concept_URAL_4320 <-rrel_key_sc_element: ...
     (*
