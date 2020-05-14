@@ -9,8 +9,8 @@
     concept_BTR_152=>nrel_production_period: concept_period_1950_1962;;
    
     concept_BTR_152=>nrel_engine_type: ZIL_123B;;
-    concept_BTR_152 => nrel_transmission_type: concept_mechanic_transmission;;
-    concept_mechanic_transmission <- concept_transmission;;
+    concept_BTR_152 => nrel_transmission_type: concept_concept_BTR_152_transmission;;
+    concept_concept_BTR_152_transmission <- concept_mechanic_transmission;;
     
     concept_BTR_152 <-rrel_key_sc_element: ...
     (*

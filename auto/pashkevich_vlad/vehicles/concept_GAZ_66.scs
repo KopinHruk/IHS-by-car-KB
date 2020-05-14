@@ -9,8 +9,8 @@
     concept_GAZ_66=>nrel_production_period: concept_period_1960_1990;;
    
     concept_GAZ_66=>nrel_engine_type: ZMZ_513;;
-    concept_GAZ_66 => nrel_transmission_type: concept_mechanic_transmission;;
-    concept_mechanic_transmission <- concept_transmission;;
+    concept_GAZ_66 => nrel_transmission_type: concept_concept_GAZ_66_transmission;;
+    concept_concept_GAZ_66_transmission <- concept_mechanic_transmission;;
     
     concept_GAZ_66 <-rrel_key_sc_element: ...
     (*

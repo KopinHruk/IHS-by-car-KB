@@ -9,8 +9,8 @@
     concept_ZIL_131=>nrel_production_period: concept_period_1966_2002;;
    
     concept_ZIL_131=>nrel_engine_type: ZIL_131;;
-    concept_ZIL_131 => nrel_transmission_type: concept_mechanic_transmission;;
-    concept_mechanic_transmission <- concept_transmission;;
+    concept_ZIL_131 => nrel_transmission_type: concept_concept_ZIL_131_transmission;;
+    concept_concept_ZIL_131_transmission <- concept_mechanic_transmission;;
     
     concept_ZIL_131 <-rrel_key_sc_element: ...
     (*

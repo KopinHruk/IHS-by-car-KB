@@ -9,8 +9,8 @@
     concept_KAMAZ_4310=>nrel_production_period: concept_period_1979_2019;;
    
     concept_KAMAZ_4310=>nrel_engine_type: KAMAZ_740;;
-    concept_KAMAZ_4310 => nrel_transmission_type: concept_mechanic_transmission;;
-    concept_mechanic_transmission <- concept_transmission;;
+    concept_KAMAZ_4310 => nrel_transmission_type: concept_concept_KAMAZ_4310_transmission;;
+    concept_concept_KAMAZ_4310_transmission <- concept_mechanic_transmission;;
     
     concept_KAMAZ_4310 <-rrel_key_sc_element: ...
     (*

@@ -9,8 +9,8 @@
     concept_ZIL_157=>nrel_production_period: concept_period_1958_1994;;
    
     concept_ZIL_157=>nrel_engine_type: ZIL_157DK;;
-    concept_ZIL_157 => nrel_transmission_type: concept_mechanic_transmission;;
-    concept_mechanic_transmission <- concept_transmission;;
+    concept_ZIL_157 => nrel_transmission_type: concept_concept_ZIL_157_transmission;;
+    concept_concept_ZIL_157_transmission <- concept_mechanic_transmission;;
     
     concept_ZIL_157 <-rrel_key_sc_element: ...
     (*

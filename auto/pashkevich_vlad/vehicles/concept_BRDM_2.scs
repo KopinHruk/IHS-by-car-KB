@@ -9,8 +9,8 @@
     concept_BRDM_2=>nrel_production_period: concept_period_1963_1982;;
    
     concept_BRDM_2=>nrel_engine_type: GAZ_41;;
-    concept_BRDM_2 => nrel_transmission_type: concept_mechanic_transmission;;
-    concept_mechanic_transmission <- concept_transmission;;
+    concept_BRDM_2 => nrel_transmission_type: concept_concept_BRDM_2_transmission;;
+    concept_concept_BRDM_2_transmission <- concept_mechanic_transmission;;
     
     concept_BRDM_2 <-rrel_key_sc_element: ...
     (*

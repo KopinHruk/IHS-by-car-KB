@@ -9,8 +9,8 @@
     concept_BTR_60=>nrel_production_period: concept_period_1960_1987;;
    
     concept_BTR_60=>nrel_engine_type: GAZ_40P;;
-    concept_BTR_60 => nrel_transmission_type: concept_mechanic_transmission;;
-    concept_mechanic_transmission <- concept_transmission;;
+    concept_BTR_60 => nrel_transmission_type: concept_concept_BTR_60_transmission;;
+    concept_concept_BTR_60_transmission <- concept_mechanic_transmission;;
     
     concept_BTR_60 <-rrel_key_sc_element: ...
     (*

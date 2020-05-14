@@ -9,8 +9,8 @@
     concept_BTR_70=>nrel_production_period: concept_period_1978_2097;;
    
     concept_BTR_70=>nrel_engine_type: ZMZ_4905;;
-    concept_BTR_70 => nrel_transmission_type: concept_mechanic_transmission;;
-    concept_mechanic_transmission <- concept_transmission;;
+    concept_BTR_70 => nrel_transmission_type: concept_concept_BTR_70_transmission;;
+    concept_concept_BTR_70_transmission <- concept_mechanic_transmission;;
     
     concept_BTR_70 <-rrel_key_sc_element: ...
     (*
